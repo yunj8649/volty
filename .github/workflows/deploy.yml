@@ -1,0 +1,56 @@
+name: Deploy to GitHub Pages
+
+# main 에 푸시하면 Flutter 웹을 빌드해 GitHub Pages 로 자동 배포한다.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 동시에 여러 배포가 겹치지 않게(진행 중이면 최신 것만).
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.44.6
+          channel: stable
+          cache: true
+
+      - name: pub get
+        working-directory: app
+        run: flutter pub get
+
+      - name: 테스트
+        working-directory: app
+        run: flutter test
+
+      - name: 웹 빌드 (base-href = 저장소 경로)
+        working-directory: app
+        run: flutter build web --release --base-href /volty/
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: app/build/web
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
