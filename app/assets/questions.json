@@ -1,0 +1,3006 @@
+{
+  "version": 1,
+  "origin": "볼티 원작 연습문제 — 출제기준(주요항목) 기반 자작. 기출 복제가 아니며, 개념 확인·계산 연습용이다.",
+  "questions": [
+    {
+      "id": "em.1.q1",
+      "subject": "em",
+      "major": "em.1",
+      "stem": "진공 중에서 $2\\times10^{-6}\\ \\mathrm{C}$ 와 $3\\times10^{-6}\\ \\mathrm{C}$ 의 두 점전하가 $30\\ \\mathrm{cm}$ 떨어져 있다. 두 전하 사이에 작용하는 힘[N]은?",
+      "choices": [
+        "$0.4$",
+        "$0.6$",
+        "$0.8$",
+        "$1.2$"
+      ],
+      "answer": 1,
+      "explanation": "$F = 9\\times10^9 \\dfrac{Q_1 Q_2}{r^2} = 9\\times10^9 \\times \\dfrac{2\\times10^{-6}\\cdot 3\\times10^{-6}}{0.3^2} = 0.6\\ \\mathrm{N}$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.3.q1",
+      "subject": "em",
+      "major": "em.3",
+      "stem": "평행판 콘덴서에서 극판 사이 간격만 2배로 늘리면 정전용량은 어떻게 되는가?",
+      "choices": [
+        "$2$배",
+        "$\\dfrac{1}{2}$배",
+        "$4$배",
+        "$\\dfrac{1}{4}$배"
+      ],
+      "answer": 1,
+      "explanation": "$C = \\dfrac{\\varepsilon A}{d}$ 이므로 $d$ 가 2배면 $C$ 는 $\\dfrac{1}{2}$ 배가 된다.",
+      "type": "계산"
+    },
+    {
+      "id": "em.5.q1",
+      "subject": "em",
+      "major": "em.5",
+      "stem": "$10\\ \\mathrm{A}$ 의 전류가 흐르는 무한 직선 도선에서 $10\\ \\mathrm{cm}$ 떨어진 점의 자계의 세기[AT/m]는?",
+      "choices": [
+        "$7.96$",
+        "$15.9$",
+        "$31.8$",
+        "$63.7$"
+      ],
+      "answer": 1,
+      "explanation": "무한 직선 도선의 자계 $H = \\dfrac{I}{2\\pi r} = \\dfrac{10}{2\\pi\\times0.1} \\approx 15.9\\ \\mathrm{AT/m}$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.4.q1",
+      "subject": "pw",
+      "major": "pw.4",
+      "stem": "정격용량 $2000\\ \\mathrm{kVA}$, 퍼센트 임피던스 $5\\%$ 인 변압기의 단락용량[MVA]은?",
+      "choices": [
+        "$20$",
+        "$40$",
+        "$100$",
+        "$400$"
+      ],
+      "answer": 1,
+      "explanation": "단락용량 $P_s = \\dfrac{100}{\\%Z}\\times P_n = \\dfrac{100}{5}\\times 2000 = 40000\\ \\mathrm{kVA} = 40\\ \\mathrm{MVA}$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.2.q1",
+      "subject": "pw",
+      "major": "pw.2",
+      "stem": "송전선로에서 복도체(다도체)의 소도체 사이 간격을 유지하고 꼬임·충돌을 막기 위해 설치하는 것은?",
+      "choices": [
+        "아머로드",
+        "스페이서",
+        "댐퍼",
+        "오프셋"
+      ],
+      "answer": 1,
+      "explanation": "스페이서는 소도체 간 간격을 유지해 꼬임·충돌을 방지한다. 댐퍼는 진동, 아머로드는 지지점 보강, 오프셋은 단락 방지를 위한 전선 배치다.",
+      "type": "개념"
+    },
+    {
+      "id": "mc.4.q1",
+      "subject": "mc",
+      "major": "mc.4",
+      "stem": "권수비 $a=20$ 인 변압기의 1차 전압이 $3300\\ \\mathrm{V}$ 일 때 2차 전압[V]은?",
+      "choices": [
+        "$66$",
+        "$165$",
+        "$330$",
+        "$660$"
+      ],
+      "answer": 1,
+      "explanation": "$V_2 = \\dfrac{V_1}{a} = \\dfrac{3300}{20} = 165\\ \\mathrm{V}$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.5.q1",
+      "subject": "mc",
+      "major": "mc.5",
+      "stem": "4극 $60\\ \\mathrm{Hz}$ 유도전동기가 $1710\\ \\mathrm{rpm}$ 으로 회전하고 있다. 슬립[%]은?",
+      "choices": [
+        "$3$",
+        "$5$",
+        "$10$",
+        "$15$"
+      ],
+      "answer": 1,
+      "explanation": "$N_s = \\dfrac{120f}{P} = \\dfrac{120\\times60}{4} = 1800\\ \\mathrm{rpm}$, $s = \\dfrac{N_s-N}{N_s} = \\dfrac{1800-1710}{1800} = 5\\%$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.2.q1",
+      "subject": "mc",
+      "major": "mc.2",
+      "stem": "6극 $60\\ \\mathrm{Hz}$ 동기발전기의 동기속도[rpm]는?",
+      "choices": [
+        "$900$",
+        "$1000$",
+        "$1200$",
+        "$1800$"
+      ],
+      "answer": 2,
+      "explanation": "$N_s = \\dfrac{120f}{P} = \\dfrac{120\\times60}{6} = 1200\\ \\mathrm{rpm}$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.q1",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "$R = 3\\ \\Omega$, $X_L = 4\\ \\Omega$ 인 R-L 직렬회로의 임피던스 크기[Ω]는?",
+      "choices": [
+        "$3$",
+        "$4$",
+        "$5$",
+        "$7$"
+      ],
+      "answer": 2,
+      "explanation": "$|Z| = \\sqrt{R^2 + X_L^2} = \\sqrt{3^2 + 4^2} = 5\\ \\Omega$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.q2",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "선간전압 $200\\ \\mathrm{V}$, 선전류 $10\\ \\mathrm{A}$, 역률 $0.8$ 인 평형 3상 부하의 소비전력[W]은?",
+      "choices": [
+        "$1600$",
+        "$2771$",
+        "$3200$",
+        "$4800$"
+      ],
+      "answer": 1,
+      "explanation": "$P = \\sqrt{3}\\,V_l I_l \\cos\\theta = \\sqrt{3}\\times200\\times10\\times0.8 \\approx 2771\\ \\mathrm{W}$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.q3",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "$R = 1\\ \\mathrm{k\\Omega}$, $C = 1\\ \\mathrm{\\mu F}$ 인 R-C 직렬회로의 시정수[ms]는?",
+      "choices": [
+        "$0.1$",
+        "$1$",
+        "$10$",
+        "$100$"
+      ],
+      "answer": 1,
+      "explanation": "$\\tau = RC = 1000 \\times 1\\times10^{-6} = 1\\ \\mathrm{ms}$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.2.q1",
+      "subject": "ct",
+      "major": "ct.2",
+      "stem": "단위 계단함수 $u(t)$ 의 라플라스 변환은?",
+      "choices": [
+        "$1$",
+        "$\\dfrac{1}{s}$",
+        "$\\dfrac{1}{s^2}$",
+        "$s$"
+      ],
+      "answer": 1,
+      "explanation": "$\\mathcal{L}[u(t)] = \\dfrac{1}{s}$. 참고로 $\\delta(t)\\to1$, $t\\to\\dfrac{1}{s^2}$.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.2.q1",
+      "subject": "kec",
+      "major": "kec.2",
+      "stem": "KEC 절연저항 기준에서 SELV 및 PELV 회로(특별저압)의 절연저항 최솟값[MΩ]은?",
+      "choices": [
+        "$0.1$",
+        "$0.5$",
+        "$1.0$",
+        "$2.0$"
+      ],
+      "answer": 1,
+      "explanation": "표 132: SELV·PELV는 시험전압 $250\\ \\mathrm{V}$ 에 절연저항 $0.5\\ \\mathrm{M\\Omega}$ 이상. FELV·500V 이하는 $1.0\\ \\mathrm{M\\Omega}$.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.2.q2",
+      "subject": "kec",
+      "major": "kec.2",
+      "stem": "KEC 표 211.2-1에서 $220\\ \\mathrm{V}$ 교류를 사용하는 TN 계통(32A 이하 분기회로)의 최대 차단시간[초]은?",
+      "choices": [
+        "$0.1$",
+        "$0.2$",
+        "$0.4$",
+        "$5$"
+      ],
+      "answer": 2,
+      "explanation": "$220\\ \\mathrm{V}$ 는 $120 < U_0 \\leq 230$ 구간이며, 이 구간의 TN 계통 교류 최대 차단시간은 $0.4\\ \\mathrm{s}$ 이다(TT는 $0.2\\ \\mathrm{s}$).",
+      "type": "계산"
+    },
+    {
+      "id": "kec.3.q1",
+      "subject": "kec",
+      "major": "kec.3",
+      "stem": "발전기 수소냉각식 설비에서 수소의 순도가 몇 % 이하로 저하한 경우에 경보를 발하도록 시설하는가?",
+      "choices": [
+        "$70$",
+        "$80$",
+        "$85$",
+        "$95$"
+      ],
+      "answer": 2,
+      "explanation": "수소냉각식 발전기·조상기는 수소 순도가 $85\\%$ 이하로 저하한 경우 경보하도록 시설한다.",
+      "type": "계산"
+    },
+    {
+      "id": "em.1.q2",
+      "subject": "em",
+      "major": "em.1",
+      "stem": "$4\\times10^{-6}\\ \\mathrm{C}$ 의 점전하로부터 $2\\ \\mathrm{m}$ 떨어진 점의 전계의 세기[V/m]는?",
+      "choices": [
+        "$4500$",
+        "$9000$",
+        "$18000$",
+        "$36000$"
+      ],
+      "answer": 1,
+      "explanation": "$E = 9\\times10^9 \\dfrac{Q}{r^2} = 9\\times10^9 \\times \\dfrac{4\\times10^{-6}}{2^2} = 9000\\ \\mathrm{V/m}$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.2.q1",
+      "subject": "em",
+      "major": "em.2",
+      "stem": "진공 중 평행판 콘덴서(극판 면적 $1\\ \\mathrm{m^2}$, 간격 $1\\ \\mathrm{mm}$)의 정전용량은 약 몇 [nF]인가?",
+      "choices": [
+        "$0.885$",
+        "$8.85$",
+        "$88.5$",
+        "$885$"
+      ],
+      "answer": 1,
+      "explanation": "$C = \\dfrac{\\varepsilon_0 A}{d} = \\dfrac{8.855\\times10^{-12}\\times1}{1\\times10^{-3}} = 8.855\\ \\mathrm{nF}$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.5.q2",
+      "subject": "em",
+      "major": "em.5",
+      "stem": "반지름 $0.1\\ \\mathrm{m}$ 인 원형 코일(1회)에 $2\\ \\mathrm{A}$ 가 흐를 때 코일 중심의 자계의 세기[AT/m]는?",
+      "choices": [
+        "$5$",
+        "$10$",
+        "$20$",
+        "$40$"
+      ],
+      "answer": 1,
+      "explanation": "원형 코일 중심 자계 $H = \\dfrac{I}{2r} = \\dfrac{2}{2\\times0.1} = 10\\ \\mathrm{AT/m}$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.6.q1",
+      "subject": "em",
+      "major": "em.6",
+      "stem": "권선수 $100$ 회 코일에 $2\\ \\mathrm{A}$ 가 흐를 때 기자력[AT]은?",
+      "choices": [
+        "$50$",
+        "$100$",
+        "$200$",
+        "$400$"
+      ],
+      "answer": 2,
+      "explanation": "기자력 $F = NI = 100\\times2 = 200\\ \\mathrm{AT}$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.7.q1",
+      "subject": "em",
+      "major": "em.7",
+      "stem": "자기 인덕턴스 $2\\ \\mathrm{H}$ 인 코일에 $3\\ \\mathrm{A}$ 가 흐를 때 축적되는 자기에너지[J]는?",
+      "choices": [
+        "$4.5$",
+        "$9$",
+        "$18$",
+        "$36$"
+      ],
+      "answer": 1,
+      "explanation": "$W = \\dfrac{1}{2}LI^2 = \\dfrac{1}{2}\\times2\\times3^2 = 9\\ \\mathrm{J}$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.8.q1",
+      "subject": "em",
+      "major": "em.8",
+      "stem": "진공의 고유(파동) 임피던스는 약 몇 [Ω]인가?",
+      "choices": [
+        "$73.6$",
+        "$120$",
+        "$377$",
+        "$754$"
+      ],
+      "answer": 2,
+      "explanation": "$\\eta_0 = \\sqrt{\\dfrac{\\mu_0}{\\varepsilon_0}} = 120\\pi \\approx 377\\ \\Omega$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.1.q1",
+      "subject": "pw",
+      "major": "pw.1",
+      "stem": "유효낙차 $100\\ \\mathrm{m}$, 사용수량 $10\\ \\mathrm{m^3/s}$, 종합효율 $0.8$ 인 수력발전소의 출력[kW]은?",
+      "choices": [
+        "$6400$",
+        "$7840$",
+        "$9800$",
+        "$12250$"
+      ],
+      "answer": 1,
+      "explanation": "$P = 9.8\\,Q H \\eta = 9.8\\times10\\times100\\times0.8 = 7840\\ \\mathrm{kW}$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.4.q2",
+      "subject": "pw",
+      "major": "pw.4",
+      "stem": "퍼센트 임피던스가 $10\\%$ 이고 정격전류가 $100\\ \\mathrm{A}$ 인 회로의 단락전류[A]는?",
+      "choices": [
+        "$1000$",
+        "$500$",
+        "$2000$",
+        "$10000$"
+      ],
+      "answer": 0,
+      "explanation": "$I_s = \\dfrac{100}{\\%Z}\\times I_n = \\dfrac{100}{10}\\times100 = 1000\\ \\mathrm{A}$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.3.q1",
+      "subject": "pw",
+      "major": "pw.3",
+      "stem": "$100\\ \\mathrm{kW}$ 부하의 역률을 $0.6$ 에서 $0.8$ 로 개선하는 데 필요한 콘덴서 용량[kVar]은?",
+      "choices": [
+        "$33.3$",
+        "$58.3$",
+        "$75$",
+        "$133$"
+      ],
+      "answer": 1,
+      "explanation": "$Q_c = P(\\tan\\theta_1 - \\tan\\theta_2) = 100(1.333 - 0.75) \\approx 58.3\\ \\mathrm{kVar}$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.2.q2",
+      "subject": "pw",
+      "major": "pw.2",
+      "stem": "송전선로의 코로나 임계전압을 높여 코로나를 방지하는 방법으로 옳은 것은?",
+      "choices": [
+        "전선을 가늘게 한다",
+        "복도체를 사용한다",
+        "기압을 낮춘다",
+        "전선 간격을 좁힌다"
+      ],
+      "answer": 1,
+      "explanation": "복도체(굵은 등가 반지름)를 쓰면 전선 표면 전위경도가 낮아져 코로나 임계전압이 높아진다.",
+      "type": "개념"
+    },
+    {
+      "id": "pw.7.q1",
+      "subject": "pw",
+      "major": "pw.7",
+      "stem": "소호 매질로 육불화황($\\mathrm{SF_6}$) 가스를 사용하는 차단기는?",
+      "choices": [
+        "유입차단기(OCB)",
+        "진공차단기(VCB)",
+        "가스차단기(GCB)",
+        "공기차단기(ABB)"
+      ],
+      "answer": 2,
+      "explanation": "$\\mathrm{SF_6}$ 가스를 소호 매질로 쓰는 것은 가스차단기(GCB)다. 절연·소호 성능이 우수하다.",
+      "type": "개념"
+    },
+    {
+      "id": "pw.5.q1",
+      "subject": "pw",
+      "major": "pw.5",
+      "stem": "단상 2선식 선로에서 한 가닥 저항이 $0.5\\ \\Omega$, 부하전류가 $10\\ \\mathrm{A}$ 일 때 선로 전압강하[V]는?",
+      "choices": [
+        "$5$",
+        "$10$",
+        "$15$",
+        "$20$"
+      ],
+      "answer": 1,
+      "explanation": "단상 2선식은 왕복 2가닥이므로 $e = 2 I R = 2\\times10\\times0.5 = 10\\ \\mathrm{V}$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.1.q1",
+      "subject": "mc",
+      "major": "mc.1",
+      "stem": "극수 $4$, 전기자 총 도체수 $400$, 파권($a=2$), 매극 자속 $0.02\\ \\mathrm{Wb}$ 인 직류발전기가 $1500\\ \\mathrm{rpm}$ 으로 회전할 때 유기기전력[V]은?",
+      "choices": [
+        "$200$",
+        "$400$",
+        "$600$",
+        "$800$"
+      ],
+      "answer": 1,
+      "explanation": "$E = \\dfrac{pZ\\phi N}{60a} = \\dfrac{4\\times400\\times0.02\\times1500}{60\\times2} = 400\\ \\mathrm{V}$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.4.q2",
+      "subject": "mc",
+      "major": "mc.4",
+      "stem": "무부하 시 2차 전압이 $220\\ \\mathrm{V}$, 정격부하 시 2차 전압이 $200\\ \\mathrm{V}$ 인 변압기의 전압변동률[%]은?",
+      "choices": [
+        "$5$",
+        "$9$",
+        "$10$",
+        "$20$"
+      ],
+      "answer": 2,
+      "explanation": "$\\varepsilon = \\dfrac{V_{20} - V_{2n}}{V_{2n}}\\times100 = \\dfrac{220-200}{200}\\times100 = 10\\%$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.5.q2",
+      "subject": "mc",
+      "major": "mc.5",
+      "stem": "유도전동기의 2차 입력이 $10\\ \\mathrm{kW}$, 슬립이 $0.05$ 일 때 2차 동손[W]은?",
+      "choices": [
+        "$500$",
+        "$250$",
+        "$1000$",
+        "$9500$"
+      ],
+      "answer": 0,
+      "explanation": "$P_{c2} = s\\,P_2 = 0.05\\times10000 = 500\\ \\mathrm{W}$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.2.q2",
+      "subject": "mc",
+      "major": "mc.2",
+      "stem": "동기발전기에서 단락비가 큰 기계(철기계)의 특징으로 옳은 것은?",
+      "choices": [
+        "전압변동률이 크다",
+        "단락전류가 작다",
+        "동기임피던스가 작다",
+        "안정도가 나쁘다"
+      ],
+      "answer": 2,
+      "explanation": "단락비가 크면 동기임피던스가 작아 전압변동률이 작고 안정도가 좋다(대신 철이 많이 들어 크고 무겁다).",
+      "type": "개념"
+    },
+    {
+      "id": "mc.3.q1",
+      "subject": "mc",
+      "major": "mc.3",
+      "stem": "단상 전파 정류회로(무제어)에서 교류 실효값이 $E$ 일 때 직류 평균전압은?",
+      "choices": [
+        "$0.45E$",
+        "$0.9E$",
+        "$1.11E$",
+        "$1.35E$"
+      ],
+      "answer": 1,
+      "explanation": "$E_{dc} = \\dfrac{2\\sqrt{2}}{\\pi}E \\approx 0.9E$. 단상 반파는 $0.45E$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.4.q3",
+      "subject": "mc",
+      "major": "mc.4",
+      "stem": "변압기 병렬운전 조건으로 반드시 필요한 것이 아닌 것은?",
+      "choices": [
+        "극성이 같을 것",
+        "권수비가 같을 것",
+        "%임피던스가 같을 것",
+        "정격용량이 같을 것"
+      ],
+      "answer": 3,
+      "explanation": "정격용량이 같을 필요는 없다(용량에 비례해 부하가 분담되면 됨). 극성·권수비·%임피던스는 일치해야 한다.",
+      "type": "개념"
+    },
+    {
+      "id": "ct.1.q4",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "내부저항 $5\\ \\Omega$ 인 전원에서 부하에 최대 전력을 전달하려면 부하저항[Ω]은?",
+      "choices": [
+        "$5$",
+        "$2.5$",
+        "$10$",
+        "$25$"
+      ],
+      "answer": 0,
+      "explanation": "최대 전력 전달 조건은 $R_L = R_s = 5\\ \\Omega$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.q5",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "각 변의 저항이 $30\\ \\Omega$ 인 평형 $\\triangle$ 결선을 Y 결선으로 등가변환하면 각 변의 저항[Ω]은?",
+      "choices": [
+        "$10$",
+        "$30$",
+        "$90$",
+        "$15$"
+      ],
+      "answer": 0,
+      "explanation": "평형일 때 $R_Y = \\dfrac{R_\\triangle}{3} = \\dfrac{30}{3} = 10\\ \\Omega$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.q6",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "$L = 1\\ \\mathrm{mH}$, $C = 1\\ \\mathrm{\\mu F}$ 인 직렬 공진회로의 공진주파수는 약 몇 [kHz]인가?",
+      "choices": [
+        "$1.6$",
+        "$5.03$",
+        "$16$",
+        "$50.3$"
+      ],
+      "answer": 1,
+      "explanation": "$f_0 = \\dfrac{1}{2\\pi\\sqrt{LC}} = \\dfrac{1}{2\\pi\\sqrt{10^{-3}\\times10^{-6}}} \\approx 5.03\\ \\mathrm{kHz}$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.q7",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "$i(t) = 3 + 4\\sin\\omega t\\ \\mathrm{[A]}$ 의 실효값[A]은?",
+      "choices": [
+        "$3.5$",
+        "$4.12$",
+        "$5$",
+        "$7$"
+      ],
+      "answer": 1,
+      "explanation": "$I = \\sqrt{3^2 + \\left(\\dfrac{4}{\\sqrt2}\\right)^2} = \\sqrt{9+8} = \\sqrt{17} \\approx 4.12\\ \\mathrm{A}$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.2.q2",
+      "subject": "ct",
+      "major": "ct.2",
+      "stem": "특성방정식 $s^3 + 2s^2 + 3s + K = 0$ 인 제어계가 안정하기 위한 $K$ 의 범위는?",
+      "choices": [
+        "$K < 0$",
+        "$0 < K < 6$",
+        "$K > 6$",
+        "$K < 6$"
+      ],
+      "answer": 1,
+      "explanation": "라우스 배열에서 $s^1$ 항 $\\dfrac{2\\times3 - K}{2} > 0 \\Rightarrow K < 6$, $s^0$ 항 $K > 0$. 따라서 $0 < K < 6$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.2.q3",
+      "subject": "ct",
+      "major": "ct.2",
+      "stem": "$e^{-at}$ 의 라플라스 변환은?",
+      "choices": [
+        "$\\dfrac{1}{s}$",
+        "$\\dfrac{1}{s+a}$",
+        "$\\dfrac{a}{s}$",
+        "$\\dfrac{s}{s+a}$"
+      ],
+      "answer": 1,
+      "explanation": "$\\mathcal{L}[e^{-at}] = \\dfrac{1}{s+a}$.",
+      "type": "개념"
+    },
+    {
+      "id": "kec.1.q1",
+      "subject": "kec",
+      "major": "kec.1",
+      "stem": "KEC에서 저압 교류의 전압 범위는?",
+      "choices": [
+        "$600\\ \\mathrm{V}$ 이하",
+        "$1\\ \\mathrm{kV}$ 이하",
+        "$1.5\\ \\mathrm{kV}$ 이하",
+        "$7\\ \\mathrm{kV}$ 이하"
+      ],
+      "answer": 1,
+      "explanation": "KEC 저압: 교류 $1\\ \\mathrm{kV}$ 이하, 직류 $1.5\\ \\mathrm{kV}$ 이하.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.1.q2",
+      "subject": "kec",
+      "major": "kec.1",
+      "stem": "KEC에서 특고압의 전압 범위는?",
+      "choices": [
+        "$1\\ \\mathrm{kV}$ 초과",
+        "$7\\ \\mathrm{kV}$ 초과",
+        "$35\\ \\mathrm{kV}$ 초과",
+        "$170\\ \\mathrm{kV}$ 초과"
+      ],
+      "answer": 1,
+      "explanation": "고압은 저압을 넘고 $7\\ \\mathrm{kV}$ 이하, 특고압은 $7\\ \\mathrm{kV}$ 초과다.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.2.q3",
+      "subject": "kec",
+      "major": "kec.2",
+      "stem": "사용전압 $500\\ \\mathrm{V}$ 이하(FELV 포함) 전로의 절연저항 최솟값[MΩ]은?",
+      "choices": [
+        "$0.5$",
+        "$1.0$",
+        "$1.5$",
+        "$2.0$"
+      ],
+      "answer": 1,
+      "explanation": "표 132: FELV·500V 이하는 시험전압 $500\\ \\mathrm{V}$ 에 절연저항 $1.0\\ \\mathrm{M\\Omega}$ 이상.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.3.q2",
+      "subject": "kec",
+      "major": "kec.3",
+      "stem": "차량 등의 압력을 받을 우려가 있는 장소에 직접 매설식으로 시설하는 지중전선로의 최소 매설깊이[m]는?",
+      "choices": [
+        "$0.6$",
+        "$1.0$",
+        "$1.2$",
+        "$1.5$"
+      ],
+      "answer": 1,
+      "explanation": "차량 등 압력을 받는 장소는 $1.0\\ \\mathrm{m}$ 이상, 그 밖의 장소는 $0.6\\ \\mathrm{m}$ 이상 매설한다.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.3.q3",
+      "subject": "kec",
+      "major": "kec.3",
+      "stem": "큰 고장전류가 흐르지 않는 일반적인 경우, 구리 접지도체의 최소 단면적[mm²]은?",
+      "choices": [
+        "$2.5$",
+        "$6$",
+        "$16$",
+        "$50$"
+      ],
+      "answer": 1,
+      "explanation": "접지도체 최소 단면적은 구리 $6\\ \\mathrm{mm^2}$(큰 고장전류가 흐를 수 있으면 구리 $16\\ \\mathrm{mm^2}$).",
+      "type": "계산"
+    },
+    {
+      "id": "kec.5.q1",
+      "subject": "kec",
+      "major": "kec.5",
+      "stem": "주택에 시설하는 전기저장장치의 옥내 직류 전로에 적용할 수 있는 대지전압의 최댓값[V]은?",
+      "choices": [
+        "$300$",
+        "$450$",
+        "$600$",
+        "$750$"
+      ],
+      "answer": 2,
+      "explanation": "조건(지락 자동차단·은폐 시공 등)을 만족하면 주택 옥내 직류 대지전압을 $600\\ \\mathrm{V}$ 까지 적용할 수 있다.",
+      "type": "계산"
+    },
+    {
+      "id": "em.1.a1",
+      "subject": "em",
+      "major": "em.1",
+      "stem": "진공 중에서 $Q_1 = 2\\times10^{-6}\\ [\\mathrm{C}]$ 와 $Q_2 = 5\\times10^{-6}\\ [\\mathrm{C}]$ 인 두 점전하가 $0.3\\ [\\mathrm{m}]$ 떨어져 있을 때, 두 전하 사이에 작용하는 힘의 크기는?",
+      "choices": [
+        "$0.3\\ [\\mathrm{N}]$",
+        "$1.0\\ [\\mathrm{N}]$",
+        "$3.0\\ [\\mathrm{N}]$",
+        "$9.0\\ [\\mathrm{N}]$"
+      ],
+      "answer": 1,
+      "explanation": "쿨롱 법칙 $F=9\\times10^9\\times\\dfrac{2\\times10^{-6}\\times5\\times10^{-6}}{(0.3)^2}=\\dfrac{0.09}{0.09}=1.0\\ [\\mathrm{N}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.1.a2",
+      "subject": "em",
+      "major": "em.1",
+      "stem": "진공 중 선전하밀도 $\\rho_L = 2\\times10^{-6}\\ [\\mathrm{C/m}]$ 인 무한 직선 도선으로부터 $0.5\\ [\\mathrm{m}]$ 떨어진 점의 전계의 세기는?",
+      "choices": [
+        "$36\\ [\\mathrm{kV/m}]$",
+        "$72\\ [\\mathrm{kV/m}]$",
+        "$144\\ [\\mathrm{kV/m}]$",
+        "$288\\ [\\mathrm{kV/m}]$"
+      ],
+      "answer": 1,
+      "explanation": "무한 직선전하의 전계 $E=\\dfrac{\\rho_L}{2\\pi\\varepsilon_0 r}=1.8\\times10^{10}\\times\\dfrac{2\\times10^{-6}}{0.5}=7.2\\times10^{4}\\ [\\mathrm{V/m}]=72\\ [\\mathrm{kV/m}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.2.a3",
+      "subject": "em",
+      "major": "em.2",
+      "stem": "극판 면적 $0.01\\ [\\mathrm{m^2}]$, 극판 간격 $1\\ [\\mathrm{mm}]$ 인 진공 평행판 콘덴서에 $100\\ [\\mathrm{V}]$ 를 가했을 때 축적되는 정전에너지는?",
+      "choices": [
+        "$0.221\\ [\\mathrm{\\mu J}]$",
+        "$0.443\\ [\\mathrm{\\mu J}]$",
+        "$0.886\\ [\\mathrm{\\mu J}]$",
+        "$4.43\\ [\\mathrm{\\mu J}]$"
+      ],
+      "answer": 1,
+      "explanation": "$C=\\dfrac{\\varepsilon_0 A}{d}=8.85\\times10^{-11}\\ [\\mathrm{F}]$, $W=\\dfrac{1}{2}CV^2=\\dfrac{1}{2}\\times8.85\\times10^{-11}\\times100^2\\approx0.443\\ [\\mathrm{\\mu J}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.2.a4",
+      "subject": "em",
+      "major": "em.2",
+      "stem": "진공 중 내구 반지름 $a=0.05\\ [\\mathrm{m}]$, 외구 반지름 $b=0.1\\ [\\mathrm{m}]$ 인 동심 구도체의 정전용량은?",
+      "choices": [
+        "$5.56\\ [\\mathrm{pF}]$",
+        "$11.1\\ [\\mathrm{pF}]$",
+        "$22.2\\ [\\mathrm{pF}]$",
+        "$111\\ [\\mathrm{pF}]$"
+      ],
+      "answer": 1,
+      "explanation": "$C=\\dfrac{4\\pi\\varepsilon_0\\,ab}{b-a}$, $\\dfrac{ab}{b-a}=0.1$, $4\\pi\\varepsilon_0=1.11\\times10^{-10}$ 이므로 $C=1.11\\times10^{-11}\\ [\\mathrm{F}]=11.1\\ [\\mathrm{pF}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.3.a5",
+      "subject": "em",
+      "major": "em.3",
+      "stem": "유전율이 다른 두 유전체($\\varepsilon_{r1}=3$, $\\varepsilon_{r2}=5$)의 경계면에 자유전하가 없다. 매질 1의 경계면 수직 전계 $E_{1n}=100\\ [\\mathrm{V/m}]$ 일 때 매질 2의 수직 전계 $E_{2n}$ 은?",
+      "choices": [
+        "$40\\ [\\mathrm{V/m}]$",
+        "$60\\ [\\mathrm{V/m}]$",
+        "$100\\ [\\mathrm{V/m}]$",
+        "$167\\ [\\mathrm{V/m}]$"
+      ],
+      "answer": 1,
+      "explanation": "법선 전속밀도 연속 $\\varepsilon_{r1}E_{1n}=\\varepsilon_{r2}E_{2n}$ 이므로 $E_{2n}=100\\times\\dfrac{3}{5}=60\\ [\\mathrm{V/m}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.4.a6",
+      "subject": "em",
+      "major": "em.4",
+      "stem": "무한히 넓은 접지 도체 평면에서 $0.3\\ [\\mathrm{m}]$ 떨어진 곳에 점전하 $Q=4\\times10^{-6}\\ [\\mathrm{C}]$ 가 있다. 영상전하법으로 구한 전하가 받는 힘의 크기는?",
+      "choices": [
+        "$0.2\\ [\\mathrm{N}]$",
+        "$0.4\\ [\\mathrm{N}]$",
+        "$0.8\\ [\\mathrm{N}]$",
+        "$1.6\\ [\\mathrm{N}]$"
+      ],
+      "answer": 1,
+      "explanation": "간격 $2d=0.6\\ [\\mathrm{m}]$, $F=9\\times10^9\\times\\dfrac{(4\\times10^{-6})^2}{0.6^2}=\\dfrac{0.144}{0.36}=0.4\\ [\\mathrm{N}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.5.a7",
+      "subject": "em",
+      "major": "em.5",
+      "stem": "반지름 $0.1\\ [\\mathrm{m}]$, 감은 횟수 $10$ 회인 원형 코일에 $2\\ [\\mathrm{A}]$ 가 흐를 때 코일 중심 자계의 세기는?",
+      "choices": [
+        "$31.8\\ [\\mathrm{AT/m}]$",
+        "$50\\ [\\mathrm{AT/m}]$",
+        "$100\\ [\\mathrm{AT/m}]$",
+        "$200\\ [\\mathrm{AT/m}]$"
+      ],
+      "answer": 2,
+      "explanation": "원형 코일 중심 자계 $H=\\dfrac{NI}{2r}=\\dfrac{10\\times2}{2\\times0.1}=100\\ [\\mathrm{AT/m}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.5.a8",
+      "subject": "em",
+      "major": "em.5",
+      "stem": "자속밀도 $B=0.01\\ [\\mathrm{T}]$ 인 평등 자계에 수직으로 속도 $v=2\\times10^7\\ [\\mathrm{m/s}]$ 로 입사한 전자의 원운동 반지름은? (전자 질량 $9.1\\times10^{-31}\\ [\\mathrm{kg}]$, 전하량 $1.6\\times10^{-19}\\ [\\mathrm{C}]$)",
+      "choices": [
+        "$0.57\\ [\\mathrm{cm}]$",
+        "$1.14\\ [\\mathrm{cm}]$",
+        "$2.28\\ [\\mathrm{cm}]$",
+        "$5.69\\ [\\mathrm{cm}]$"
+      ],
+      "answer": 1,
+      "explanation": "$r=\\dfrac{mv}{qB}=\\dfrac{9.1\\times10^{-31}\\times2\\times10^7}{1.6\\times10^{-19}\\times0.01}\\approx1.14\\times10^{-2}\\ [\\mathrm{m}]=1.14\\ [\\mathrm{cm}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.6.a9",
+      "subject": "em",
+      "major": "em.6",
+      "stem": "평균 자로 길이 $0.5\\ [\\mathrm{m}]$, 단면적 $0.001\\ [\\mathrm{m^2}]$, 비투자율 $1000$ 인 철심에 코일 $200$ 회를 감고 $5\\ [\\mathrm{A}]$ 를 흘릴 때 자속은?",
+      "choices": [
+        "$1.26\\ [\\mathrm{mWb}]$",
+        "$2.51\\ [\\mathrm{mWb}]$",
+        "$5.03\\ [\\mathrm{mWb}]$",
+        "$25.1\\ [\\mathrm{mWb}]$"
+      ],
+      "answer": 1,
+      "explanation": "$F=NI=1000\\ [\\mathrm{AT}]$, $R=\\dfrac{l}{\\mu_0\\mu_r A}\\approx3.98\\times10^{5}$, $\\Phi=\\dfrac{F}{R}\\approx2.51\\times10^{-3}\\ [\\mathrm{Wb}]=2.51\\ [\\mathrm{mWb}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.7.a10",
+      "subject": "em",
+      "major": "em.7",
+      "stem": "두 코일의 자기 인덕턴스가 각각 $L_1=0.4\\ [\\mathrm{H}]$, $L_2=0.9\\ [\\mathrm{H}]$ 이고 상호 인덕턴스가 $M=0.3\\ [\\mathrm{H}]$ 일 때 결합계수는?",
+      "choices": [
+        "$0.25$",
+        "$0.5$",
+        "$0.6$",
+        "$0.75$"
+      ],
+      "answer": 1,
+      "explanation": "$k=\\dfrac{M}{\\sqrt{L_1 L_2}}=\\dfrac{0.3}{\\sqrt{0.36}}=\\dfrac{0.3}{0.6}=0.5$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.8.a11",
+      "subject": "em",
+      "major": "em.8",
+      "stem": "비유전율 $\\varepsilon_r=4$, 비투자율 $\\mu_r=1$ 인 무손실 유전체 내부를 진행하는 평면 전자파의 고유임피던스는? (진공의 고유임피던스 $377\\ [\\Omega]$)",
+      "choices": [
+        "$94.25\\ [\\Omega]$",
+        "$188.5\\ [\\Omega]$",
+        "$377\\ [\\Omega]$",
+        "$754\\ [\\Omega]$"
+      ],
+      "answer": 1,
+      "explanation": "$\\eta=\\eta_0\\sqrt{\\dfrac{\\mu_r}{\\varepsilon_r}}=377\\times\\sqrt{\\dfrac{1}{4}}=\\dfrac{377}{2}\\approx188.5\\ [\\Omega]$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.1.a1",
+      "subject": "pw",
+      "major": "pw.1",
+      "stem": "정격용량 $20\\,[\\mathrm{MVA}]$, %임피던스가 $8\\%$인 변압기의 2차 측에서 3상 단락이 발생했다. 이 지점의 단락용량은 약 얼마인가? (전원 측 임피던스 무시)",
+      "choices": [
+        "$125\\,[\\mathrm{MVA}]$",
+        "$160\\,[\\mathrm{MVA}]$",
+        "$250\\,[\\mathrm{MVA}]$",
+        "$400\\,[\\mathrm{MVA}]$"
+      ],
+      "answer": 2,
+      "explanation": "$P_s=\\dfrac{100}{\\%Z}\\cdot P_n=\\dfrac{100}{8}\\times 20=250\\,[\\mathrm{MVA}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.3.a2",
+      "subject": "pw",
+      "major": "pw.3",
+      "stem": "송전계통 중성점 직접접지방식의 특징으로 옳지 않은 것은?",
+      "choices": [
+        "1선 지락 시 건전상의 대지전위 상승이 가장 작다.",
+        "변압기를 단절연할 수 있어 절연 측면에서 경제적이다.",
+        "지락전류가 커서 통신선에 대한 유도장해가 크다.",
+        "지락전류가 작아 계통의 과도안정도가 높다."
+      ],
+      "answer": 3,
+      "explanation": "직접접지는 1선 지락 시 지락전류가 매우 커서 과도안정도가 낮아진다. 따라서 '지락전류가 작아 안정도가 높다'는 설명이 틀리다.",
+      "type": "개념"
+    },
+    {
+      "id": "pw.2.a3",
+      "subject": "pw",
+      "major": "pw.2",
+      "stem": "가공송전선의 코로나 임계전압과 억제 대책에 대한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "지름이 큰 전선이나 복도체를 사용하면 임계전압이 높아진다.",
+        "전선 표면을 매끄럽게 유지하면 임계전압이 높아진다.",
+        "상대공기밀도 $\\delta$가 클수록 임계전압이 높아진다.",
+        "전선의 지름을 작게 하면 임계전압이 높아진다."
+      ],
+      "answer": 3,
+      "explanation": "코로나 임계전압 $E_0=24.3\\,m_0 m_1 \\delta\\, d\\,\\log_{10}\\dfrac{D}{r}$. 전선을 가늘게 하면 표면 전위경도가 커져 임계전압이 낮아지므로 마지막이 틀리다.",
+      "type": "개념"
+    },
+    {
+      "id": "pw.2.a4",
+      "subject": "pw",
+      "major": "pw.2",
+      "stem": "선간전압 $154\\,[\\mathrm{kV}]$, 길이 $100\\,[\\mathrm{km}]$인 3상 송전선의 단위길이당 정전용량이 $0.008\\,[\\mu\\mathrm{F/km}]$일 때, $60\\,[\\mathrm{Hz}]$에서 1선당 충전전류는 약 얼마인가?",
+      "choices": [
+        "$8.9\\,[\\mathrm{A}]$",
+        "$26.8\\,[\\mathrm{A}]$",
+        "$46.4\\,[\\mathrm{A}]$",
+        "$15.5\\,[\\mathrm{A}]$"
+      ],
+      "answer": 1,
+      "explanation": "$C=0.008\\times100=0.8\\,[\\mu\\mathrm{F}]$, $I_c=2\\pi f C\\dfrac{V}{\\sqrt{3}}=2\\pi\\times60\\times0.8\\times10^{-6}\\times\\dfrac{154000}{\\sqrt{3}}\\approx26.8\\,[\\mathrm{A}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.3.a5",
+      "subject": "pw",
+      "major": "pw.3",
+      "stem": "전력계통의 과도안정도를 향상시키기 위한 대책으로 옳지 않은 것은?",
+      "choices": [
+        "발전기의 단락비를 크게 하고 속응 여자방식을 채용한다.",
+        "복도체·다도체를 사용하여 선로 리액턴스를 줄인다.",
+        "고장구간을 신속히 제거하는 고속 차단·재폐로 방식을 적용한다.",
+        "송전선로의 직렬 리액턴스를 증가시켜 전류를 제한한다."
+      ],
+      "answer": 3,
+      "explanation": "$P=\\dfrac{V_s V_r}{X}\\sin\\delta$ 에서 $X$ 가 작을수록 안정도가 좋아진다. 직렬 리액턴스를 크게 하면 안정도가 저하되므로 틀리다.",
+      "type": "개념"
+    },
+    {
+      "id": "pw.2.a6",
+      "subject": "pw",
+      "major": "pw.2",
+      "stem": "경간 $200\\,[\\mathrm{m}]$, 전선 단위길이당 하중 $2\\,[\\mathrm{kg/m}]$, 수평장력 $2000\\,[\\mathrm{kg}]$인 가공전선의 이도(dip)는 약 얼마인가?",
+      "choices": [
+        "$2.5\\,[\\mathrm{m}]$",
+        "$4.0\\,[\\mathrm{m}]$",
+        "$5.0\\,[\\mathrm{m}]$",
+        "$6.3\\,[\\mathrm{m}]$"
+      ],
+      "answer": 2,
+      "explanation": "$D=\\dfrac{WS^2}{8T}=\\dfrac{2\\times 200^2}{8\\times 2000}=5.0\\,[\\mathrm{m}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.4.a7",
+      "subject": "pw",
+      "major": "pw.4",
+      "stem": "보호계전기의 동작 원리에 대한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "거리계전기는 전압과 전류의 비로 측정한 임피던스에 따라 동작한다.",
+        "비율차동계전기는 변압기 내부고장 검출에 주로 사용된다.",
+        "반한시 과전류계전기는 고장전류가 클수록 동작시간이 길어진다.",
+        "방향단락계전기는 고장전류의 방향을 판별하여 동작한다."
+      ],
+      "answer": 2,
+      "explanation": "반한시 특성은 전류가 클수록 동작시간이 짧아진다. 따라서 '전류가 클수록 동작시간이 길어진다'는 설명이 틀리다.",
+      "type": "개념"
+    },
+    {
+      "id": "pw.7.a8",
+      "subject": "pw",
+      "major": "pw.7",
+      "stem": "정격전압 $170\\,[\\mathrm{kV}]$, 정격차단전류 $20\\,[\\mathrm{kA}]$인 3상용 차단기의 정격차단용량은 약 얼마인가?",
+      "choices": [
+        "$3400\\,[\\mathrm{MVA}]$",
+        "$5890\\,[\\mathrm{MVA}]$",
+        "$6800\\,[\\mathrm{MVA}]$",
+        "$2940\\,[\\mathrm{MVA}]$"
+      ],
+      "answer": 1,
+      "explanation": "$P_s=\\sqrt{3}\\,V_n I_s=\\sqrt{3}\\times 170\\times 20\\approx 5890\\,[\\mathrm{MVA}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.1.a9",
+      "subject": "pw",
+      "major": "pw.1",
+      "stem": "유효낙차 $100\\,[\\mathrm{m}]$, 사용수량 $20\\,[\\mathrm{m^3/s}]$, 종합효율 $85\\%$인 수력발전소의 출력은 약 얼마인가?",
+      "choices": [
+        "$9800\\,[\\mathrm{kW}]$",
+        "$16660\\,[\\mathrm{kW}]$",
+        "$19600\\,[\\mathrm{kW}]$",
+        "$14700\\,[\\mathrm{kW}]$"
+      ],
+      "answer": 1,
+      "explanation": "$P=9.8\\,Q H \\eta=9.8\\times 20\\times 100\\times 0.85=16660\\,[\\mathrm{kW}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.1.a10",
+      "subject": "pw",
+      "major": "pw.1",
+      "stem": "발열량 $6000\\,[\\mathrm{kcal/kg}]$인 연료를 $50000\\,[\\mathrm{kg}]$ 소비하여 $150000\\,[\\mathrm{kWh}]$를 발전한 화력발전소의 열효율은 약 얼마인가?",
+      "choices": [
+        "$34.4\\%$",
+        "$43.0\\%$",
+        "$50.0\\%$",
+        "$25.8\\%$"
+      ],
+      "answer": 1,
+      "explanation": "$\\eta=\\dfrac{860\\times 150000}{50000\\times 6000}\\times 100=43.0\\,[\\%]$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.6.a11",
+      "subject": "pw",
+      "major": "pw.6",
+      "stem": "부하 $100\\,[\\mathrm{kW}]$, 역률 $0.6$(지상)을 $0.9$(지상)로 개선하려 할 때 필요한 전력용 콘덴서의 용량은 약 얼마인가?",
+      "choices": [
+        "$48.4\\,[\\mathrm{kVA}]$",
+        "$84.9\\,[\\mathrm{kVA}]$",
+        "$133.3\\,[\\mathrm{kVA}]$",
+        "$75.0\\,[\\mathrm{kVA}]$"
+      ],
+      "answer": 1,
+      "explanation": "$Q_c=P(\\tan\\theta_1-\\tan\\theta_2)=100\\times(1.333-0.484)\\approx 84.9\\,[\\mathrm{kVA}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.2.a12",
+      "subject": "pw",
+      "major": "pw.2",
+      "stem": "3상 3선식 배전선로에서 선전류 $100\\,[\\mathrm{A}]$, 1선당 저항 $0.2\\,[\\Omega]$, 리액턴스 $0.1\\,[\\Omega]$, 부하역률 $0.8$(지상)일 때 전압강하는 약 얼마인가?",
+      "choices": [
+        "$22.0\\,[\\mathrm{V}]$",
+        "$27.7\\,[\\mathrm{V}]$",
+        "$38.1\\,[\\mathrm{V}]$",
+        "$44.0\\,[\\mathrm{V}]$"
+      ],
+      "answer": 2,
+      "explanation": "$e=\\sqrt{3}\\,I(R\\cos\\theta+X\\sin\\theta)=\\sqrt{3}\\times100\\times(0.2\\times0.8+0.1\\times0.6)\\approx38.1\\,[\\mathrm{V}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.1.a1",
+      "subject": "mc",
+      "major": "mc.1",
+      "stem": "극수 6, 전기자 총 도체수 400, 매극 자속 $0.02\\,[\\mathrm{Wb}]$, 회전속도 $1200\\,[\\mathrm{rpm}]$인 파권(wave) 직류발전기의 유기기전력은?",
+      "choices": [
+        "$160\\,[\\mathrm{V}]$",
+        "$240\\,[\\mathrm{V}]$",
+        "$480\\,[\\mathrm{V}]$",
+        "$960\\,[\\mathrm{V}]$"
+      ],
+      "answer": 2,
+      "explanation": "파권이므로 $a=2$. $E=\\dfrac{P Z \\phi N}{60 a}=\\dfrac{6 \\times 400 \\times 0.02 \\times 1200}{60 \\times 2}=480\\,[\\mathrm{V}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.1.a2",
+      "subject": "mc",
+      "major": "mc.1",
+      "stem": "직류 분권전동기의 속도제어법에 해당하지 않는 것은?",
+      "choices": [
+        "계자 제어법",
+        "저항 제어법",
+        "전압 제어법",
+        "주파수 제어법"
+      ],
+      "answer": 3,
+      "explanation": "$N=\\dfrac{V-I_a R_a}{k\\phi}$ 에서 전압·저항·계자로 속도를 제어한다. 주파수 제어는 교류 전동기의 방법이다.",
+      "type": "개념"
+    },
+    {
+      "id": "mc.4.a3",
+      "subject": "mc",
+      "major": "mc.4",
+      "stem": "백분율 저항강하 $2\\%$, 백분율 리액턴스강하 $4\\%$인 변압기가 지상 역률 $0.8$의 정격부하로 운전될 때 전압변동률은?",
+      "choices": [
+        "$-0.8\\,[\\%]$",
+        "$2.4\\,[\\%]$",
+        "$4.0\\,[\\%]$",
+        "$4.4\\,[\\%]$"
+      ],
+      "answer": 2,
+      "explanation": "$\\varepsilon \\approx p\\cos\\theta + q\\sin\\theta = 2 \\times 0.8 + 4 \\times 0.6 = 4.0\\,[\\%]$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.4.a4",
+      "subject": "mc",
+      "major": "mc.4",
+      "stem": "정격에서 철손 $100\\,[\\mathrm{W}]$, 전부하 동손 $400\\,[\\mathrm{W}]$인 변압기가 최대효율을 나타내는 부하율(정격 대비)은?",
+      "choices": [
+        "$25\\%$",
+        "$50\\%$",
+        "$70.7\\%$",
+        "$141\\%$"
+      ],
+      "answer": 1,
+      "explanation": "최대효율 조건 $m^2 P_c = P_i$, $m=\\sqrt{\\dfrac{P_i}{P_c}}=\\sqrt{\\dfrac{100}{400}}=0.5$, 즉 $50\\%$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.4.a5",
+      "subject": "mc",
+      "major": "mc.4",
+      "stem": "3상 변압기의 병렬운전에서 결선 조합이 불가능한 것은?",
+      "choices": [
+        "$Y{-}Y$ 와 $\\Delta{-}\\Delta$",
+        "$\\Delta{-}Y$ 와 $Y{-}\\Delta$",
+        "$\\Delta{-}\\Delta$ 와 $\\Delta{-}Y$",
+        "$Y{-}Y$ 와 $Y{-}Y$"
+      ],
+      "answer": 2,
+      "explanation": "$Y$(또는 $\\Delta$) 총 개수가 홀수이면 2차 전압에 $30^\\circ$ 위상차가 생겨 병렬운전이 불가능하다. $\\Delta{-}\\Delta$와 $\\Delta{-}Y$가 그 예이다.",
+      "type": "개념"
+    },
+    {
+      "id": "mc.5.a6",
+      "subject": "mc",
+      "major": "mc.5",
+      "stem": "6극 $60\\,[\\mathrm{Hz}]$ 3상 유도전동기가 슬립 $4\\%$로 운전할 때 회전자(2차) 기전력의 주파수는?",
+      "choices": [
+        "$1.2\\,[\\mathrm{Hz}]$",
+        "$2.4\\,[\\mathrm{Hz}]$",
+        "$4.8\\,[\\mathrm{Hz}]$",
+        "$57.6\\,[\\mathrm{Hz}]$"
+      ],
+      "answer": 1,
+      "explanation": "$f_2 = s f = 0.04 \\times 60 = 2.4\\,[\\mathrm{Hz}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.5.a7",
+      "subject": "mc",
+      "major": "mc.5",
+      "stem": "권선형 유도전동기의 2차 회로에 외부 저항을 삽입해 2차 저항을 증가시킬 때 나타나는 현상으로 옳은 것은?",
+      "choices": [
+        "최대토크의 크기가 2차 저항에 비례하여 증가한다",
+        "최대토크의 크기는 변하지 않고, 최대토크가 발생하는 슬립이 커진다",
+        "기동토크가 감소하여 기동특성이 나빠진다",
+        "동기속도가 2차 저항에 비례하여 증가한다"
+      ],
+      "answer": 1,
+      "explanation": "비례추이에 의해 $\\dfrac{r_2}{s}$ 가 일정하면 토크가 같다. 2차 저항을 늘리면 최대토크 크기는 불변, 발생 슬립만 커진다(기동토크는 증가).",
+      "type": "개념"
+    },
+    {
+      "id": "mc.2.a8",
+      "subject": "mc",
+      "major": "mc.2",
+      "stem": "백분율 동기임피던스가 $80\\%$인 3상 동기발전기의 단락비는?",
+      "choices": [
+        "$0.8$",
+        "$1.0$",
+        "$1.25$",
+        "$1.6$"
+      ],
+      "answer": 2,
+      "explanation": "$K_s = \\dfrac{100}{\\%Z_s} = \\dfrac{100}{80} = 1.25$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.2.a9",
+      "subject": "mc",
+      "major": "mc.2",
+      "stem": "매극 자속 $0.02\\,[\\mathrm{Wb}]$, 1상당 직렬 권수 100회, 주파수 $60\\,[\\mathrm{Hz}]$인 3상 동기발전기의 1상 유도기전력은? (권선계수 1)",
+      "choices": [
+        "$266.4\\,[\\mathrm{V}]$",
+        "$480\\,[\\mathrm{V}]$",
+        "$532.8\\,[\\mathrm{V}]$",
+        "$1066\\,[\\mathrm{V}]$"
+      ],
+      "answer": 2,
+      "explanation": "$E = 4.44 f N \\phi = 4.44 \\times 60 \\times 100 \\times 0.02 = 532.8\\,[\\mathrm{V}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.3.a10",
+      "subject": "mc",
+      "major": "mc.3",
+      "stem": "교류 실효값 $100\\,[\\mathrm{V}]$를 단상 전파 정류했을 때 직류 평균전압은? (이상적 정류, 순저항 부하)",
+      "choices": [
+        "$45\\,[\\mathrm{V}]$",
+        "$90\\,[\\mathrm{V}]$",
+        "$100\\,[\\mathrm{V}]$",
+        "$141\\,[\\mathrm{V}]$"
+      ],
+      "answer": 1,
+      "explanation": "$E_d = \\dfrac{2\\sqrt{2}}{\\pi}E \\approx 0.9 \\times 100 = 90\\,[\\mathrm{V}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.7.a11",
+      "subject": "mc",
+      "major": "mc.7",
+      "stem": "스테핑(스텝) 모터에 대한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "입력 펄스 수에 비례하여 회전각이 정해진다",
+        "회전속도는 입력 펄스의 주파수에 비례한다",
+        "디지털 신호에 의한 위치 제어 및 개루프 제어에 적합하다",
+        "회전을 위해 브러시와 정류자가 반드시 필요하다"
+      ],
+      "answer": 3,
+      "explanation": "스텝 모터는 고정자 권선의 여자 순서를 전환해 회전하며 브러시·정류자가 없다. 따라서 이들이 필요하다는 설명이 옳지 않다.",
+      "type": "개념"
+    },
+    {
+      "id": "ct.1.a1",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "직류 $100\\,\\mathrm{V}$ 를 $t=0$ 에서 $R=20\\,\\Omega$, $L=0.4\\,\\mathrm{H}$ 인 직렬 $RL$ 회로에 인가하였다. $t=0.02\\,\\mathrm{s}$ 일 때 전류의 크기는? (단, $e^{-1}=0.368$)",
+      "choices": [
+        "$1.84\\,\\mathrm{A}$",
+        "$5.00\\,\\mathrm{A}$",
+        "$3.16\\,\\mathrm{A}$",
+        "$4.32\\,\\mathrm{A}$"
+      ],
+      "answer": 2,
+      "explanation": "$\\tau=\\dfrac{L}{R}=0.02\\,\\mathrm{s}=t$. $i(\\tau)=\\dfrac{E}{R}(1-e^{-1})=5\\times0.632=3.16\\,\\mathrm{A}$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.a2",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "어떤 시간함수의 라플라스 변환이 $F(s)=\\dfrac{2s+10}{s(s^2+3s+2)}$ 일 때, 최종값 정리로 구한 $f(\\infty)$ 는?",
+      "choices": [
+        "$10$",
+        "$5$",
+        "$2.5$",
+        "$0$"
+      ],
+      "answer": 1,
+      "explanation": "$s^2+3s+2=(s+1)(s+2)$ 로 극점이 좌반면이므로 최종값 정리 적용. $f(\\infty)=\\lim_{s\\to 0}sF(s)=\\dfrac{10}{2}=5$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.a3",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "대칭인 가역(상반) 4단자망의 $F$ 파라미터에서 $A=1.5$, $C=0.5\\,\\mathrm{S}$ 이다. $B$ 의 값은? (대칭 $A=D$, 가역 $AD-BC=1$)",
+      "choices": [
+        "$1.25\\,\\Omega$",
+        "$6.5\\,\\Omega$",
+        "$3.25\\,\\Omega$",
+        "$2.5\\,\\Omega$"
+      ],
+      "answer": 3,
+      "explanation": "$A=D=1.5$, $1.5\\times1.5-0.5B=1 \\Rightarrow 2.25-0.5B=1 \\Rightarrow B=2.5\\,\\Omega$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.a4",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "선간전압 $200\\,\\mathrm{V}$ 의 3상 전원에 $Z=6+j8\\,[\\Omega]$ 인 평형 부하를 $\\Delta$ 결선하였다. 3상 유효전력은?",
+      "choices": [
+        "$7.2\\,\\mathrm{kW}$",
+        "$12\\,\\mathrm{kW}$",
+        "$2.4\\,\\mathrm{kW}$",
+        "$9.6\\,\\mathrm{kW}$"
+      ],
+      "answer": 0,
+      "explanation": "$\\Delta$ 에서 $V_p=200$, $|Z|=10$, $I_p=20\\,\\mathrm{A}$, $\\cos\\theta=0.6$. $P=3V_pI_p\\cos\\theta=3\\times200\\times20\\times0.6=7.2\\,\\mathrm{kW}$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.a5",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "3상 회로에서 1선 지락에 의해 $I_a=15\\angle 0^\\circ\\,\\mathrm{A}$, $I_b=I_c=0$ 일 때 영상분 전류 $I_0$ 의 크기는?",
+      "choices": [
+        "$15\\,\\mathrm{A}$",
+        "$45\\,\\mathrm{A}$",
+        "$5\\,\\mathrm{A}$",
+        "$0\\,\\mathrm{A}$"
+      ],
+      "answer": 2,
+      "explanation": "$I_0=\\dfrac{1}{3}(I_a+I_b+I_c)=\\dfrac{15}{3}=5\\,\\mathrm{A}$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.a6",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "전압 $v=100\\sqrt{2}\\sin\\omega t+30\\sqrt{2}\\sin 3\\omega t+40\\sqrt{2}\\sin 5\\omega t\\,[\\mathrm{V}]$ 의 왜형률은?",
+      "choices": [
+        "$40\\%$",
+        "$50\\%$",
+        "$25\\%$",
+        "$70\\%$"
+      ],
+      "answer": 1,
+      "explanation": "$\\dfrac{\\sqrt{V_3^2+V_5^2}}{V_1}=\\dfrac{\\sqrt{30^2+40^2}}{100}=\\dfrac{50}{100}=50\\%$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.a7",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "무손실 분포정수 선로에서 단위길이당 $L=25\\,\\mu\\mathrm{H}$, $C=100\\,\\mathrm{pF}$ 일 때 특성임피던스 $Z_0$ 는?",
+      "choices": [
+        "$250\\,\\Omega$",
+        "$50\\,\\Omega$",
+        "$1000\\,\\Omega$",
+        "$500\\,\\Omega$"
+      ],
+      "answer": 3,
+      "explanation": "$Z_0=\\sqrt{\\dfrac{L}{C}}=\\sqrt{\\dfrac{25\\times10^{-6}}{100\\times10^{-12}}}=500\\,\\Omega$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.2.a8",
+      "subject": "ct",
+      "major": "ct.2",
+      "stem": "신호흐름선도에서 전향경로 이득 $P_1=36$, $\\Delta_1=1$ 이고 세 폐루프 이득이 $L_1=-2$, $L_2=-3$, $L_3=-4$ 이다. $L_1$ 과 $L_3$ 만 서로 접촉하지 않으며 전향경로는 모든 루프와 접촉한다. 메이슨 공식에 의한 전달함수는?",
+      "choices": [
+        "$2$",
+        "$3.6$",
+        "$1.44$",
+        "$4.5$"
+      ],
+      "answer": 0,
+      "explanation": "$\\Delta=1-(L_1+L_2+L_3)+(L_1L_3)=1+9+8=18$. $T=\\dfrac{P_1\\Delta_1}{\\Delta}=\\dfrac{36}{18}=2$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.2.a9",
+      "subject": "ct",
+      "major": "ct.2",
+      "stem": "특성방정식 $s^3+4s^2+5s+K=0$ 이 안정하기 위한 $K$ 의 범위는? (라우스-후르비츠 판별법)",
+      "choices": [
+        "$0<K<5$",
+        "$K>20$",
+        "$0<K<20$",
+        "$0<K<10$"
+      ],
+      "answer": 2,
+      "explanation": "$s^1$ 행 $\\dfrac{4\\times5-K}{4}=\\dfrac{20-K}{4}>0 \\Rightarrow K<20$, $s^0$ 행 $K>0$. 따라서 $0<K<20$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.2.a10",
+      "subject": "ct",
+      "major": "ct.2",
+      "stem": "2차 제어계의 전달함수가 $\\dfrac{C(s)}{R(s)}=\\dfrac{25}{s^2+6s+25}$ 일 때 감쇠비 $\\zeta$ 는?",
+      "choices": [
+        "$0.5$",
+        "$0.6$",
+        "$0.3$",
+        "$0.75$"
+      ],
+      "answer": 1,
+      "explanation": "$\\omega_n^2=25 \\Rightarrow \\omega_n=5$, $2\\zeta\\omega_n=6 \\Rightarrow \\zeta=\\dfrac{6}{10}=0.6$.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.1.a1",
+      "subject": "kec",
+      "major": "kec.1",
+      "stem": "현행 KEC의 전압 종별 구분에서 '저압'에 해당하는 것으로 옳은 것은?",
+      "choices": [
+        "교류 $1.5\\ \\mathrm{kV}$ 이하, 직류 $1\\ \\mathrm{kV}$ 이하",
+        "교류 $1\\ \\mathrm{kV}$ 이하, 직류 $1.5\\ \\mathrm{kV}$ 이하",
+        "교류 $7\\ \\mathrm{kV}$ 이하, 직류 $7\\ \\mathrm{kV}$ 이하",
+        "교류·직류 모두 $600\\ \\mathrm{V}$ 이하"
+      ],
+      "answer": 1,
+      "explanation": "KEC 111.1. 저압은 교류 $1\\ \\mathrm{kV}$ 이하·직류 $1.5\\ \\mathrm{kV}$ 이하, 고압은 이를 초과하고 $7\\ \\mathrm{kV}$ 이하, 특고압은 $7\\ \\mathrm{kV}$ 초과.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.2.a2",
+      "subject": "kec",
+      "major": "kec.2",
+      "stem": "저압 전로의 절연저항에서 사용전압 구분이 SELV 및 PELV인 전로에 요구되는 절연저항 최솟값은?",
+      "choices": [
+        "$0.5\\ \\mathrm{M\\Omega}$",
+        "$1.0\\ \\mathrm{M\\Omega}$",
+        "$0.3\\ \\mathrm{M\\Omega}$",
+        "$0.1\\ \\mathrm{M\\Omega}$"
+      ],
+      "answer": 0,
+      "explanation": "KEC 132 절연저항 표. SELV·PELV는 $0.5\\ \\mathrm{M\\Omega}$(DC $250\\ \\mathrm{V}$), FELV·$500\\ \\mathrm{V}$ 이하는 $1.0\\ \\mathrm{M\\Omega}$.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.1.a3",
+      "subject": "kec",
+      "major": "kec.1",
+      "stem": "최대사용전압이 $7\\ \\mathrm{kV}$ 이하인 전로에 대해 연속 10분간 가하는 절연내력 시험전압은 최대사용전압의 몇 배인가?",
+      "choices": [
+        "1.25배",
+        "1.5배",
+        "0.92배",
+        "1.1배"
+      ],
+      "answer": 1,
+      "explanation": "KEC 132 표 132-1. 최대사용전압 $7\\ \\mathrm{kV}$ 이하는 1.5배(최저 $500\\ \\mathrm{V}$). 0.92배는 $7$ 초과 $25\\ \\mathrm{kV}$ 이하 중성점 다중접지식.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.1.a4",
+      "subject": "kec",
+      "major": "kec.1",
+      "stem": "접지를 하는 방식에 따라 구분한 접지시스템의 시설 종류로 KEC가 규정하지 않는 것은?",
+      "choices": [
+        "단독접지",
+        "공통접지",
+        "통합접지",
+        "다중접지"
+      ],
+      "answer": 3,
+      "explanation": "KEC 141. 접지시스템은 단독·공통·통합접지로 구분한다. 저압 계통접지는 TN·TT·IT.",
+      "type": "개념"
+    },
+    {
+      "id": "kec.2.a5",
+      "subject": "kec",
+      "major": "kec.2",
+      "stem": "저압 계통접지 방식 중, 전원의 한 점을 직접 접지하고 설비의 노출도전부는 전원 접지극과 전기적으로 독립된 별도의 접지극에 접속하는 방식은?",
+      "choices": [
+        "TN-S 계통",
+        "TN-C 계통",
+        "TT 계통",
+        "IT 계통"
+      ],
+      "answer": 2,
+      "explanation": "KEC 203. TT 계통은 전원 한 점을 직접접지하고 노출도전부는 독립된 접지극에 접속한다.",
+      "type": "개념"
+    },
+    {
+      "id": "kec.1.a6",
+      "subject": "kec",
+      "major": "kec.1",
+      "stem": "특고압·고압 전기설비용 접지도체는 단면적 얼마 이상의 연동선(구리)을 사용하여야 하는가?",
+      "choices": [
+        "$2.5\\ \\mathrm{mm^2}$",
+        "$6\\ \\mathrm{mm^2}$",
+        "$10\\ \\mathrm{mm^2}$",
+        "$16\\ \\mathrm{mm^2}$"
+      ],
+      "answer": 1,
+      "explanation": "KEC 142.3.1. 특고압·고압 전기설비용 접지도체는 구리 $6\\ \\mathrm{mm^2}$ 이상, 중성점 접지용은 $16\\ \\mathrm{mm^2}$ 이상.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.2.a7",
+      "subject": "kec",
+      "major": "kec.2",
+      "stem": "보호도체 재질이 선도체와 같을 때, 선도체 단면적 $S$ 가 $16\\ \\mathrm{mm^2} < S \\le 35\\ \\mathrm{mm^2}$ 이면 보호도체의 최소단면적은?",
+      "choices": [
+        "$S$ 와 동일",
+        "$16\\ \\mathrm{mm^2}$",
+        "$S/2$",
+        "$25\\ \\mathrm{mm^2}$"
+      ],
+      "answer": 1,
+      "explanation": "KEC 142.3.2 표 142.3-1. $S\\le16$ 이면 $S$, $16<S\\le35$ 이면 $16\\ \\mathrm{mm^2}$ 고정, $S>35$ 이면 $S/2$.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.3.a8",
+      "subject": "kec",
+      "major": "kec.3",
+      "stem": "고압 가공전선이 도로를 횡단하는 경우, 전선의 지표상 높이는 최소 몇 m 이상이어야 하는가?",
+      "choices": [
+        "$5\\ \\mathrm{m}$",
+        "$6\\ \\mathrm{m}$",
+        "$6.5\\ \\mathrm{m}$",
+        "$3.5\\ \\mathrm{m}$"
+      ],
+      "answer": 1,
+      "explanation": "KEC 332.5. 도로 횡단 $6\\ \\mathrm{m}$, 철도·궤도 횡단 $6.5\\ \\mathrm{m}$, 횡단보도교 위 $3.5\\ \\mathrm{m}$, 기타 $5\\ \\mathrm{m}$ 이상.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.3.a9",
+      "subject": "kec",
+      "major": "kec.3",
+      "stem": "지중전선로를 직접매설식으로 시설할 때, 차량 등 중량물의 압력을 받을 우려가 있는 장소의 최소 매설깊이는?",
+      "choices": [
+        "$0.6\\ \\mathrm{m}$",
+        "$0.8\\ \\mathrm{m}$",
+        "$1.0\\ \\mathrm{m}$",
+        "$1.2\\ \\mathrm{m}$"
+      ],
+      "answer": 2,
+      "explanation": "KEC 334.1. 압력을 받을 우려가 있는 장소는 $1.0\\ \\mathrm{m}$ 이상, 그 외는 $0.6\\ \\mathrm{m}$ 이상.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.2.a10",
+      "subject": "kec",
+      "major": "kec.2",
+      "stem": "TN 계통에서 정격전류 $32\\ \\mathrm{A}$ 이하 분기회로의 대지전압 $U_0$ 가 $120\\ \\mathrm{V} < U_0 \\le 230\\ \\mathrm{V}$(교류)일 때, 표 211.2-1에 따른 최대 차단시간은?",
+      "choices": [
+        "$0.2\\ \\mathrm{s}$",
+        "$0.4\\ \\mathrm{s}$",
+        "$0.8\\ \\mathrm{s}$",
+        "$5\\ \\mathrm{s}$"
+      ],
+      "answer": 1,
+      "explanation": "KEC 211.2 표 211.2-1. TN·교류 $120<U_0\\le230$ 구간 최대 차단시간은 $0.4\\ \\mathrm{s}$(TT는 $0.2\\ \\mathrm{s}$).",
+      "type": "계산"
+    },
+    {
+      "id": "kec.5.a11",
+      "subject": "kec",
+      "major": "kec.5",
+      "stem": "주택의 옥내에 시설하는 태양광설비·전기저장장치 등 분산형전원의 직류 전로에서 대지전압은 최대 몇 V 이하로 제한되는가?",
+      "choices": [
+        "$300\\ \\mathrm{V}$",
+        "$400\\ \\mathrm{V}$",
+        "$600\\ \\mathrm{V}$",
+        "$750\\ \\mathrm{V}$"
+      ],
+      "answer": 2,
+      "explanation": "주택 옥내 직류 전로의 대지전압은 조건 만족 시 $600\\ \\mathrm{V}$ 이하로 제한한다.",
+      "type": "계산"
+    },
+    {
+      "id": "em.1.b1",
+      "subject": "em",
+      "major": "em.1",
+      "stem": "공기 중에서 $+5\\,\\mu\\mathrm{C}$ 과 $-3\\,\\mu\\mathrm{C}$ 의 두 점전하가 $0.3\\,\\mathrm{m}$ 떨어져 있다. 두 전하 사이에 작용하는 힘의 크기는?",
+      "choices": [
+        "$1.5\\,\\mathrm{N}$",
+        "$0.45\\,\\mathrm{N}$",
+        "$3.0\\,\\mathrm{N}$",
+        "$0.75\\,\\mathrm{N}$"
+      ],
+      "answer": 0,
+      "explanation": "$F=9\\times10^9\\times\\dfrac{(5\\times10^{-6})(3\\times10^{-6})}{0.3^2}=\\dfrac{0.135}{0.09}=1.5\\,\\mathrm{N}$ (인력).",
+      "type": "계산"
+    },
+    {
+      "id": "em.1.b2",
+      "subject": "em",
+      "major": "em.1",
+      "stem": "진공 중 한 점 P 로부터 $0.1\\,\\mathrm{m}$ 떨어진 곳에 $+4\\,\\mathrm{nC}$, $0.2\\,\\mathrm{m}$ 떨어진 곳에 $-3\\,\\mathrm{nC}$ 의 점전하가 있다. 점 P 의 전위는?",
+      "choices": [
+        "$225\\,\\mathrm{V}$",
+        "$315\\,\\mathrm{V}$",
+        "$135\\,\\mathrm{V}$",
+        "$90\\,\\mathrm{V}$"
+      ],
+      "answer": 0,
+      "explanation": "$V=9\\times10^9\\left(\\dfrac{4\\times10^{-9}}{0.1}+\\dfrac{-3\\times10^{-9}}{0.2}\\right)=9\\times10^9\\times25\\times10^{-9}=225\\,\\mathrm{V}$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.1.b3",
+      "subject": "em",
+      "major": "em.1",
+      "stem": "가우스 법칙에 대한 설명으로 옳은 것은?",
+      "choices": [
+        "폐곡면 외부 전하도 그 폐곡면을 통과하는 전속 총량에 기여한다.",
+        "폐곡면을 통과하는 전속 총량은 내부 총 전하량과 같고 외부 전하와는 무관하다.",
+        "내부 총 전하가 0이면 폐곡면 위 전계는 어디서나 반드시 0이다.",
+        "전속밀도의 폐곡면 면적분은 내부 전하량의 $\\dfrac{1}{\\varepsilon_0}$ 배이다."
+      ],
+      "answer": 1,
+      "explanation": "$\\oint \\vec{D}\\cdot d\\vec{S}=Q_{enc}$. 전속밀도 면적분은 내부 전하량 그 자체이고 외부 전하와 무관하다.",
+      "type": "개념"
+    },
+    {
+      "id": "em.2.b4",
+      "subject": "em",
+      "major": "em.2",
+      "stem": "무한 접지 도체 평면에서 수직으로 $0.05\\,\\mathrm{m}$ 떨어진 위치에 $+2\\,\\mathrm{nC}$ 의 점전하가 있다. 이 전하가 평면으로부터 받는 힘의 크기는?",
+      "choices": [
+        "$14.4\\,\\mu\\mathrm{N}$",
+        "$7.2\\,\\mu\\mathrm{N}$",
+        "$3.6\\,\\mu\\mathrm{N}$",
+        "$1.8\\,\\mu\\mathrm{N}$"
+      ],
+      "answer": 2,
+      "explanation": "$F=9\\times10^9\\times\\dfrac{(2\\times10^{-9})^2}{(2\\times0.05)^2}=\\dfrac{3.6\\times10^{-8}}{0.01}=3.6\\,\\mu\\mathrm{N}$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.2.b5",
+      "subject": "em",
+      "major": "em.2",
+      "stem": "극판 면적 $0.02\\,\\mathrm{m^2}$, 간격 $1\\,\\mathrm{mm}$ 인 평행판 사이를 비유전율 $4$ 인 유전체로 채웠다. 정전용량은? ($\\varepsilon_0=8.855\\times10^{-12}\\,\\mathrm{F/m}$)",
+      "choices": [
+        "$708\\,\\mathrm{pF}$",
+        "$177\\,\\mathrm{pF}$",
+        "$354\\,\\mathrm{pF}$",
+        "$1416\\,\\mathrm{pF}$"
+      ],
+      "answer": 0,
+      "explanation": "$C=\\dfrac{\\varepsilon_0\\varepsilon_r A}{d}=\\dfrac{8.855\\times10^{-12}\\times4\\times0.02}{10^{-3}}\\approx708\\,\\mathrm{pF}$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.2.b6",
+      "subject": "em",
+      "major": "em.2",
+      "stem": "$2.5\\,\\mu\\mathrm{F}$ 의 콘덴서를 $120\\,\\mathrm{V}$ 로 충전할 때 축적되는 정전에너지는?",
+      "choices": [
+        "$36\\,\\mathrm{mJ}$",
+        "$9\\,\\mathrm{mJ}$",
+        "$18\\,\\mathrm{mJ}$",
+        "$72\\,\\mathrm{mJ}$"
+      ],
+      "answer": 2,
+      "explanation": "$W=\\dfrac{1}{2}CV^2=\\dfrac{1}{2}\\times2.5\\times10^{-6}\\times120^2=18\\,\\mathrm{mJ}$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.2.b7",
+      "subject": "em",
+      "major": "em.2",
+      "stem": "도체계의 전위계수 $P_{rs}$ 에 대한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "$P_{rs}=P_{sr}$ 의 대칭 관계가 성립한다.",
+        "모든 전위계수는 양(+)의 값을 가진다.",
+        "$P_{rr}\\ge P_{rs}$ 의 관계가 성립한다.",
+        "$P_{rs}$ 는 도체의 배치·형상과 무관하고 도체 재질에만 의존한다."
+      ],
+      "answer": 3,
+      "explanation": "전위계수는 도체의 기하학적 배치·형상·매질로 정해지며 재질과는 무관하다.",
+      "type": "개념"
+    },
+    {
+      "id": "em.3.b8",
+      "subject": "em",
+      "major": "em.3",
+      "stem": "비유전율 $5$ 인 유전체 내부에 전계 $2\\times10^{5}\\,\\mathrm{V/m}$ 가 인가될 때 분극의 세기는? ($\\varepsilon_0=8.855\\times10^{-12}\\,\\mathrm{F/m}$)",
+      "choices": [
+        "$7.08\\,\\mu\\mathrm{C/m^2}$",
+        "$8.86\\,\\mu\\mathrm{C/m^2}$",
+        "$3.54\\,\\mu\\mathrm{C/m^2}$",
+        "$1.77\\,\\mu\\mathrm{C/m^2}$"
+      ],
+      "answer": 0,
+      "explanation": "$P=\\varepsilon_0(\\varepsilon_r-1)E=8.855\\times10^{-12}\\times4\\times2\\times10^{5}\\approx7.08\\,\\mu\\mathrm{C/m^2}$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.3.b9",
+      "subject": "em",
+      "major": "em.3",
+      "stem": "진전하가 없는 서로 다른 두 유전체의 경계면에서 성립하는 경계조건으로 옳은 것은?",
+      "choices": [
+        "전계의 접선 성분은 경계면 양쪽에서 서로 같다.",
+        "전속밀도의 접선 성분이 경계면 양쪽에서 서로 같다.",
+        "전계의 법선 성분이 경계면 양쪽에서 서로 같다.",
+        "전속밀도의 법선 성분은 경계면에서 항상 불연속이다."
+      ],
+      "answer": 0,
+      "explanation": "진전하가 없으면 전계 접선 성분 연속($E_{t1}=E_{t2}$), 전속밀도 법선 성분 연속($D_{n1}=D_{n2}$).",
+      "type": "개념"
+    },
+    {
+      "id": "em.4.b10",
+      "subject": "em",
+      "major": "em.4",
+      "stem": "무한히 긴 직선 도체에 $15\\,\\mathrm{A}$ 가 흐를 때 도체에서 $0.1\\,\\mathrm{m}$ 떨어진 점의 자계의 세기는?",
+      "choices": [
+        "$47.7\\,\\mathrm{A/m}$",
+        "$23.9\\,\\mathrm{A/m}$",
+        "$11.9\\,\\mathrm{A/m}$",
+        "$95.5\\,\\mathrm{A/m}$"
+      ],
+      "answer": 1,
+      "explanation": "$H=\\dfrac{I}{2\\pi r}=\\dfrac{15}{2\\pi\\times0.1}\\approx23.9\\,\\mathrm{A/m}$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.4.b11",
+      "subject": "em",
+      "major": "em.4",
+      "stem": "반지름 $0.05\\,\\mathrm{m}$, 감은 수 $20$ 회인 원형 코일에 $3\\,\\mathrm{A}$ 가 흐를 때 원의 중심에서의 자계의 세기는?",
+      "choices": [
+        "$600\\,\\mathrm{A/m}$",
+        "$300\\,\\mathrm{A/m}$",
+        "$1200\\,\\mathrm{A/m}$",
+        "$60\\,\\mathrm{A/m}$"
+      ],
+      "answer": 0,
+      "explanation": "$H=\\dfrac{NI}{2a}=\\dfrac{20\\times3}{2\\times0.05}=600\\,\\mathrm{A/m}$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.4.b12",
+      "subject": "em",
+      "major": "em.4",
+      "stem": "평균 반지름 $0.2\\,\\mathrm{m}$, 총 권수 $500$ 회의 환상 솔레노이드에 $2\\,\\mathrm{A}$ 를 흘렸을 때 평균 반지름 위의 자계의 세기는?",
+      "choices": [
+        "$398\\,\\mathrm{A/m}$",
+        "$1592\\,\\mathrm{A/m}$",
+        "$159\\,\\mathrm{A/m}$",
+        "$796\\,\\mathrm{A/m}$"
+      ],
+      "answer": 3,
+      "explanation": "$H=\\dfrac{NI}{2\\pi r}=\\dfrac{500\\times2}{2\\pi\\times0.2}\\approx796\\,\\mathrm{A/m}$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.5.b13",
+      "subject": "em",
+      "major": "em.5",
+      "stem": "길이 $0.25\\,\\mathrm{m}$, 단면적 $4\\times10^{-4}\\,\\mathrm{m^2}$, 권수 $200$ 회인 공심 솔레노이드의 자기 인덕턴스는? ($\\mu_0=4\\pi\\times10^{-7}\\,\\mathrm{H/m}$)",
+      "choices": [
+        "$80.4\\,\\mu\\mathrm{H}$",
+        "$40.2\\,\\mu\\mathrm{H}$",
+        "$160.8\\,\\mu\\mathrm{H}$",
+        "$20.1\\,\\mu\\mathrm{H}$"
+      ],
+      "answer": 0,
+      "explanation": "$L=\\dfrac{\\mu_0 N^2 A}{l}=\\dfrac{4\\pi\\times10^{-7}\\times200^2\\times4\\times10^{-4}}{0.25}\\approx80.4\\,\\mu\\mathrm{H}$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.5.b14",
+      "subject": "em",
+      "major": "em.5",
+      "stem": "두 코일의 자기 인덕턴스가 각각 $10\\,\\mathrm{mH}$, $40\\,\\mathrm{mH}$ 이고 결합계수가 $0.6$ 일 때 상호 인덕턴스는?",
+      "choices": [
+        "$20\\,\\mathrm{mH}$",
+        "$12\\,\\mathrm{mH}$",
+        "$24\\,\\mathrm{mH}$",
+        "$6\\,\\mathrm{mH}$"
+      ],
+      "answer": 1,
+      "explanation": "$M=k\\sqrt{L_1 L_2}=0.6\\times\\sqrt{400}=12\\,\\mathrm{mH}$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.5.b15",
+      "subject": "em",
+      "major": "em.5",
+      "stem": "자기 인덕턴스가 각각 $8\\,\\mathrm{mH}$, $12\\,\\mathrm{mH}$ 이고 상호 인덕턴스가 $4\\,\\mathrm{mH}$ 인 두 코일을 가동접속으로 직렬 연결할 때 합성 인덕턴스는?",
+      "choices": [
+        "$28\\,\\mathrm{mH}$",
+        "$12\\,\\mathrm{mH}$",
+        "$20\\,\\mathrm{mH}$",
+        "$24\\,\\mathrm{mH}$"
+      ],
+      "answer": 0,
+      "explanation": "가동접속 $L=L_1+L_2+2M=8+12+8=28\\,\\mathrm{mH}$ (차동은 $12\\,\\mathrm{mH}$).",
+      "type": "계산"
+    },
+    {
+      "id": "em.6.b16",
+      "subject": "em",
+      "major": "em.6",
+      "stem": "평균 자로 길이 $0.3\\,\\mathrm{m}$, 단면적 $5\\times10^{-4}\\,\\mathrm{m^2}$, 비투자율 $1000$ 인 환상 철심에 권수 $300$ 회 코일을 감고 $2\\,\\mathrm{A}$ 를 흘릴 때 자속은? ($\\mu_0=4\\pi\\times10^{-7}\\,\\mathrm{H/m}$)",
+      "choices": [
+        "$1.26\\,\\mathrm{mWb}$",
+        "$0.63\\,\\mathrm{mWb}$",
+        "$2.51\\,\\mathrm{mWb}$",
+        "$0.126\\,\\mathrm{mWb}$"
+      ],
+      "answer": 0,
+      "explanation": "$F=NI=600\\,\\mathrm{AT}$, $R=\\dfrac{l}{\\mu_0\\mu_r A}\\approx4.77\\times10^{5}$, $\\Phi=\\dfrac{F}{R}\\approx1.26\\,\\mathrm{mWb}$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.6.b17",
+      "subject": "em",
+      "major": "em.6",
+      "stem": "강자성체에 대한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "비투자율이 $1$ 보다 매우 크다.",
+        "히스테리시스 현상을 나타낸다.",
+        "내부에 자구(magnetic domain)를 가진다.",
+        "온도를 올려 큐리점을 넘어서면 강자성 성질이 더욱 강해진다."
+      ],
+      "answer": 3,
+      "explanation": "큐리점 이상에서는 자구 배열이 무너져 상자성체로 변해 강자성 성질을 잃는다.",
+      "type": "개념"
+    },
+    {
+      "id": "em.7.b18",
+      "subject": "em",
+      "major": "em.7",
+      "stem": "비유전율 $4$, 비투자율 $1$ 인 완전 유전체 매질의 고유(파동) 임피던스는? (자유공간 고유 임피던스 $377\\,\\Omega$)",
+      "choices": [
+        "$377\\,\\Omega$",
+        "$188.5\\,\\Omega$",
+        "$94.2\\,\\Omega$",
+        "$754\\,\\Omega$"
+      ],
+      "answer": 1,
+      "explanation": "$\\eta=377\\sqrt{\\dfrac{\\mu_r}{\\varepsilon_r}}=377\\times\\dfrac{1}{2}=188.5\\,\\Omega$.",
+      "type": "계산"
+    },
+    {
+      "id": "em.7.b19",
+      "subject": "em",
+      "major": "em.7",
+      "stem": "전자파의 포인팅 벡터 $\\vec{P}=\\vec{E}\\times\\vec{H}$ 에 대한 설명으로 옳은 것은?",
+      "choices": [
+        "단위 면적당 전달되는 전력(전력 밀도)을 나타내며 방향은 전파의 진행 방향과 같다.",
+        "단위는 $\\mathrm{J/m^3}$ 이며 매질 내 에너지 밀도를 나타낸다.",
+        "$\\vec{E}$ 와 $\\vec{H}$ 에 각각 평행한 방향을 향한다.",
+        "크기는 $\\vec{E}$ 와 $\\vec{H}$ 의 크기 차 $|E-H|$ 로 주어진다."
+      ],
+      "answer": 0,
+      "explanation": "포인팅 벡터는 전력 밀도 $[\\mathrm{W/m^2}]$ 이며 방향은 $\\vec{E}$·$\\vec{H}$ 에 수직인 전파 진행 방향이다.",
+      "type": "개념"
+    },
+    {
+      "id": "em.8.b20",
+      "subject": "em",
+      "major": "em.8",
+      "stem": "자속밀도 $0.01\\,\\mathrm{T}$ 인 균일 자계에 수직으로 속력 $3\\times10^{6}\\,\\mathrm{m/s}$ 로 전자가 입사할 때 원운동 반지름은? (전자 질량 $9.11\\times10^{-31}\\,\\mathrm{kg}$, 전하 $1.6\\times10^{-19}\\,\\mathrm{C}$)",
+      "choices": [
+        "$1.71\\,\\mathrm{mm}$",
+        "$0.85\\,\\mathrm{mm}$",
+        "$3.42\\,\\mathrm{mm}$",
+        "$17.1\\,\\mathrm{mm}$"
+      ],
+      "answer": 0,
+      "explanation": "$r=\\dfrac{mv}{qB}=\\dfrac{9.11\\times10^{-31}\\times3\\times10^{6}}{1.6\\times10^{-19}\\times0.01}\\approx1.71\\,\\mathrm{mm}$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.1.b1",
+      "subject": "pw",
+      "major": "pw.1",
+      "stem": "유효낙차 $80\\,[\\mathrm{m}]$, 사용수량 $15\\,[\\mathrm{m^3/s}]$, 종합효율 $90\\%$ 인 수력발전소의 출력은 약 얼마인가?",
+      "choices": [
+        "$10584\\,[\\mathrm{kW}]$",
+        "$11760\\,[\\mathrm{kW}]$",
+        "$9408\\,[\\mathrm{kW}]$",
+        "$8820\\,[\\mathrm{kW}]$"
+      ],
+      "answer": 0,
+      "explanation": "$P=9.8QH\\eta=9.8\\times15\\times80\\times0.9=10584\\,[\\mathrm{kW}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.1.b2",
+      "subject": "pw",
+      "major": "pw.1",
+      "stem": "발열량 $6000\\,[\\mathrm{kcal/kg}]$ 인 연료를 $60000\\,[\\mathrm{kg}]$ 소비하여 $200000\\,[\\mathrm{kWh}]$ 를 발전한 화력발전소의 열효율은 약 얼마인가?",
+      "choices": [
+        "$43.0\\%$",
+        "$55.6\\%$",
+        "$51.7\\%$",
+        "$47.8\\%$"
+      ],
+      "answer": 3,
+      "explanation": "$\\eta=\\dfrac{860\\times200000}{6000\\times60000}\\times100=47.8\\%$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.1.b3",
+      "subject": "pw",
+      "major": "pw.1",
+      "stem": "수차의 특유속도(비속도)가 가장 높은 수차는?",
+      "choices": [
+        "펠턴 수차",
+        "프란시스 수차",
+        "카플란(프로펠러) 수차",
+        "사류 수차"
+      ],
+      "answer": 2,
+      "explanation": "비속도는 저낙차 대유량일수록 높다: 펠턴 < 프란시스 < 사류 < 카플란(프로펠러). 프로펠러형이 가장 높다.",
+      "type": "개념"
+    },
+    {
+      "id": "pw.2.b4",
+      "subject": "pw",
+      "major": "pw.2",
+      "stem": "송전선로의 4단자정수 $A,\\ B,\\ C,\\ D$ 중 정수 $C$ 의 단위로 옳은 것은?",
+      "choices": [
+        "$[\\mho]$",
+        "$[\\Omega]$",
+        "무차원",
+        "$[\\mathrm{V/A}]$"
+      ],
+      "answer": 0,
+      "explanation": "$C=\\dfrac{I_s}{E_r}$ 로 어드미턴스 차원이므로 $[\\mho]$. $A,D$ 무차원, $B$ 는 $[\\Omega]$.",
+      "type": "개념"
+    },
+    {
+      "id": "pw.2.b5",
+      "subject": "pw",
+      "major": "pw.2",
+      "stem": "인덕턴스 $L=1\\,[\\mathrm{mH/km}]$, 정전용량 $C=0.01\\,[\\mu\\mathrm{F/km}]$ 인 무손실 송전선로의 특성임피던스는 약 얼마인가?",
+      "choices": [
+        "$224\\,[\\Omega]$",
+        "$447\\,[\\Omega]$",
+        "$500\\,[\\Omega]$",
+        "$316\\,[\\Omega]$"
+      ],
+      "answer": 3,
+      "explanation": "$Z_0=\\sqrt{\\dfrac{L}{C}}=\\sqrt{\\dfrac{10^{-3}}{0.01\\times10^{-6}}}=\\sqrt{10^5}\\approx316\\,[\\Omega]$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.2.b6",
+      "subject": "pw",
+      "major": "pw.2",
+      "stem": "무부하 또는 경부하인 장거리 송전선로에서 수전단 전압이 송전단 전압보다 높아지는 페란티 현상의 방지 대책으로 옳은 것은?",
+      "choices": [
+        "수전단에 분로(병렬)리액터를 설치한다",
+        "선로에 직렬콘덴서를 설치한다",
+        "수전단에 전력용 콘덴서를 증설한다",
+        "복도체를 채용한다"
+      ],
+      "answer": 0,
+      "explanation": "페란티는 진상 충전전류가 원인. 지상 무효전력을 공급하는 분로리액터로 진상전류를 상쇄해 방지한다.",
+      "type": "개념"
+    },
+    {
+      "id": "pw.2.b7",
+      "subject": "pw",
+      "major": "pw.2",
+      "stem": "경간 $250\\,[\\mathrm{m}]$, 이도(dip) $6.25\\,[\\mathrm{m}]$ 인 가공전선의 실제 전선 길이는 경간보다 약 얼마나 더 긴가?",
+      "choices": [
+        "$0.21\\,[\\mathrm{m}]$",
+        "$0.83\\,[\\mathrm{m}]$",
+        "$1.25\\,[\\mathrm{m}]$",
+        "$0.42\\,[\\mathrm{m}]$"
+      ],
+      "answer": 3,
+      "explanation": "$\\dfrac{8D^2}{3S}=\\dfrac{8\\times6.25^2}{3\\times250}=\\dfrac{312.5}{750}\\approx0.42\\,[\\mathrm{m}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.3.b8",
+      "subject": "pw",
+      "major": "pw.3",
+      "stem": "1선 지락 고장 시 지락전류가 가장 작아 통신선 유도장해가 가장 적고, 고장 중에도 송전을 계속할 수 있는 중성점 접지방식은?",
+      "choices": [
+        "직접접지방식",
+        "저항접지방식",
+        "소호리액터접지방식",
+        "비접지방식"
+      ],
+      "answer": 2,
+      "explanation": "소호리액터접지는 충전전류를 공진 보상해 지락전류를 거의 0으로 만든다. 직접접지는 지락전류가 가장 크다.",
+      "type": "개념"
+    },
+    {
+      "id": "pw.3.b9",
+      "subject": "pw",
+      "major": "pw.3",
+      "stem": "1선 대지 정전용량이 $C$ 인 3상 송전선로에서 소호리액터가 대지 충전전류를 완전히 보상하기 위한 공진 조건으로 옳은 것은? (각주파수 $\\omega$)",
+      "choices": [
+        "$\\omega L=\\dfrac{1}{3\\omega C}$",
+        "$\\omega L=3\\omega C$",
+        "$\\omega L=\\dfrac{1}{\\omega C}$",
+        "$\\omega L=\\dfrac{3}{\\omega C}$"
+      ],
+      "answer": 0,
+      "explanation": "완전 보상 공진 조건 $\\omega L=\\dfrac{1}{3\\omega C}$, 즉 $L=\\dfrac{1}{3\\omega^2 C}$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.3.b10",
+      "subject": "pw",
+      "major": "pw.3",
+      "stem": "송전선로에 직렬콘덴서를 설치하는 주된 목적으로 옳은 것은?",
+      "choices": [
+        "선로의 대지 정전용량을 키워 충전전류를 늘린다",
+        "선로의 직렬 리액턴스를 보상하여 전압강하를 줄이고 안정도를 높인다",
+        "계통의 단락전류를 크게 하여 계전기 동작을 빠르게 한다",
+        "페란티 현상을 촉진하여 수전단 전압을 높인다"
+      ],
+      "answer": 1,
+      "explanation": "직렬콘덴서는 용량성 리액턴스로 선로의 유도성 리액턴스를 상쇄해 전압강하 감소·안정도 향상.",
+      "type": "개념"
+    },
+    {
+      "id": "pw.3.b11",
+      "subject": "pw",
+      "major": "pw.3",
+      "stem": "각 수용가의 최대수요전력이 각각 $200,\\ 150,\\ 250\\,[\\mathrm{kW}]$ 이고, 합성최대수요전력이 $480\\,[\\mathrm{kW}]$ 일 때 부등률은 얼마인가?",
+      "choices": [
+        "$0.8$",
+        "$1.0$",
+        "$1.25$",
+        "$1.5$"
+      ],
+      "answer": 2,
+      "explanation": "부등률 $=\\dfrac{200+150+250}{480}=\\dfrac{600}{480}=1.25$ (항상 1 이상).",
+      "type": "계산"
+    },
+    {
+      "id": "pw.3.b12",
+      "subject": "pw",
+      "major": "pw.3",
+      "stem": "하루 사용전력량이 $4800\\,[\\mathrm{kWh}]$ 이고 최대수요전력이 $400\\,[\\mathrm{kW}]$ 인 수용가의 일부하율은 얼마인가?",
+      "choices": [
+        "$40\\%$",
+        "$50\\%$",
+        "$60\\%$",
+        "$75\\%$"
+      ],
+      "answer": 1,
+      "explanation": "평균전력 $\\dfrac{4800}{24}=200\\,[\\mathrm{kW}]$, 부하율 $\\dfrac{200}{400}=50\\%$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.4.b13",
+      "subject": "pw",
+      "major": "pw.4",
+      "stem": "$10\\,[\\mathrm{MVA}]$ 를 기준으로 한 어떤 기기의 퍼센트 임피던스가 $6\\%$ 이다. 이를 $100\\,[\\mathrm{MVA}]$ 기준으로 환산하면 얼마인가?",
+      "choices": [
+        "$0.6\\%$",
+        "$6\\%$",
+        "$30\\%$",
+        "$60\\%$"
+      ],
+      "answer": 3,
+      "explanation": "$\\%Z$ 는 기준용량에 비례: $6\\times\\dfrac{100}{10}=60\\%$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.4.b14",
+      "subject": "pw",
+      "major": "pw.4",
+      "stem": "고장점까지의 전압과 전류의 비, 즉 임피던스를 측정하여 고장점까지의 거리에 따라 동작하는 계전기는?",
+      "choices": [
+        "과전류계전기",
+        "부족전압계전기",
+        "거리계전기",
+        "차동계전기"
+      ],
+      "answer": 2,
+      "explanation": "거리계전기는 $Z=V/I$ 를 측정해 일정 거리 이내 고장에 동작한다.",
+      "type": "개념"
+    },
+    {
+      "id": "pw.4.b15",
+      "subject": "pw",
+      "major": "pw.4",
+      "stem": "동작전류(고장전류)의 크기와 관계없이 항상 일정한 시간에 동작하는 보호계전기의 한시 특성은?",
+      "choices": [
+        "순한시 계전기",
+        "정한시 계전기",
+        "반한시 계전기",
+        "반한시성 정한시 계전기"
+      ],
+      "answer": 1,
+      "explanation": "정한시는 정정치 초과 시 전류 크기와 무관하게 일정 시간 후 동작한다.",
+      "type": "개념"
+    },
+    {
+      "id": "pw.5.b16",
+      "subject": "pw",
+      "major": "pw.5",
+      "stem": "동일 전력을 동일 선간전압으로 송전할 때, 전력손실이 같다는 조건에서 3상 3선식 배전선로에 필요한 전선의 총 소요량은 단상 2선식의 약 몇 [%] 인가?",
+      "choices": [
+        "$75\\%$",
+        "$50\\%$",
+        "$87.5\\%$",
+        "$100\\%$"
+      ],
+      "answer": 0,
+      "explanation": "단상2선 $100\\%$ 기준: 단상3선 $37.5\\%$, 3상3선 $75\\%$, 3상4선 $33.3\\%$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.5.b17",
+      "subject": "pw",
+      "major": "pw.5",
+      "stem": "단상 2선식 선로에서 부하전류가 $20\\,[\\mathrm{A}]$, 한 가닥 전선의 저항이 $0.3\\,[\\Omega]$ 일 때 선로에서의 전력손실은 얼마인가?",
+      "choices": [
+        "$120\\,[\\mathrm{W}]$",
+        "$360\\,[\\mathrm{W}]$",
+        "$480\\,[\\mathrm{W}]$",
+        "$240\\,[\\mathrm{W}]$"
+      ],
+      "answer": 3,
+      "explanation": "$P_l=2I^2R=2\\times20^2\\times0.3=240\\,[\\mathrm{W}]$ (왕복 2가닥).",
+      "type": "계산"
+    },
+    {
+      "id": "pw.6.b18",
+      "subject": "pw",
+      "major": "pw.6",
+      "stem": "피뢰기(LA)의 정격전압에 대한 설명으로 옳은 것은?",
+      "choices": [
+        "방전 중 피뢰기 단자에 나타나는 최고 전압",
+        "속류를 차단할 수 있는 최고의 교류전압(실효값)",
+        "피뢰기가 방전을 개시하는 최저 전압",
+        "계통에 인가되는 최대 상전압"
+      ],
+      "answer": 1,
+      "explanation": "피뢰기 정격전압은 속류를 차단하고 회복시킬 수 있는 최고 교류전압(실효값). 방전 중 최고는 제한전압.",
+      "type": "개념"
+    },
+    {
+      "id": "pw.7.b19",
+      "subject": "pw",
+      "major": "pw.7",
+      "stem": "정격전압 $25.8\\,[\\mathrm{kV}]$, 정격차단전류 $25\\,[\\mathrm{kA}]$ 인 3상용 차단기의 정격차단용량은 약 얼마인가?",
+      "choices": [
+        "$645\\,[\\mathrm{MVA}]$",
+        "$774\\,[\\mathrm{MVA}]$",
+        "$1117\\,[\\mathrm{MVA}]$",
+        "$1935\\,[\\mathrm{MVA}]$"
+      ],
+      "answer": 2,
+      "explanation": "$P_s=\\sqrt{3}\\,V_n I_s=\\sqrt{3}\\times25.8\\times25\\approx1117\\,[\\mathrm{MVA}]$.",
+      "type": "계산"
+    },
+    {
+      "id": "pw.7.b20",
+      "subject": "pw",
+      "major": "pw.7",
+      "stem": "차단기의 정격차단시간에 대한 정의로 옳은 것은?",
+      "choices": [
+        "고장 발생 순간부터 트립코일이 여자될 때까지의 시간",
+        "트립코일이 여자되는 순간부터 아크가 소호될 때까지의 시간(개극시간 + 아크시간)",
+        "차단기 접점이 열리기 시작할 때까지의 개극시간만을 의미",
+        "아크가 발생하여 소호될 때까지의 아크시간만을 의미"
+      ],
+      "answer": 1,
+      "explanation": "정격차단시간 = 개극시간 + 아크시간(트립코일 여자~아크 소호). 보통 사이클로 표시.",
+      "type": "개념"
+    },
+    {
+      "id": "mc.1.b1",
+      "subject": "mc",
+      "major": "mc.1",
+      "stem": "극수 $8$, 전기자 총 도체수 $600$, 중권($a=p$), 매극 자속 $0.03\\ \\mathrm{Wb}$ 인 직류발전기가 $1000\\ \\mathrm{rpm}$ 으로 회전할 때 유기기전력[V]은?",
+      "choices": [
+        "$200$",
+        "$300$",
+        "$400$",
+        "$600$"
+      ],
+      "answer": 1,
+      "explanation": "$E=\\dfrac{pZ\\Phi N}{60a}$, 중권 $a=p=8$. $E=\\dfrac{8\\cdot600\\cdot0.03\\cdot1000}{60\\cdot8}=300\\ \\mathrm{V}$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.1.b2",
+      "subject": "mc",
+      "major": "mc.1",
+      "stem": "무부하 시 회전속도가 $1260\\ \\mathrm{rpm}$, 정격부하 시 회전속도가 $1200\\ \\mathrm{rpm}$ 인 직류전동기의 속도변동률[%]은?",
+      "choices": [
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$"
+      ],
+      "answer": 2,
+      "explanation": "$\\varepsilon=\\dfrac{N_0-N_n}{N_n}\\times100=\\dfrac{1260-1200}{1200}\\times100=5\\ [\\%]$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.1.b3",
+      "subject": "mc",
+      "major": "mc.1",
+      "stem": "타여자 직류전동기가 단자전압 $220\\ \\mathrm{V}$, 전기자전류 $40\\ \\mathrm{A}$, 전기자저항 $0.25\\ \\Omega$ 으로 운전 중일 때 역기전력[V]은?",
+      "choices": [
+        "$200$",
+        "$205$",
+        "$210$",
+        "$220$"
+      ],
+      "answer": 2,
+      "explanation": "$E_b=V-I_aR_a=220-40\\cdot0.25=210\\ \\mathrm{V}$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.1.b4",
+      "subject": "mc",
+      "major": "mc.1",
+      "stem": "직류기에서 불꽃 없는 양호한 정류를 얻기 위한 대책으로 옳지 않은 것은?",
+      "choices": [
+        "보극(전위 자극)을 설치한다",
+        "탄소브러시를 사용하여 브러시의 접촉저항을 크게 한다",
+        "정류주기를 길게 한다",
+        "정류코일의 리액턴스 전압을 크게 한다"
+      ],
+      "answer": 3,
+      "explanation": "양호한 정류를 위해 리액턴스 전압은 작게 해야 한다. 리액턴스 전압을 크게 하면 정류가 나빠진다.",
+      "type": "개념"
+    },
+    {
+      "id": "mc.1.b5",
+      "subject": "mc",
+      "major": "mc.1",
+      "stem": "정격출력 $10\\ \\mathrm{kW}$, 전손실 $1\\ \\mathrm{kW}$ 인 직류발전기의 규약효율[%]은?",
+      "choices": [
+        "$88.0$",
+        "$89.5$",
+        "$90.9$",
+        "$92.5$"
+      ],
+      "answer": 2,
+      "explanation": "발전기 규약효율 $\\eta=\\dfrac{P}{P+P_\\ell}\\times100=\\dfrac{10000}{11000}\\times100=90.9\\ [\\%]$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.2.b6",
+      "subject": "mc",
+      "major": "mc.2",
+      "stem": "$60\\ \\mathrm{Hz}$ 에서 동기속도 $720\\ \\mathrm{rpm}$ 을 얻으려면 동기발전기의 극수는?",
+      "choices": [
+        "$8$",
+        "$10$",
+        "$12$",
+        "$14$"
+      ],
+      "answer": 1,
+      "explanation": "$p=\\dfrac{120f}{N_s}=\\dfrac{120\\cdot60}{720}=10$ 극.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.2.b7",
+      "subject": "mc",
+      "major": "mc.2",
+      "stem": "무부하에서 정격전압을 유기하는 데 필요한 계자전류가 $120\\ \\mathrm{A}$, 3상 단락 시 정격전류를 흐르게 하는 계자전류가 $80\\ \\mathrm{A}$ 인 동기발전기의 단락비는?",
+      "choices": [
+        "$0.67$",
+        "$1.25$",
+        "$1.5$",
+        "$1.8$"
+      ],
+      "answer": 2,
+      "explanation": "$K_s=\\dfrac{I_{f1}}{I_{f2}}=\\dfrac{120}{80}=1.5$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.2.b8",
+      "subject": "mc",
+      "major": "mc.2",
+      "stem": "정격전압이 $6000\\ \\mathrm{V}$ 이고 무부하 유기기전력이 $6600\\ \\mathrm{V}$ 인 동기발전기의 전압변동률[%]은?",
+      "choices": [
+        "$6$",
+        "$8$",
+        "$10$",
+        "$12$"
+      ],
+      "answer": 2,
+      "explanation": "$\\varepsilon=\\dfrac{E_0-V_n}{V_n}\\times100=\\dfrac{6600-6000}{6000}\\times100=10\\ [\\%]$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.2.b9",
+      "subject": "mc",
+      "major": "mc.2",
+      "stem": "동기전동기를 과여자(계자전류를 크게)로 운전할 때 전기자전류의 위상과 작용으로 옳은 것은?",
+      "choices": [
+        "앞선(진상) 전류가 흘러 콘덴서로 작용한다",
+        "뒤진(지상) 전류가 흘러 리액터로 작용한다",
+        "역률이 항상 $0$ 이 된다",
+        "전기자전류가 $0$ 이 된다"
+      ],
+      "answer": 0,
+      "explanation": "과여자 시 진상 전류가 흘러 콘덴서로 작용한다(동기조상기 원리).",
+      "type": "개념"
+    },
+    {
+      "id": "mc.4.b10",
+      "subject": "mc",
+      "major": "mc.4",
+      "stem": "1차 권수 $600$, 2차 권수 $150$ 인 변압기의 2차 전류가 $40\\ \\mathrm{A}$ 일 때 1차 전류[A]는?",
+      "choices": [
+        "$10$",
+        "$20$",
+        "$40$",
+        "$160$"
+      ],
+      "answer": 0,
+      "explanation": "$a=\\dfrac{600}{150}=4$, $I_1=\\dfrac{I_2}{a}=\\dfrac{40}{4}=10\\ \\mathrm{A}$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.4.b11",
+      "subject": "mc",
+      "major": "mc.4",
+      "stem": "백분율 임피던스가 $5\\%$ 인 변압기의 단락전류는 정격전류의 몇 배인가?",
+      "choices": [
+        "$5$ 배",
+        "$10$ 배",
+        "$20$ 배",
+        "$25$ 배"
+      ],
+      "answer": 2,
+      "explanation": "단락전류는 정격의 $\\dfrac{100}{\\%Z}=\\dfrac{100}{5}=20$ 배.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.4.b12",
+      "subject": "mc",
+      "major": "mc.4",
+      "stem": "정격용량 $10\\ \\mathrm{kVA}$, 철손 $120\\ \\mathrm{W}$, 전부하 동손 $200\\ \\mathrm{W}$ 인 변압기의 역률 $100\\%$, 전부하 시 효율[%]은?",
+      "choices": [
+        "$94.5$",
+        "$95.8$",
+        "$96.9$",
+        "$98.0$"
+      ],
+      "answer": 2,
+      "explanation": "$\\eta=\\dfrac{10000}{10000+120+200}\\times100=96.9\\ [\\%]$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.4.b13",
+      "subject": "mc",
+      "major": "mc.4",
+      "stem": "단상변압기 3대로 $\\Delta{-}\\Delta$ 결선하여 운전 중 1대가 고장나 V결선으로 운전할 때, 고장 전 대비 출력비[%]는?",
+      "choices": [
+        "$57.7$",
+        "$66.7$",
+        "$75.0$",
+        "$86.6$"
+      ],
+      "answer": 0,
+      "explanation": "$\\dfrac{P_V}{P_\\Delta}=\\dfrac{\\sqrt{3}VI}{3VI}=\\dfrac{1}{\\sqrt{3}}=57.7\\ [\\%]$ (이용률 $86.6\\%$ 와 구분).",
+      "type": "계산"
+    },
+    {
+      "id": "mc.4.b14",
+      "subject": "mc",
+      "major": "mc.4",
+      "stem": "변압기의 $Y{-}Y$ 결선이 실제로 거의 사용되지 않는 주된 이유로 옳은 것은?",
+      "choices": [
+        "제3고조파 전류의 통로가 없어 유기기전력에 제3고조파가 포함되고 통신선에 유도장해를 일으킨다",
+        "중성점을 접지할 수 없다",
+        "선간전압과 상전압의 위상차가 $30^\\circ$ 이다",
+        "V결선으로 운전할 수 없다"
+      ],
+      "answer": 0,
+      "explanation": "$Y{-}Y$ 는 제3고조파 여자전류 통로가 없어 기전력에 제3고조파가 포함되고 유도장해를 일으킨다(그래서 $Y{-}Y{-}\\Delta$ 사용).",
+      "type": "개념"
+    },
+    {
+      "id": "mc.5.b15",
+      "subject": "mc",
+      "major": "mc.5",
+      "stem": "$8$ 극 $60\\ \\mathrm{Hz}$ 3상 유도전동기가 슬립 $5\\%$ 로 운전할 때 회전자의 회전속도[rpm]는?",
+      "choices": [
+        "$810$",
+        "$855$",
+        "$900$",
+        "$945$"
+      ],
+      "answer": 1,
+      "explanation": "$N_s=\\dfrac{120\\cdot60}{8}=900$, $N=(1-0.05)\\cdot900=855\\ \\mathrm{rpm}$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.5.b16",
+      "subject": "mc",
+      "major": "mc.5",
+      "stem": "3상 권선형 유도전동기가 2차저항 $r_2$ 일 때 슬립 $0.04$ 에서 최대토크가 발생한다. 2차저항을 $3$ 배로 하면 최대토크가 발생하는 슬립은?",
+      "choices": [
+        "$0.04$",
+        "$0.08$",
+        "$0.12$",
+        "$0.36$"
+      ],
+      "answer": 2,
+      "explanation": "비례추이 $s\\propto r_2$ 이므로 $s=0.04\\times3=0.12$ (최대토크 크기는 불변).",
+      "type": "계산"
+    },
+    {
+      "id": "mc.5.b17",
+      "subject": "mc",
+      "major": "mc.5",
+      "stem": "3상 농형 유도전동기의 기동법으로 적합하지 않은 것은?",
+      "choices": [
+        "전전압(직입) 기동",
+        "$Y{-}\\Delta$ 기동",
+        "기동보상기(단권변압기) 기동",
+        "2차 저항 기동"
+      ],
+      "answer": 3,
+      "explanation": "2차 저항 기동은 권선형 전용이다. 농형은 회전자가 단락돼 외부 저항을 넣을 수 없다.",
+      "type": "개념"
+    },
+    {
+      "id": "mc.5.b18",
+      "subject": "mc",
+      "major": "mc.5",
+      "stem": "슬립 $4\\%$ 로 운전하는 3상 유도전동기의 기계적 출력이 $9.6\\ \\mathrm{kW}$ 일 때 2차 입력[kW]은?",
+      "choices": [
+        "$9.6$",
+        "$10$",
+        "$10.4$",
+        "$12$"
+      ],
+      "answer": 1,
+      "explanation": "$P_2=\\dfrac{P_m}{1-s}=\\dfrac{9600}{0.96}=10000\\ \\mathrm{W}=10\\ \\mathrm{kW}$.",
+      "type": "계산"
+    },
+    {
+      "id": "mc.3.b19",
+      "subject": "mc",
+      "major": "mc.3",
+      "stem": "사이리스터(SCR)에 대한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "PNPN 4층 구조의 역저지 3단자 사이리스터이다",
+        "게이트 신호로 turn-on 시점(점호각)을 제어할 수 있다",
+        "일단 도통되면 게이트 신호만으로는 차단할 수 없다",
+        "애노드 전류가 유지전류 이하로 감소해도 계속 도통 상태를 유지한다"
+      ],
+      "answer": 3,
+      "explanation": "애노드 전류가 유지전류 이하로 감소하면 SCR은 자연히 turn-off 된다. 나머지는 옳다.",
+      "type": "개념"
+    },
+    {
+      "id": "mc.7.b20",
+      "subject": "mc",
+      "major": "mc.7",
+      "stem": "서보모터(servo motor)에 요구되는 특성으로 옳지 않은 것은?",
+      "choices": [
+        "기동토크가 클 것",
+        "회전자의 관성모멘트가 클 것",
+        "응답이 빠르고 제어성이 좋을 것",
+        "넓은 범위의 속도제어가 가능할 것"
+      ],
+      "answer": 1,
+      "explanation": "서보모터는 빠른 응답을 위해 관성모멘트가 작아야 한다. '관성모멘트가 클 것'은 옳지 않다.",
+      "type": "개념"
+    },
+    {
+      "id": "ct.1.b1",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "RC 직렬회로에 $E=100$ V의 직류전압을 $t=0$에서 인가하였다. $R=1\\ \\mathrm{k}\\Omega$, $C=100\\ \\mu\\mathrm{F}$일 때, 시정수와 같은 시각 $t=0.1$ s에서 커패시터 양단 전압은 약 몇 V인가?",
+      "choices": [
+        "$36.8$ V",
+        "$63.2$ V",
+        "$86.5$ V",
+        "$100$ V"
+      ],
+      "answer": 1,
+      "explanation": "$\\tau=RC=0.1$ s. $v_C(\\tau)=E(1-e^{-1})=100\\times0.632=63.2$ V.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.b2",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "RL 직렬회로에 $E=20$ V를 $t=0$에서 인가한다. $R=4\\ \\Omega$, $L=0.2$ H일 때 $t=0.05$ s에서 회로에 흐르는 전류는 약 몇 A인가?",
+      "choices": [
+        "$5.00$ A",
+        "$4.32$ A",
+        "$1.84$ A",
+        "$3.16$ A"
+      ],
+      "answer": 3,
+      "explanation": "$\\tau=\\dfrac{L}{R}=0.05$ s, $I=\\dfrac{E}{R}=5$ A. $i(\\tau)=5(1-e^{-1})=3.16$ A.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.b3",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "$R$-$L$-$C$ 직렬회로에서 $L=0.5$ H, $C=8\\ \\mu\\mathrm{F}$이다. 이 회로가 감쇠진동(부족제동)을 하기 위한 $R$의 조건은?",
+      "choices": [
+        "$R<250\\ \\Omega$",
+        "$R<500\\ \\Omega$",
+        "$R<707\\ \\Omega$",
+        "$R<1000\\ \\Omega$"
+      ],
+      "answer": 1,
+      "explanation": "진동 조건 $R<2\\sqrt{\\dfrac{L}{C}}=2\\sqrt{62500}=500\\ \\Omega$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.b4",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "$F(s)=\\dfrac{s+3}{(s+1)(s+2)}$의 역라플라스 변환 $f(t)$는?",
+      "choices": [
+        "$2e^{-t}-e^{-2t}$",
+        "$-2e^{-t}+3e^{-2t}$",
+        "$e^{-t}+e^{-2t}$",
+        "$2e^{-t}+e^{-2t}$"
+      ],
+      "answer": 0,
+      "explanation": "부분분수 $A=\\left.\\dfrac{s+3}{s+2}\\right|_{s=-1}=2$, $B=\\left.\\dfrac{s+3}{s+1}\\right|_{s=-2}=-1$. $f(t)=2e^{-t}-e^{-2t}$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.b5",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "$F(s)=\\dfrac{2s+10}{s(s^2+4s+5)}$일 때 최종값 정리로 구한 $\\lim_{t\\to\\infty}f(t)$는?",
+      "choices": [
+        "$0$",
+        "$5$",
+        "$\\infty$",
+        "$2$"
+      ],
+      "answer": 3,
+      "explanation": "$\\lim_{s\\to0}sF(s)=\\dfrac{10}{5}=2$. 분모 근이 좌반평면이라 유효.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.b6",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "T형 4단자 회로에서 입력측 직렬 임피던스 $4\\ \\Omega$, 출력측 직렬 임피던스 $6\\ \\Omega$, 중앙 병렬 임피던스 $10\\ \\Omega$이다. $Z$ 파라미터 중 $Z_{11}$은 몇 $\\Omega$인가?",
+      "choices": [
+        "$14\\ \\Omega$",
+        "$16\\ \\Omega$",
+        "$10\\ \\Omega$",
+        "$20\\ \\Omega$"
+      ],
+      "answer": 0,
+      "explanation": "T형에서 $Z_{11}=4+10=14\\ \\Omega$ ($Z_{22}=16$, $Z_{12}=Z_{21}=10$).",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.b7",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "대칭 4단자망의 $F$ 파라미터에서 $B=900\\ \\Omega$, $C=0.01\\ \\mho$이다. 영상임피던스 $Z_0$는 몇 $\\Omega$인가?",
+      "choices": [
+        "$150\\ \\Omega$",
+        "$600\\ \\Omega$",
+        "$450\\ \\Omega$",
+        "$300\\ \\Omega$"
+      ],
+      "answer": 3,
+      "explanation": "대칭망 $Z_0=\\sqrt{\\dfrac{B}{C}}=\\sqrt{90000}=300\\ \\Omega$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.b8",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "평형 3상 $\\Delta$결선 부하에 선간전압 $200$ V를 인가하였다. 각 상의 임피던스가 $20\\ \\Omega$일 때 선전류는 약 몇 A인가?",
+      "choices": [
+        "$10$ A",
+        "$17.3$ A",
+        "$20$ A",
+        "$34.6$ A"
+      ],
+      "answer": 1,
+      "explanation": "$I_p=\\dfrac{200}{20}=10$ A, $I_l=\\sqrt{3}\\,I_p=17.3$ A.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.b9",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "2전력계법으로 3상 전력을 측정하니 $W_1=800$ W, $W_2=400$ W였다. 부하의 역률은 약 얼마인가?",
+      "choices": [
+        "$0.5$",
+        "$0.707$",
+        "$0.866$",
+        "$0.95$"
+      ],
+      "answer": 2,
+      "explanation": "$P=1200$ W, $Q=\\sqrt{3}(W_1-W_2)=692.8$ Var, $\\cos\\theta=\\dfrac{1200}{\\sqrt{1200^2+692.8^2}}=0.866$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.b10",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "대칭 3상 발전기의 상전압(대지 기준)이 $100$ V이고, 정상·역상·영상 임피던스가 각각 $Z_1=Z_2=Z_0=5\\ \\Omega$이다. 1선 지락사고 시 지락전류는 몇 A인가?",
+      "choices": [
+        "$6.67$ A",
+        "$10$ A",
+        "$20$ A",
+        "$60$ A"
+      ],
+      "answer": 2,
+      "explanation": "$I_g=\\dfrac{3E}{Z_0+Z_1+Z_2}=\\dfrac{300}{15}=20$ A.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.b11",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "비정현파 전압 $v=100\\sqrt{2}\\sin\\omega t+50\\sqrt{2}\\sin 3\\omega t$ [V]의 실효값은 약 몇 V인가?",
+      "choices": [
+        "$100$ V",
+        "$150$ V",
+        "$125$ V",
+        "$111.8$ V"
+      ],
+      "answer": 3,
+      "explanation": "$V=\\sqrt{100^2+50^2}=\\sqrt{12500}=111.8$ V.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.b12",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "무손실 분포정수 선로의 단위길이당 인덕턴스가 $L=2.5\\ \\mathrm{mH}$, 커패시턴스가 $C=0.01\\ \\mu\\mathrm{F}$이다. 이 선로의 특성임피던스는 몇 $\\Omega$인가?",
+      "choices": [
+        "$250\\ \\Omega$",
+        "$500\\ \\Omega$",
+        "$400\\ \\Omega$",
+        "$1000\\ \\Omega$"
+      ],
+      "answer": 1,
+      "explanation": "$Z_0=\\sqrt{\\dfrac{L}{C}}=\\sqrt{250000}=500\\ \\Omega$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.1.b13",
+      "subject": "ct",
+      "major": "ct.1",
+      "stem": "기전력 $E=100$ V, 내부저항 $25\\ \\Omega$인 전원에 부하저항 $R_L$을 접속한다. $R_L$에 최대 전력이 전달될 때 그 전력은 몇 W인가?",
+      "choices": [
+        "$200$ W",
+        "$400$ W",
+        "$50$ W",
+        "$100$ W"
+      ],
+      "answer": 3,
+      "explanation": "$R_L=25\\ \\Omega$일 때 $P_{max}=\\dfrac{E^2}{4R_L}=\\dfrac{10000}{100}=100$ W.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.2.b14",
+      "subject": "ct",
+      "major": "ct.2",
+      "stem": "부궤환 제어계의 전향경로에 이득 $G_1=3$, $G_2=4$인 블록이 직렬로 있고, 전체에 되먹임 이득 $H=0.5$가 걸려 있다. 폐루프 전달함수 $\\dfrac{C}{R}$는 약 얼마인가?",
+      "choices": [
+        "$1.71$",
+        "$1.5$",
+        "$2.4$",
+        "$12$"
+      ],
+      "answer": 0,
+      "explanation": "$\\dfrac{C}{R}=\\dfrac{G_1G_2}{1+G_1G_2H}=\\dfrac{12}{1+6}=1.71$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.2.b15",
+      "subject": "ct",
+      "major": "ct.2",
+      "stem": "특성방정식이 $s^3+6s^2+8s+K=0$인 제어계가 안정하기 위한 $K$의 범위는?",
+      "choices": [
+        "$K>48$",
+        "$0<K<24$",
+        "$0<K<48$",
+        "$K<8$"
+      ],
+      "answer": 2,
+      "explanation": "$s^1$행 $\\dfrac{48-K}{6}>0 \\Rightarrow K<48$, $s^0$행 $K>0$. 따라서 $0<K<48$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.2.b16",
+      "subject": "ct",
+      "major": "ct.2",
+      "stem": "2차 제어계의 특성방정식이 $s^2+6s+25=0$이다. 감쇠비 $\\zeta$는 얼마인가?",
+      "choices": [
+        "$0.4$",
+        "$0.5$",
+        "$0.6$",
+        "$0.75$"
+      ],
+      "answer": 2,
+      "explanation": "$\\omega_n=5$, $2\\zeta\\omega_n=6 \\Rightarrow \\zeta=0.6$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.2.b17",
+      "subject": "ct",
+      "major": "ct.2",
+      "stem": "단위 부궤환 제어계의 개루프 전달함수가 $G(s)=\\dfrac{20}{s(s+4)}$이다. 단위 램프(속도) 입력에 대한 정상상태 편차는?",
+      "choices": [
+        "$0$",
+        "$0.2$",
+        "$0.5$",
+        "$\\infty$"
+      ],
+      "answer": 1,
+      "explanation": "$K_v=\\lim_{s\\to0}sG(s)=\\dfrac{20}{4}=5$, $e_{ss}=\\dfrac{1}{K_v}=0.2$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.2.b18",
+      "subject": "ct",
+      "major": "ct.2",
+      "stem": "어떤 신호흐름선도에서 입력에서 출력으로 가는 전향경로 이득이 $8$이고, 이 경로와 서로 닿는 폐루프의 이득이 $-3$인 단일 루프 계이다. 메이슨 공식으로 구한 전달함수는?",
+      "choices": [
+        "$2$",
+        "$4$",
+        "$8$",
+        "$1$"
+      ],
+      "answer": 0,
+      "explanation": "$\\Delta=1-(-3)=4$, $\\Delta_1=1$, $T=\\dfrac{8}{4}=2$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.2.b19",
+      "subject": "ct",
+      "major": "ct.2",
+      "stem": "상태방정식 $\\dot{x}=Ax$에서 $A=\\begin{bmatrix}0&1\\\\-2&-3\\end{bmatrix}$일 때 이 계의 특성근은?",
+      "choices": [
+        "$-1,\\ -2$",
+        "$-2,\\ -3$",
+        "$-1,\\ -3$",
+        "$1,\\ 2$"
+      ],
+      "answer": 0,
+      "explanation": "$\\det(sI-A)=s^2+3s+2=(s+1)(s+2)=0 \\Rightarrow s=-1,\\ -2$.",
+      "type": "계산"
+    },
+    {
+      "id": "ct.2.b20",
+      "subject": "ct",
+      "major": "ct.2",
+      "stem": "$X(z)=\\dfrac{z}{(z-1)(z-0.5)}$일 때, Z변환 최종값 정리로 구한 $\\lim_{k\\to\\infty}x(k)$는?",
+      "choices": [
+        "$0$",
+        "$1$",
+        "$2$",
+        "$\\infty$"
+      ],
+      "answer": 2,
+      "explanation": "$\\lim_{z\\to1}(1-z^{-1})X(z)=\\lim_{z\\to1}\\dfrac{1}{z-0.5}=2$. 극점 $z=0.5$가 단위원 내부라 유효.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.1.b1",
+      "subject": "kec",
+      "major": "kec.1",
+      "stem": "KEC에서 전선을 접속할 때, 접속 부분의 전선 세기(인장하중)를 원래의 몇 % 이상 감소시키지 않아야 하는가?",
+      "choices": [
+        "$10\\%$",
+        "$15\\%$",
+        "$20\\%$",
+        "$30\\%$"
+      ],
+      "answer": 2,
+      "explanation": "KEC 123. 접속으로 전기저항을 증가시키지 않고 전선 세기를 $20\\%$ 이상 감소시키지 아니할 것(원래의 $80\\%$ 이상 유지).",
+      "type": "계산"
+    },
+    {
+      "id": "kec.1.b2",
+      "subject": "kec",
+      "major": "kec.1",
+      "stem": "최대사용전압 $22.9\\ \\mathrm{kV}$ 인 중성점 다중접지식 전로(7 kV 초과 25 kV 이하)에 대해 연속 10분간 가하는 절연내력 시험전압은 최대사용전압의 몇 배인가?",
+      "choices": [
+        "1.5배",
+        "1.25배",
+        "1.1배",
+        "0.92배"
+      ],
+      "answer": 3,
+      "explanation": "KEC 132 표 132-1. $7$ 초과 $25\\ \\mathrm{kV}$ 이하 중성점 다중접지식은 0.92배($7\\ \\mathrm{kV}$ 이하 1.5배).",
+      "type": "계산"
+    },
+    {
+      "id": "kec.1.b3",
+      "subject": "kec",
+      "major": "kec.1",
+      "stem": "충전부 전체를 대지로부터 절연시키거나 한 점을 임피던스를 통해 대지에 접속하고, 설비의 노출도전부는 개별 또는 집합적으로 접지하는 저압 계통접지 방식은?",
+      "choices": [
+        "TN-S 계통",
+        "TN-C-S 계통",
+        "TT 계통",
+        "IT 계통"
+      ],
+      "answer": 3,
+      "explanation": "KEC 203.3. IT 계통은 충전부를 대지에서 절연(또는 임피던스 접지)하고 노출도전부는 개별·집합 접지한다.",
+      "type": "개념"
+    },
+    {
+      "id": "kec.1.b4",
+      "subject": "kec",
+      "major": "kec.1",
+      "stem": "낙뢰로부터 보호가 필요한 경우 피뢰시스템을 적용하는 건축물·구조물의 지상 높이 기준은 몇 m 이상인가?",
+      "choices": [
+        "$10\\ \\mathrm{m}$",
+        "$15\\ \\mathrm{m}$",
+        "$20\\ \\mathrm{m}$",
+        "$30\\ \\mathrm{m}$"
+      ],
+      "answer": 2,
+      "explanation": "KEC 151.1. 지상 높이 $20\\ \\mathrm{m}$ 이상 건축물·구조물에 피뢰시스템을 적용한다.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.1.b5",
+      "subject": "kec",
+      "major": "kec.1",
+      "stem": "접지극을 지중에 시설할 때, 동결 깊이를 감안하여 지표면으로부터 최소 몇 m 이상의 깊이로 매설하여야 하는가?",
+      "choices": [
+        "$0.5\\ \\mathrm{m}$",
+        "$0.6\\ \\mathrm{m}$",
+        "$0.75\\ \\mathrm{m}$",
+        "$1.0\\ \\mathrm{m}$"
+      ],
+      "answer": 2,
+      "explanation": "KEC 142.2. 접지극은 지표면에서 $0.75\\ \\mathrm{m}$ 이상 깊이로 매설(동결 깊이 감안).",
+      "type": "계산"
+    },
+    {
+      "id": "kec.2.b6",
+      "subject": "kec",
+      "major": "kec.2",
+      "stem": "주택 등의 옥내에 시설하는 백열전등 또는 방전등 전로의 대지전압은 최대 몇 V 이하로 제한되는가?",
+      "choices": [
+        "$150\\ \\mathrm{V}$",
+        "$220\\ \\mathrm{V}$",
+        "$300\\ \\mathrm{V}$",
+        "$400\\ \\mathrm{V}$"
+      ],
+      "answer": 2,
+      "explanation": "KEC 231.6. 백열전등·방전등 옥내 전로의 대지전압은 $300\\ \\mathrm{V}$ 이하.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.2.b7",
+      "subject": "kec",
+      "major": "kec.2",
+      "stem": "인체감전보호용으로 시설하는 누전차단기(일반 장소)의 정격감도전류와 동작시간 기준으로 옳은 것은?",
+      "choices": [
+        "$15\\ \\mathrm{mA}$ 이하, $0.03$ 초 이하",
+        "$30\\ \\mathrm{mA}$ 이하, $0.03$ 초 이하",
+        "$50\\ \\mathrm{mA}$ 이하, $0.1$ 초 이하",
+        "$100\\ \\mathrm{mA}$ 이하, $0.2$ 초 이하"
+      ],
+      "answer": 1,
+      "explanation": "KEC 211.2.4. 인체감전보호용 누전차단기는 정격감도전류 $30\\ \\mathrm{mA}$ 이하, 동작시간 $0.03$ 초 이하(물기 장소는 $15\\ \\mathrm{mA}$).",
+      "type": "계산"
+    },
+    {
+      "id": "kec.2.b8",
+      "subject": "kec",
+      "major": "kec.2",
+      "stem": "저압 가공인입선이 도로를 횡단하는 경우, 전선의 노면상 최소 높이는 몇 m 이상인가?",
+      "choices": [
+        "$3.5\\ \\mathrm{m}$",
+        "$4\\ \\mathrm{m}$",
+        "$5\\ \\mathrm{m}$",
+        "$6\\ \\mathrm{m}$"
+      ],
+      "answer": 2,
+      "explanation": "KEC 221.1.1. 도로 횡단 $5\\ \\mathrm{m}$, 철도·궤도 $6.5\\ \\mathrm{m}$, 횡단보도교 위 $3\\ \\mathrm{m}$, 기타 $4\\ \\mathrm{m}$ 이상.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.2.b9",
+      "subject": "kec",
+      "major": "kec.2",
+      "stem": "사용전압이 $400\\ \\mathrm{V}$ 를 초과하는 저압 가공전선(시가지 외)으로 경동선을 사용할 때 최소 지름은?",
+      "choices": [
+        "$3.2\\ \\mathrm{mm}$",
+        "$4\\ \\mathrm{mm}$",
+        "$5\\ \\mathrm{mm}$",
+        "$6\\ \\mathrm{mm}$"
+      ],
+      "answer": 2,
+      "explanation": "KEC 222.5. $400\\ \\mathrm{V}$ 초과는 지름 $5\\ \\mathrm{mm}$ 이상 경동선($400\\ \\mathrm{V}$ 이하는 $3.2\\ \\mathrm{mm}$).",
+      "type": "계산"
+    },
+    {
+      "id": "kec.2.b10",
+      "subject": "kec",
+      "major": "kec.2",
+      "stem": "주택용 배선용차단기(정격 63 A 이하)는 정격전류의 몇 배 전류에서 규정 시간(60분) 이내에 자동으로 동작(트립)하여야 하는가?",
+      "choices": [
+        "1.13배",
+        "1.45배",
+        "1.6배",
+        "2배"
+      ],
+      "answer": 1,
+      "explanation": "KEC 212.3.4 표 212.3-2. 주택용은 1.13배 부동작, 1.45배 60분 이내 동작(산업용은 1.05·1.3배).",
+      "type": "계산"
+    },
+    {
+      "id": "kec.3.b11",
+      "subject": "kec",
+      "major": "kec.3",
+      "stem": "특고압 가공전선로에서 B종 철주 또는 B종 철근콘크리트주를 사용하는 경우 표준 경간은 최대 몇 m 이하인가?",
+      "choices": [
+        "$150\\ \\mathrm{m}$",
+        "$250\\ \\mathrm{m}$",
+        "$400\\ \\mathrm{m}$",
+        "$600\\ \\mathrm{m}$"
+      ],
+      "answer": 1,
+      "explanation": "KEC 333.21. A종 $150\\ \\mathrm{m}$, B종 $250\\ \\mathrm{m}$, 철탑 $600\\ \\mathrm{m}$ 이하.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.3.b12",
+      "subject": "kec",
+      "major": "kec.3",
+      "stem": "고압 가공전선이 건조물의 상부조영재 위쪽에 시설될 때(케이블이 아닌 경우) 확보하여야 할 최소 이격거리는?",
+      "choices": [
+        "$0.8\\ \\mathrm{m}$",
+        "$1.2\\ \\mathrm{m}$",
+        "$2\\ \\mathrm{m}$",
+        "$2.5\\ \\mathrm{m}$"
+      ],
+      "answer": 2,
+      "explanation": "KEC 332.11. 상부조영재 위쪽 $2\\ \\mathrm{m}$(케이블 $1\\ \\mathrm{m}$), 옆·아래·기타 $1.2\\ \\mathrm{m}$(케이블 $0.5\\ \\mathrm{m}$).",
+      "type": "계산"
+    },
+    {
+      "id": "kec.3.b13",
+      "subject": "kec",
+      "major": "kec.3",
+      "stem": "사용전압 $22.9\\ \\mathrm{kV}$(15 kV 초과 25 kV 이하) 중성선 다중접지식 전로에서, 1 km마다의 중성선과 대지 사이 합성 전기저항값은 몇 Ω 이하이어야 하는가?",
+      "choices": [
+        "$10\\ \\Omega$",
+        "$15\\ \\Omega$",
+        "$30\\ \\Omega$",
+        "$300\\ \\Omega$"
+      ],
+      "answer": 1,
+      "explanation": "KEC 333.32. $15$ 초과 $25\\ \\mathrm{kV}$ 이하 다중접지는 각 접지점 $300\\ \\Omega$ 이하, 1 km 합성 $15\\ \\Omega$ 이하.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.3.b14",
+      "subject": "kec",
+      "major": "kec.3",
+      "stem": "발전기의 내부 고장이 생긴 경우에 자동으로 전로로부터 차단하는 장치를 시설하여야 하는 발전기 용량의 최소 기준은?",
+      "choices": [
+        "$500\\ \\mathrm{kVA}$ 이상",
+        "$2000\\ \\mathrm{kVA}$ 이상",
+        "$5000\\ \\mathrm{kVA}$ 이상",
+        "$10000\\ \\mathrm{kVA}$ 이상"
+      ],
+      "answer": 3,
+      "explanation": "KEC 351.3. 용량 $10000\\ \\mathrm{kVA}$ 이상 발전기는 내부고장 시 자동차단.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.3.b15",
+      "subject": "kec",
+      "major": "kec.3",
+      "stem": "전력용 커패시터 및 분로리액터에서 내부고장·과전류와 함께 과전압이 생긴 경우 자동 차단하는 장치를 시설하여야 하는 뱅크용량의 최소 기준은?",
+      "choices": [
+        "$500\\ \\mathrm{kVA}$ 이상",
+        "$10000\\ \\mathrm{kVA}$ 이상",
+        "$15000\\ \\mathrm{kVA}$ 이상",
+        "$20000\\ \\mathrm{kVA}$ 이상"
+      ],
+      "answer": 2,
+      "explanation": "KEC 351.5 표 351.5-1. $15000\\ \\mathrm{kVA}$ 이상은 내부고장·과전류·과전압 시 자동차단.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.4.b16",
+      "subject": "kec",
+      "major": "kec.4",
+      "stem": "우리나라 전기철도에서 교류 급전방식에 사용하는 단상 교류 급전 표준전압(공칭전압)은?",
+      "choices": [
+        "$1500\\ \\mathrm{V}$",
+        "$22900\\ \\mathrm{V}$",
+        "$25000\\ \\mathrm{V}$",
+        "$154000\\ \\mathrm{V}$"
+      ],
+      "answer": 2,
+      "explanation": "KEC 411.2 표 411.2-1. 교류 급전 공칭전압은 단상 $25000\\ \\mathrm{V}$, 직류는 $750$ 및 $1500\\ \\mathrm{V}$.",
+      "type": "계산"
+    },
+    {
+      "id": "kec.4.b17",
+      "subject": "kec",
+      "major": "kec.4",
+      "stem": "교류 전기철도의 급전용 변압기에서 단상 부하를 3상 전력계통에 평형시켜 접속하기 위해 주로 사용하는 변압기 결선 방식은?",
+      "choices": [
+        "$Y$–$\\Delta$ 결선",
+        "스코트(Scott) 결선",
+        "지그재그 결선",
+        "$V$ 결선"
+      ],
+      "answer": 1,
+      "explanation": "KEC 421. 단상 견인부하를 3상 계통에 평형화하기 위해 스코트 결선(또는 변형 우드브리지)을 쓴다.",
+      "type": "개념"
+    },
+    {
+      "id": "kec.5.b18",
+      "subject": "kec",
+      "major": "kec.5",
+      "stem": "태양광설비에서 태양전지 모듈 등을 접속하는 배선(전선)의 최소 공칭단면적(연동선 기준)은?",
+      "choices": [
+        "$1.5\\ \\mathrm{mm^2}$",
+        "$2.5\\ \\mathrm{mm^2}$",
+        "$4\\ \\mathrm{mm^2}$",
+        "$6\\ \\mathrm{mm^2}$"
+      ],
+      "answer": 1,
+      "explanation": "KEC 522.1.1. 모듈 접속 전선은 공칭단면적 $2.5\\ \\mathrm{mm^2}$ 이상 연동선(또는 동등 이상).",
+      "type": "계산"
+    },
+    {
+      "id": "kec.5.b19",
+      "subject": "kec",
+      "major": "kec.5",
+      "stem": "풍력발전설비의 풍력터빈에 피뢰설비를 시설할 때, 수뢰부(수뢰침)를 우선적으로 설치하여야 하는 위치로 가장 적절한 것은?",
+      "choices": [
+        "타워 기초 콘크리트",
+        "나셀 하부 프레임",
+        "회전 블레이드(회전날개)의 선단부",
+        "지상 변전실 외벽"
+      ],
+      "answer": 2,
+      "explanation": "KEC 532. 가장 높고 낙뢰를 직접 받는 회전 블레이드 선단부에 수뢰부를 시설하고 인하도선으로 접지시스템에 연결한다.",
+      "type": "개념"
+    },
+    {
+      "id": "kec.3.b20",
+      "subject": "kec",
+      "major": "kec.3",
+      "stem": "KEC에서 가공전선로의 지지물에 시설하는 지선(支線)의 안전율은 얼마 이상이어야 하는가?",
+      "choices": [
+        "$1.5$",
+        "$2.0$",
+        "$2.5$",
+        "$3.0$"
+      ],
+      "answer": 2,
+      "explanation": "KEC 331.11(지선의 시설). 지선의 안전율은 2.5 이상이어야 하며, 허용 최저 인장하중은 $4.31\\ \\mathrm{kN}$ 이상이다.",
+      "type": "계산"
+    }
+  ]
+}

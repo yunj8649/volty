@@ -1,0 +1,27 @@
+# Flutter / Dart
+app/build/
+app/.dart_tool/
+app/.flutter-plugins
+app/.flutter-plugins-dependencies
+app/ios/Pods/
+app/ios/.symlinks/
+app/android/.gradle/
+app/android/local.properties
+**/*.iml
+
+# Python (tools/)
+.venv/
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# 원본 PDF는 저장소에 넣지 않는다. tools/parse_chulje.py 가 로컬 경로에서 읽는다.
+data/source/
+
+# KEC 원문·기술기준 등 검증용 참고자료(대용량, 빌드에 불필요).
+data/reference/
+
+# Node
+node_modules/
