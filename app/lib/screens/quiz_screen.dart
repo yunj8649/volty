@@ -48,6 +48,7 @@ class QuizScreen extends StatefulWidget {
 class _QuizScreenState extends State<QuizScreen> {
   int _index = 0;
   final Map<int, int> _selected = {}; // 문항 index -> 고른 보기 index
+  final Set<int> _hintShown = {}; // 힌트를 펼쳐 둔 문항 index
   Timer? _timer;
   Duration _remaining = Duration.zero;
 
@@ -229,6 +230,16 @@ class _QuizScreenState extends State<QuizScreen> {
                   color: scheme.onSurface,
                 ),
               ),
+              if (q.hint != null) ...[
+                const SizedBox(height: 14),
+                _HintBox(
+                  hint: q.hint!,
+                  shown: _hintShown.contains(_index),
+                  onToggle: () => setState(() {
+                    if (!_hintShown.remove(_index)) _hintShown.add(_index);
+                  }),
+                ),
+              ],
               const SizedBox(height: 20),
               for (var i = 0; i < q.choices.length; i++)
                 _ChoiceTile(
@@ -324,6 +335,72 @@ class _TimerChip extends StatelessWidget {
               fontFeatures: const [FontFeature.tabularFigures()],
               fontWeight: FontWeight.w700,
               color: low ? scheme.error : scheme.onSurface,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// 문항 힌트. 접혀 있다가 '힌트 보기'를 누르면 펼쳐지고, 다시 누르면 숨는다.
+/// 정답은 담지 않고 개념·공식·주의점만 짚는다.
+class _HintBox extends StatelessWidget {
+  const _HintBox(
+      {required this.hint, required this.shown, required this.onToggle});
+  final String hint;
+  final bool shown;
+  final VoidCallback onToggle;
+
+  @override
+  Widget build(BuildContext context) {
+    final fg = Palette.trapFg(context);
+    if (!shown) {
+      return Align(
+        alignment: Alignment.centerLeft,
+        child: OutlinedButton.icon(
+          onPressed: onToggle,
+          icon: const Icon(Icons.lightbulb_outline, size: 18),
+          label: const Text('힌트 보기'),
+          style: OutlinedButton.styleFrom(
+            foregroundColor: fg,
+            side: BorderSide(color: Palette.trapBorder(context)),
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+            visualDensity: VisualDensity.compact,
+          ),
+        ),
+      );
+    }
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(14, 12, 8, 12),
+      decoration: BoxDecoration(
+        color: Palette.trapBg(context),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: Palette.trapBorder(context)),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(Icons.lightbulb, size: 18, color: fg),
+          const SizedBox(width: 10),
+          Expanded(
+            child: InlineRich(
+              hint,
+              style: TextStyle(
+                fontFamily: 'NanumGothic',
+                fontSize: 14,
+                height: 1.55,
+                color: Theme.of(context).colorScheme.onSurface,
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: onToggle,
+            borderRadius: BorderRadius.circular(20),
+            child: Padding(
+              padding: const EdgeInsets.all(4),
+              child: Icon(Icons.close, size: 18, color: fg),
             ),
           ),
         ],

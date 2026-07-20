@@ -15,7 +15,8 @@
       ],
       "answer": 1,
       "explanation": "$F = 9\\times10^9 \\dfrac{Q_1 Q_2}{r^2} = 9\\times10^9 \\times \\dfrac{2\\times10^{-6}\\cdot 3\\times10^{-6}}{0.3^2} = 0.6\\ \\mathrm{N}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "쿨롱 법칙 $F=9\\times10^9\\dfrac{Q_1 Q_2}{r^2}$, 거리는 m 단위로"
     },
     {
       "id": "em.3.q1",
@@ -30,7 +31,8 @@
       ],
       "answer": 1,
       "explanation": "$C = \\dfrac{\\varepsilon A}{d}$ 이므로 $d$ 가 2배면 $C$ 는 $\\dfrac{1}{2}$ 배가 된다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$C=\\dfrac{\\varepsilon A}{d}$, 용량은 간격 $d$에 반비례"
     },
     {
       "id": "em.5.q1",
@@ -45,7 +47,8 @@
       ],
       "answer": 1,
       "explanation": "무한 직선 도선의 자계 $H = \\dfrac{I}{2\\pi r} = \\dfrac{10}{2\\pi\\times0.1} \\approx 15.9\\ \\mathrm{AT/m}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "무한 직선 자계 $H=\\dfrac{I}{2\\pi r}$"
     },
     {
       "id": "pw.4.q1",
@@ -60,7 +63,8 @@
       ],
       "answer": 1,
       "explanation": "단락용량 $P_s = \\dfrac{100}{\\%Z}\\times P_n = \\dfrac{100}{5}\\times 2000 = 40000\\ \\mathrm{kVA} = 40\\ \\mathrm{MVA}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "단락용량 $P_s=\\dfrac{100}{\\%Z}\\times P_n$, kVA를 MVA로 환산"
     },
     {
       "id": "pw.2.q1",
@@ -75,7 +79,8 @@
       ],
       "answer": 1,
       "explanation": "스페이서는 소도체 간 간격을 유지해 꼬임·충돌을 방지한다. 댐퍼는 진동, 아머로드는 지지점 보강, 오프셋은 단락 방지를 위한 전선 배치다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "복도체 소도체 간격 유지·꼬임 방지 부속을 고르는 문제(진동방지 댐퍼와 혼동 주의)"
     },
     {
       "id": "mc.4.q1",
@@ -90,7 +95,8 @@
       ],
       "answer": 1,
       "explanation": "$V_2 = \\dfrac{V_1}{a} = \\dfrac{3300}{20} = 165\\ \\mathrm{V}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "변압기 전압비=권수비, $V_2=V_1/a$"
     },
     {
       "id": "mc.5.q1",
@@ -105,7 +111,8 @@
       ],
       "answer": 1,
       "explanation": "$N_s = \\dfrac{120f}{P} = \\dfrac{120\\times60}{4} = 1800\\ \\mathrm{rpm}$, $s = \\dfrac{N_s-N}{N_s} = \\dfrac{1800-1710}{1800} = 5\\%$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "동기속도 $N_s=\\dfrac{120f}{P}$ 구한 뒤 $s=\\dfrac{N_s-N}{N_s}$"
     },
     {
       "id": "mc.2.q1",
@@ -120,7 +127,8 @@
       ],
       "answer": 2,
       "explanation": "$N_s = \\dfrac{120f}{P} = \\dfrac{120\\times60}{6} = 1200\\ \\mathrm{rpm}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "동기속도 $N_s=\\dfrac{120f}{P}$"
     },
     {
       "id": "ct.1.q1",
@@ -135,7 +143,8 @@
       ],
       "answer": 2,
       "explanation": "$|Z| = \\sqrt{R^2 + X_L^2} = \\sqrt{3^2 + 4^2} = 5\\ \\Omega$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "직렬 임피던스 크기 $|Z|=\\sqrt{R^2+X_L^2}$"
     },
     {
       "id": "ct.1.q2",
@@ -150,7 +159,8 @@
       ],
       "answer": 1,
       "explanation": "$P = \\sqrt{3}\\,V_l I_l \\cos\\theta = \\sqrt{3}\\times200\\times10\\times0.8 \\approx 2771\\ \\mathrm{W}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "3상 전력 $P=\\sqrt{3}\\,V_l I_l\\cos\\theta$"
     },
     {
       "id": "ct.1.q3",
@@ -165,7 +175,8 @@
       ],
       "answer": 1,
       "explanation": "$\\tau = RC = 1000 \\times 1\\times10^{-6} = 1\\ \\mathrm{ms}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "시정수 $\\tau=RC$, 단위(ms) 환산 주의"
     },
     {
       "id": "ct.2.q1",
@@ -180,7 +191,8 @@
       ],
       "answer": 1,
       "explanation": "$\\mathcal{L}[u(t)] = \\dfrac{1}{s}$. 참고로 $\\delta(t)\\to1$, $t\\to\\dfrac{1}{s^2}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "계단함수 변환쌍; $\\delta(t)$·$t$와 혼동 주의"
     },
     {
       "id": "kec.2.q1",
@@ -195,7 +207,8 @@
       ],
       "answer": 1,
       "explanation": "표 132: SELV·PELV는 시험전압 $250\\ \\mathrm{V}$ 에 절연저항 $0.5\\ \\mathrm{M\\Omega}$ 이상. FELV·500V 이하는 $1.0\\ \\mathrm{M\\Omega}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "특별저압(SELV/PELV)과 FELV/500V 이하의 시험전압·절연저항 구분을 떠올려라"
     },
     {
       "id": "kec.2.q2",
@@ -210,7 +223,8 @@
       ],
       "answer": 2,
       "explanation": "$220\\ \\mathrm{V}$ 는 $120 < U_0 \\leq 230$ 구간이며, 이 구간의 TN 계통 교류 최대 차단시간은 $0.4\\ \\mathrm{s}$ 이다(TT는 $0.2\\ \\mathrm{s}$).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$U_0$ 전압구간과 TN/TT 계통별 최대 차단시간 표를 구분하라"
     },
     {
       "id": "kec.3.q1",
@@ -225,7 +239,8 @@
       ],
       "answer": 2,
       "explanation": "수소냉각식 발전기·조상기는 수소 순도가 $85\\%$ 이하로 저하한 경우 경보하도록 시설한다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "수소냉각식 발전기의 순도 저하 경보 규정을 확인하라"
     },
     {
       "id": "em.1.q2",
@@ -240,7 +255,8 @@
       ],
       "answer": 1,
       "explanation": "$E = 9\\times10^9 \\dfrac{Q}{r^2} = 9\\times10^9 \\times \\dfrac{4\\times10^{-6}}{2^2} = 9000\\ \\mathrm{V/m}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "점전하 전계 $E=9\\times10^9\\dfrac{Q}{r^2}$"
     },
     {
       "id": "em.2.q1",
@@ -255,7 +271,8 @@
       ],
       "answer": 1,
       "explanation": "$C = \\dfrac{\\varepsilon_0 A}{d} = \\dfrac{8.855\\times10^{-12}\\times1}{1\\times10^{-3}} = 8.855\\ \\mathrm{nF}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$C=\\dfrac{\\varepsilon_0 A}{d}$, $\\varepsilon_0\\approx8.855\\times10^{-12}$, mm를 m로"
     },
     {
       "id": "em.5.q2",
@@ -270,7 +287,8 @@
       ],
       "answer": 1,
       "explanation": "원형 코일 중심 자계 $H = \\dfrac{I}{2r} = \\dfrac{2}{2\\times0.1} = 10\\ \\mathrm{AT/m}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "원형 코일 중심 자계 $H=\\dfrac{I}{2r}$ (1회)"
     },
     {
       "id": "em.6.q1",
@@ -285,7 +303,8 @@
       ],
       "answer": 2,
       "explanation": "기자력 $F = NI = 100\\times2 = 200\\ \\mathrm{AT}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "기자력 $F=NI$"
     },
     {
       "id": "em.7.q1",
@@ -300,7 +319,8 @@
       ],
       "answer": 1,
       "explanation": "$W = \\dfrac{1}{2}LI^2 = \\dfrac{1}{2}\\times2\\times3^2 = 9\\ \\mathrm{J}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "코일 축적에너지 $W=\\dfrac{1}{2}LI^2$"
     },
     {
       "id": "em.8.q1",
@@ -315,7 +335,8 @@
       ],
       "answer": 2,
       "explanation": "$\\eta_0 = \\sqrt{\\dfrac{\\mu_0}{\\varepsilon_0}} = 120\\pi \\approx 377\\ \\Omega$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\eta_0=\\sqrt{\\dfrac{\\mu_0}{\\varepsilon_0}}=120\\pi$"
     },
     {
       "id": "pw.1.q1",
@@ -330,7 +351,8 @@
       ],
       "answer": 1,
       "explanation": "$P = 9.8\\,Q H \\eta = 9.8\\times10\\times100\\times0.8 = 7840\\ \\mathrm{kW}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "수력 출력 $P=9.8QH\\eta$"
     },
     {
       "id": "pw.4.q2",
@@ -345,7 +367,8 @@
       ],
       "answer": 0,
       "explanation": "$I_s = \\dfrac{100}{\\%Z}\\times I_n = \\dfrac{100}{10}\\times100 = 1000\\ \\mathrm{A}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "단락전류 $I_s=\\dfrac{100}{\\%Z}\\times I_n$"
     },
     {
       "id": "pw.3.q1",
@@ -360,7 +383,8 @@
       ],
       "answer": 1,
       "explanation": "$Q_c = P(\\tan\\theta_1 - \\tan\\theta_2) = 100(1.333 - 0.75) \\approx 58.3\\ \\mathrm{kVar}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "콘덴서 용량 $Q_c=P(\\tan\\theta_1-\\tan\\theta_2)$"
     },
     {
       "id": "pw.2.q2",
@@ -375,7 +399,8 @@
       ],
       "answer": 1,
       "explanation": "복도체(굵은 등가 반지름)를 쓰면 전선 표면 전위경도가 낮아져 코로나 임계전압이 높아진다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "임계전압을 높이는 방향: 등가 반지름을 키우는 대책"
     },
     {
       "id": "pw.7.q1",
@@ -390,7 +415,8 @@
       ],
       "answer": 2,
       "explanation": "$\\mathrm{SF_6}$ 가스를 소호 매질로 쓰는 것은 가스차단기(GCB)다. 절연·소호 성능이 우수하다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "$\\mathrm{SF_6}$ 가스를 소호 매질로 쓰는 차단기 종류"
     },
     {
       "id": "pw.5.q1",
@@ -405,7 +431,8 @@
       ],
       "answer": 1,
       "explanation": "단상 2선식은 왕복 2가닥이므로 $e = 2 I R = 2\\times10\\times0.5 = 10\\ \\mathrm{V}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "단상 2선식은 왕복 2가닥: $e=2IR$"
     },
     {
       "id": "mc.1.q1",
@@ -420,7 +447,8 @@
       ],
       "answer": 1,
       "explanation": "$E = \\dfrac{pZ\\phi N}{60a} = \\dfrac{4\\times400\\times0.02\\times1500}{60\\times2} = 400\\ \\mathrm{V}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "유기기전력 $E=\\dfrac{pZ\\phi N}{60a}$, 파권 $a=2$"
     },
     {
       "id": "mc.4.q2",
@@ -435,7 +463,8 @@
       ],
       "answer": 2,
       "explanation": "$\\varepsilon = \\dfrac{V_{20} - V_{2n}}{V_{2n}}\\times100 = \\dfrac{220-200}{200}\\times100 = 10\\%$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "전압변동률 $\\varepsilon=\\dfrac{V_{20}-V_{2n}}{V_{2n}}\\times100$"
     },
     {
       "id": "mc.5.q2",
@@ -450,7 +479,8 @@
       ],
       "answer": 0,
       "explanation": "$P_{c2} = s\\,P_2 = 0.05\\times10000 = 500\\ \\mathrm{W}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "2차 동손 $P_{c2}=s\\,P_2$"
     },
     {
       "id": "mc.2.q2",
@@ -465,7 +495,8 @@
       ],
       "answer": 2,
       "explanation": "단락비가 크면 동기임피던스가 작아 전압변동률이 작고 안정도가 좋다(대신 철이 많이 들어 크고 무겁다).",
-      "type": "개념"
+      "type": "개념",
+      "hint": "단락비 크면 동기임피던스는? 철기계 특성 방향 떠올리기"
     },
     {
       "id": "mc.3.q1",
@@ -480,7 +511,8 @@
       ],
       "answer": 1,
       "explanation": "$E_{dc} = \\dfrac{2\\sqrt{2}}{\\pi}E \\approx 0.9E$. 단상 반파는 $0.45E$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "단상 전파는 $0.9E$, 반파는 $0.45E$로 구분"
     },
     {
       "id": "mc.4.q3",
@@ -495,7 +527,8 @@
       ],
       "answer": 3,
       "explanation": "정격용량이 같을 필요는 없다(용량에 비례해 부하가 분담되면 됨). 극성·권수비·%임피던스는 일치해야 한다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "병렬운전 필수조건: 극성·권수비·%임피던스. 용량은 무관"
     },
     {
       "id": "ct.1.q4",
@@ -510,7 +543,8 @@
       ],
       "answer": 0,
       "explanation": "최대 전력 전달 조건은 $R_L = R_s = 5\\ \\Omega$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "최대전력전달 조건은 부하=내부저항"
     },
     {
       "id": "ct.1.q5",
@@ -525,7 +559,8 @@
       ],
       "answer": 0,
       "explanation": "평형일 때 $R_Y = \\dfrac{R_\\triangle}{3} = \\dfrac{30}{3} = 10\\ \\Omega$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "평형 $\\Delta\\to$Y는 $R_Y=R_\\triangle/3$"
     },
     {
       "id": "ct.1.q6",
@@ -540,7 +575,8 @@
       ],
       "answer": 1,
       "explanation": "$f_0 = \\dfrac{1}{2\\pi\\sqrt{LC}} = \\dfrac{1}{2\\pi\\sqrt{10^{-3}\\times10^{-6}}} \\approx 5.03\\ \\mathrm{kHz}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "공진주파수 $f_0=\\dfrac{1}{2\\pi\\sqrt{LC}}$"
     },
     {
       "id": "ct.1.q7",
@@ -555,7 +591,8 @@
       ],
       "answer": 1,
       "explanation": "$I = \\sqrt{3^2 + \\left(\\dfrac{4}{\\sqrt2}\\right)^2} = \\sqrt{9+8} = \\sqrt{17} \\approx 4.12\\ \\mathrm{A}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "직류분과 교류실효값 제곱합; $\\sqrt{I_{dc}^2+(I_m/\\sqrt{2})^2}$"
     },
     {
       "id": "ct.2.q2",
@@ -570,7 +607,8 @@
       ],
       "answer": 1,
       "explanation": "라우스 배열에서 $s^1$ 항 $\\dfrac{2\\times3 - K}{2} > 0 \\Rightarrow K < 6$, $s^0$ 항 $K > 0$. 따라서 $0 < K < 6$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "라우스 첫 열 전부 양수, 두 조건 교집합"
     },
     {
       "id": "ct.2.q3",
@@ -585,7 +623,8 @@
       ],
       "answer": 1,
       "explanation": "$\\mathcal{L}[e^{-at}] = \\dfrac{1}{s+a}$.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "지수함수 변환쌍 $\\mathcal{L}[e^{-at}]$을 떠올려라"
     },
     {
       "id": "kec.1.q1",
@@ -600,7 +639,8 @@
       ],
       "answer": 1,
       "explanation": "KEC 저압: 교류 $1\\ \\mathrm{kV}$ 이하, 직류 $1.5\\ \\mathrm{kV}$ 이하.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "저압 교류·직류 상한 구분을 떠올려라"
     },
     {
       "id": "kec.1.q2",
@@ -615,7 +655,8 @@
       ],
       "answer": 1,
       "explanation": "고압은 저압을 넘고 $7\\ \\mathrm{kV}$ 이하, 특고압은 $7\\ \\mathrm{kV}$ 초과다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "고압과 특고압의 경계 전압을 떠올려라"
     },
     {
       "id": "kec.2.q3",
@@ -630,7 +671,8 @@
       ],
       "answer": 1,
       "explanation": "표 132: FELV·500V 이하는 시험전압 $500\\ \\mathrm{V}$ 에 절연저항 $1.0\\ \\mathrm{M\\Omega}$ 이상.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "FELV·500V 이하 전로의 절연저항 규정을 확인하라"
     },
     {
       "id": "kec.3.q2",
@@ -645,7 +687,8 @@
       ],
       "answer": 1,
       "explanation": "차량 등 압력을 받는 장소는 $1.0\\ \\mathrm{m}$ 이상, 그 밖의 장소는 $0.6\\ \\mathrm{m}$ 이상 매설한다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "직접매설식에서 압력 유무에 따른 매설깊이 구분"
     },
     {
       "id": "kec.3.q3",
@@ -660,7 +703,8 @@
       ],
       "answer": 1,
       "explanation": "접지도체 최소 단면적은 구리 $6\\ \\mathrm{mm^2}$(큰 고장전류가 흐를 수 있으면 구리 $16\\ \\mathrm{mm^2}$).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "일반·큰고장전류별 구리 접지도체 최소굵기 규정 구분"
     },
     {
       "id": "kec.5.q1",
@@ -675,7 +719,8 @@
       ],
       "answer": 2,
       "explanation": "조건(지락 자동차단·은폐 시공 등)을 만족하면 주택 옥내 직류 대지전압을 $600\\ \\mathrm{V}$ 까지 적용할 수 있다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "주택 옥내 직류 전로의 대지전압 상한 규정 확인"
     },
     {
       "id": "em.1.a1",
@@ -690,7 +735,8 @@
       ],
       "answer": 1,
       "explanation": "쿨롱 법칙 $F=9\\times10^9\\times\\dfrac{2\\times10^{-6}\\times5\\times10^{-6}}{(0.3)^2}=\\dfrac{0.09}{0.09}=1.0\\ [\\mathrm{N}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "쿨롱 법칙 $F=9\\times10^9\\dfrac{Q_1 Q_2}{r^2}$"
     },
     {
       "id": "em.1.a2",
@@ -705,7 +751,8 @@
       ],
       "answer": 1,
       "explanation": "무한 직선전하의 전계 $E=\\dfrac{\\rho_L}{2\\pi\\varepsilon_0 r}=1.8\\times10^{10}\\times\\dfrac{2\\times10^{-6}}{0.5}=7.2\\times10^{4}\\ [\\mathrm{V/m}]=72\\ [\\mathrm{kV/m}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "무한 선전하 전계 $E=\\dfrac{\\rho_L}{2\\pi\\varepsilon_0 r}$, 거리에 반비례(점전하와 혼동 주의)"
     },
     {
       "id": "em.2.a3",
@@ -720,7 +767,8 @@
       ],
       "answer": 1,
       "explanation": "$C=\\dfrac{\\varepsilon_0 A}{d}=8.85\\times10^{-11}\\ [\\mathrm{F}]$, $W=\\dfrac{1}{2}CV^2=\\dfrac{1}{2}\\times8.85\\times10^{-11}\\times100^2\\approx0.443\\ [\\mathrm{\\mu J}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "먼저 $C=\\dfrac{\\varepsilon_0 A}{d}$ 구하고 $W=\\dfrac{1}{2}CV^2$"
     },
     {
       "id": "em.2.a4",
@@ -735,7 +783,8 @@
       ],
       "answer": 1,
       "explanation": "$C=\\dfrac{4\\pi\\varepsilon_0\\,ab}{b-a}$, $\\dfrac{ab}{b-a}=0.1$, $4\\pi\\varepsilon_0=1.11\\times10^{-10}$ 이므로 $C=1.11\\times10^{-11}\\ [\\mathrm{F}]=11.1\\ [\\mathrm{pF}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "동심구 용량 $C=\\dfrac{4\\pi\\varepsilon_0 ab}{b-a}$"
     },
     {
       "id": "em.3.a5",
@@ -750,7 +799,8 @@
       ],
       "answer": 1,
       "explanation": "법선 전속밀도 연속 $\\varepsilon_{r1}E_{1n}=\\varepsilon_{r2}E_{2n}$ 이므로 $E_{2n}=100\\times\\dfrac{3}{5}=60\\ [\\mathrm{V/m}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "경계면 법선: 전속밀도 연속 $\\varepsilon_1 E_{1n}=\\varepsilon_2 E_{2n}$"
     },
     {
       "id": "em.4.a6",
@@ -765,7 +815,8 @@
       ],
       "answer": 1,
       "explanation": "간격 $2d=0.6\\ [\\mathrm{m}]$, $F=9\\times10^9\\times\\dfrac{(4\\times10^{-6})^2}{0.6^2}=\\dfrac{0.144}{0.36}=0.4\\ [\\mathrm{N}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "영상전하법: 간격은 $2d$, 크기 같고 부호 반대"
     },
     {
       "id": "em.5.a7",
@@ -780,7 +831,8 @@
       ],
       "answer": 2,
       "explanation": "원형 코일 중심 자계 $H=\\dfrac{NI}{2r}=\\dfrac{10\\times2}{2\\times0.1}=100\\ [\\mathrm{AT/m}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "원형 코일 중심 $H=\\dfrac{NI}{2r}$, 감은 수 $N$ 곱하기"
     },
     {
       "id": "em.5.a8",
@@ -795,7 +847,8 @@
       ],
       "answer": 1,
       "explanation": "$r=\\dfrac{mv}{qB}=\\dfrac{9.1\\times10^{-31}\\times2\\times10^7}{1.6\\times10^{-19}\\times0.01}\\approx1.14\\times10^{-2}\\ [\\mathrm{m}]=1.14\\ [\\mathrm{cm}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "로런츠력=구심력, 반지름 $r=\\dfrac{mv}{qB}$"
     },
     {
       "id": "em.6.a9",
@@ -810,7 +863,8 @@
       ],
       "answer": 1,
       "explanation": "$F=NI=1000\\ [\\mathrm{AT}]$, $R=\\dfrac{l}{\\mu_0\\mu_r A}\\approx3.98\\times10^{5}$, $\\Phi=\\dfrac{F}{R}\\approx2.51\\times10^{-3}\\ [\\mathrm{Wb}]=2.51\\ [\\mathrm{mWb}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\Phi=\\dfrac{F}{R}$, $F=NI$, 자기저항 $R=\\dfrac{l}{\\mu_0\\mu_r A}$"
     },
     {
       "id": "em.7.a10",
@@ -825,7 +879,8 @@
       ],
       "answer": 1,
       "explanation": "$k=\\dfrac{M}{\\sqrt{L_1 L_2}}=\\dfrac{0.3}{\\sqrt{0.36}}=\\dfrac{0.3}{0.6}=0.5$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "결합계수 $k=\\dfrac{M}{\\sqrt{L_1 L_2}}$"
     },
     {
       "id": "em.8.a11",
@@ -840,7 +895,8 @@
       ],
       "answer": 1,
       "explanation": "$\\eta=\\eta_0\\sqrt{\\dfrac{\\mu_r}{\\varepsilon_r}}=377\\times\\sqrt{\\dfrac{1}{4}}=\\dfrac{377}{2}\\approx188.5\\ [\\Omega]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\eta=\\eta_0\\sqrt{\\dfrac{\\mu_r}{\\varepsilon_r}}$"
     },
     {
       "id": "pw.1.a1",
@@ -855,7 +911,8 @@
       ],
       "answer": 2,
       "explanation": "$P_s=\\dfrac{100}{\\%Z}\\cdot P_n=\\dfrac{100}{8}\\times 20=250\\,[\\mathrm{MVA}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "단락용량 $P_s=\\dfrac{100}{\\%Z}\\times P_n$"
     },
     {
       "id": "pw.3.a2",
@@ -870,7 +927,8 @@
       ],
       "answer": 3,
       "explanation": "직접접지는 1선 지락 시 지락전류가 매우 커서 과도안정도가 낮아진다. 따라서 '지락전류가 작아 안정도가 높다'는 설명이 틀리다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "직접접지: 지락전류가 크다 → 유도장해·안정도 방향을 뒤집은 보기를 찾기"
     },
     {
       "id": "pw.2.a3",
@@ -885,7 +943,8 @@
       ],
       "answer": 3,
       "explanation": "코로나 임계전압 $E_0=24.3\\,m_0 m_1 \\delta\\, d\\,\\log_{10}\\dfrac{D}{r}$. 전선을 가늘게 하면 표면 전위경도가 커져 임계전압이 낮아지므로 마지막이 틀리다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "임계전압 $E_0\\propto\\delta\\, d\\,\\log_{10}\\dfrac{D}{r}$: 전선을 가늘게 하면 전위경도가 커진다"
     },
     {
       "id": "pw.2.a4",
@@ -900,7 +959,8 @@
       ],
       "answer": 1,
       "explanation": "$C=0.008\\times100=0.8\\,[\\mu\\mathrm{F}]$, $I_c=2\\pi f C\\dfrac{V}{\\sqrt{3}}=2\\pi\\times60\\times0.8\\times10^{-6}\\times\\dfrac{154000}{\\sqrt{3}}\\approx26.8\\,[\\mathrm{A}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "충전전류 $I_c=2\\pi f C\\dfrac{V}{\\sqrt{3}}$ (상전압 기준)"
     },
     {
       "id": "pw.3.a5",
@@ -915,7 +975,8 @@
       ],
       "answer": 3,
       "explanation": "$P=\\dfrac{V_s V_r}{X}\\sin\\delta$ 에서 $X$ 가 작을수록 안정도가 좋아진다. 직렬 리액턴스를 크게 하면 안정도가 저하되므로 틀리다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "$P=\\dfrac{V_sV_r}{X}\\sin\\delta$: 리액턴스는 작게 해야 안정도↑"
     },
     {
       "id": "pw.2.a6",
@@ -930,7 +991,8 @@
       ],
       "answer": 2,
       "explanation": "$D=\\dfrac{WS^2}{8T}=\\dfrac{2\\times 200^2}{8\\times 2000}=5.0\\,[\\mathrm{m}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "이도 $D=\\dfrac{WS^2}{8T}$"
     },
     {
       "id": "pw.4.a7",
@@ -945,7 +1007,8 @@
       ],
       "answer": 2,
       "explanation": "반한시 특성은 전류가 클수록 동작시간이 짧아진다. 따라서 '전류가 클수록 동작시간이 길어진다'는 설명이 틀리다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "반한시: 전류가 클수록 동작시간은 짧아진다(방향을 뒤집은 보기 주의)"
     },
     {
       "id": "pw.7.a8",
@@ -960,7 +1023,8 @@
       ],
       "answer": 1,
       "explanation": "$P_s=\\sqrt{3}\\,V_n I_s=\\sqrt{3}\\times 170\\times 20\\approx 5890\\,[\\mathrm{MVA}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "3상 차단용량 $P_s=\\sqrt{3}\\,V_n I_s$"
     },
     {
       "id": "pw.1.a9",
@@ -975,7 +1039,8 @@
       ],
       "answer": 1,
       "explanation": "$P=9.8\\,Q H \\eta=9.8\\times 20\\times 100\\times 0.85=16660\\,[\\mathrm{kW}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "수력 출력 $P=9.8QH\\eta$"
     },
     {
       "id": "pw.1.a10",
@@ -990,7 +1055,8 @@
       ],
       "answer": 1,
       "explanation": "$\\eta=\\dfrac{860\\times 150000}{50000\\times 6000}\\times 100=43.0\\,[\\%]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "화력 열효율 $\\eta=\\dfrac{860 W}{m\\,C}$ (발전량·발열량 단위 일치)"
     },
     {
       "id": "pw.6.a11",
@@ -1005,7 +1071,8 @@
       ],
       "answer": 1,
       "explanation": "$Q_c=P(\\tan\\theta_1-\\tan\\theta_2)=100\\times(1.333-0.484)\\approx 84.9\\,[\\mathrm{kVA}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "콘덴서 용량 $Q_c=P(\\tan\\theta_1-\\tan\\theta_2)$"
     },
     {
       "id": "pw.2.a12",
@@ -1020,7 +1087,8 @@
       ],
       "answer": 2,
       "explanation": "$e=\\sqrt{3}\\,I(R\\cos\\theta+X\\sin\\theta)=\\sqrt{3}\\times100\\times(0.2\\times0.8+0.1\\times0.6)\\approx38.1\\,[\\mathrm{V}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "3상 전압강하 $e=\\sqrt{3}\\,I(R\\cos\\theta+X\\sin\\theta)$"
     },
     {
       "id": "mc.1.a1",
@@ -1035,7 +1103,8 @@
       ],
       "answer": 2,
       "explanation": "파권이므로 $a=2$. $E=\\dfrac{P Z \\phi N}{60 a}=\\dfrac{6 \\times 400 \\times 0.02 \\times 1200}{60 \\times 2}=480\\,[\\mathrm{V}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$E=\\dfrac{pZ\\phi N}{60a}$, 파권이면 $a=2$"
     },
     {
       "id": "mc.1.a2",
@@ -1050,7 +1119,8 @@
       ],
       "answer": 3,
       "explanation": "$N=\\dfrac{V-I_a R_a}{k\\phi}$ 에서 전압·저항·계자로 속도를 제어한다. 주파수 제어는 교류 전동기의 방법이다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "분권전동기 $N=\\dfrac{V-I_aR_a}{k\\phi}$, 주파수제어는 교류용"
     },
     {
       "id": "mc.4.a3",
@@ -1065,7 +1135,8 @@
       ],
       "answer": 2,
       "explanation": "$\\varepsilon \\approx p\\cos\\theta + q\\sin\\theta = 2 \\times 0.8 + 4 \\times 0.6 = 4.0\\,[\\%]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\varepsilon\\approx p\\cos\\theta+q\\sin\\theta$, 지상 $\\sin\\theta=0.6$"
     },
     {
       "id": "mc.4.a4",
@@ -1080,7 +1151,8 @@
       ],
       "answer": 1,
       "explanation": "최대효율 조건 $m^2 P_c = P_i$, $m=\\sqrt{\\dfrac{P_i}{P_c}}=\\sqrt{\\dfrac{100}{400}}=0.5$, 즉 $50\\%$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "최대효율 부하율 $m=\\sqrt{P_i/P_c}$"
     },
     {
       "id": "mc.4.a5",
@@ -1095,7 +1167,8 @@
       ],
       "answer": 2,
       "explanation": "$Y$(또는 $\\Delta$) 총 개수가 홀수이면 2차 전압에 $30^\\circ$ 위상차가 생겨 병렬운전이 불가능하다. $\\Delta{-}\\Delta$와 $\\Delta{-}Y$가 그 예이다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "$Y$·$\\Delta$ 홀수 개면 $30^\\circ$ 위상차로 병렬 불가"
     },
     {
       "id": "mc.5.a6",
@@ -1110,7 +1183,8 @@
       ],
       "answer": 1,
       "explanation": "$f_2 = s f = 0.04 \\times 60 = 2.4\\,[\\mathrm{Hz}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "회전자 주파수 $f_2=s f$"
     },
     {
       "id": "mc.5.a7",
@@ -1125,7 +1199,8 @@
       ],
       "answer": 1,
       "explanation": "비례추이에 의해 $\\dfrac{r_2}{s}$ 가 일정하면 토크가 같다. 2차 저항을 늘리면 최대토크 크기는 불변, 발생 슬립만 커진다(기동토크는 증가).",
-      "type": "개념"
+      "type": "개념",
+      "hint": "비례추이: 2차저항 늘리면 최대토크 크기 불변, 슬립만 이동"
     },
     {
       "id": "mc.2.a8",
@@ -1140,7 +1215,8 @@
       ],
       "answer": 2,
       "explanation": "$K_s = \\dfrac{100}{\\%Z_s} = \\dfrac{100}{80} = 1.25$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "단락비 $K_s=\\dfrac{100}{\\%Z_s}$"
     },
     {
       "id": "mc.2.a9",
@@ -1155,7 +1231,8 @@
       ],
       "answer": 2,
       "explanation": "$E = 4.44 f N \\phi = 4.44 \\times 60 \\times 100 \\times 0.02 = 532.8\\,[\\mathrm{V}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "동기기 1상 기전력 $E=4.44f N\\phi$"
     },
     {
       "id": "mc.3.a10",
@@ -1170,7 +1247,8 @@
       ],
       "answer": 1,
       "explanation": "$E_d = \\dfrac{2\\sqrt{2}}{\\pi}E \\approx 0.9 \\times 100 = 90\\,[\\mathrm{V}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "단상 전파 $E_d\\approx0.9E$"
     },
     {
       "id": "mc.7.a11",
@@ -1185,7 +1263,8 @@
       ],
       "answer": 3,
       "explanation": "스텝 모터는 고정자 권선의 여자 순서를 전환해 회전하며 브러시·정류자가 없다. 따라서 이들이 필요하다는 설명이 옳지 않다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "스텝모터는 브러시·정류자가 없다는 점이 함정"
     },
     {
       "id": "ct.1.a1",
@@ -1200,7 +1279,8 @@
       ],
       "answer": 2,
       "explanation": "$\\tau=\\dfrac{L}{R}=0.02\\,\\mathrm{s}=t$. $i(\\tau)=\\dfrac{E}{R}(1-e^{-1})=5\\times0.632=3.16\\,\\mathrm{A}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$t=\\tau$이면 $i=\\dfrac{E}{R}(1-e^{-1})$"
     },
     {
       "id": "ct.1.a2",
@@ -1215,7 +1295,8 @@
       ],
       "answer": 1,
       "explanation": "$s^2+3s+2=(s+1)(s+2)$ 로 극점이 좌반면이므로 최종값 정리 적용. $f(\\infty)=\\lim_{s\\to 0}sF(s)=\\dfrac{10}{2}=5$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "최종값정리 $\\lim_{s\\to0}sF(s)$, 극점 좌반면 확인"
     },
     {
       "id": "ct.1.a3",
@@ -1230,7 +1311,8 @@
       ],
       "answer": 3,
       "explanation": "$A=D=1.5$, $1.5\\times1.5-0.5B=1 \\Rightarrow 2.25-0.5B=1 \\Rightarrow B=2.5\\,\\Omega$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "대칭 $A=D$, 가역 $AD-BC=1$ 연립"
     },
     {
       "id": "ct.1.a4",
@@ -1245,7 +1327,8 @@
       ],
       "answer": 0,
       "explanation": "$\\Delta$ 에서 $V_p=200$, $|Z|=10$, $I_p=20\\,\\mathrm{A}$, $\\cos\\theta=0.6$. $P=3V_pI_p\\cos\\theta=3\\times200\\times20\\times0.6=7.2\\,\\mathrm{kW}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\Delta$는 상전압=선간, $|Z|$로 상전류·역률"
     },
     {
       "id": "ct.1.a5",
@@ -1260,7 +1343,8 @@
       ],
       "answer": 2,
       "explanation": "$I_0=\\dfrac{1}{3}(I_a+I_b+I_c)=\\dfrac{15}{3}=5\\,\\mathrm{A}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "영상분 $I_0=\\dfrac{1}{3}(I_a+I_b+I_c)$"
     },
     {
       "id": "ct.1.a6",
@@ -1275,7 +1359,8 @@
       ],
       "answer": 1,
       "explanation": "$\\dfrac{\\sqrt{V_3^2+V_5^2}}{V_1}=\\dfrac{\\sqrt{30^2+40^2}}{100}=\\dfrac{50}{100}=50\\%$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "왜형률=고조파 실효값$/$기본파 실효값"
     },
     {
       "id": "ct.1.a7",
@@ -1290,7 +1375,8 @@
       ],
       "answer": 3,
       "explanation": "$Z_0=\\sqrt{\\dfrac{L}{C}}=\\sqrt{\\dfrac{25\\times10^{-6}}{100\\times10^{-12}}}=500\\,\\Omega$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "무손실 특성임피던스 $Z_0=\\sqrt{L/C}$"
     },
     {
       "id": "ct.2.a8",
@@ -1305,7 +1391,8 @@
       ],
       "answer": 0,
       "explanation": "$\\Delta=1-(L_1+L_2+L_3)+(L_1L_3)=1+9+8=18$. $T=\\dfrac{P_1\\Delta_1}{\\Delta}=\\dfrac{36}{18}=2$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "메이슨 $\\Delta$: 비접촉 루프곱의 부호에 주의"
     },
     {
       "id": "ct.2.a9",
@@ -1320,7 +1407,8 @@
       ],
       "answer": 2,
       "explanation": "$s^1$ 행 $\\dfrac{4\\times5-K}{4}=\\dfrac{20-K}{4}>0 \\Rightarrow K<20$, $s^0$ 행 $K>0$. 따라서 $0<K<20$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "라우스 $s^1$·$s^0$ 행 두 조건 모두"
     },
     {
       "id": "ct.2.a10",
@@ -1335,7 +1423,8 @@
       ],
       "answer": 1,
       "explanation": "$\\omega_n^2=25 \\Rightarrow \\omega_n=5$, $2\\zeta\\omega_n=6 \\Rightarrow \\zeta=\\dfrac{6}{10}=0.6$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$2\\zeta\\omega_n$ 항과 $\\omega_n^2$ 비교"
     },
     {
       "id": "kec.1.a1",
@@ -1350,7 +1439,8 @@
       ],
       "answer": 1,
       "explanation": "KEC 111.1. 저압은 교류 $1\\ \\mathrm{kV}$ 이하·직류 $1.5\\ \\mathrm{kV}$ 이하, 고압은 이를 초과하고 $7\\ \\mathrm{kV}$ 이하, 특고압은 $7\\ \\mathrm{kV}$ 초과.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "저압의 교류·직류 상한값 짝을 구분하라"
     },
     {
       "id": "kec.2.a2",
@@ -1365,7 +1455,8 @@
       ],
       "answer": 0,
       "explanation": "KEC 132 절연저항 표. SELV·PELV는 $0.5\\ \\mathrm{M\\Omega}$(DC $250\\ \\mathrm{V}$), FELV·$500\\ \\mathrm{V}$ 이하는 $1.0\\ \\mathrm{M\\Omega}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "특별저압(SELV/PELV)의 절연저항 규정을 확인하라"
     },
     {
       "id": "kec.1.a3",
@@ -1380,7 +1471,8 @@
       ],
       "answer": 1,
       "explanation": "KEC 132 표 132-1. 최대사용전압 $7\\ \\mathrm{kV}$ 이하는 1.5배(최저 $500\\ \\mathrm{V}$). 0.92배는 $7$ 초과 $25\\ \\mathrm{kV}$ 이하 중성점 다중접지식.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "최대사용전압 구간별 절연내력 시험전압 배수표 확인"
     },
     {
       "id": "kec.1.a4",
@@ -1395,7 +1487,8 @@
       ],
       "answer": 3,
       "explanation": "KEC 141. 접지시스템은 단독·공통·통합접지로 구분한다. 저압 계통접지는 TN·TT·IT.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "접지시스템 시설분류와 계통접지(TN/TT/IT)를 구분하라"
     },
     {
       "id": "kec.2.a5",
@@ -1410,7 +1503,8 @@
       ],
       "answer": 2,
       "explanation": "KEC 203. TT 계통은 전원 한 점을 직접접지하고 노출도전부는 독립된 접지극에 접속한다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "노출도전부를 독립 접지극에 접속하는 계통방식을 떠올려라"
     },
     {
       "id": "kec.1.a6",
@@ -1425,7 +1519,8 @@
       ],
       "answer": 1,
       "explanation": "KEC 142.3.1. 특고압·고압 전기설비용 접지도체는 구리 $6\\ \\mathrm{mm^2}$ 이상, 중성점 접지용은 $16\\ \\mathrm{mm^2}$ 이상.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "특고압·고압 접지도체와 중성점접지용 최소굵기 구분"
     },
     {
       "id": "kec.2.a7",
@@ -1440,7 +1535,8 @@
       ],
       "answer": 1,
       "explanation": "KEC 142.3.2 표 142.3-1. $S\\le16$ 이면 $S$, $16<S\\le35$ 이면 $16\\ \\mathrm{mm^2}$ 고정, $S>35$ 이면 $S/2$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "선도체 단면적 구간별 보호도체 최소단면적 표를 확인하라"
     },
     {
       "id": "kec.3.a8",
@@ -1455,7 +1551,8 @@
       ],
       "answer": 1,
       "explanation": "KEC 332.5. 도로 횡단 $6\\ \\mathrm{m}$, 철도·궤도 횡단 $6.5\\ \\mathrm{m}$, 횡단보도교 위 $3.5\\ \\mathrm{m}$, 기타 $5\\ \\mathrm{m}$ 이상.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "도로·철도·횡단보도교별 가공전선 높이 구분"
     },
     {
       "id": "kec.3.a9",
@@ -1470,7 +1567,8 @@
       ],
       "answer": 2,
       "explanation": "KEC 334.1. 압력을 받을 우려가 있는 장소는 $1.0\\ \\mathrm{m}$ 이상, 그 외는 $0.6\\ \\mathrm{m}$ 이상.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "압력 우려 장소의 직접매설 깊이 규정 확인"
     },
     {
       "id": "kec.2.a10",
@@ -1485,7 +1583,8 @@
       ],
       "answer": 1,
       "explanation": "KEC 211.2 표 211.2-1. TN·교류 $120<U_0\\le230$ 구간 최대 차단시간은 $0.4\\ \\mathrm{s}$(TT는 $0.2\\ \\mathrm{s}$).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "TN·TT 계통별 해당 전압구간 차단시간을 구분하라"
     },
     {
       "id": "kec.5.a11",
@@ -1500,7 +1599,8 @@
       ],
       "answer": 2,
       "explanation": "주택 옥내 직류 전로의 대지전압은 조건 만족 시 $600\\ \\mathrm{V}$ 이하로 제한한다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "주택 옥내 분산형전원 직류 대지전압 상한 확인"
     },
     {
       "id": "em.1.b1",
@@ -1515,7 +1615,8 @@
       ],
       "answer": 0,
       "explanation": "$F=9\\times10^9\\times\\dfrac{(5\\times10^{-6})(3\\times10^{-6})}{0.3^2}=\\dfrac{0.135}{0.09}=1.5\\,\\mathrm{N}$ (인력).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "쿨롱 법칙 $F=9\\times10^9\\dfrac{Q_1 Q_2}{r^2}$, 크기만(부호는 인력/척력 방향)"
     },
     {
       "id": "em.1.b2",
@@ -1530,7 +1631,8 @@
       ],
       "answer": 0,
       "explanation": "$V=9\\times10^9\\left(\\dfrac{4\\times10^{-9}}{0.1}+\\dfrac{-3\\times10^{-9}}{0.2}\\right)=9\\times10^9\\times25\\times10^{-9}=225\\,\\mathrm{V}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "전위는 스칼라 합 $V=9\\times10^9\\sum\\dfrac{Q}{r}$, 부호 그대로 더하기"
     },
     {
       "id": "em.1.b3",
@@ -1545,7 +1647,8 @@
       ],
       "answer": 1,
       "explanation": "$\\oint \\vec{D}\\cdot d\\vec{S}=Q_{enc}$. 전속밀도 면적분은 내부 전하량 그 자체이고 외부 전하와 무관하다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "$\\oint\\vec{D}\\cdot d\\vec{S}=Q_{enc}$, 폐곡면 내부 전하만 관여"
     },
     {
       "id": "em.2.b4",
@@ -1560,7 +1663,8 @@
       ],
       "answer": 2,
       "explanation": "$F=9\\times10^9\\times\\dfrac{(2\\times10^{-9})^2}{(2\\times0.05)^2}=\\dfrac{3.6\\times10^{-8}}{0.01}=3.6\\,\\mu\\mathrm{N}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "영상전하법, 간격 $2d$ 사용"
     },
     {
       "id": "em.2.b5",
@@ -1575,7 +1679,8 @@
       ],
       "answer": 0,
       "explanation": "$C=\\dfrac{\\varepsilon_0\\varepsilon_r A}{d}=\\dfrac{8.855\\times10^{-12}\\times4\\times0.02}{10^{-3}}\\approx708\\,\\mathrm{pF}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$C=\\dfrac{\\varepsilon_0\\varepsilon_r A}{d}$, 비유전율 곱하기"
     },
     {
       "id": "em.2.b6",
@@ -1590,7 +1695,8 @@
       ],
       "answer": 2,
       "explanation": "$W=\\dfrac{1}{2}CV^2=\\dfrac{1}{2}\\times2.5\\times10^{-6}\\times120^2=18\\,\\mathrm{mJ}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$W=\\dfrac{1}{2}CV^2$"
     },
     {
       "id": "em.2.b7",
@@ -1605,7 +1711,8 @@
       ],
       "answer": 3,
       "explanation": "전위계수는 도체의 기하학적 배치·형상·매질로 정해지며 재질과는 무관하다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "전위계수는 기하학적 배치로 결정, 재질 무관(옳지 않은 것 찾기)"
     },
     {
       "id": "em.3.b8",
@@ -1620,7 +1727,8 @@
       ],
       "answer": 0,
       "explanation": "$P=\\varepsilon_0(\\varepsilon_r-1)E=8.855\\times10^{-12}\\times4\\times2\\times10^{5}\\approx7.08\\,\\mu\\mathrm{C/m^2}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "분극 $P=\\varepsilon_0(\\varepsilon_r-1)E$"
     },
     {
       "id": "em.3.b9",
@@ -1635,7 +1743,8 @@
       ],
       "answer": 0,
       "explanation": "진전하가 없으면 전계 접선 성분 연속($E_{t1}=E_{t2}$), 전속밀도 법선 성분 연속($D_{n1}=D_{n2}$).",
-      "type": "개념"
+      "type": "개념",
+      "hint": "진전하 없으면 전계 접선성분·전속밀도 법선성분이 연속"
     },
     {
       "id": "em.4.b10",
@@ -1650,7 +1759,8 @@
       ],
       "answer": 1,
       "explanation": "$H=\\dfrac{I}{2\\pi r}=\\dfrac{15}{2\\pi\\times0.1}\\approx23.9\\,\\mathrm{A/m}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "무한 직선 자계 $H=\\dfrac{I}{2\\pi r}$"
     },
     {
       "id": "em.4.b11",
@@ -1665,7 +1775,8 @@
       ],
       "answer": 0,
       "explanation": "$H=\\dfrac{NI}{2a}=\\dfrac{20\\times3}{2\\times0.05}=600\\,\\mathrm{A/m}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "원형 코일 중심 $H=\\dfrac{NI}{2a}$"
     },
     {
       "id": "em.4.b12",
@@ -1680,7 +1791,8 @@
       ],
       "answer": 3,
       "explanation": "$H=\\dfrac{NI}{2\\pi r}=\\dfrac{500\\times2}{2\\pi\\times0.2}\\approx796\\,\\mathrm{A/m}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "환상 솔레노이드 $H=\\dfrac{NI}{2\\pi r}$"
     },
     {
       "id": "em.5.b13",
@@ -1695,7 +1807,8 @@
       ],
       "answer": 0,
       "explanation": "$L=\\dfrac{\\mu_0 N^2 A}{l}=\\dfrac{4\\pi\\times10^{-7}\\times200^2\\times4\\times10^{-4}}{0.25}\\approx80.4\\,\\mu\\mathrm{H}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "솔레노이드 $L=\\dfrac{\\mu_0 N^2 A}{l}$, $N$은 제곱"
     },
     {
       "id": "em.5.b14",
@@ -1710,7 +1823,8 @@
       ],
       "answer": 1,
       "explanation": "$M=k\\sqrt{L_1 L_2}=0.6\\times\\sqrt{400}=12\\,\\mathrm{mH}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$M=k\\sqrt{L_1 L_2}$"
     },
     {
       "id": "em.5.b15",
@@ -1725,7 +1839,8 @@
       ],
       "answer": 0,
       "explanation": "가동접속 $L=L_1+L_2+2M=8+12+8=28\\,\\mathrm{mH}$ (차동은 $12\\,\\mathrm{mH}$).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "가동접속 $L=L_1+L_2+2M$ (차동은 $-2M$)"
     },
     {
       "id": "em.6.b16",
@@ -1740,7 +1855,8 @@
       ],
       "answer": 0,
       "explanation": "$F=NI=600\\,\\mathrm{AT}$, $R=\\dfrac{l}{\\mu_0\\mu_r A}\\approx4.77\\times10^{5}$, $\\Phi=\\dfrac{F}{R}\\approx1.26\\,\\mathrm{mWb}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\Phi=\\dfrac{NI}{R}$, $R=\\dfrac{l}{\\mu_0\\mu_r A}$"
     },
     {
       "id": "em.6.b17",
@@ -1755,7 +1871,8 @@
       ],
       "answer": 3,
       "explanation": "큐리점 이상에서는 자구 배열이 무너져 상자성체로 변해 강자성 성질을 잃는다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "큐리점 이상에서 강자성 상실→상자성(옳지 않은 것 찾기)"
     },
     {
       "id": "em.7.b18",
@@ -1770,7 +1887,8 @@
       ],
       "answer": 1,
       "explanation": "$\\eta=377\\sqrt{\\dfrac{\\mu_r}{\\varepsilon_r}}=377\\times\\dfrac{1}{2}=188.5\\,\\Omega$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\eta=\\eta_0\\sqrt{\\dfrac{\\mu_r}{\\varepsilon_r}}$"
     },
     {
       "id": "em.7.b19",
@@ -1785,7 +1903,8 @@
       ],
       "answer": 0,
       "explanation": "포인팅 벡터는 전력 밀도 $[\\mathrm{W/m^2}]$ 이며 방향은 $\\vec{E}$·$\\vec{H}$ 에 수직인 전파 진행 방향이다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "포인팅 벡터는 전력밀도 $[\\mathrm{W/m^2}]$, 방향은 $\\vec{E},\\vec{H}$에 수직인 진행방향"
     },
     {
       "id": "em.8.b20",
@@ -1800,7 +1919,8 @@
       ],
       "answer": 0,
       "explanation": "$r=\\dfrac{mv}{qB}=\\dfrac{9.11\\times10^{-31}\\times3\\times10^{6}}{1.6\\times10^{-19}\\times0.01}\\approx1.71\\,\\mathrm{mm}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "원운동 반지름 $r=\\dfrac{mv}{qB}$"
     },
     {
       "id": "pw.1.b1",
@@ -1815,7 +1935,8 @@
       ],
       "answer": 0,
       "explanation": "$P=9.8QH\\eta=9.8\\times15\\times80\\times0.9=10584\\,[\\mathrm{kW}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "수력 출력 $P=9.8QH\\eta$"
     },
     {
       "id": "pw.1.b2",
@@ -1830,7 +1951,8 @@
       ],
       "answer": 3,
       "explanation": "$\\eta=\\dfrac{860\\times200000}{6000\\times60000}\\times100=47.8\\%$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "화력 열효율 $\\eta=\\dfrac{860 W}{m\\,C}$"
     },
     {
       "id": "pw.1.b3",
@@ -1845,7 +1967,8 @@
       ],
       "answer": 2,
       "explanation": "비속도는 저낙차 대유량일수록 높다: 펠턴 < 프란시스 < 사류 < 카플란(프로펠러). 프로펠러형이 가장 높다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "비속도 순서: 펠턴 < 프란시스 < 사류 < 프로펠러"
     },
     {
       "id": "pw.2.b4",
@@ -1860,7 +1983,8 @@
       ],
       "answer": 0,
       "explanation": "$C=\\dfrac{I_s}{E_r}$ 로 어드미턴스 차원이므로 $[\\mho]$. $A,D$ 무차원, $B$ 는 $[\\Omega]$.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "$C=\\dfrac{I_s}{E_r}$: 어드미턴스 차원의 단위를 고른다"
     },
     {
       "id": "pw.2.b5",
@@ -1875,7 +1999,8 @@
       ],
       "answer": 3,
       "explanation": "$Z_0=\\sqrt{\\dfrac{L}{C}}=\\sqrt{\\dfrac{10^{-3}}{0.01\\times10^{-6}}}=\\sqrt{10^5}\\approx316\\,[\\Omega]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "특성임피던스 $Z_0=\\sqrt{\\dfrac{L}{C}}$ (단위 환산 주의)"
     },
     {
       "id": "pw.2.b6",
@@ -1890,7 +2015,8 @@
       ],
       "answer": 0,
       "explanation": "페란티는 진상 충전전류가 원인. 지상 무효전력을 공급하는 분로리액터로 진상전류를 상쇄해 방지한다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "페란티는 진상 충전전류가 원인: 지상 무효전력 공급 설비"
     },
     {
       "id": "pw.2.b7",
@@ -1905,7 +2031,8 @@
       ],
       "answer": 3,
       "explanation": "$\\dfrac{8D^2}{3S}=\\dfrac{8\\times6.25^2}{3\\times250}=\\dfrac{312.5}{750}\\approx0.42\\,[\\mathrm{m}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "전선 실장이 경간보다 긴 양 $\\dfrac{8D^2}{3S}$"
     },
     {
       "id": "pw.3.b8",
@@ -1920,7 +2047,8 @@
       ],
       "answer": 2,
       "explanation": "소호리액터접지는 충전전류를 공진 보상해 지락전류를 거의 0으로 만든다. 직접접지는 지락전류가 가장 크다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "충전전류를 공진 보상해 지락전류를 거의 0으로 만드는 접지방식"
     },
     {
       "id": "pw.3.b9",
@@ -1935,7 +2063,8 @@
       ],
       "answer": 0,
       "explanation": "완전 보상 공진 조건 $\\omega L=\\dfrac{1}{3\\omega C}$, 즉 $L=\\dfrac{1}{3\\omega^2 C}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "소호리액터 완전보상 공진조건 $\\omega L=\\dfrac{1}{3\\omega C}$"
     },
     {
       "id": "pw.3.b10",
@@ -1950,7 +2079,8 @@
       ],
       "answer": 1,
       "explanation": "직렬콘덴서는 용량성 리액턴스로 선로의 유도성 리액턴스를 상쇄해 전압강하 감소·안정도 향상.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "직렬콘덴서: 유도성 리액턴스 보상으로 전압강하↓·안정도↑"
     },
     {
       "id": "pw.3.b11",
@@ -1965,7 +2095,8 @@
       ],
       "answer": 2,
       "explanation": "부등률 $=\\dfrac{200+150+250}{480}=\\dfrac{600}{480}=1.25$ (항상 1 이상).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "부등률 $=\\dfrac{\\text{개별 최대의 합}}{\\text{합성 최대}}$ (항상 1 이상)"
     },
     {
       "id": "pw.3.b12",
@@ -1980,7 +2111,8 @@
       ],
       "answer": 1,
       "explanation": "평균전력 $\\dfrac{4800}{24}=200\\,[\\mathrm{kW}]$, 부하율 $\\dfrac{200}{400}=50\\%$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "부하율 $=\\dfrac{\\text{평균전력}}{\\text{최대전력}}$, 평균은 사용량/시간"
     },
     {
       "id": "pw.4.b13",
@@ -1995,7 +2127,8 @@
       ],
       "answer": 3,
       "explanation": "$\\%Z$ 는 기준용량에 비례: $6\\times\\dfrac{100}{10}=60\\%$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\%Z$는 기준용량에 비례하여 환산"
     },
     {
       "id": "pw.4.b14",
@@ -2010,7 +2143,8 @@
       ],
       "answer": 2,
       "explanation": "거리계전기는 $Z=V/I$ 를 측정해 일정 거리 이내 고장에 동작한다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "$Z=V/I$를 측정해 고장 거리로 동작하는 계전기"
     },
     {
       "id": "pw.4.b15",
@@ -2025,7 +2159,8 @@
       ],
       "answer": 1,
       "explanation": "정한시는 정정치 초과 시 전류 크기와 무관하게 일정 시간 후 동작한다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "전류 크기와 무관하게 일정 시간에 동작하는 한시 특성 명칭"
     },
     {
       "id": "pw.5.b16",
@@ -2040,7 +2175,8 @@
       ],
       "answer": 0,
       "explanation": "단상2선 $100\\%$ 기준: 단상3선 $37.5\\%$, 3상3선 $75\\%$, 3상4선 $33.3\\%$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "전선 소요량 비: 단상2선 100% 기준, 3상3선의 상대값을 기억"
     },
     {
       "id": "pw.5.b17",
@@ -2055,7 +2191,8 @@
       ],
       "answer": 3,
       "explanation": "$P_l=2I^2R=2\\times20^2\\times0.3=240\\,[\\mathrm{W}]$ (왕복 2가닥).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "전력손실 $P_l=2I^2R$ (단상 2선, 왕복 2가닥)"
     },
     {
       "id": "pw.6.b18",
@@ -2070,7 +2207,8 @@
       ],
       "answer": 1,
       "explanation": "피뢰기 정격전압은 속류를 차단하고 회복시킬 수 있는 최고 교류전압(실효값). 방전 중 최고는 제한전압.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "피뢰기 정격전압=속류를 차단하는 최고 상용주파 전압(제한전압과 구분)"
     },
     {
       "id": "pw.7.b19",
@@ -2085,7 +2223,8 @@
       ],
       "answer": 2,
       "explanation": "$P_s=\\sqrt{3}\\,V_n I_s=\\sqrt{3}\\times25.8\\times25\\approx1117\\,[\\mathrm{MVA}]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "3상 차단용량 $P_s=\\sqrt{3}\\,V_n I_s$"
     },
     {
       "id": "pw.7.b20",
@@ -2100,7 +2239,8 @@
       ],
       "answer": 1,
       "explanation": "정격차단시간 = 개극시간 + 아크시간(트립코일 여자~아크 소호). 보통 사이클로 표시.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "정격차단시간 = 개극시간 + 아크시간"
     },
     {
       "id": "mc.1.b1",
@@ -2115,7 +2255,8 @@
       ],
       "answer": 1,
       "explanation": "$E=\\dfrac{pZ\\Phi N}{60a}$, 중권 $a=p=8$. $E=\\dfrac{8\\cdot600\\cdot0.03\\cdot1000}{60\\cdot8}=300\\ \\mathrm{V}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$E=\\dfrac{pZ\\Phi N}{60a}$, 중권 $a=p$"
     },
     {
       "id": "mc.1.b2",
@@ -2130,7 +2271,8 @@
       ],
       "answer": 2,
       "explanation": "$\\varepsilon=\\dfrac{N_0-N_n}{N_n}\\times100=\\dfrac{1260-1200}{1200}\\times100=5\\ [\\%]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "속도변동률 $\\varepsilon=\\dfrac{N_0-N_n}{N_n}\\times100$"
     },
     {
       "id": "mc.1.b3",
@@ -2145,7 +2287,8 @@
       ],
       "answer": 2,
       "explanation": "$E_b=V-I_aR_a=220-40\\cdot0.25=210\\ \\mathrm{V}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "역기전력 $E_b=V-I_aR_a$"
     },
     {
       "id": "mc.1.b4",
@@ -2160,7 +2303,8 @@
       ],
       "answer": 3,
       "explanation": "양호한 정류를 위해 리액턴스 전압은 작게 해야 한다. 리액턴스 전압을 크게 하면 정류가 나빠진다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "양호한 정류엔 리액턴스 전압을 작게(크게가 함정)"
     },
     {
       "id": "mc.1.b5",
@@ -2175,7 +2319,8 @@
       ],
       "answer": 2,
       "explanation": "발전기 규약효율 $\\eta=\\dfrac{P}{P+P_\\ell}\\times100=\\dfrac{10000}{11000}\\times100=90.9\\ [\\%]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "발전기 규약효율 $\\eta=\\dfrac{P}{P+P_\\ell}\\times100$"
     },
     {
       "id": "mc.2.b6",
@@ -2190,7 +2335,8 @@
       ],
       "answer": 1,
       "explanation": "$p=\\dfrac{120f}{N_s}=\\dfrac{120\\cdot60}{720}=10$ 극.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "극수 $p=\\dfrac{120f}{N_s}$"
     },
     {
       "id": "mc.2.b7",
@@ -2205,7 +2351,8 @@
       ],
       "answer": 2,
       "explanation": "$K_s=\\dfrac{I_{f1}}{I_{f2}}=\\dfrac{120}{80}=1.5$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "단락비 $K_s=\\dfrac{I_{f1}}{I_{f2}}$ (계자전류비)"
     },
     {
       "id": "mc.2.b8",
@@ -2220,7 +2367,8 @@
       ],
       "answer": 2,
       "explanation": "$\\varepsilon=\\dfrac{E_0-V_n}{V_n}\\times100=\\dfrac{6600-6000}{6000}\\times100=10\\ [\\%]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "전압변동률 $\\varepsilon=\\dfrac{E_0-V_n}{V_n}\\times100$"
     },
     {
       "id": "mc.2.b9",
@@ -2235,7 +2383,8 @@
       ],
       "answer": 0,
       "explanation": "과여자 시 진상 전류가 흘러 콘덴서로 작용한다(동기조상기 원리).",
-      "type": "개념"
+      "type": "개념",
+      "hint": "동기전동기 과여자는 진상 전류, 콘덴서 작용(위상특성곡선)"
     },
     {
       "id": "mc.4.b10",
@@ -2250,7 +2399,8 @@
       ],
       "answer": 0,
       "explanation": "$a=\\dfrac{600}{150}=4$, $I_1=\\dfrac{I_2}{a}=\\dfrac{40}{4}=10\\ \\mathrm{A}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "전류비는 권수비의 역, $I_1=I_2/a$"
     },
     {
       "id": "mc.4.b11",
@@ -2265,7 +2415,8 @@
       ],
       "answer": 2,
       "explanation": "단락전류는 정격의 $\\dfrac{100}{\\%Z}=\\dfrac{100}{5}=20$ 배.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "단락전류는 정격의 $\\dfrac{100}{\\%Z}$ 배"
     },
     {
       "id": "mc.4.b12",
@@ -2280,7 +2431,8 @@
       ],
       "answer": 2,
       "explanation": "$\\eta=\\dfrac{10000}{10000+120+200}\\times100=96.9\\ [\\%]$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "효율 $\\eta=\\dfrac{P}{P+P_i+P_c}\\times100$"
     },
     {
       "id": "mc.4.b13",
@@ -2295,7 +2447,8 @@
       ],
       "answer": 0,
       "explanation": "$\\dfrac{P_V}{P_\\Delta}=\\dfrac{\\sqrt{3}VI}{3VI}=\\dfrac{1}{\\sqrt{3}}=57.7\\ [\\%]$ (이용률 $86.6\\%$ 와 구분).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "V결선 출력비 $1/\\sqrt3$, 이용률 $86.6\\%$와 구분"
     },
     {
       "id": "mc.4.b14",
@@ -2310,7 +2463,8 @@
       ],
       "answer": 0,
       "explanation": "$Y{-}Y$ 는 제3고조파 여자전류 통로가 없어 기전력에 제3고조파가 포함되고 유도장해를 일으킨다(그래서 $Y{-}Y{-}\\Delta$ 사용).",
-      "type": "개념"
+      "type": "개념",
+      "hint": "$Y{-}Y$는 제3고조파 통로 부재가 문제"
     },
     {
       "id": "mc.5.b15",
@@ -2325,7 +2479,8 @@
       ],
       "answer": 1,
       "explanation": "$N_s=\\dfrac{120\\cdot60}{8}=900$, $N=(1-0.05)\\cdot900=855\\ \\mathrm{rpm}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$N=(1-s)N_s$, 먼저 $N_s=\\dfrac{120f}{p}$"
     },
     {
       "id": "mc.5.b16",
@@ -2340,7 +2495,8 @@
       ],
       "answer": 2,
       "explanation": "비례추이 $s\\propto r_2$ 이므로 $s=0.04\\times3=0.12$ (최대토크 크기는 불변).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "비례추이 $s\\propto r_2$"
     },
     {
       "id": "mc.5.b17",
@@ -2355,7 +2511,8 @@
       ],
       "answer": 3,
       "explanation": "2차 저항 기동은 권선형 전용이다. 농형은 회전자가 단락돼 외부 저항을 넣을 수 없다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "2차 저항 기동은 권선형 전용, 농형엔 불가"
     },
     {
       "id": "mc.5.b18",
@@ -2370,7 +2527,8 @@
       ],
       "answer": 1,
       "explanation": "$P_2=\\dfrac{P_m}{1-s}=\\dfrac{9600}{0.96}=10000\\ \\mathrm{W}=10\\ \\mathrm{kW}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$P_2=\\dfrac{P_m}{1-s}$"
     },
     {
       "id": "mc.3.b19",
@@ -2385,7 +2543,8 @@
       ],
       "answer": 3,
       "explanation": "애노드 전류가 유지전류 이하로 감소하면 SCR은 자연히 turn-off 된다. 나머지는 옳다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "SCR은 유지전류 이하면 turn-off된다는 점 확인"
     },
     {
       "id": "mc.7.b20",
@@ -2400,7 +2559,8 @@
       ],
       "answer": 1,
       "explanation": "서보모터는 빠른 응답을 위해 관성모멘트가 작아야 한다. '관성모멘트가 클 것'은 옳지 않다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "서보모터는 관성모멘트가 작아야 함(크다가 함정)"
     },
     {
       "id": "ct.1.b1",
@@ -2415,7 +2575,8 @@
       ],
       "answer": 1,
       "explanation": "$\\tau=RC=0.1$ s. $v_C(\\tau)=E(1-e^{-1})=100\\times0.632=63.2$ V.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$t=\\tau$일 때 $v_C=E(1-e^{-1})$"
     },
     {
       "id": "ct.1.b2",
@@ -2430,7 +2591,8 @@
       ],
       "answer": 3,
       "explanation": "$\\tau=\\dfrac{L}{R}=0.05$ s, $I=\\dfrac{E}{R}=5$ A. $i(\\tau)=5(1-e^{-1})=3.16$ A.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\tau=L/R$이고 $t=\\tau$이면 $(1-e^{-1})$"
     },
     {
       "id": "ct.1.b3",
@@ -2445,7 +2607,8 @@
       ],
       "answer": 1,
       "explanation": "진동 조건 $R<2\\sqrt{\\dfrac{L}{C}}=2\\sqrt{62500}=500\\ \\Omega$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "부족제동(진동) 조건 $R<2\\sqrt{L/C}$"
     },
     {
       "id": "ct.1.b4",
@@ -2460,7 +2623,8 @@
       ],
       "answer": 0,
       "explanation": "부분분수 $A=\\left.\\dfrac{s+3}{s+2}\\right|_{s=-1}=2$, $B=\\left.\\dfrac{s+3}{s+1}\\right|_{s=-2}=-1$. $f(t)=2e^{-t}-e^{-2t}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "부분분수 후 각 항 지수함수로 역변환"
     },
     {
       "id": "ct.1.b5",
@@ -2475,7 +2639,8 @@
       ],
       "answer": 3,
       "explanation": "$\\lim_{s\\to0}sF(s)=\\dfrac{10}{5}=2$. 분모 근이 좌반평면이라 유효.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "최종값정리 $\\lim_{s\\to0}sF(s)$"
     },
     {
       "id": "ct.1.b6",
@@ -2490,7 +2655,8 @@
       ],
       "answer": 0,
       "explanation": "T형에서 $Z_{11}=4+10=14\\ \\Omega$ ($Z_{22}=16$, $Z_{12}=Z_{21}=10$).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "T형 $Z_{11}=$ 입력측 직렬$+$병렬"
     },
     {
       "id": "ct.1.b7",
@@ -2505,7 +2671,8 @@
       ],
       "answer": 3,
       "explanation": "대칭망 $Z_0=\\sqrt{\\dfrac{B}{C}}=\\sqrt{90000}=300\\ \\Omega$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "대칭망 영상임피던스 $Z_0=\\sqrt{B/C}$"
     },
     {
       "id": "ct.1.b8",
@@ -2520,7 +2687,8 @@
       ],
       "answer": 1,
       "explanation": "$I_p=\\dfrac{200}{20}=10$ A, $I_l=\\sqrt{3}\\,I_p=17.3$ A.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\Delta$: 상전류=선간전압$/Z$, 선전류는 $\\sqrt{3}$배"
     },
     {
       "id": "ct.1.b9",
@@ -2535,7 +2703,8 @@
       ],
       "answer": 2,
       "explanation": "$P=1200$ W, $Q=\\sqrt{3}(W_1-W_2)=692.8$ Var, $\\cos\\theta=\\dfrac{1200}{\\sqrt{1200^2+692.8^2}}=0.866$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "2전력계법 $\\cos\\theta=\\dfrac{P}{\\sqrt{P^2+Q^2}}$, $Q=\\sqrt{3}(W_1-W_2)$"
     },
     {
       "id": "ct.1.b10",
@@ -2550,7 +2719,8 @@
       ],
       "answer": 2,
       "explanation": "$I_g=\\dfrac{3E}{Z_0+Z_1+Z_2}=\\dfrac{300}{15}=20$ A.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "1선지락 $I_g=\\dfrac{3E}{Z_0+Z_1+Z_2}$"
     },
     {
       "id": "ct.1.b11",
@@ -2565,7 +2735,8 @@
       ],
       "answer": 3,
       "explanation": "$V=\\sqrt{100^2+50^2}=\\sqrt{12500}=111.8$ V.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "비정현파 실효값 $\\sqrt{\\sum V_n^2}$ (각 항 실효값)"
     },
     {
       "id": "ct.1.b12",
@@ -2580,7 +2751,8 @@
       ],
       "answer": 1,
       "explanation": "$Z_0=\\sqrt{\\dfrac{L}{C}}=\\sqrt{250000}=500\\ \\Omega$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "특성임피던스 $Z_0=\\sqrt{L/C}$"
     },
     {
       "id": "ct.1.b13",
@@ -2595,7 +2767,8 @@
       ],
       "answer": 3,
       "explanation": "$R_L=25\\ \\Omega$일 때 $P_{max}=\\dfrac{E^2}{4R_L}=\\dfrac{10000}{100}=100$ W.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "정합 시 $P_{max}=\\dfrac{E^2}{4R}$"
     },
     {
       "id": "ct.2.b14",
@@ -2610,7 +2783,8 @@
       ],
       "answer": 0,
       "explanation": "$\\dfrac{C}{R}=\\dfrac{G_1G_2}{1+G_1G_2H}=\\dfrac{12}{1+6}=1.71$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "폐루프 $\\dfrac{G_1G_2}{1+G_1G_2H}$"
     },
     {
       "id": "ct.2.b15",
@@ -2625,7 +2799,8 @@
       ],
       "answer": 2,
       "explanation": "$s^1$행 $\\dfrac{48-K}{6}>0 \\Rightarrow K<48$, $s^0$행 $K>0$. 따라서 $0<K<48$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "라우스 $s^1$·$s^0$ 행 두 조건"
     },
     {
       "id": "ct.2.b16",
@@ -2640,7 +2815,8 @@
       ],
       "answer": 2,
       "explanation": "$\\omega_n=5$, $2\\zeta\\omega_n=6 \\Rightarrow \\zeta=0.6$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\omega_n=\\sqrt{25}$, $2\\zeta\\omega_n$ 비교"
     },
     {
       "id": "ct.2.b17",
@@ -2655,7 +2831,8 @@
       ],
       "answer": 1,
       "explanation": "$K_v=\\lim_{s\\to0}sG(s)=\\dfrac{20}{4}=5$, $e_{ss}=\\dfrac{1}{K_v}=0.2$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "램프 정상편차 $1/K_v$, $K_v=\\lim_{s\\to0}sG$"
     },
     {
       "id": "ct.2.b18",
@@ -2670,7 +2847,8 @@
       ],
       "answer": 0,
       "explanation": "$\\Delta=1-(-3)=4$, $\\Delta_1=1$, $T=\\dfrac{8}{4}=2$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "메이슨 단일루프 $\\Delta=1-L$"
     },
     {
       "id": "ct.2.b19",
@@ -2685,7 +2863,8 @@
       ],
       "answer": 0,
       "explanation": "$\\det(sI-A)=s^2+3s+2=(s+1)(s+2)=0 \\Rightarrow s=-1,\\ -2$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "특성근은 $\\det(sI-A)=0$의 해"
     },
     {
       "id": "ct.2.b20",
@@ -2700,7 +2879,8 @@
       ],
       "answer": 2,
       "explanation": "$\\lim_{z\\to1}(1-z^{-1})X(z)=\\lim_{z\\to1}\\dfrac{1}{z-0.5}=2$. 극점 $z=0.5$가 단위원 내부라 유효.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "Z 최종값정리 $\\lim_{z\\to1}(1-z^{-1})X(z)$"
     },
     {
       "id": "kec.1.b1",
@@ -2715,7 +2895,8 @@
       ],
       "answer": 2,
       "explanation": "KEC 123. 접속으로 전기저항을 증가시키지 않고 전선 세기를 $20\\%$ 이상 감소시키지 아니할 것(원래의 $80\\%$ 이상 유지).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "접속 시 전선 세기 감소 허용 한도 규정을 떠올려라"
     },
     {
       "id": "kec.1.b2",
@@ -2730,7 +2911,8 @@
       ],
       "answer": 3,
       "explanation": "KEC 132 표 132-1. $7$ 초과 $25\\ \\mathrm{kV}$ 이하 중성점 다중접지식은 0.92배($7\\ \\mathrm{kV}$ 이하 1.5배).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "7 초과 25kV 이하 중성점 다중접지식 시험전압 배수 확인"
     },
     {
       "id": "kec.1.b3",
@@ -2745,7 +2927,8 @@
       ],
       "answer": 3,
       "explanation": "KEC 203.3. IT 계통은 충전부를 대지에서 절연(또는 임피던스 접지)하고 노출도전부는 개별·집합 접지한다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "충전부를 대지 절연·임피던스 접지하는 계통을 떠올려라"
     },
     {
       "id": "kec.1.b4",
@@ -2760,7 +2943,8 @@
       ],
       "answer": 2,
       "explanation": "KEC 151.1. 지상 높이 $20\\ \\mathrm{m}$ 이상 건축물·구조물에 피뢰시스템을 적용한다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "피뢰시스템 적용 대상 건축물 높이 기준 확인"
     },
     {
       "id": "kec.1.b5",
@@ -2775,7 +2959,8 @@
       ],
       "answer": 2,
       "explanation": "KEC 142.2. 접지극은 지표면에서 $0.75\\ \\mathrm{m}$ 이상 깊이로 매설(동결 깊이 감안).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "동결깊이 감안 접지극 매설깊이 규정 확인"
     },
     {
       "id": "kec.2.b6",
@@ -2790,7 +2975,8 @@
       ],
       "answer": 2,
       "explanation": "KEC 231.6. 백열전등·방전등 옥내 전로의 대지전압은 $300\\ \\mathrm{V}$ 이하.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "옥내 백열전등·방전등 전로 대지전압 상한 확인"
     },
     {
       "id": "kec.2.b7",
@@ -2805,7 +2991,8 @@
       ],
       "answer": 1,
       "explanation": "KEC 211.2.4. 인체감전보호용 누전차단기는 정격감도전류 $30\\ \\mathrm{mA}$ 이하, 동작시간 $0.03$ 초 이하(물기 장소는 $15\\ \\mathrm{mA}$).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "인체감전보호용 누전차단기 정격감도전류·동작시간 확인"
     },
     {
       "id": "kec.2.b8",
@@ -2820,7 +3007,8 @@
       ],
       "answer": 2,
       "explanation": "KEC 221.1.1. 도로 횡단 $5\\ \\mathrm{m}$, 철도·궤도 $6.5\\ \\mathrm{m}$, 횡단보도교 위 $3\\ \\mathrm{m}$, 기타 $4\\ \\mathrm{m}$ 이상.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "저압 인입선 도로횡단 노면상 높이를 구분하라"
     },
     {
       "id": "kec.2.b9",
@@ -2835,7 +3023,8 @@
       ],
       "answer": 2,
       "explanation": "KEC 222.5. $400\\ \\mathrm{V}$ 초과는 지름 $5\\ \\mathrm{mm}$ 이상 경동선($400\\ \\mathrm{V}$ 이하는 $3.2\\ \\mathrm{mm}$).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "사용전압별 저압 가공전선 경동선 최소지름 구분"
     },
     {
       "id": "kec.2.b10",
@@ -2850,7 +3039,8 @@
       ],
       "answer": 1,
       "explanation": "KEC 212.3.4 표 212.3-2. 주택용은 1.13배 부동작, 1.45배 60분 이내 동작(산업용은 1.05·1.3배).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "주택용 차단기 부동작·동작 배율표(산업용과 구분) 확인"
     },
     {
       "id": "kec.3.b11",
@@ -2865,7 +3055,8 @@
       ],
       "answer": 1,
       "explanation": "KEC 333.21. A종 $150\\ \\mathrm{m}$, B종 $250\\ \\mathrm{m}$, 철탑 $600\\ \\mathrm{m}$ 이하.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "지지물 종류별(A종·B종·철탑) 표준경간 구분"
     },
     {
       "id": "kec.3.b12",
@@ -2880,7 +3071,8 @@
       ],
       "answer": 2,
       "explanation": "KEC 332.11. 상부조영재 위쪽 $2\\ \\mathrm{m}$(케이블 $1\\ \\mathrm{m}$), 옆·아래·기타 $1.2\\ \\mathrm{m}$(케이블 $0.5\\ \\mathrm{m}$).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "조영재 위쪽·옆·케이블 여부별 이격거리 구분"
     },
     {
       "id": "kec.3.b13",
@@ -2895,7 +3087,8 @@
       ],
       "answer": 1,
       "explanation": "KEC 333.32. $15$ 초과 $25\\ \\mathrm{kV}$ 이하 다중접지는 각 접지점 $300\\ \\Omega$ 이하, 1 km 합성 $15\\ \\Omega$ 이하.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "다중접지의 각 접지점 저항과 1km 합성저항을 구분하라"
     },
     {
       "id": "kec.3.b14",
@@ -2910,7 +3103,8 @@
       ],
       "answer": 3,
       "explanation": "KEC 351.3. 용량 $10000\\ \\mathrm{kVA}$ 이상 발전기는 내부고장 시 자동차단.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "발전기 내부고장 자동차단 의무 용량 기준 확인"
     },
     {
       "id": "kec.3.b15",
@@ -2925,7 +3119,8 @@
       ],
       "answer": 2,
       "explanation": "KEC 351.5 표 351.5-1. $15000\\ \\mathrm{kVA}$ 이상은 내부고장·과전류·과전압 시 자동차단.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "커패시터 보호장치 뱅크용량별 동작조건 표 확인"
     },
     {
       "id": "kec.4.b16",
@@ -2940,7 +3135,8 @@
       ],
       "answer": 2,
       "explanation": "KEC 411.2 표 411.2-1. 교류 급전 공칭전압은 단상 $25000\\ \\mathrm{V}$, 직류는 $750$ 및 $1500\\ \\mathrm{V}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "전기철도 교류·직류 급전 공칭전압 값을 확인하라"
     },
     {
       "id": "kec.4.b17",
@@ -2955,7 +3151,8 @@
       ],
       "answer": 1,
       "explanation": "KEC 421. 단상 견인부하를 3상 계통에 평형화하기 위해 스코트 결선(또는 변형 우드브리지)을 쓴다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "단상 견인부하를 3상에 평형화하는 결선방식을 떠올려라"
     },
     {
       "id": "kec.5.b18",
@@ -2970,7 +3167,8 @@
       ],
       "answer": 1,
       "explanation": "KEC 522.1.1. 모듈 접속 전선은 공칭단면적 $2.5\\ \\mathrm{mm^2}$ 이상 연동선(또는 동등 이상).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "태양전지 모듈 접속전선 최소 공칭단면적 확인"
     },
     {
       "id": "kec.5.b19",
@@ -2985,7 +3183,8 @@
       ],
       "answer": 2,
       "explanation": "KEC 532. 가장 높고 낙뢰를 직접 받는 회전 블레이드 선단부에 수뢰부를 시설하고 인하도선으로 접지시스템에 연결한다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "낙뢰를 직접 받는 가장 높은 부위에 수뢰부를 두는 원칙"
     },
     {
       "id": "kec.3.b20",
@@ -3000,7 +3199,8 @@
       ],
       "answer": 2,
       "explanation": "KEC 331.11(지선의 시설). 지선의 안전율은 2.5 이상이어야 하며, 허용 최저 인장하중은 $4.31\\ \\mathrm{kN}$ 이상이다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "가공전선로 지선의 안전율 규정을 확인하라"
     },
     {
       "id": "em.1.c1",
@@ -3015,7 +3215,8 @@
       ],
       "answer": 0,
       "explanation": "$F=9\\times10^9\\cdot\\dfrac{(7\\times10^{-6})(3\\times10^{-6})}{0.15^2}=8.4\\,\\mathrm{N}$ (흡인력).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "쿨롱 법칙 $F=9\\times10^9\\dfrac{Q_1 Q_2}{r^2}$"
     },
     {
       "id": "em.1.c2",
@@ -3030,7 +3231,8 @@
       ],
       "answer": 0,
       "explanation": "영상전하 간격 $2d=0.12$. $F=9\\times10^9\\cdot\\dfrac{(2\\times10^{-6})^2}{0.12^2}=2.5\\,\\mathrm{N}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "영상전하법, 유효 거리 $2d$"
     },
     {
       "id": "em.1.c3",
@@ -3045,7 +3247,8 @@
       ],
       "answer": 0,
       "explanation": "균일 대전 구 내부($r<R$) $E=\\dfrac{Qr}{4\\pi\\varepsilon_0 R^3}=9\\times10^9\\cdot\\dfrac{8\\times10^{-6}\\cdot0.1}{0.2^3}=9\\times10^{5}\\,\\mathrm{V/m}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "균일 대전 구 내부($r<R$): $E=\\dfrac{Qr}{4\\pi\\varepsilon_0 R^3}$, $r$에 비례"
     },
     {
       "id": "em.2.c4",
@@ -3060,7 +3263,8 @@
       ],
       "answer": 0,
       "explanation": "$C=4\\pi\\varepsilon_0\\dfrac{ab}{b-a}$, $\\dfrac{ab}{b-a}=0.1$, $C=\\dfrac{0.1}{9\\times10^9}=11.1\\,\\mathrm{pF}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "동심구 용량 $C=\\dfrac{4\\pi\\varepsilon_0 ab}{b-a}$"
     },
     {
       "id": "em.2.c5",
@@ -3075,7 +3279,8 @@
       ],
       "answer": 0,
       "explanation": "$W=\\dfrac{1}{2}CV^2=\\dfrac{1}{2}\\cdot20\\times10^{-6}\\cdot250^2=0.625\\,\\mathrm{J}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$W=\\dfrac{1}{2}CV^2$"
     },
     {
       "id": "em.2.c6",
@@ -3090,7 +3295,8 @@
       ],
       "answer": 0,
       "explanation": "직렬 $\\dfrac{12\\times4}{16}=3$, 병렬 $3+5=8\\,\\mu\\mathrm{F}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "직렬은 $\\dfrac{C_1 C_2}{C_1+C_2}$, 병렬은 합, 순서대로"
     },
     {
       "id": "em.3.c7",
@@ -3105,7 +3311,8 @@
       ],
       "answer": 0,
       "explanation": "$\\dfrac{\\tan\\theta_1}{\\tan\\theta_2}=\\dfrac{\\varepsilon_1}{\\varepsilon_2}$, $\\tan\\theta_2=1\\cdot\\dfrac{2}{4}=0.5$, $\\theta_2\\approx26.6^\\circ$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "굴절 법칙 $\\dfrac{\\tan\\theta_1}{\\tan\\theta_2}=\\dfrac{\\varepsilon_1}{\\varepsilon_2}$"
     },
     {
       "id": "em.3.c8",
@@ -3120,7 +3327,8 @@
       ],
       "answer": 0,
       "explanation": "$P=\\varepsilon_0(\\varepsilon_r-1)E=8.854\\times10^{-12}\\cdot5\\cdot2000=8.85\\times10^{-8}\\,\\mathrm{C/m^2}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "분극 $P=\\varepsilon_0(\\varepsilon_r-1)E$"
     },
     {
       "id": "em.4.c9",
@@ -3135,7 +3343,8 @@
       ],
       "answer": 0,
       "explanation": "$R=\\rho\\dfrac{L}{A}=1.72\\times10^{-8}\\cdot\\dfrac{200}{2\\times10^{-6}}=1.72\\,\\Omega$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$R=\\rho\\dfrac{L}{A}$, 면적 mm²를 m²로"
     },
     {
       "id": "em.4.c10",
@@ -3150,7 +3359,8 @@
       ],
       "answer": 0,
       "explanation": "$G=\\sigma\\dfrac{A}{L}=5\\times10^{7}\\cdot0.5=2.5\\times10^{7}\\,\\mathrm{S}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "컨덕턴스 $G=\\sigma\\dfrac{A}{L}$"
     },
     {
       "id": "em.5.c11",
@@ -3165,7 +3375,8 @@
       ],
       "answer": 0,
       "explanation": "$H=\\dfrac{I}{2\\pi r}=\\dfrac{15}{2\\pi\\times0.03}=79.6\\,\\mathrm{A/m}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "무한 직선 자계 $H=\\dfrac{I}{2\\pi r}$"
     },
     {
       "id": "em.5.c12",
@@ -3180,7 +3391,8 @@
       ],
       "answer": 0,
       "explanation": "$H=\\dfrac{NI}{2a}=\\dfrac{20\\times3}{0.2}=300\\,\\mathrm{A/m}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "원형 코일 중심 $H=\\dfrac{NI}{2a}$"
     },
     {
       "id": "em.5.c13",
@@ -3195,7 +3407,8 @@
       ],
       "answer": 0,
       "explanation": "$H=\\dfrac{NI}{2\\pi r}=\\dfrac{400\\times5}{2\\pi\\times0.2}\\approx1592\\,\\mathrm{A/m}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "토로이드 내부 $H=\\dfrac{NI}{2\\pi r}$"
     },
     {
       "id": "em.6.c14",
@@ -3210,7 +3423,8 @@
       ],
       "answer": 0,
       "explanation": "$M=(\\mu_r-1)H=100\\times500=5\\times10^{4}\\,\\mathrm{A/m}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "자화 $M=(\\mu_r-1)H$"
     },
     {
       "id": "em.6.c15",
@@ -3225,7 +3439,8 @@
       ],
       "answer": 0,
       "explanation": "$F=400$, $R_m=\\dfrac{0.5}{\\mu_0\\cdot1000\\cdot4\\times10^{-4}}\\approx9.95\\times10^{5}$, $\\Phi=\\dfrac{400}{9.95\\times10^{5}}=4.02\\times10^{-4}\\,\\mathrm{Wb}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\Phi=\\dfrac{NI}{R}$, $R=\\dfrac{l}{\\mu_0\\mu_r A}$"
     },
     {
       "id": "em.7.c16",
@@ -3240,7 +3455,8 @@
       ],
       "answer": 0,
       "explanation": "$L=\\dfrac{\\mu_0 N^2 A}{l}=\\dfrac{\\mu_0\\cdot90000\\cdot6\\times10^{-4}}{0.4}=1.70\\times10^{-4}\\,\\mathrm{H}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "솔레노이드 $L=\\dfrac{\\mu_0 N^2 A}{l}$"
     },
     {
       "id": "em.7.c17",
@@ -3255,7 +3471,8 @@
       ],
       "answer": 0,
       "explanation": "$k=\\dfrac{M}{\\sqrt{L_1 L_2}}=\\dfrac{6}{\\sqrt{144}}=\\dfrac{6}{12}=0.5$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "결합계수 $k=\\dfrac{M}{\\sqrt{L_1 L_2}}$"
     },
     {
       "id": "em.7.c18",
@@ -3270,7 +3487,8 @@
       ],
       "answer": 0,
       "explanation": "$|e|=N\\dfrac{\\Delta\\Phi}{\\Delta t}=150\\cdot\\dfrac{0.03}{0.1}=45\\,\\mathrm{V}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "패러데이 법칙 $|e|=N\\dfrac{\\Delta\\Phi}{\\Delta t}$"
     },
     {
       "id": "em.8.c19",
@@ -3285,7 +3503,8 @@
       ],
       "answer": 0,
       "explanation": "$\\eta=377\\sqrt{\\dfrac{\\mu_r}{\\varepsilon_r}}=377\\times\\dfrac{1}{2}=188.5\\,\\Omega$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\eta=\\eta_0\\sqrt{\\dfrac{\\mu_r}{\\varepsilon_r}}$"
     },
     {
       "id": "em.8.c20",
@@ -3300,7 +3519,8 @@
       ],
       "answer": 0,
       "explanation": "$S=\\dfrac{E^2}{\\eta_0}=\\dfrac{100^2}{377}=26.5\\,\\mathrm{W/m^2}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "전력밀도 $S=\\dfrac{E^2}{\\eta_0}$ (실효값 기준)"
     },
     {
       "id": "pw.1.c1",
@@ -3315,7 +3535,8 @@
       ],
       "answer": 2,
       "explanation": "$P=9.8\\,QH\\eta=9.8\\times25\\times80\\times0.85=16660\\ \\mathrm{kW}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "수력 출력 $P=9.8QH\\eta$"
     },
     {
       "id": "pw.1.c2",
@@ -3330,7 +3551,8 @@
       ],
       "answer": 0,
       "explanation": "$\\eta=\\dfrac{860\\times8000}{4000\\times6000}\\times100=28.7\\%$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "화력 열효율 $\\eta=\\dfrac{860 P}{m\\,C}$ (연료 시간당 소비량 단위 주의)"
     },
     {
       "id": "pw.1.c3",
@@ -3345,7 +3567,8 @@
       ],
       "answer": 0,
       "explanation": "$N_s=N\\dfrac{P^{1/2}}{H^{5/4}}=600\\times\\dfrac{100}{316.2}\\approx190$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "비속도 $N_s=N\\dfrac{P^{1/2}}{H^{5/4}}$"
     },
     {
       "id": "pw.2.c4",
@@ -3360,7 +3583,8 @@
       ],
       "answer": 3,
       "explanation": "돌기는 전위 경도를 국부적으로 높여 코로나를 촉진하므로 잘못된 대책이다. 굵은 전선·복도체·매끄러운 표면은 임계전압을 높인다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "코로나 억제는 전위경도를 낮추는 방향: 돌기를 만드는 대책은 반대"
     },
     {
       "id": "pw.2.c5",
@@ -3375,7 +3599,8 @@
       ],
       "answer": 0,
       "explanation": "경부하 시 대지 정전용량의 진상 충전전류가 선로 리액턴스에 흘러 수전단 전압이 송전단보다 높아진다. 대책은 분로리액터.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "페란티: 경부하 시 진상 충전전류로 수전단 전압이 상승"
     },
     {
       "id": "pw.2.c6",
@@ -3390,7 +3615,8 @@
       ],
       "answer": 1,
       "explanation": "$C=0.008\\times40=0.32\\ \\mathrm{\\mu F}$, $E=\\dfrac{66000}{\\sqrt3}=38105\\ \\mathrm{V}$, $I_c=\\omega C E=2\\pi\\times60\\times0.32\\times10^{-6}\\times38105\\approx4.6\\ \\mathrm{A}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "충전전류 $I_c=\\omega C E$ ($E$는 상전압)"
     },
     {
       "id": "pw.2.c7",
@@ -3405,7 +3631,8 @@
       ],
       "answer": 0,
       "explanation": "$A=1+\\dfrac{ZY}{2}$, $ZY=(j40)(j10^{-3})=-0.04$, $A=1-0.02=0.98$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\pi$형 4단자정수 $A=1+\\dfrac{ZY}{2}$ ($j\\times j=-1$ 주의)"
     },
     {
       "id": "pw.2.c8",
@@ -3420,7 +3647,8 @@
       ],
       "answer": 1,
       "explanation": "$D=\\dfrac{WS^2}{8T}=\\dfrac{2\\times200^2}{8\\times1600}=6.25\\ \\mathrm{m}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "이도 $D=\\dfrac{WS^2}{8T}$"
     },
     {
       "id": "pw.2.c9",
@@ -3435,7 +3663,8 @@
       ],
       "answer": 1,
       "explanation": "무손실이면 $Z_0=\\sqrt{L/C}$로 순저항이며 길이와 무관. 전파정수 $\\gamma=\\alpha+j\\beta$에서 $\\alpha$는 감쇠정수, $\\beta$가 위상정수.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "무손실 $Z_0=\\sqrt{L/C}$(길이·주파수 무관), $\\gamma=\\alpha+j\\beta$에서 $\\beta$가 위상정수"
     },
     {
       "id": "pw.3.c10",
@@ -3450,7 +3679,8 @@
       ],
       "answer": 3,
       "explanation": "$I_n=\\dfrac{20\\times10^6}{\\sqrt3\\times22900}=504\\ \\mathrm{A}$, $I_s=504\\times\\dfrac{100}{8}=6300\\ \\mathrm{A}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "정격전류 $I_n=\\dfrac{P}{\\sqrt3 V}$ 구한 뒤 $I_s=\\dfrac{100}{\\%Z}I_n$"
     },
     {
       "id": "pw.3.c11",
@@ -3465,7 +3695,8 @@
       ],
       "answer": 2,
       "explanation": "$\\%Z_{new}=25\\times\\dfrac{100}{50}=50\\%$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\%Z$는 기준용량에 비례하여 환산"
     },
     {
       "id": "pw.3.c12",
@@ -3480,7 +3711,8 @@
       ],
       "answer": 0,
       "explanation": "유효접지는 건전상 전위 상승을 상전압의 1.3배 이하로 억제(직접접지 대표). 지락전류가 커 유도장해·차단 부담은 크다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "유효접지: 건전상 전위 상승을 상전압의 약 1.3배 이하로 억제"
     },
     {
       "id": "pw.3.c13",
@@ -3495,7 +3727,8 @@
       ],
       "answer": 3,
       "explanation": "소호리액터는 지락전류를 거의 0으로 만들어 오히려 검출이 어렵다. 4번이 틀리다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "소호리액터는 지락전류를 거의 0으로 만들어 검출이 어렵다(방향 뒤집은 보기)"
     },
     {
       "id": "pw.3.c14",
@@ -3510,7 +3743,8 @@
       ],
       "answer": 1,
       "explanation": "개별 최대 합 $=100\\times0.6=60$, 합성 최대 $=\\dfrac{60}{1.2}=50\\ \\mathrm{kW}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "합성최대 $=\\dfrac{\\text{설비}\\times\\text{수용률}}{\\text{부등률}}$"
     },
     {
       "id": "pw.4.c15",
@@ -3525,7 +3759,8 @@
       ],
       "answer": 3,
       "explanation": "$P_m=\\dfrac{V_sV_r}{X}\\sin\\delta$. 단락비를 작게 하면 리액턴스가 커져 안정도가 낮아진다. 4번이 틀리다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "$P=\\dfrac{V_sV_r}{X}\\sin\\delta$: 단락비를 작게 하면 $X$↑로 안정도↓"
     },
     {
       "id": "pw.4.c16",
@@ -3540,7 +3775,8 @@
       ],
       "answer": 0,
       "explanation": "제한전압은 방전 중 단자 잔류전압. 절연협조 기준은 가장 낮은 절연강도의 피뢰기, 정격전압은 속류 차단 최고 상용주파 전압.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "제한전압=방전 중 단자전압, 절연협조는 피뢰기 절연강도를 가장 낮게"
     },
     {
       "id": "pw.4.c17",
@@ -3555,7 +3791,8 @@
       ],
       "answer": 1,
       "explanation": "투과계수 $\\dfrac{2Z_2}{Z_1+Z_2}=\\dfrac{200}{500}=0.4$, 투과파 $=0.4\\times100=40\\ \\mathrm{kV}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "투과전압 계수 $\\dfrac{2Z_2}{Z_1+Z_2}$"
     },
     {
       "id": "pw.6.c18",
@@ -3570,7 +3807,8 @@
       ],
       "answer": 2,
       "explanation": "$Q_c=P(\\tan\\theta_1-\\tan\\theta_2)=200\\times(1.333-0.484)\\approx170\\ \\mathrm{kvar}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "콘덴서 용량 $Q_c=P(\\tan\\theta_1-\\tan\\theta_2)$"
     },
     {
       "id": "pw.6.c19",
@@ -3585,7 +3823,8 @@
       ],
       "answer": 3,
       "explanation": "주파수 저하 검출은 주파수계전기(UFR)의 역할. 과전류계전기는 단락 등 과전류 검출.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "주파수 저하 검출은 주파수계전기 몫: 과전류계전기와 짝지은 보기 확인"
     },
     {
       "id": "pw.5.c20",
@@ -3600,7 +3839,8 @@
       ],
       "answer": 1,
       "explanation": "$P_l=2I^2R=2\\times25^2\\times0.4=500\\ \\mathrm{W}$ (왕복 2가닥).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "전력손실 $P_l=2I^2R$ (단상 2선)"
     },
     {
       "id": "mc.1.c1",
@@ -3615,7 +3855,8 @@
       ],
       "answer": 1,
       "explanation": "직권은 $\\phi\\propto I_a$, $T\\propto\\phi I_a\\propto I_a^2$. 따라서 $1.5^2=2.25$ 배.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "직권 $\\phi\\propto I_a$이므로 $T\\propto I_a^2$"
     },
     {
       "id": "mc.1.c2",
@@ -3630,7 +3871,8 @@
       ],
       "answer": 2,
       "explanation": "워드 레오나드는 직류발전기로 전기자 단자전압을 연속 가감하는 전압제어 방식(광범위·정토크).",
-      "type": "개념"
+      "type": "개념",
+      "hint": "워드 레오나드=발전기-전동기 세트 전압제어"
     },
     {
       "id": "mc.1.c3",
@@ -3645,7 +3887,8 @@
       ],
       "answer": 3,
       "explanation": "전기자 반작용은 감자작용으로 주자속을 줄인다. 자속 증가·전압 상승은 반대이므로 옳지 않다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "전기자 반작용은 감자작용, 자속 증가는 반대"
     },
     {
       "id": "mc.1.c4",
@@ -3660,7 +3903,8 @@
       ],
       "answer": 1,
       "explanation": "발전기 $V=E-I_a R_a=215-9=206\\ \\mathrm{V}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "발전기 단자전압 $V=E-I_aR_a$"
     },
     {
       "id": "mc.2.c5",
@@ -3675,7 +3919,8 @@
       ],
       "answer": 2,
       "explanation": "$N_s=\\dfrac{120\\times50}{8}=750\\ \\mathrm{rpm}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "동기속도 $N_s=\\dfrac{120f}{p}$"
     },
     {
       "id": "mc.2.c6",
@@ -3690,7 +3935,8 @@
       ],
       "answer": 1,
       "explanation": "$K_s=\\dfrac{100}{\\%Z_s}=\\dfrac{100}{125}=0.8$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "단락비 $K_s=\\dfrac{100}{\\%Z_s}$"
     },
     {
       "id": "mc.2.c7",
@@ -3705,7 +3951,8 @@
       ],
       "answer": 3,
       "explanation": "병렬운전 조건은 크기·위상·주파수·파형·상회전 일치. 정격용량이 같을 필요는 없다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "병렬운전 조건에 정격용량 일치는 불필요"
     },
     {
       "id": "mc.2.c8",
@@ -3720,7 +3967,8 @@
       ],
       "answer": 3,
       "explanation": "난조는 제동권선으로 방지한다. 계자권선 단락 상시운전은 방지책이 아니다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "난조 방지는 제동권선, 계자 단락은 대책 아님"
     },
     {
       "id": "mc.4.c9",
@@ -3735,7 +3983,8 @@
       ],
       "answer": 3,
       "explanation": "$Z_1=a^2 Z_2=10^2\\times4=400\\ \\Omega$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "임피던스 환산 $Z_1=a^2 Z_2$"
     },
     {
       "id": "mc.4.c10",
@@ -3750,7 +3999,8 @@
       ],
       "answer": 2,
       "explanation": "$\\varepsilon=p\\cos\\theta+q\\sin\\theta=3\\times0.6+4\\times0.8=5.0\\%$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\varepsilon=p\\cos\\theta+q\\sin\\theta$, 지상 $\\cos\\theta=0.6$"
     },
     {
       "id": "mc.4.c11",
@@ -3765,7 +4015,8 @@
       ],
       "answer": 2,
       "explanation": "$m=\\sqrt{\\dfrac{P_i}{P_c}}=\\sqrt{\\dfrac{160}{250}}=0.8$, 즉 $80\\%$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "최대효율 부하율 $m=\\sqrt{P_i/P_c}$"
     },
     {
       "id": "mc.4.c12",
@@ -3780,7 +4031,8 @@
       ],
       "answer": 0,
       "explanation": "CT 2차를 개방하면 철심 포화로 고전압이 유기돼 절연 파괴 위험. 점검 시 2차를 단락한다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "CT 2차는 개방 금지, 점검 시 단락"
     },
     {
       "id": "mc.5.c13",
@@ -3795,7 +4047,8 @@
       ],
       "answer": 0,
       "explanation": "$N_s=1800$, $N=(1-0.03)\\times1800=1746\\ \\mathrm{rpm}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$N=(1-s)N_s$"
     },
     {
       "id": "mc.5.c14",
@@ -3810,7 +4063,8 @@
       ],
       "answer": 2,
       "explanation": "$\\eta_2=\\dfrac{P_0}{P_2}=1-s=0.95=95\\%$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "2차 효율 $\\eta_2=1-s$"
     },
     {
       "id": "mc.5.c15",
@@ -3825,7 +4079,8 @@
       ],
       "answer": 3,
       "explanation": "비례추이 되는 것: 토크·1차전류·2차전류·역률·1차입력·동기와트. 안 되는 것: 출력·효율·2차동손.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "비례추이 안 되는 것: 출력·효율·2차동손"
     },
     {
       "id": "mc.5.c16",
@@ -3840,7 +4095,8 @@
       ],
       "answer": 3,
       "explanation": "$Y{-}\\Delta$ 기동은 3상 농형용. 단상은 분상·콘덴서·셰이딩코일·반발 기동형.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "$Y{-}\\Delta$는 3상 농형용, 단상 기동법 아님"
     },
     {
       "id": "mc.3.c17",
@@ -3855,7 +4111,8 @@
       ],
       "answer": 0,
       "explanation": "단상 반파 $E_{dc}=\\dfrac{\\sqrt2 E}{\\pi}=0.45E=45\\ \\mathrm{V}$ (전파는 $0.9E=90$).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "단상 반파 $E_{dc}=0.45E$, 전파 $0.9E$와 구분"
     },
     {
       "id": "mc.3.c18",
@@ -3870,7 +4127,8 @@
       ],
       "answer": 3,
       "explanation": "맥동률: 단상반파 121%, 단상전파 48%, 3상반파 17%, 3상전파 4%. 3상 전파가 가장 작다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "상수·정류상수 클수록 맥동률 작다(3상 전파 최소)"
     },
     {
       "id": "mc.7.c19",
@@ -3885,7 +4143,8 @@
       ],
       "answer": 3,
       "explanation": "리니어 모터는 공극이 크고 단부효과로 효율·역률이 낮은 편. 공극을 없애 효율↑는 옳지 않다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "리니어 모터는 공극 크고 단부효과로 효율 낮음"
     },
     {
       "id": "mc.7.c20",
@@ -3900,7 +4159,8 @@
       ],
       "answer": 1,
       "explanation": "스텝각 $=\\dfrac{360^\\circ}{200}=1.8^\\circ$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "스텝각 $=\\dfrac{360^\\circ}{\\mathrm{스텝수}}$"
     },
     {
       "id": "ct.1.c1",
@@ -3915,7 +4175,8 @@
       ],
       "answer": 0,
       "explanation": "$\\tau=\\dfrac{L}{R}=\\dfrac{0.4}{20}=0.02\\,\\mathrm{s}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "RL 시정수 $\\tau=L/R$"
     },
     {
       "id": "ct.1.c2",
@@ -3930,7 +4191,8 @@
       ],
       "answer": 0,
       "explanation": "$\\mathcal{L}\\{t\\}=\\dfrac{1}{s^2}$, 복소추이 $s\\to s+2$ 로 $\\mathcal{L}\\{t e^{-2t}\\}=\\dfrac{1}{(s+2)^2}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$t^n$ 변환에 복소추이 $s\\to s+a$ 적용"
     },
     {
       "id": "ct.1.c3",
@@ -3945,7 +4207,8 @@
       ],
       "answer": 0,
       "explanation": "$\\mathcal{L}\\{\\sin at\\}=\\dfrac{a}{s^2+a^2}$, $a=5$ 이므로 $f(t)=\\sin 5t$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\sin at$ 변환쌍 $\\dfrac{a}{s^2+a^2}$ 대응"
     },
     {
       "id": "ct.1.c4",
@@ -3960,7 +4223,8 @@
       ],
       "answer": 2,
       "explanation": "상반(가역) 조건은 $AD-BC=1$. $A=D$ 는 대칭 조건이다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "가역(상반)은 $AD-BC=1$, $A=D$는 대칭"
     },
     {
       "id": "ct.1.c5",
@@ -3975,7 +4239,8 @@
       ],
       "answer": 1,
       "explanation": "대칭이므로 $Z_{01}=\\sqrt{\\dfrac{B}{C}}=\\sqrt{\\dfrac{100}{0.01}}=100\\,\\Omega$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "대칭망 $Z_{01}=\\sqrt{B/C}$"
     },
     {
       "id": "ct.1.c6",
@@ -3990,7 +4255,8 @@
       ],
       "answer": 0,
       "explanation": "$V=\\sqrt{\\left(\\dfrac{100}{\\sqrt2}\\right)^2+\\left(\\dfrac{50}{\\sqrt2}\\right)^2}=\\sqrt{6250}=79.1\\,\\mathrm{V}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "진폭을 실효값으로 바꿔 $\\sqrt{\\sum V_n^2}$"
     },
     {
       "id": "ct.1.c7",
@@ -4005,7 +4271,8 @@
       ],
       "answer": 0,
       "explanation": "$Y=\\sqrt{\\left(\\dfrac{1}{4}\\right)^2+\\left(\\dfrac{1}{3}\\right)^2}=\\sqrt{0.0625+0.1111}=\\sqrt{0.1736}=0.417\\,\\mathrm{S}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "병렬 어드미턴스 $Y=\\sqrt{G^2+B^2}$, $G=1/R$, $B=1/X$"
     },
     {
       "id": "ct.1.c8",
@@ -4020,7 +4287,8 @@
       ],
       "answer": 0,
       "explanation": "평형일 때 $R_Y=\\dfrac{R_\\Delta}{3}=\\dfrac{12}{3}=4\\,\\Omega$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "평형 $\\Delta\\to$Y는 $R_\\Delta/3$"
     },
     {
       "id": "ct.1.c9",
@@ -4035,7 +4303,8 @@
       ],
       "answer": 0,
       "explanation": "$\\omega_0=\\dfrac{1}{\\sqrt{LC}}=\\dfrac{1}{\\sqrt{4\\times10^{-3}\\cdot10^{-6}}}=\\dfrac{1}{\\sqrt{4\\times10^{-9}}}\\approx1.58\\times10^{4}\\,\\mathrm{rad/s}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "공진 각주파수 $\\omega_0=\\dfrac{1}{\\sqrt{LC}}$"
     },
     {
       "id": "ct.1.c10",
@@ -4050,7 +4319,8 @@
       ],
       "answer": 0,
       "explanation": "$R_L=10\\,\\Omega$ 일 때 $P_{max}=\\dfrac{E^2}{4R_L}=\\dfrac{120^2}{40}=360\\,\\mathrm{W}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "정합 시 $P_{max}=\\dfrac{E^2}{4R}$"
     },
     {
       "id": "ct.1.c11",
@@ -4065,7 +4335,8 @@
       ],
       "answer": 0,
       "explanation": "Y 결선 선간전압 $V_l=\\sqrt{3}\\,V_p=\\sqrt{3}\\times220\\approx381\\,\\mathrm{V}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "Y결선 선간전압$=\\sqrt{3}\\times$상전압"
     },
     {
       "id": "ct.1.c12",
@@ -4080,7 +4351,8 @@
       ],
       "answer": 0,
       "explanation": "$|Z|=\\sqrt{R^2+X_C^2}=\\sqrt{36+64}=10\\,\\Omega$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$|Z|=\\sqrt{R^2+X_C^2}$"
     },
     {
       "id": "ct.1.c13",
@@ -4095,7 +4367,8 @@
       ],
       "answer": 0,
       "explanation": "$\\mathcal{L}\\{\\delta(t)\\}=1$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "임펄스 $\\delta(t)$의 변환값을 떠올려라"
     },
     {
       "id": "ct.2.c14",
@@ -4110,7 +4383,8 @@
       ],
       "answer": 1,
       "explanation": "$\\dfrac{G}{1+GH}=\\dfrac{10}{1+2}=3.33$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "폐루프 $\\dfrac{G}{1+GH}$"
     },
     {
       "id": "ct.2.c15",
@@ -4125,7 +4399,8 @@
       ],
       "answer": 1,
       "explanation": "$P-Z=3-1=2$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "점근선 개수$=$극수$-$영점수 $(P-Z)$"
     },
     {
       "id": "ct.2.c16",
@@ -4140,7 +4415,8 @@
       ],
       "answer": 0,
       "explanation": "$\\sum z^{-n}=\\dfrac{z}{z-1}$. $\\dfrac{Tz}{(z-1)^2}$ 는 램프의 변환.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "계단열 $\\sum z^{-n}$; 램프 변환과 혼동 주의"
     },
     {
       "id": "ct.2.c17",
@@ -4155,7 +4431,8 @@
       ],
       "answer": 0,
       "explanation": "$s^1$ 행 $\\dfrac{5\\times6-K}{5}=\\dfrac{30-K}{5}>0 \\Rightarrow K<30$, $K>0$. 따라서 $0<K<30$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "라우스 $s^1$·$s^0$ 두 조건 교집합"
     },
     {
       "id": "ct.2.c18",
@@ -4170,7 +4447,8 @@
       ],
       "answer": 0,
       "explanation": "$\\omega_n=\\sqrt{16}=4$, $2\\zeta\\omega_n=4 \\Rightarrow \\zeta=\\dfrac{4}{8}=0.5$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\omega_n=\\sqrt{16}$, $2\\zeta\\omega_n$ 비교"
     },
     {
       "id": "ct.2.c19",
@@ -4185,7 +4463,8 @@
       ],
       "answer": 0,
       "explanation": "$K_v=\\lim_{s\\to0}sG(s)H(s)=\\dfrac{50}{5}=10$, $e_{ss}=\\dfrac{1}{10}=0.1$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "램프 편차 $1/K_v$, $K_v=\\lim_{s\\to0}sGH$"
     },
     {
       "id": "ct.2.c20",
@@ -4200,7 +4479,8 @@
       ],
       "answer": 0,
       "explanation": "위치편차상수 $K_p=\\lim_{s\\to0}G(s)=\\dfrac{8}{1\\times4}=2$, $e_{ss}=\\dfrac{1}{1+K_p}=\\dfrac{1}{3}\\approx0.33$... 재계산: $\\dfrac{1}{1+2}=0.33$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "0형 계단 편차 $\\dfrac{1}{1+K_p}$, $K_p=\\lim_{s\\to0}G$"
     },
     {
       "id": "kec.1.c1",
@@ -4215,7 +4495,8 @@
       ],
       "answer": 2,
       "explanation": "KEC 표 142.3-1: $S\\le16$ 이면 $S$, $16<S\\le35$ 이면 $16\\ \\mathrm{mm^2}$, $S>35$ 이면 $S/2$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "선도체 $S\\le16$ 구간 보호도체 단면적 규정 확인"
     },
     {
       "id": "kec.1.c2",
@@ -4230,7 +4511,8 @@
       ],
       "answer": 0,
       "explanation": "KEC 143.3.1: 최대 보호접지도체 단면적의 1/2 이상이면서 구리 $6\\ \\mathrm{mm^2}$(알루미늄 16, 강철 50) 이상, 구리 25 초과 불필요.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "보호등전위본딩 도체 구리 최소단면적 규정 확인"
     },
     {
       "id": "kec.1.c3",
@@ -4245,7 +4527,8 @@
       ],
       "answer": 1,
       "explanation": "KEC 152.1: 60 m 초과 시 최상부로부터 20 % 부분에 한해 측뢰 보호(피뢰시스템 등급 Ⅳ).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "60m 초과 건축물 측뢰보호 대상부분과 피뢰등급 확인"
     },
     {
       "id": "kec.1.c4",
@@ -4260,7 +4543,8 @@
       ],
       "answer": 0,
       "explanation": "KEC 142.3.1 주: 접지도체·보호도체로 알루미늄 단선은 사용하지 않는다(구리 6/16, 철 50 mm²).",
-      "type": "개념"
+      "type": "개념",
+      "hint": "접지도체로 알루미늄 단선 사용 가능 여부 규정 확인"
     },
     {
       "id": "kec.2.c5",
@@ -4275,7 +4559,8 @@
       ],
       "answer": 2,
       "explanation": "KEC 203.1: 제1문자는 전원-대지 관계. T=한 점 직접접지, I=충전부 절연 또는 임피던스 접지.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "계통접지 제1문자(전원-대지 관계) 의미를 구분하라"
     },
     {
       "id": "kec.2.c6",
@@ -4290,7 +4575,8 @@
       ],
       "answer": 1,
       "explanation": "KEC 211.6.1: 정격감도전류 30 mA 이하 누전차단기를 추가적 보호로 본다(단독 보호대책은 아님).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "추가적 보호용 누전차단기 정격감도전류 기준 확인"
     },
     {
       "id": "kec.2.c7",
@@ -4305,7 +4591,8 @@
       ],
       "answer": 1,
       "explanation": "KEC 211.5.1: 특별저압 전압한계는 교류 50 V·직류 120 V 이하. 교류 25 V·직류 60 V는 기본보호 생략 기준.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "특별저압(밴드I) 교류·직류 전압한계 확인"
     },
     {
       "id": "kec.2.c8",
@@ -4320,7 +4607,8 @@
       ],
       "answer": 3,
       "explanation": "KEC 222.7: 철도·궤도 횡단 레일면상 6.5 m 이상(도로 6 m, 횡단보도교 위 3.5 m, 기타 5 m).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "철도·궤도 횡단 레일면상 높이를 도로와 구분하라"
     },
     {
       "id": "kec.3.c10",
@@ -4335,7 +4623,8 @@
       ],
       "answer": 3,
       "explanation": "KEC 334.1: 관로식은 매설 1.0 m 이상(중량물 압력 우려 없으면 0.6 m 이상).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "관로식 지중전선 매설깊이 규정을 확인하라"
     },
     {
       "id": "kec.3.c11",
@@ -4350,7 +4639,8 @@
       ],
       "answer": 3,
       "explanation": "KEC 표 351.4-1: 5,000~10,000 kVA 미만은 자동차단 또는 경보, 10,000 kVA 이상은 자동차단.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "특고압 변압기 뱅크용량별 자동차단·경보 구분"
     },
     {
       "id": "kec.3.c12",
@@ -4365,7 +4655,8 @@
       ],
       "answer": 0,
       "explanation": "KEC 표 351.5-1: 500 초과~15,000 kVA 미만은 '내부고장 또는 과전류', 15,000 kVA 이상은 '내부고장·과전류·과전압'.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "커패시터 뱅크용량 구간별 보호동작 조건 구분"
     },
     {
       "id": "kec.3.c13",
@@ -4380,7 +4671,8 @@
       ],
       "answer": 0,
       "explanation": "KEC 332.9/333.21: A종 150 m, B종 250 m, 철탑 600 m 이하.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "A종 지지물 표준경간을 확인하라"
     },
     {
       "id": "kec.4.c14",
@@ -4395,7 +4687,8 @@
       ],
       "answer": 0,
       "explanation": "KEC 표 411.2-1: 직류 급전 공칭전압 750 V, 1,500 V. 25,000 V는 교류방식.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "전기철도 직류 급전 공칭전압 값을 확인하라"
     },
     {
       "id": "kec.4.c15",
@@ -4410,7 +4703,8 @@
       ],
       "answer": 3,
       "explanation": "KEC 표 411.1-1: 전기철도 수전 공칭전압 22.9, 154, 345 kV. 66 kV는 아님.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "전기철도 변전소 수전 공칭전압 목록을 확인하라"
     },
     {
       "id": "kec.4.c16",
@@ -4425,7 +4719,8 @@
       ],
       "answer": 0,
       "explanation": "KEC 461.5: 직류 귀선 누설전류가 매설 금속(수도관 등)을 전기부식(전식)시킨다. 배류법으로 방지.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "귀선 누설전류가 매설금속을 부식시키는 현상 명칭"
     },
     {
       "id": "kec.5.c17",
@@ -4440,7 +4735,8 @@
       ],
       "answer": 2,
       "explanation": "KEC 511.1.3: 조건 충족 시 주택 옥내 직류 대지전압을 직류 600 V까지 적용(태양광 521.3도 준용).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "주택 전기저장장치 옥내 직류 대지전압 상한 확인"
     },
     {
       "id": "kec.5.c18",
@@ -4455,7 +4751,8 @@
       ],
       "answer": 0,
       "explanation": "KEC 503.2.2: 인버터 교류출력 측 직류 검출기에서 최대 정격 출력전류의 0.5% 초과 직류 검출 시 교류출력 정지.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "인버터 교류출력측 직류 유출 검출 기준을 확인하라"
     },
     {
       "id": "kec.5.c19",
@@ -4470,7 +4767,8 @@
       ],
       "answer": 3,
       "explanation": "KEC 532.5: 과속·과진동·계통 이상 등에서 자동정지. 무풍은 자동정지 사유가 아니다(스스로 정지).",
-      "type": "개념"
+      "type": "개념",
+      "hint": "풍력 자동정지 사유와 무풍 상태를 구분하라"
     },
     {
       "id": "kec.5.c20",
@@ -4485,7 +4783,8 @@
       ],
       "answer": 3,
       "explanation": "KEC 542.3.2: 과전류·발전전압 이상·가스농도 이상·온도 상승·개질기 버너 이상·환기 이상 시 차단. 정격 주파수는 정상.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "연료전지 자동차단 사유와 정상운전 상태를 구분하라"
     },
     {
       "id": "kec.3.c99",
@@ -4500,7 +4799,8 @@
       ],
       "answer": 1,
       "explanation": "KEC 331.7: 지지물 기초의 안전율은 2 이상(이상 시 상정하중에 대한 철탑 기초는 1.33 이상).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "가공전선로 지지물 기초 안전율(철탑 예외) 규정 확인"
     },
     {
       "id": "em.3.t1",
@@ -4515,7 +4815,8 @@
       ],
       "answer": 2,
       "explanation": "굴절 법칙 $\\dfrac{\\tan\\theta_1}{\\tan\\theta_2}=\\dfrac{\\varepsilon_1}{\\varepsilon_2}$, $\\tan\\theta_2=\\dfrac{6}{2}\\tan45^\\circ=3$, $\\theta_2=\\tan^{-1}3\\approx71.6^\\circ$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "굴절 법칙 $\\dfrac{\\tan\\theta_1}{\\tan\\theta_2}=\\dfrac{\\varepsilon_1}{\\varepsilon_2}$, 유전율 큰 쪽으로 각 커짐"
     },
     {
       "id": "em.3.t2",
@@ -4530,7 +4831,8 @@
       ],
       "answer": 0,
       "explanation": "$P=D\\left(1-\\dfrac{1}{\\varepsilon_r}\\right)=4\\times10^{-6}\\times0.8=3.2\\times10^{-6}\\ \\mathrm{C/m^2}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$P=D\\left(1-\\dfrac{1}{\\varepsilon_r}\\right)$"
     },
     {
       "id": "em.3.t3",
@@ -4545,7 +4847,8 @@
       ],
       "answer": 1,
       "explanation": "직렬 $C=\\dfrac{\\varepsilon_0 A}{(d-a)+a/\\varepsilon_r}=\\dfrac{8.854\\times10^{-12}\\times0.02}{0.002+0.0005}=8.854\\times10^{-12}\\times8\\approx70.8\\ \\mathrm{pF}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "직렬 합성: 공기층과 유전체층을 나눠 $C=\\dfrac{\\varepsilon_0 A}{(d-a)+a/\\varepsilon_r}$"
     },
     {
       "id": "em.3.t4",
@@ -4560,7 +4863,8 @@
       ],
       "answer": 3,
       "explanation": "$f=\\dfrac{1}{2}\\varepsilon_0\\varepsilon_r E^2=\\dfrac{1}{2}\\times8.854\\times10^{-12}\\times3\\times(5\\times10^{5})^2\\approx3.32\\ \\mathrm{N/m^2}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "단위면적 정전흡인력 $f=\\dfrac{1}{2}\\varepsilon_0\\varepsilon_r E^2$"
     },
     {
       "id": "em.4.t5",
@@ -4575,7 +4879,8 @@
       ],
       "answer": 0,
       "explanation": "접지 구도체 영상전하 $Q'=-\\dfrac{a}{d}Q=-\\dfrac{0.1}{0.25}\\times6=-2.4\\ \\mathrm{nC}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "접지 구도체 영상전하 $Q'=-\\dfrac{a}{d}Q$"
     },
     {
       "id": "em.4.t6",
@@ -4590,7 +4895,8 @@
       ],
       "answer": 1,
       "explanation": "$J=\\sigma E$, $E=\\dfrac{J}{\\sigma}=\\dfrac{2\\times10^{6}}{5\\times10^{7}}=0.04\\ \\mathrm{V/m}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "옴의 법칙 미분형 $J=\\sigma E$, $E=\\dfrac{J}{\\sigma}$"
     },
     {
       "id": "em.4.t7",
@@ -4605,7 +4911,8 @@
       ],
       "answer": 2,
       "explanation": "$R_t=50[1+0.004\\times(75-20)]=50\\times1.22=61\\ \\Omega$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$R_t=R_0[1+\\alpha(t-t_0)]$"
     },
     {
       "id": "em.4.t8",
@@ -4620,7 +4927,8 @@
       ],
       "answer": 3,
       "explanation": "$R=\\dfrac{\\rho}{4\\pi}\\left(\\dfrac{1}{a}-\\dfrac{1}{b}\\right)=\\dfrac{2\\times10^{12}}{4\\pi}(20-10)\\approx1.59\\times10^{12}\\ \\Omega$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "동심구 누설저항 $R=\\dfrac{\\rho}{4\\pi}\\left(\\dfrac{1}{a}-\\dfrac{1}{b}\\right)$"
     },
     {
       "id": "em.6.t9",
@@ -4635,7 +4943,8 @@
       ],
       "answer": 0,
       "explanation": "$M=(\\mu_r-1)H=399\\times2000=7.98\\times10^{5}\\ \\mathrm{A/m}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "자화 $M=(\\mu_r-1)H$"
     },
     {
       "id": "em.6.t10",
@@ -4650,7 +4959,8 @@
       ],
       "answer": 1,
       "explanation": "$R_m=\\dfrac{l}{\\mu_0\\mu_r A}\\approx9.95\\times10^{5}$, $F=NI=600$, $\\Phi=\\dfrac{F}{R_m}\\approx6.03\\times10^{-4}\\ \\mathrm{Wb}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\Phi=\\dfrac{NI}{R}$, $R=\\dfrac{l}{\\mu_0\\mu_r A}$"
     },
     {
       "id": "em.6.t11",
@@ -4665,7 +4975,8 @@
       ],
       "answer": 2,
       "explanation": "$\\dfrac{\\tan\\theta_1}{\\tan\\theta_2}=\\dfrac{\\mu_1}{\\mu_2}$, $\\tan\\theta_2=\\dfrac{200}{600}\\tan45^\\circ=0.333$, $\\theta_2\\approx18.4^\\circ$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "자성체 굴절 $\\dfrac{\\tan\\theta_1}{\\tan\\theta_2}=\\dfrac{\\mu_1}{\\mu_2}$"
     },
     {
       "id": "em.6.t12",
@@ -4680,7 +4991,8 @@
       ],
       "answer": 3,
       "explanation": "$P_h=\\eta f B_m^{1.6}$, $B_m$ 일정이면 $f$에 비례. $60\\times\\dfrac{60}{50}=72\\ \\mathrm{W}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$B_m$ 일정 시 히스테리시스손은 $f$에 비례"
     },
     {
       "id": "em.7.t13",
@@ -4695,7 +5007,8 @@
       ],
       "answer": 0,
       "explanation": "$e=N\\dfrac{\\Delta\\Phi}{\\Delta t}=200\\times\\dfrac{0.03}{0.01}=600\\ \\mathrm{V}$ (렌츠 법칙: 감소를 방해하는 방향).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$|e|=N\\dfrac{\\Delta\\Phi}{\\Delta t}$, 크기만"
     },
     {
       "id": "em.7.t14",
@@ -4710,7 +5023,8 @@
       ],
       "answer": 1,
       "explanation": "차동 $L=L_1+L_2-2M=0.4+0.6-0.4=0.6\\ \\mathrm{H}$ (가동이면 $1.4\\ \\mathrm{H}$).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "차동접속 $L=L_1+L_2-2M$"
     },
     {
       "id": "em.7.t15",
@@ -4725,7 +5039,8 @@
       ],
       "answer": 2,
       "explanation": "$W=\\dfrac{1}{2}LI^2=\\dfrac{1}{2}\\times0.05\\times144=3.6\\ \\mathrm{J}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$W=\\dfrac{1}{2}LI^2$"
     },
     {
       "id": "em.8.t16",
@@ -4740,7 +5055,8 @@
       ],
       "answer": 3,
       "explanation": "$J_{d,\\max}=\\varepsilon_0\\varepsilon_r\\omega E_m=8.854\\times10^{-12}\\times3\\times2\\pi\\times10^{6}\\times100\\approx1.67\\times10^{-2}\\ \\mathrm{A/m^2}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "변위전류밀도 최댓값 $J_d=\\varepsilon_0\\varepsilon_r\\omega E_m$, $\\omega=2\\pi f$"
     },
     {
       "id": "em.8.t17",
@@ -4755,7 +5071,8 @@
       ],
       "answer": 0,
       "explanation": "$v=\\dfrac{c}{\\sqrt{\\varepsilon_r}}=\\dfrac{3\\times10^{8}}{2}=1.5\\times10^{8}$, $\\lambda=\\dfrac{v}{f}=\\dfrac{1.5\\times10^{8}}{300\\times10^{6}}=0.5\\ \\mathrm{m}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "매질 내 $v=\\dfrac{c}{\\sqrt{\\varepsilon_r}}$, $\\lambda=\\dfrac{v}{f}$"
     },
     {
       "id": "em.8.t18",
@@ -4770,7 +5087,8 @@
       ],
       "answer": 2,
       "explanation": "$\\eta=377\\sqrt{\\dfrac{\\mu_r}{\\varepsilon_r}}=377\\times\\dfrac{1}{3}\\approx125.7\\ \\Omega$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\eta=\\eta_0\\sqrt{\\dfrac{\\mu_r}{\\varepsilon_r}}$"
     },
     {
       "id": "em.8.t19",
@@ -4785,7 +5103,8 @@
       ],
       "answer": 1,
       "explanation": "$P=\\dfrac{E^2}{\\eta}=\\dfrac{20^2}{377}\\approx1.06\\ \\mathrm{W/m^2}$ (실효값 기준).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "전력밀도 $P=\\dfrac{E^2}{\\eta_0}$ (실효값)"
     },
     {
       "id": "em.8.t20",
@@ -4800,7 +5119,8 @@
       ],
       "answer": 3,
       "explanation": "직교 두 성분의 진폭이 같고 위상차 $90^\\circ$이면 합성 전계 끝점이 원을 그려 원편파. 진폭이 다르면 타원, 위상차 $0/180^\\circ$이면 직선편파.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "진폭 같고 위상차 $90^\\circ$면 편파 궤적 판별(원/타원/직선)"
     },
     {
       "id": "pw.5.t1",
@@ -4815,7 +5135,8 @@
       ],
       "answer": 2,
       "explanation": "단상 2선식은 왕복 2가닥에서 강하가 생기므로 $e=2IR=2\\times25\\times0.4=20\\ \\mathrm{V}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "단상 2선 전압강하 $e=2IR$"
     },
     {
       "id": "pw.5.t2",
@@ -4830,7 +5151,8 @@
       ],
       "answer": 0,
       "explanation": "전선 소요량 비: 단상2선 100%, 단상3선 37.5%, 3상3선 75%, 3상4선 33.3%.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "전선 소요량 비: 단상2선 100% 기준 3상3선의 상대값"
     },
     {
       "id": "pw.5.t3",
@@ -4845,7 +5167,8 @@
       ],
       "answer": 3,
       "explanation": "$A=\\dfrac{30.8\\times100\\times20}{1000\\times8}=\\dfrac{61600}{8000}=7.7\\ \\mathrm{mm^2}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "주어진 식 $A=\\dfrac{30.8\\,L\\,I}{1000\\,e}$에 값 대입"
     },
     {
       "id": "pw.5.t4",
@@ -4860,7 +5183,8 @@
       ],
       "answer": 1,
       "explanation": "수용률 $=\\dfrac{350}{500}\\times100=70\\%$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "수용률 $=\\dfrac{\\text{최대수요전력}}{\\text{설비용량}}$"
     },
     {
       "id": "pw.5.t5",
@@ -4875,7 +5199,8 @@
       ],
       "answer": 2,
       "explanation": "부등률 $=\\dfrac{60+80+100}{200}=\\dfrac{240}{200}=1.2$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "부등률 $=\\dfrac{\\text{개별 최대의 합}}{\\text{합성 최대}}$"
     },
     {
       "id": "pw.5.t6",
@@ -4890,7 +5215,8 @@
       ],
       "answer": 0,
       "explanation": "부등률은 개별 최대의 합/합성 최대로 항상 1 이상. 수용률은 보통 100% 미만, 부하율이 높을수록 이용률↑, 부하율=평균/최대.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "부등률=개별최대합/합성최대(≥1), 부하율=평균/최대, 수용률<100%가 보통"
     },
     {
       "id": "pw.6.t7",
@@ -4905,7 +5231,8 @@
       ],
       "answer": 1,
       "explanation": "CT 2차 개방 시 감자작용이 없어져 1차 전류 전량이 여자전류로 작용, 철심 과포화·2차 고전압 유기로 절연 파괴. CT 2차는 단락 취급(PT는 반대).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "CT 2차 개방 시 전량이 여자전류→철심 과포화·2차 고전압. CT 2차는 단락 취급"
     },
     {
       "id": "pw.6.t8",
@@ -4920,7 +5247,8 @@
       ],
       "answer": 3,
       "explanation": "$\\varepsilon=\\dfrac{50-49}{49}\\times100\\approx+2.04\\%$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "비오차 $\\varepsilon=\\dfrac{K_n-K}{K}\\times100$ (부호 주의)"
     },
     {
       "id": "pw.6.t9",
@@ -4935,7 +5263,8 @@
       ],
       "answer": 0,
       "explanation": "비율차동(차동)계전기는 보호구간 양단 전류차를 검출해 변압기·발전기 내부 권선 고장을 보호한다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "보호구간 양단 전류차로 내부고장 검출하는 계전기"
     },
     {
       "id": "pw.6.t10",
@@ -4950,7 +5279,8 @@
       ],
       "answer": 2,
       "explanation": "동기조상기는 여자 가감으로 진상(과여자)·지상(부족여자) 무효전력을 연속 조정. 콘덴서는 진상·계단조정, 분로리액터는 경부하 시 진상 흡수(페란티 방지).",
-      "type": "개념"
+      "type": "개념",
+      "hint": "조상설비: 진상·지상 무효전력을 모두 연속 조정하는 주체 구분"
     },
     {
       "id": "pw.6.t11",
@@ -4965,7 +5295,8 @@
       ],
       "answer": 1,
       "explanation": "$Q_c=P(\\tan\\theta_1-\\tan\\theta_2)=200\\times(1.333-0.75)\\approx116.7\\ \\mathrm{kVA}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "콘덴서 용량 $Q_c=P(\\tan\\theta_1-\\tan\\theta_2)$"
     },
     {
       "id": "pw.6.t12",
@@ -4980,7 +5311,8 @@
       ],
       "answer": 3,
       "explanation": "IVR·OLTC는 부하 변동에 따라 전압을 조정하는 대표 수단. 고정 탭은 자동 불가, 직렬 콘덴서는 리액턴스 상쇄로 강하 저감, 분로 리액터는 경부하 전압상승 억제.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "부하 변동 전압조정: 연속·단계 조정 가능한 장치(고정 탭은 자동 불가)"
     },
     {
       "id": "pw.7.t13",
@@ -4995,7 +5327,8 @@
       ],
       "answer": 0,
       "explanation": "GCB는 SF6, VCB는 고진공, OCB는 절연유, ABB는 압축공기로 소호한다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "차단기별 소호 매질 짝: GCB·VCB·OCB·ABB 각각을 구분"
     },
     {
       "id": "pw.7.t14",
@@ -5010,7 +5343,8 @@
       ],
       "answer": 2,
       "explanation": "$P_s=\\sqrt3\\,V\\,I_s=\\sqrt3\\times24\\times25\\approx1039\\ \\mathrm{MVA}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "3상 차단용량 $P_s=\\sqrt{3}\\,V\\,I_s$"
     },
     {
       "id": "pw.7.t15",
@@ -5025,7 +5359,8 @@
       ],
       "answer": 3,
       "explanation": "단로기는 소호장치가 없어 무부하에서만 개폐. 정전 시 차단기 먼저 개방 후 단로기, 급전 시 단로기 먼저 투입 후 차단기.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "단로기는 소호장치 없어 무부하에서만 개폐, 차단기와 인터록"
     },
     {
       "id": "pw.7.t16",
@@ -5040,7 +5375,8 @@
       ],
       "answer": 1,
       "explanation": "전력퓨즈는 소형·경량·큰 차단용량, 한류형은 파고 도달 전 용단해 통과 전류를 억제. 용단 후 교체 필요, 과부하 보호 부적합.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "전력퓨즈: 소형·큰 차단용량, 한류형은 파고 억제(과부하 보호·재사용 부적합)"
     },
     {
       "id": "pw.7.t17",
@@ -5055,7 +5391,8 @@
       ],
       "answer": 0,
       "explanation": "정격 차단시간 = 개극시간 + 아크시간. 보통 3~8사이클과 같이 사이클 단위로 표시한다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "정격차단시간 = 개극시간 + 아크시간, 사이클로 표시"
     },
     {
       "id": "pw.7.t18",
@@ -5070,7 +5407,8 @@
       ],
       "answer": 2,
       "explanation": "가공선 고장 대부분은 아크성 순간고장이라 짧은 무전압 후 절연 회복. 자동 재투입으로 신뢰도·안정도 향상. 단상·3상 재폐로 모두 존재.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "가공선 고장 대부분은 아크성 순간고장: 무전압 후 자동 재투입 목적"
     },
     {
       "id": "mc.3.t1",
@@ -5085,7 +5423,8 @@
       ],
       "answer": 0,
       "explanation": "단상 전파 $E_d=\\dfrac{2\\sqrt2}{\\pi}E\\approx0.9E=0.9\\times200=180$ V. ($0.45E=90$ V는 반파값).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "단상 전파 $E_d\\approx0.9E$, 반파 $0.45E$와 구분"
     },
     {
       "id": "mc.3.t2",
@@ -5100,7 +5439,8 @@
       ],
       "answer": 1,
       "explanation": "유도성 부하(전류 연속)에서 $E_{d\\alpha}=E_{d0}\\cos\\alpha=100\\times\\cos60^\\circ=50$ V. (저항부하식이면 75 V).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "유도성 부하 $E_{d\\alpha}=E_{d0}\\cos\\alpha$"
     },
     {
       "id": "mc.3.t3",
@@ -5115,7 +5455,8 @@
       ],
       "answer": 2,
       "explanation": "$\\nu=\\sqrt{\\left(\\dfrac{E_{rms}}{E_{dc}}\\right)^2-1}=\\sqrt{1.21-1}=\\sqrt{0.21}\\approx0.458$, 즉 약 45.8%.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "맥동률 $\\nu=\\sqrt{(E_{rms}/E_{dc})^2-1}$"
     },
     {
       "id": "mc.3.t4",
@@ -5130,7 +5471,8 @@
       ],
       "answer": 3,
       "explanation": "승압형 $E_o=\\dfrac{1}{1-D}E=\\dfrac{1}{0.4}\\times100=250$ V. (강압형이면 $DE=60$ V).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "부스트 초퍼 $E_o=\\dfrac{1}{1-D}E$"
     },
     {
       "id": "mc.3.t5",
@@ -5145,7 +5487,8 @@
       ],
       "answer": 2,
       "explanation": "인버터는 직류→교류 역변환. 컨버터·정류기는 교류→직류(순변환), 초퍼는 직류→직류.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "직류$\\to$교류 역변환은 무엇인지 명칭 구분"
     },
     {
       "id": "mc.6.t6",
@@ -5160,7 +5503,8 @@
       ],
       "answer": 2,
       "explanation": "직권형은 $T\\propto\\phi I_a\\propto I^2$. 극성 반전 시 자속·전기자전류가 동시 반전돼 토크 방향 유지 → 교류·직류 양용.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "직권은 극성 반전 시 자속·전류 동시 반전, 토크 방향 유지"
     },
     {
       "id": "mc.6.t7",
@@ -5175,7 +5519,8 @@
       ],
       "answer": 3,
       "explanation": "만능전동기는 소형·고속이며 직권 특성상 속도 변동이 커 대용량 정속도 부하에는 부적합.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "만능전동기는 소형 고속용, 대용량 정속도엔 부적합"
     },
     {
       "id": "mc.6.t8",
@@ -5190,7 +5535,8 @@
       ],
       "answer": 0,
       "explanation": "계자 리액턴스가 크면 역률 악화 → 계자 권수를 줄여 리액턴스↓, 부족 자속은 전기자 권수로 보상, 철심은 성층.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "역률 개선하려면 계자 권수를 줄여 리액턴스↓"
     },
     {
       "id": "mc.6.t9",
@@ -5205,7 +5551,8 @@
       ],
       "answer": 2,
       "explanation": "보상권선은 전기자와 직렬 접속돼 전기자 반작용 자속을 상쇄 → 정류 개선·역률 향상.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "보상권선은 전기자 반작용 상쇄가 핵심 역할"
     },
     {
       "id": "mc.6.t10",
@@ -5220,7 +5567,8 @@
       ],
       "answer": 1,
       "explanation": "중간변압기 권수비로 전기자 전압을 낮추면 정류자편 간 전압↓ → 정류 개선, 경부하 과속 억제.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "중간변압기는 전기자 전압 낮춰 정류자편 전압·과속 억제"
     },
     {
       "id": "mc.6.t11",
@@ -5235,7 +5583,8 @@
       ],
       "answer": 0,
       "explanation": "반발 전동기는 전기자 브러시를 단락하고 브러시 축을 기울여 반발력으로 토크를 낸다. 브러시 위치로 기동토크·속도 조정(아트킨손·톰슨·데리형).",
-      "type": "개념"
+      "type": "개념",
+      "hint": "반발 전동기는 브러시 단락·위치 이동으로 제어"
     },
     {
       "id": "mc.6.t12",
@@ -5250,7 +5599,8 @@
       ],
       "answer": 1,
       "explanation": "단상 $m=2$, $\\sin\\dfrac{\\pi}{2}=1$ → $E_a=\\dfrac{E_d}{\\sqrt2}=\\dfrac{141}{\\sqrt2}\\approx100$ V.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "단상 $m=2$ 대입, $E_a=\\dfrac{E_d}{\\sqrt2}\\sin\\dfrac{\\pi}{m}$"
     },
     {
       "id": "mc.6.t13",
@@ -5265,7 +5615,8 @@
       ],
       "answer": 2,
       "explanation": "$N_s=\\dfrac{120f}{p}=\\dfrac{120\\times60}{6}=1200$ rpm.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "회전 변류기 속도=동기속도 $\\dfrac{120f}{p}$"
     },
     {
       "id": "mc.6.t14",
@@ -5280,7 +5631,8 @@
       ],
       "answer": 3,
       "explanation": "시라게 전동기는 회전자 1차 권선과 브러시 이동으로 2차 유도전압을 조정 → 넓은 속도제어·역률 개선.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "브러시 이동 3상 정류자기=시라게 전동기"
     },
     {
       "id": "mc.6.t15",
@@ -5295,7 +5647,8 @@
       ],
       "answer": 3,
       "explanation": "중간변압기 권수비로 전기자 실효전압을 조정 → 속도·토크 특성 조정, 경부하 과속 방지.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "중간변압기 권수비로 전기자 전압 조정, 과속 억제"
     },
     {
       "id": "mc.7.t16",
@@ -5310,7 +5663,8 @@
       ],
       "answer": 1,
       "explanation": "$\\dfrac{\\beta f_p}{360}=\\dfrac{1.8\\times1000}{360}=5$ rev/s $\\times60=300$ rpm.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "회전속도 $N=\\dfrac{\\beta f_p}{360}\\times60$ [rpm]"
     },
     {
       "id": "mc.7.t17",
@@ -5325,7 +5679,8 @@
       ],
       "answer": 3,
       "explanation": "스테핑 모터는 1펄스당 일정 스텝각 회전 → 총 회전각∝펄스 수. 개루프로도 정밀 위치·속도 제어(디지털 제어 적합).",
-      "type": "개념"
+      "type": "개념",
+      "hint": "회전각∝펄스 수, 개루프로 정밀 위치제어 가능"
     },
     {
       "id": "mc.7.t18",
@@ -5340,7 +5695,8 @@
       ],
       "answer": 2,
       "explanation": "서보 모터는 빠른 응답을 위해 관성 모멘트가 작아야 한다. 큰 기동토크·좋은 속응성·넓은 속도범위는 옳은 요구특성.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "서보모터는 관성모멘트가 작아야 함(크다가 함정)"
     },
     {
       "id": "mc.7.t19",
@@ -5355,7 +5711,8 @@
       ],
       "answer": 0,
       "explanation": "리니어 모터는 고정자·회전자를 직선으로 펼쳐 직접 직선 추력 발생 → 변환기구 불필요, 마찰손 적으나 단부효과 존재.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "리니어 모터=회전형 펼친 구조, 직선 추력 직접"
     },
     {
       "id": "mc.7.t20",
@@ -5370,7 +5727,8 @@
       ],
       "answer": 1,
       "explanation": "열동 계전기(THR)는 바이메탈 발열·휨으로 과부하를 검출. 전자접촉기와 조합해 전자개폐기 구성(ZCT는 지락 검출).",
-      "type": "개념"
+      "type": "개념",
+      "hint": "과부하 보호는 바이메탈 열동계전기(ZCT는 지락)"
     },
     {
       "id": "mc.7.t21",
@@ -5385,7 +5743,8 @@
       ],
       "answer": 3,
       "explanation": "TRIAC은 양방향 3단자 소자로 교류 양·음 반주기를 게이트로 도통 → 교류 위상제어에 직접 사용. SCR·GTO는 단방향.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "양방향 교류 위상제어 소자는 무엇? SCR은 단방향"
     },
     {
       "id": "kec.4.t1",
@@ -5400,7 +5759,8 @@
       ],
       "answer": 0,
       "explanation": "KEC 411.2. 직류 공칭 750·1500 V, 교류(단상) 25000 V. 27500 V는 교류 최고전압, 22900 V는 배전값.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "직류·교류 급전 공칭전압 조합을 최고전압과 구분하라"
     },
     {
       "id": "kec.4.t2",
@@ -5415,7 +5775,8 @@
       ],
       "answer": 1,
       "explanation": "KEC 461.2. 작업장 등에서 공칭전압 교류 25 V·직류 60 V 초과 노출 도전부에 접촉방지 방호설비를 시설한다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "작업장 노출도전부 접촉방지 방호 공칭전압 기준 확인"
     },
     {
       "id": "kec.4.t3",
@@ -5430,7 +5791,8 @@
       ],
       "answer": 0,
       "explanation": "스코트(T) 결선은 3상을 위상 90° 다른 2상으로 변환해 단상 견인부하의 3상 불평형을 완화한다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "3상을 2상으로 변환해 불평형 완화하는 결선방식"
     },
     {
       "id": "kec.4.t4",
@@ -5445,7 +5807,8 @@
       ],
       "answer": 1,
       "explanation": "회생제동은 견인전동기를 발전기로 사용해 회생전력을 전차선로로 반환한다(인근 열차·변전소가 소비).",
-      "type": "개념"
+      "type": "개념",
+      "hint": "견인전동기를 발전기로 써 전력을 전차선에 반환하는 제동방식"
     },
     {
       "id": "kec.4.t5",
@@ -5460,7 +5823,8 @@
       ],
       "answer": 2,
       "explanation": "절연구간은 급전 구분 경계로, 아크·단락 방지를 위해 견인력을 끄고 타행(관성)으로 통과한다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "절연구간 통과 시 아크 방지 운전방식을 떠올려라"
     },
     {
       "id": "kec.4.t6",
@@ -5475,7 +5839,8 @@
       ],
       "answer": 3,
       "explanation": "KEC 461.4. 철도측은 변전소 간격 축소·레일본드·장대레일·도상 절연저항 증대, 매설 금속체측은 배류법을 적용한다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "전식방지에서 매설금속체측 대책을 철도측과 구분하라"
     },
     {
       "id": "kec.5.t7",
@@ -5490,7 +5855,8 @@
       ],
       "answer": 0,
       "explanation": "KEC 503.2.2. 인버터 정격 교류 출력전류 최대값의 0.5% 초과 직류 검출 시 자동으로 계통과 분리한다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "인버터 직류유출 자동분리 기준(정격교류출력전류 비율) 확인"
     },
     {
       "id": "kec.5.t8",
@@ -5505,7 +5871,8 @@
       ],
       "answer": 1,
       "explanation": "단독운전(islanding)은 계통 정전에도 분산형전원이 계통을 가압하는 상태로, 감전·기기 손상 위험이 있어 단독운전 방지기능이 필요하다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "계통 정전에도 계통을 가압하는 현상 방지기능을 떠올려라"
     },
     {
       "id": "kec.5.t9",
@@ -5520,7 +5887,8 @@
       ],
       "answer": 2,
       "explanation": "KEC 511.1.3. 주택 전기저장장치 옥내배선은 조건 충족 시 대지전압 600 V 이하로 시설 가능(일반 옥내 300 V와 구분).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "주택 전기저장장치 옥내배선 대지전압 상한 확인"
     },
     {
       "id": "kec.5.t10",
@@ -5535,7 +5903,8 @@
       ],
       "answer": 3,
       "explanation": "KEC 542.3.2. 과전류·발전전압 이상·온도 상승 등에서 전로 차단·연료가스 차단·내부 가스 배기의 삼중 보호를 수행한다. 운전 계속은 해당 없음.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "연료전지 이상시 삼중 보호동작과 운전계속을 구분하라"
     },
     {
       "id": "ct.1.r41",
@@ -5550,7 +5919,8 @@
       ],
       "answer": 2,
       "explanation": "실효값 $V_{rms}=\\dfrac{V_m}{\\sqrt{2}}=\\dfrac{200}{\\sqrt{2}}\\approx 141.4$ V. 각속도 $\\omega=120\\pi$ 이므로 $f=\\dfrac{\\omega}{2\\pi}=\\dfrac{120\\pi}{2\\pi}=60$ Hz.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "실효값=최댓값$/\\sqrt{2}$, $f=\\omega/2\\pi$"
     },
     {
       "id": "ct.1.r42",
@@ -5565,7 +5935,8 @@
       ],
       "answer": 0,
       "explanation": "극형식 나눗셈은 크기끼리 나누고 위상끼리 뺀다. $\\dfrac{60}{12}=5$, $75^\\circ-30^\\circ=45^\\circ$ 이므로 $5\\angle 45^\\circ$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "극형식 나눗셈: 크기끼리 나누고 위상끼리 뺀다"
     },
     {
       "id": "ct.1.r43",
@@ -5580,7 +5951,8 @@
       ],
       "answer": 1,
       "explanation": "$Z=R+j(X_L-X_C)=8+j6$. $|Z|=\\sqrt{8^2+6^2}=10\\ \\Omega$, 역률 $\\cos\\theta=\\dfrac{R}{|Z|}=\\dfrac{8}{10}=0.8$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$Z=R+j(X_L-X_C)$, 역률 $\\cos\\theta=R/|Z|$"
     },
     {
       "id": "ct.1.r44",
@@ -5595,7 +5967,8 @@
       ],
       "answer": 3,
       "explanation": "직렬 공진 주파수 $f_0=\\dfrac{1}{2\\pi\\sqrt{LC}}$. $LC=(10\\times10^{-3})(1\\times10^{-6})=10^{-8}$, $\\sqrt{LC}=10^{-4}$. $f_0=\\dfrac{1}{2\\pi\\times10^{-4}}\\approx 1592$ Hz.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$f_0=\\dfrac{1}{2\\pi\\sqrt{LC}}$"
     },
     {
       "id": "ct.1.r45",
@@ -5610,7 +5983,8 @@
       ],
       "answer": 0,
       "explanation": "Y결선은 선전류=상전류이므로 $I_l=10$ A. 선간전압은 상전압의 $\\sqrt{3}$ 배이므로 $V_l=\\sqrt{3}\\times220\\approx 381$ V.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "Y: 선전류=상전류, 선간전압$=\\sqrt{3}\\times$상전압"
     },
     {
       "id": "ct.1.r46",
@@ -5625,7 +5999,8 @@
       ],
       "answer": 2,
       "explanation": "$\\Delta$결선은 선간전압=상전압이므로 $V_l=200$ V. 선전류는 상전류의 $\\sqrt{3}$ 배이므로 $I_l=\\sqrt{3}\\times10\\approx 17.3$ A.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\Delta$: 선간전압=상전압, 선전류$=\\sqrt{3}\\times$상전류"
     },
     {
       "id": "ct.1.r47",
@@ -5640,7 +6015,8 @@
       ],
       "answer": 1,
       "explanation": "3상 유효전력 $P=\\sqrt{3}\\,V_l I_l \\cos\\theta=\\sqrt{3}\\times200\\times10\\times0.8\\approx 2771$ W.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$P=\\sqrt{3}\\,V_l I_l\\cos\\theta$"
     },
     {
       "id": "ct.1.r48",
@@ -5655,7 +6031,8 @@
       ],
       "answer": 3,
       "explanation": "V결선 출력은 변압기 1대 용량의 $\\sqrt{3}$ 배이다. $P_V=\\sqrt{3}\\times10\\approx 17.3$ kVA (2대 용량 $20$ kVA 대비 이용률 $86.6\\%$).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "V결선 출력$=\\sqrt{3}\\times$변압기 1대 용량"
     },
     {
       "id": "ct.1.r49",
@@ -5670,7 +6047,8 @@
       ],
       "answer": 0,
       "explanation": "영상분 $I_0=\\dfrac{1}{3}(I_a+I_b+I_c)=\\dfrac{1}{3}(15+0+0)=5$ A.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "영상분 $I_0=\\dfrac{1}{3}(I_a+I_b+I_c)$"
     },
     {
       "id": "ct.1.r50",
@@ -5685,7 +6063,8 @@
       ],
       "answer": 2,
       "explanation": "T형에서 $B=Z_1+Z_2+\\dfrac{Z_1 Z_2}{Z_3}=2+2+\\dfrac{4}{4}=5$, $C=\\dfrac{1}{Z_3}=\\dfrac{1}{4}=0.25$. (검산 $AD-BC=1.5\\times1.5-5\\times0.25=1$)",
-      "type": "계산"
+      "type": "계산",
+      "hint": "T형 $B=Z_1+Z_2+\\dfrac{Z_1Z_2}{Z_3}$, $C=\\dfrac{1}{Z_3}$"
     },
     {
       "id": "ct.1.r51",
@@ -5700,7 +6079,8 @@
       ],
       "answer": 1,
       "explanation": "최종값 정리 $f(\\infty)=\\lim_{s\\to0} s\\,F(s)=\\lim_{s\\to0}\\dfrac{5}{s+2}=\\dfrac{5}{2}=2.5$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "최종값정리 $\\lim_{s\\to0}sF(s)$"
     },
     {
       "id": "ct.1.r52",
@@ -5715,7 +6095,8 @@
       ],
       "answer": 3,
       "explanation": "RL 회로 시정수 $\\tau=\\dfrac{L}{R}=\\dfrac{0.1}{50}=0.002$ s $=2$ ms. 이는 전류가 정상값의 $63.2\\%$ 에 도달하는 시간이다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\tau=L/R$, ms 환산 주의"
     },
     {
       "id": "ct.1.r53",
@@ -5730,7 +6111,8 @@
       ],
       "answer": 0,
       "explanation": "정저항 회로 조건 $R=\\sqrt{\\dfrac{L}{C}}=\\sqrt{\\dfrac{0.1}{0.4\\times10^{-6}}}=\\sqrt{2.5\\times10^{5}}=500\\ \\Omega$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "정저항 회로 조건 $R=\\sqrt{L/C}$"
     },
     {
       "id": "ct.2.r21",
@@ -5745,7 +6127,8 @@
       ],
       "answer": 1,
       "explanation": "$M(s)=\\dfrac{G}{1+GH}=\\dfrac{\\frac{10}{s+2}}{1+\\frac{10}{s+2}}=\\dfrac{10}{(s+2)+10}=\\dfrac{10}{s+12}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\dfrac{G}{1+GH}$를 통분해 정리"
     },
     {
       "id": "ct.2.r22",
@@ -5760,7 +6143,8 @@
       ],
       "answer": 3,
       "explanation": "직렬 결합은 곱, 병렬 결합은 합이다. $G_1 G_2 + G_3 = 2\\times3 + 4 = 10$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "직렬은 곱, 병렬은 합"
     },
     {
       "id": "ct.2.r23",
@@ -5775,7 +6159,8 @@
       ],
       "answer": 0,
       "explanation": "라우스 표에서 $s^1$ 행 $=\\dfrac{4\\times5-1\\times K}{4}=\\dfrac{20-K}{4}>0 \\Rightarrow K<20$, $s^0$ 행 $=K>0$. 따라서 $0<K<20$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "라우스 $s^1$·$s^0$ 두 조건"
     },
     {
       "id": "ct.2.r24",
@@ -5790,7 +6175,8 @@
       ],
       "answer": 2,
       "explanation": "점근선 무게중심 $\\sigma=\\dfrac{\\sum \\mathrm{극} - \\sum \\mathrm{영점}}{n-m}=\\dfrac{(0-2-4)-0}{3-0}=\\dfrac{-6}{3}=-2$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "무게중심 $\\sigma=\\dfrac{\\sum\\text{극}-\\sum\\text{영점}}{n-m}$"
     },
     {
       "id": "ct.2.r25",
@@ -5805,7 +6191,8 @@
       ],
       "answer": 1,
       "explanation": "이득 $g=20\\log_{10}|G(j\\omega)|=20\\log_{10}1000=20\\times3=60$ dB.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "이득$=20\\log_{10}|G|$ [dB]"
     },
     {
       "id": "ct.2.r26",
@@ -5820,7 +6207,8 @@
       ],
       "answer": 3,
       "explanation": "위상여유 $\\mathrm{PM}=180^\\circ+\\angle G(j\\omega_{gc})=180^\\circ+(-135^\\circ)=45^\\circ$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "위상여유 $\\mathrm{PM}=180^\\circ+\\angle G(j\\omega_{gc})$"
     },
     {
       "id": "ct.2.r27",
@@ -5835,7 +6223,8 @@
       ],
       "answer": 0,
       "explanation": "나이퀴스트 판별식 $Z=N+P$ 에서 $P=0$, $N=0$ 이면 우반평면 폐루프 극 $Z=0$ 이므로 폐루프계는 안정하다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "나이퀴스트 $Z=N+P$, $Z=0$이면 안정"
     },
     {
       "id": "ct.2.r28",
@@ -5850,7 +6239,8 @@
       ],
       "answer": 2,
       "explanation": "표준형 $\\dfrac{\\omega_n^2}{s^2+2\\zeta\\omega_n s+\\omega_n^2}$ 과 비교하면 $\\omega_n^2=25\\Rightarrow\\omega_n=5$, $2\\zeta\\omega_n=6\\Rightarrow\\zeta=\\dfrac{6}{2\\times5}=0.6$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "표준형과 비교: $\\omega_n^2$, $2\\zeta\\omega_n$"
     },
     {
       "id": "ct.2.r29",
@@ -5865,7 +6255,8 @@
       ],
       "answer": 1,
       "explanation": "$\\omega_d=\\omega_n\\sqrt{1-\\zeta^2}=10\\sqrt{1-0.6^2}=10\\sqrt{0.64}=10\\times0.8=8$ rad/s.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "감쇠진동 $\\omega_d=\\omega_n\\sqrt{1-\\zeta^2}$"
     },
     {
       "id": "ct.2.r30",
@@ -5880,7 +6271,8 @@
       ],
       "answer": 3,
       "explanation": "위치오차상수 $K_p=\\lim_{s\\to0}G(s)=\\dfrac{20}{2\\times5}=2$. 정상위치편차 $e_{ss}=\\dfrac{1}{1+K_p}=\\dfrac{1}{1+2}=\\dfrac{1}{3}$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "계단 편차 $\\dfrac{1}{1+K_p}$, $K_p=\\lim_{s\\to0}G$"
     },
     {
       "id": "ct.2.r31",
@@ -5895,7 +6287,8 @@
       ],
       "answer": 0,
       "explanation": "속도오차상수 $K_v=\\lim_{s\\to0}s\\,G(s)=\\dfrac{10}{5}=2$. 정상속도편차 $e_{ss}=\\dfrac{1}{K_v}=\\dfrac{1}{2}=0.5$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "램프 편차 $\\dfrac{1}{K_v}$, $K_v=\\lim_{s\\to0}sG$"
     },
     {
       "id": "ct.2.r32",
@@ -5910,7 +6303,8 @@
       ],
       "answer": 2,
       "explanation": "특성방정식 $\\det(sI-A)=\\det\\begin{bmatrix}s & -1\\\\ 6 & s+5\\end{bmatrix}=s(s+5)-(-1)(6)=s^2+5s+6=0$.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "특성방정식 $\\det(sI-A)=0$"
     },
     {
       "id": "ct.2.r33",
@@ -5925,7 +6319,8 @@
       ],
       "answer": 1,
       "explanation": "단위계단열 $\\{1,1,1,\\dots\\}$ 의 $z$변환은 $\\sum_{k=0}^{\\infty}z^{-k}=\\dfrac{1}{1-z^{-1}}=\\dfrac{z}{z-1}$ ($|z|>1$).",
-      "type": "계산"
+      "type": "계산",
+      "hint": "계단열 $\\sum z^{-k}$ 등비급수 합"
     },
     {
       "id": "pw.4.r10",
@@ -5940,7 +6335,8 @@
       ],
       "answer": 2,
       "explanation": "소호리액터접지는 $\\omega L=\\dfrac{1}{3\\omega C_s}$의 병렬 공진 조건으로 지락전류 $I_g=I_L+I_C$를 상쇄시켜 최소화한다. 지락전류가 작아 유도장해가 가장 작고 과도안정도가 높으나, 지락전류가 미소하여 보호계전기 동작이 불확실하다. 직접접지는 지락전류가 최대, 비접지는 병렬 공진과 무관하다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "$\\omega L=\\dfrac{1}{3\\omega C}$ 공진으로 지락전류를 최소화하는 접지방식"
     },
     {
       "id": "pw.4.r11",
@@ -5955,7 +6351,8 @@
       ],
       "answer": 1,
       "explanation": "전자유도전압 $E_m=3\\omega M l I_0$이다. $\\omega=2\\pi\\times 60=376.99$ rad/s이므로 $E_m=3\\times 376.99\\times 0.05\\times 10^{-3}\\times 40\\times 100\\approx 226$ V. 여기서 $3I_0$는 지락전류에 해당한다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "전자유도전압 $E_m=3\\omega M l I_0$ ($3I_0$=지락전류)"
     },
     {
       "id": "pw.4.r12",
@@ -5970,7 +6367,8 @@
       ],
       "answer": 0,
       "explanation": "무손실 송전전력 $P=\\dfrac{V_s V_r}{X}\\sin\\delta$에서 직렬 리액턴스 $X$가 작을수록 송전전력과 안정도가 커진다. 따라서 리액턴스는 작게 해야 하며, 복도체 채용, 병행 회선수 증가, 직렬 콘덴서 설치가 그 방법이다. 리액턴스를 크게 하는 것은 안정도를 저하시킨다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "$P=\\dfrac{V_sV_r}{X}\\sin\\delta$: 리액턴스를 크게 하는 대책은 안정도↓"
     },
     {
       "id": "pw.1.r11",
@@ -5985,7 +6383,8 @@
       ],
       "answer": 3,
       "explanation": "수력 발전출력 $P=9.8QH\\eta$ [kW]이다. $P=9.8\\times 20\\times 100\\times 0.8=15680$ kW. 효율을 곱하지 않은 이론출력 $9.8\\times 20\\times 100=19600$ kW는 오답이다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "수력 출력 $P=9.8QH\\eta$: 효율을 반드시 곱할 것(함정)"
     },
     {
       "id": "pw.1.r12",
@@ -6000,7 +6399,8 @@
       ],
       "answer": 3,
       "explanation": "수차를 적용 낙차가 높은 순으로 나열하면 펠턴 > 프란시스 > 사류 > 프로펠러(카플란)이며, 특유속도는 이와 반대로 카플란(프로펠러)이 가장 크다. 따라서 저낙차·대유량 지점에는 특유속도가 큰 카플란 수차가 적합하다. 펠턴은 고낙차·소유량용이다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "저낙차·대유량=특유속도가 가장 큰 수차(프로펠러형)"
     },
     {
       "id": "pw.1.r13",
@@ -6015,7 +6415,8 @@
       ],
       "answer": 2,
       "explanation": "재생 사이클은 터빈 중간에서 증기를 추기하여 급수가열기로 급수를 가열하는 방식이다. 재열 사이클은 팽창 도중의 증기를 재열기로 다시 가열(증기가열)하여 저압터빈으로 보내는 방식으로 구분된다. 랭킨은 기력발전의 기본 사이클, 카르노는 이론상 최고 효율 사이클이다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "추기로 급수를 가열하는 사이클(재열과 구분)"
     },
     {
       "id": "pw.3.r14",
@@ -6030,7 +6431,8 @@
       ],
       "answer": 1,
       "explanation": "3상 충전용량 $Q_c=3\\omega C E^2=\\omega C V^2$ (V는 선간전압)이다. $\\omega=2\\pi\\times 60=376.99$이므로 $Q_c=376.99\\times 0.5\\times 10^{-6}\\times (154\\times 10^3)^2\\approx 4.47\\times 10^6$ VA $=4470$ kVA.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "3상 충전용량 $Q_c=\\omega C V^2$ ($V$=선간전압)"
     },
     {
       "id": "pw.3.r15",
@@ -6045,7 +6447,8 @@
       ],
       "answer": 0,
       "explanation": "페란티 현상은 경부하·무부하 시 선로의 대지 정전용량에 흐르는 진상(충전) 전류 때문에 $V_s<V_r$가 되는 현상이다. 대책으로 분로(병렬) 리액터로 지상 무효전력을 공급하거나 동기조상기를 부족여자로 운전한다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "경부하 진상 충전전류로 수전단 전압이 상승하는 현상 명칭"
     },
     {
       "id": "pw.3.r16",
@@ -6060,7 +6463,8 @@
       ],
       "answer": 3,
       "explanation": "복도체는 등가 반지름이 커져 인덕턴스 $L$이 감소하고 정전용량 $C$가 증가한다. 그 결과 송전용량과 안정도가 증가하고, 전선 표면 전위경도가 완화되어 코로나 임계전압이 상승(코로나 방지)한다. 인덕턴스가 증가하여 안정도가 낮아진다는 설명은 반대로 서술된 오류이다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "복도체는 등가 반지름↑ → $L$ 감소·$C$ 증가·안정도↑ (반대로 서술한 보기 주의)"
     },
     {
       "id": "kec.1.r16",
@@ -6075,7 +6479,8 @@
       ],
       "answer": 0,
       "explanation": "KEC 152.1 수뢰부시스템(회전구체법). 회전구체 반지름은 피뢰레벨에 따라 LPL I $20\\ \\mathrm{m}$, II $30\\ \\mathrm{m}$, III $45\\ \\mathrm{m}$, IV $60\\ \\mathrm{m}$로 규정한다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "피뢰레벨별 회전구체 반지름 값을 구분하라"
     },
     {
       "id": "kec.1.r17",
@@ -6090,7 +6495,8 @@
       ],
       "answer": 1,
       "explanation": "KEC 152.2 인하도선시스템. 병렬 인하도선의 평균 간격은 피뢰레벨 I, II에서 $10\\ \\mathrm{m}$, III에서 $15\\ \\mathrm{m}$, IV에서 $20\\ \\mathrm{m}$로 한다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "피뢰레벨별 병렬 인하도선 평균간격을 확인하라"
     },
     {
       "id": "kec.1.r18",
@@ -6105,7 +6511,8 @@
       ],
       "answer": 1,
       "explanation": "KEC 142.6 수도관로 등을 접지극으로 사용. 지중 매설 금속제 수도관로는 접지저항 $3\\ \\Omega$ 이하, 건물의 철골은 $2\\ \\Omega$ 이하일 때 접지극으로 사용할 수 있다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "수도관로·철골을 접지극으로 쓸 때 접지저항 기준 구분"
     },
     {
       "id": "kec.1.r19",
@@ -6120,7 +6527,8 @@
       ],
       "answer": 0,
       "explanation": "KEC 203.1 계통접지 구성. 제1문자는 전력계통과 대지의 관계(T: 직접접지, I: 절연 또는 임피던스 접지), 제2문자는 노출도전부와 대지의 관계(T: 독립접지, N: 계통접지점에 직접 접속)를 나타낸다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "계통접지 제1문자(전력계통-대지 관계) 의미 확인"
     },
     {
       "id": "kec.2.r17",
@@ -6135,7 +6543,8 @@
       ],
       "answer": 2,
       "explanation": "KEC 212.4.1 과부하전류 보호장치의 특성. $I_B \\le I_n \\le I_z$ 및 $I_2 \\le 1.45\\,I_z$ 두 조건을 모두 만족해야 한다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "과부하 보호 협조조건 $I_2$와 $I_z$ 관계식을 확인하라"
     },
     {
       "id": "kec.2.r18",
@@ -6150,7 +6559,8 @@
       ],
       "answer": 2,
       "explanation": "$\\Sigma I_H < \\Sigma I_M$이므로 $I_a=\\Sigma I_H + k\\cdot\\Sigma I_M = 30 + 1.25\\times 40 = 80\\ \\mathrm{A}$이다. $\\Sigma I_M \\le 50\\ \\mathrm{A}$이므로 $k=1.25$를 적용한다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "$\\Sigma I_H$와 $\\Sigma I_M$ 대소에 따른 간선전류 계산식 적용"
     },
     {
       "id": "kec.2.r19",
@@ -6165,7 +6575,8 @@
       ],
       "answer": 0,
       "explanation": "KEC 234.5 콘센트 시설. 물에 젖은 상태에서 전기를 사용하는 장소는 정격감도전류 $15\\ \\mathrm{mA}$ 이하, 동작시간 $0.03\\ \\mathrm{s}$ 이하의 인체감전보호용 누전차단기와 접지극이 있는 방적형 콘센트를 시설한다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "물에 젖은 장소 콘센트 누전차단기 감도전류·동작시간 확인"
     },
     {
       "id": "kec.2.r20",
@@ -6180,7 +6591,8 @@
       ],
       "answer": 1,
       "explanation": "KEC 234.6 점멸기의 시설. 관광숙박업 또는 숙박업 객실 입구등은 $1$분 이내, 주택·아파트 현관등은 $3$분 이내에 소등되는 타임스위치를 시설한다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "객실 입구등과 주택 현관등 자동소등 시간을 구분하라"
     },
     {
       "id": "kec.3.r17",
@@ -6195,7 +6607,8 @@
       ],
       "answer": 2,
       "explanation": "KEC 351.1 발전소 등의 울타리·담 등의 시설. 단수 $=(345-160)/10=18.5$를 올림하면 $19$단. 합계 $=6+0.12\\times 19 = 8.28\\ \\mathrm{m}$이다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "160kV 초과 단수 가산 방식으로 울타리+거리 합계 계산"
     },
     {
       "id": "kec.3.r18",
@@ -6210,7 +6623,8 @@
       ],
       "answer": 3,
       "explanation": "KEC 331.6 풍압하중의 종별과 적용. 갑종 풍압하중은 목주·원형지지물 $588\\ \\mathrm{Pa}$, 기타 전선(단도체) $745\\ \\mathrm{Pa}$, 애자장치 $1039\\ \\mathrm{Pa}$, 강관 철탑 $1255\\ \\mathrm{Pa}$이다.",
-      "type": "계산"
+      "type": "계산",
+      "hint": "갑종 풍압하중 대상물별 풍압값 표에서 강관철탑 확인"
     },
     {
       "id": "kec.5.r13",
@@ -6225,7 +6639,8 @@
       ],
       "answer": 3,
       "explanation": "KEC 512.2.2 전기저장장치 제어 및 보호장치. 과전압·과전류 발생, 제어장치 이상, 이차전지 내부 온도의 급격한 상승 시 자동으로 전로를 차단해야 한다. 역률 저하는 자동차단 요건이 아니다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "이차전지 자동차단 사유와 역률저하를 구분하라"
     },
     {
       "id": "kec.5.r14",
@@ -6240,7 +6655,8 @@
       ],
       "answer": 3,
       "explanation": "KEC 520 태양광설비. 충전부 비노출, 병렬 접속 전로의 과전류 보호, 부하측 개폐기 시설은 모두 규정에 부합한다. 옥외 노출 배선은 케이블 등 절연 전선을 사용하며 나전선을 강제하지 않으므로 (4)가 틀리다.",
-      "type": "개념"
+      "type": "개념",
+      "hint": "옥외 태양광 배선에 나전선 강제 여부를 판단하라"
     }
   ]
 }

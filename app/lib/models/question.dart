@@ -18,6 +18,7 @@ class Question {
     required this.answer,
     required this.explanation,
     this.type = '계산',
+    this.hint,
   });
 
   final String id;
@@ -39,6 +40,9 @@ class Question {
   final int answer;
   final String explanation;
 
+  /// 문항별 힌트 — 정답은 감추고 개념·공식·주의점만 짚는다. 없을 수 있다.
+  final String? hint;
+
   factory Question.fromJson(Map<String, dynamic> j) => Question(
         id: j['id'] as String,
         subject: j['subject'] as String,
@@ -48,6 +52,7 @@ class Question {
         answer: j['answer'] as int,
         explanation: j['explanation'] as String? ?? '',
         type: j['type'] as String? ?? '계산',
+        hint: j['hint'] as String?,
       );
 }
 

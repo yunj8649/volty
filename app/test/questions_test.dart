@@ -41,11 +41,12 @@ void main() {
       expect(majorIds.contains(q['major']), isTrue,
           reason: '$id 단원(major) 없음: ${q['major']}');
 
-      // 지문·보기·해설의 $…$ LaTeX 가 렌더(파싱)되는지.
+      // 지문·보기·해설·힌트의 $…$ LaTeX 가 렌더(파싱)되는지.
       final texts = <String>[
         q['stem'] as String,
         ...choices.cast<String>(),
         (q['explanation'] as String?) ?? '',
+        (q['hint'] as String?) ?? '',
       ];
       for (final t in texts) {
         for (final m in inlineRe.allMatches(t)) {
