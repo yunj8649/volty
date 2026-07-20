@@ -131,6 +131,14 @@ class _QuestionFlashcardScreenState extends State<QuestionFlashcardScreen> {
                       constraints: const BoxConstraints(maxWidth: 720),
                       child: GestureDetector(
                         onTap: () => setState(() => _revealed = !_revealed),
+                        onHorizontalDragEnd: (d) {
+                          final v = d.primaryVelocity ?? 0;
+                          if (v < -100) {
+                            _go(1); // 왼쪽으로 밀기 → 다음
+                          } else if (v > 100) {
+                            _go(-1); // 오른쪽으로 밀기 → 이전
+                          }
+                        },
                         child: _QuestionCard(
                           question: q,
                           revealed: _revealed,

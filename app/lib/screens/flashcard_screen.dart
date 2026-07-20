@@ -117,6 +117,14 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
                         padding: const EdgeInsets.fromLTRB(20, 8, 20, 8),
                         child: GestureDetector(
                           onTap: () => setState(() => _revealed = !_revealed),
+                          onHorizontalDragEnd: (d) {
+                            final v = d.primaryVelocity ?? 0;
+                            if (v < -100) {
+                              _go(1); // 왼쪽으로 밀기 → 다음
+                            } else if (v > 100) {
+                              _go(-1); // 오른쪽으로 밀기 → 이전
+                            }
+                          },
                           child: _FlipCard(
                             item: _deck[_index],
                             revealed: _revealed,
