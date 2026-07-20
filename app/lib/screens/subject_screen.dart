@@ -31,7 +31,8 @@ class SubjectScreen extends StatelessWidget {
       MaterialPageRoute<void>(
         builder: (_) => QuizScreen(
           progress: progress,
-          config: QuizConfig(title: title, questions: qs, isExam: false),
+          config: QuizConfig(
+              title: title, questions: qs, isExam: false, cards: cards),
         ),
       ),
     );

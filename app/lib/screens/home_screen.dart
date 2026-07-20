@@ -76,7 +76,8 @@ class HomeScreen extends StatelessWidget {
       MaterialPageRoute<void>(
         builder: (_) => QuizScreen(
           progress: progress,
-          config: QuizConfig(title: '오답노트', questions: qs, isExam: false),
+          config: QuizConfig(
+              title: '오답노트', questions: qs, isExam: false, cards: cards),
         ),
       ),
     );
@@ -91,7 +92,8 @@ class HomeScreen extends StatelessWidget {
       MaterialPageRoute<void>(
         builder: (_) => QuizScreen(
           progress: progress,
-          config: QuizConfig(title: '오늘의 복습', questions: qs, isExam: false),
+          config: QuizConfig(
+              title: '오늘의 복습', questions: qs, isExam: false, cards: cards),
         ),
       ),
     );
@@ -104,9 +106,56 @@ class HomeScreen extends StatelessWidget {
             taxonomy: taxonomy,
             questions: questions,
             progress: progress,
+            cards: cards,
           ),
         ),
       );
+
+  /// 약한 단원(정답률 70% 미만·3회 이상)이 하나라도 있으면 약점 공략을 권한다.
+  bool get _hasWeakness => progress.majorStats.values
+      .any((s) => s.attempts >= 3 && s.accuracy < 0.7);
+
+  /// 약한 단원에 가중해 20문제를 뽑는다. 부족하면 오답노트로 채운다.
+  List<Question> _weaknessQuiz() {
+    final weak = progress.majorStats.entries
+        .where((e) => e.value.attempts >= 3 && e.value.accuracy < 0.7)
+        .toList()
+      ..sort((a, b) => a.value.accuracy.compareTo(b.value.accuracy));
+    final out = <Question>[];
+    final seen = <String>{};
+    for (final e in weak) {
+      final pool = questions.byMajor(e.key)..shuffle();
+      for (final q in pool) {
+        if (seen.add(q.id)) out.add(q);
+        if (out.length >= 20) break;
+      }
+      if (out.length >= 20) break;
+    }
+    if (out.length < 20) {
+      final wrong = questions.byIds(progress.wrongIds)..shuffle();
+      for (final q in wrong) {
+        if (seen.add(q.id)) out.add(q);
+        if (out.length >= 20) break;
+      }
+    }
+    out.shuffle();
+    return out;
+  }
+
+  void _startWeakness(BuildContext context) {
+    final qs = _weaknessQuiz();
+    if (qs.isEmpty) return;
+    Navigator.push(
+      context,
+      MaterialPageRoute<void>(
+        builder: (_) => QuizScreen(
+          progress: progress,
+          config: QuizConfig(
+              title: '약점 공략', questions: qs, isExam: false, cards: cards),
+        ),
+      ),
+    );
+  }
 
   /// 별표(헷갈린) 문제만 모아 다시 푼다.
   void _startStarred(BuildContext context) {
@@ -117,7 +166,8 @@ class HomeScreen extends StatelessWidget {
       MaterialPageRoute<void>(
         builder: (_) => QuizScreen(
           progress: progress,
-          config: QuizConfig(title: '즐겨찾은 문제', questions: qs, isExam: false),
+          config: QuizConfig(
+              title: '즐겨찾은 문제', questions: qs, isExam: false, cards: cards),
         ),
       ),
     );
@@ -137,6 +187,7 @@ class HomeScreen extends StatelessWidget {
             taxonomy: taxonomy,
             questions: questions,
             progress: progress,
+            cards: cards,
           ),
         ),
       );
@@ -329,6 +380,10 @@ class HomeScreen extends StatelessWidget {
                         count: progress.dueCount(),
                         onTap: () => _startReview(context),
                       ),
+                    ],
+                    if (_hasWeakness) ...[
+                      const SizedBox(height: 12),
+                      _WeaknessCard(onTap: () => _startWeakness(context)),
                     ],
                     if (questions.count > 0) ...[
                       const SizedBox(height: 12),
@@ -653,6 +708,23 @@ class _FlashcardCard extends StatelessWidget {
       iconColor: Theme.of(context).colorScheme.secondary,
       title: '공식 암기',
       subtitle: '핵심 공식 $count개 · 이름 보고 떠올린 뒤 뒤집기',
+      onTap: onTap,
+    );
+  }
+}
+
+/// 약점 공략 진입 카드. 약한 단원 가중 20문제.
+class _WeaknessCard extends StatelessWidget {
+  const _WeaknessCard({required this.onTap});
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return _ActionCard(
+      icon: Icons.track_changes,
+      iconColor: Theme.of(context).colorScheme.error,
+      title: '약점 공략',
+      subtitle: '정답률 낮은 단원 위주로 20문제',
       onTap: onTap,
     );
   }

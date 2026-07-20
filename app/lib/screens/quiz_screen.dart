@@ -2,11 +2,13 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+import '../models/card.dart';
 import '../models/progress.dart';
 import '../models/question.dart';
 import '../theme.dart';
 import '../widgets/card_body.dart';
 import '../widgets/handwriting_canvas.dart';
+import 'card_screen.dart';
 import 'quiz_result_screen.dart';
 
 /// 문제풀이 설정.
@@ -17,6 +19,7 @@ class QuizConfig {
     required this.isExam,
     this.timeLimit,
     this.examLabel = '',
+    this.cards,
   });
 
   final String title;
@@ -28,6 +31,9 @@ class QuizConfig {
 
   /// 성적 이력에 남길 모의고사 이름('랜덤', '1회' 등).
   final String examLabel;
+
+  /// 있으면 해설 밑에 '이 단원 이론 보기' 링크를 띄운다(문제↔이론 연결).
+  final CardLibrary? cards;
 }
 
 class QuizScreen extends StatefulWidget {
@@ -77,6 +83,32 @@ class _QuizScreenState extends State<QuizScreen> {
     // 연습은 한 번 고르면 잠금(즉시 채점). 시험은 제출 전까지 변경 가능.
     if (!_exam && _selected.containsKey(_index)) return;
     setState(() => _selected[_index] = choice);
+  }
+
+  /// 현재 문제 단원(major)에 해당하는 이론 카드들.
+  List<TheoryCard> _relatedCards() {
+    final lib = widget.config.cards;
+    if (lib == null) return const [];
+    final major = _qs[_index].major;
+    return [
+      for (final c in lib.all)
+        if (c.id.startsWith('$major.')) c,
+    ];
+  }
+
+  void _openTheory(BuildContext context) {
+    final rel = _relatedCards();
+    if (rel.isEmpty) return;
+    Navigator.push(
+      context,
+      MaterialPageRoute<void>(
+        builder: (_) => CardScreen(
+          card: rel.first,
+          progress: widget.progress,
+          siblings: rel,
+        ),
+      ),
+    );
   }
 
   void _finish() {
@@ -210,6 +242,21 @@ class _QuizScreenState extends State<QuizScreen> {
               if (revealed) ...[
                 const SizedBox(height: 8),
                 _Explanation(correct: _selected[_index] == q.answer, text: q.explanation),
+                if (!_exam && _selected[_index] != q.answer) ...[
+                  const SizedBox(height: 10),
+                  _ReasonPicker(
+                    selected: widget.progress.wrongReason(q.id),
+                    onPick: (r) => setState(() {
+                      final cur = widget.progress.wrongReason(q.id);
+                      widget.progress
+                          .setWrongReason(q.id, cur == r ? null : r);
+                    }),
+                  ),
+                ],
+                if (_relatedCards().isNotEmpty) ...[
+                  const SizedBox(height: 10),
+                  _TheoryLink(onTap: () => _openTheory(context)),
+                ],
               ],
             ],
             ),
@@ -372,6 +419,63 @@ class _ChoiceTile extends StatelessWidget {
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+/// 오답 원인 태그 선택. 왜 틀렸는지 한 번 눌러 두면 실력 분석에 모인다.
+class _ReasonPicker extends StatelessWidget {
+  const _ReasonPicker({required this.selected, required this.onPick});
+  final String? selected;
+  final ValueChanged<String> onPick;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('왜 틀렸나요?',
+            style: TextStyle(
+                fontSize: 12.5,
+                fontWeight: FontWeight.w700,
+                color: scheme.onSurfaceVariant)),
+        const SizedBox(height: 8),
+        Wrap(
+          spacing: 8,
+          runSpacing: 8,
+          children: [
+            for (final tag in StudyProgress.wrongReasonTags)
+              ChoiceChip(
+                label: Text(tag),
+                selected: selected == tag,
+                onSelected: (_) => onPick(tag),
+                visualDensity: VisualDensity.compact,
+              ),
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+/// 문제 단원의 이론 카드로 바로 가는 링크.
+class _TheoryLink extends StatelessWidget {
+  const _TheoryLink({required this.onTap});
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return OutlinedButton.icon(
+      onPressed: onTap,
+      icon: const Icon(Icons.menu_book_outlined, size: 18),
+      label: const Text('이 단원 이론 보기'),
+      style: OutlinedButton.styleFrom(
+        foregroundColor: scheme.primary,
+        side: BorderSide(color: scheme.primary.withValues(alpha: 0.5)),
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
       ),
     );
   }

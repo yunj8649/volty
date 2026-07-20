@@ -1,23 +1,43 @@
 import 'package:flutter/material.dart';
 
+import '../models/card.dart';
 import '../models/progress.dart';
 import '../models/question.dart';
 import '../models/taxonomy.dart';
 import '../theme.dart';
+import 'quiz_screen.dart';
 
 /// 실력 분석. 지금까지 푼 문제를 과목·단원(주요항목)별 정답률로 되짚어,
 /// 어디가 약한지 한눈에 보여준다. 과락(과목당 40점)이 있는 시험이라 고른 실력이 중요하다.
+/// 약한 단원을 누르면 바로 그 단원을 연습할 수 있다(진단→연습).
 class AnalysisScreen extends StatelessWidget {
   const AnalysisScreen({
     super.key,
     required this.taxonomy,
     required this.questions,
     required this.progress,
+    required this.cards,
   });
 
   final Taxonomy taxonomy;
   final QuestionBank questions;
   final StudyProgress progress;
+  final CardLibrary cards;
+
+  void _practice(BuildContext context, String majorId, String title) {
+    final qs = questions.byMajor(majorId)..shuffle();
+    if (qs.isEmpty) return;
+    Navigator.push(
+      context,
+      MaterialPageRoute<void>(
+        builder: (_) => QuizScreen(
+          progress: progress,
+          config: QuizConfig(
+              title: title, questions: qs, isExam: false, cards: cards),
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -68,11 +88,16 @@ class AnalysisScreen extends StatelessWidget {
                     attempts: totalAtt,
                     correct: totalCor,
                   ),
+                  if (progress.reasonCounts().isNotEmpty) ...[
+                    const SizedBox(height: 12),
+                    _ReasonCard(counts: progress.reasonCounts()),
+                  ],
                   if (weak.isNotEmpty) ...[
                     const SizedBox(height: 12),
                     _WeakCard(
                       items: weak.take(3).toList(),
                       nameOf: _majorName,
+                      onTap: (id) => _practice(context, id, '약점 연습'),
                     ),
                   ],
                   const SizedBox(height: 20),
@@ -80,6 +105,8 @@ class AnalysisScreen extends StatelessWidget {
                     _SubjectBlock(
                       subject: s,
                       progress: progress,
+                      hasQuestions: questions.hasMajor,
+                      onPractice: (id, name) => _practice(context, id, name),
                     ),
                     const SizedBox(height: 16),
                   ],
@@ -148,16 +175,18 @@ class _OverallCard extends StatelessWidget {
 }
 
 class _WeakCard extends StatelessWidget {
-  const _WeakCard({required this.items, required this.nameOf});
+  const _WeakCard(
+      {required this.items, required this.nameOf, required this.onTap});
   final List<MapEntry<String, MajorStat>> items;
   final String Function(String) nameOf;
+  final ValueChanged<String> onTap;
 
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     final fg = Palette.trapFg(context);
     return Container(
-      padding: const EdgeInsets.fromLTRB(16, 14, 16, 8),
+      padding: const EdgeInsets.fromLTRB(16, 14, 16, 10),
       decoration: BoxDecoration(
         color: Palette.trapBg(context),
         borderRadius: BorderRadius.circular(16),
@@ -170,29 +199,34 @@ class _WeakCard extends StatelessWidget {
             children: [
               Icon(Icons.priority_high_rounded, size: 16, color: fg),
               const SizedBox(width: 6),
-              Text('약한 단원',
+              Text('약한 단원 · 눌러서 바로 연습',
                   style: TextStyle(
                       fontSize: 13, fontWeight: FontWeight.w800, color: fg)),
             ],
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 6),
           for (final e in items)
-            Padding(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: Text(nameOf(e.key),
+            InkWell(
+              borderRadius: BorderRadius.circular(8),
+              onTap: () => onTap(e.key),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Text(nameOf(e.key),
+                          style: TextStyle(
+                              fontSize: 13.5, color: scheme.onSurface)),
+                    ),
+                    const SizedBox(width: 8),
+                    Text('${(e.value.accuracy * 100).round()}%',
                         style: TextStyle(
-                            fontSize: 13.5, color: scheme.onSurface)),
-                  ),
-                  const SizedBox(width: 8),
-                  Text('${(e.value.accuracy * 100).round()}%',
-                      style: TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.w800,
-                          color: fg)),
-                ],
+                            fontSize: 13,
+                            fontWeight: FontWeight.w800,
+                            color: fg)),
+                    Icon(Icons.chevron_right, size: 18, color: fg),
+                  ],
+                ),
               ),
             ),
         ],
@@ -201,10 +235,68 @@ class _WeakCard extends StatelessWidget {
   }
 }
 
+/// 오답 원인 분포. 왜 틀리는지(계산실수·개념·함정) 패턴을 보여준다.
+class _ReasonCard extends StatelessWidget {
+  const _ReasonCard({required this.counts});
+  final Map<String, int> counts;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final total = counts.values.fold(0, (a, b) => a + b);
+    final entries = counts.entries.toList()
+      ..sort((a, b) => b.value.compareTo(a.value));
+    return Container(
+      padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
+      decoration: BoxDecoration(
+        color: scheme.surface,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: Palette.hairline(context)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text('오답 원인 ($total개 태그)',
+              style: const TextStyle(
+                  fontSize: 13.5, fontWeight: FontWeight.w800)),
+          const SizedBox(height: 10),
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: [
+              for (final e in entries)
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: scheme.surfaceContainerHighest,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Text('${e.key} ${e.value}',
+                      style: TextStyle(
+                          fontSize: 12.5,
+                          fontWeight: FontWeight.w700,
+                          color: scheme.onSurface)),
+                ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class _SubjectBlock extends StatelessWidget {
-  const _SubjectBlock({required this.subject, required this.progress});
+  const _SubjectBlock({
+    required this.subject,
+    required this.progress,
+    required this.hasQuestions,
+    required this.onPractice,
+  });
   final Subject subject;
   final StudyProgress progress;
+  final bool Function(String) hasQuestions;
+  final void Function(String majorId, String title) onPractice;
 
   @override
   Widget build(BuildContext context) {
@@ -250,7 +342,13 @@ class _SubjectBlock extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           for (final m in subject.majors)
-            _MajorBar(name: m.name, stat: progress.majorStat(m.id)),
+            _MajorBar(
+              name: m.name,
+              stat: progress.majorStat(m.id),
+              onTap: hasQuestions(m.id)
+                  ? () => onPractice(m.id, '${m.name} 연습')
+                  : null,
+            ),
         ],
       ),
     );
@@ -258,9 +356,10 @@ class _SubjectBlock extends StatelessWidget {
 }
 
 class _MajorBar extends StatelessWidget {
-  const _MajorBar({required this.name, required this.stat});
+  const _MajorBar({required this.name, required this.stat, this.onTap});
   final String name;
   final MajorStat? stat;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -272,43 +371,53 @@ class _MajorBar extends StatelessWidget {
         : (acc < 0.4
             ? scheme.error
             : (acc < 0.7 ? scheme.tertiary : scheme.primary));
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 10),
-      child: Row(
-        children: [
-          SizedBox(
-            width: 130,
-            child: Text(name,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(fontSize: 12.5, color: scheme.onSurface)),
-          ),
-          const SizedBox(width: 8),
-          Expanded(
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(4),
-              child: LinearProgressIndicator(
-                value: acc ?? 0,
-                minHeight: 7,
-                backgroundColor: scheme.surfaceContainerHighest,
-                color: barColor,
-              ),
+    final row = Row(
+      children: [
+        SizedBox(
+          width: 122,
+          child: Text(name,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(fontSize: 12.5, color: scheme.onSurface)),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(4),
+            child: LinearProgressIndicator(
+              value: acc ?? 0,
+              minHeight: 7,
+              backgroundColor: scheme.surfaceContainerHighest,
+              color: barColor,
             ),
           ),
-          const SizedBox(width: 8),
-          SizedBox(
-            width: 52,
-            child: Text(
-              acc == null ? '—' : '${(acc * 100).round()}% ',
-              textAlign: TextAlign.right,
-              style: TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.w700,
-                color: scheme.onSurfaceVariant,
-              ),
+        ),
+        const SizedBox(width: 8),
+        SizedBox(
+          width: 44,
+          child: Text(
+            acc == null ? '—' : '${(acc * 100).round()}%',
+            textAlign: TextAlign.right,
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w700,
+              color: scheme.onSurfaceVariant,
             ),
           ),
-        ],
+        ),
+        Icon(Icons.chevron_right,
+            size: 16,
+            color: onTap == null
+                ? Colors.transparent
+                : scheme.onSurfaceVariant),
+      ],
+    );
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(8),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 6),
+        child: row,
       ),
     );
   }

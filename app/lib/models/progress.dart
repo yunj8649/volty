@@ -74,6 +74,7 @@ class StudyProgress extends ChangeNotifier {
     this._srs,
     this._majorStats,
     this._dayCounts,
+    this._wrongReasons,
     this._dailyGoal,
   );
 
@@ -86,7 +87,11 @@ class StudyProgress extends ChangeNotifier {
   final Map<String, ReviewCard> _srs; // 문항ID -> 복습 상태
   final Map<String, MajorStat> _majorStats; // 단원ID -> 누적 통계
   final Map<int, int> _dayCounts; // 일련일 -> 그날 푼 문항 수
+  final Map<String, String> _wrongReasons; // 틀린 문항ID -> 오답 원인 태그
   int _dailyGoal;
+
+  /// 오답 원인 태그 후보(순서대로 표시).
+  static const wrongReasonTags = ['계산 실수', '개념 부족', '함정에 걸림', '단순 실수'];
 
   static const _kStudied = 'studied_ids';
   static const _kBookmarked = 'bookmarked_ids';
@@ -96,6 +101,7 @@ class StudyProgress extends ChangeNotifier {
   static const _kSrs = 'srs_v1';
   static const _kMajor = 'major_stats_v1';
   static const _kDays = 'day_counts_v1';
+  static const _kReasons = 'wrong_reasons_v1';
   static const _kGoal = 'daily_goal';
 
   static const defaultGoal = 20;
@@ -139,6 +145,12 @@ class StudyProgress extends ChangeNotifier {
       m.forEach((k, v) => days[int.parse(k)] = (v as num).toInt());
     } catch (_) {/* 무시 */}
 
+    final reasons = <String, String>{};
+    try {
+      final m = jsonDecode(prefs.getString(_kReasons) ?? '{}') as Map<String, dynamic>;
+      m.forEach((k, v) => reasons[k] = v as String);
+    } catch (_) {/* 무시 */}
+
     return StudyProgress._(
       prefs,
       (prefs.getStringList(_kStudied) ?? const []).toSet(),
@@ -149,6 +161,7 @@ class StudyProgress extends ChangeNotifier {
       srs,
       major,
       days,
+      reasons,
       prefs.getInt(_kGoal) ?? defaultGoal,
     );
   }
@@ -238,6 +251,31 @@ class StudyProgress extends ChangeNotifier {
   MajorStat? majorStat(String majorId) => _majorStats[majorId];
   Map<String, MajorStat> get majorStats => Map.unmodifiable(_majorStats);
 
+  // ── 오답 원인 태그 ──
+  String? wrongReason(String qid) => _wrongReasons[qid];
+
+  void setWrongReason(String qid, String? reason) {
+    if (reason == null) {
+      _wrongReasons.remove(qid);
+    } else {
+      _wrongReasons[qid] = reason;
+    }
+    _saveReasons();
+    notifyListeners();
+  }
+
+  /// 오답 원인별 개수(태그 -> 수).
+  Map<String, int> reasonCounts() {
+    final c = <String, int>{};
+    for (final r in _wrongReasons.values) {
+      c[r] = (c[r] ?? 0) + 1;
+    }
+    return c;
+  }
+
+  void _saveReasons() =>
+      _prefs.setString(_kReasons, jsonEncode(_wrongReasons));
+
   /// 채점된 문항들을 한 번에 기록: SRS 갱신·오답노트·단원통계·오늘 학습량, 모의고사면 성적 이력.
   void recordAnswers(
     List<AnswerRecord> answers, {
@@ -248,6 +286,7 @@ class StudyProgress extends ChangeNotifier {
     if (answers.isEmpty) return;
     final t = now ?? DateTime.now();
     final today = dayOf(t);
+    var reasonsChanged = false;
 
     for (final a in answers) {
       // SRS: 맞히면 상자 한 칸 위(간격↑), 틀리면 0(오늘 다시).
@@ -263,6 +302,7 @@ class StudyProgress extends ChangeNotifier {
       // 오답노트: 맞히면 빠지고 틀리면 들어간다.
       if (a.correct) {
         _wrong.remove(a.id);
+        if (_wrongReasons.remove(a.id) != null) reasonsChanged = true;
       } else {
         _wrong.add(a.id);
       }
@@ -279,6 +319,7 @@ class StudyProgress extends ChangeNotifier {
     _saveSrs();
     _saveMajor();
     _saveDays();
+    if (reasonsChanged) _saveReasons();
     _prefs.setStringList(_kWrong, _wrong.toList());
 
     if (isExam) {
@@ -327,6 +368,7 @@ class StudyProgress extends ChangeNotifier {
     _srs.clear();
     _majorStats.clear();
     _dayCounts.clear();
+    _wrongReasons.clear();
     _dailyGoal = defaultGoal;
     for (final k in [
       _kStudied,
@@ -337,6 +379,7 @@ class StudyProgress extends ChangeNotifier {
       _kSrs,
       _kMajor,
       _kDays,
+      _kReasons,
       _kGoal,
     ]) {
       _prefs.remove(k);

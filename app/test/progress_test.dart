@@ -130,4 +130,21 @@ void main() {
     expect(p.dueIds(now: d0), contains('q9'));
     expect(p.majorStat('ct.1')!.attempts, 1);
   });
+
+  test('오답 원인 태그는 저장·집계되고 정답 시 사라진다', () async {
+    var p = await StudyProgress.load();
+    p.recordAnswers([(id: 'q1', major: 'em.1', correct: false)], now: d0);
+    p.setWrongReason('q1', '계산 실수');
+    expect(p.wrongReason('q1'), '계산 실수');
+    expect(p.reasonCounts()['계산 실수'], 1);
+
+    // 저장·복원
+    p = await StudyProgress.load();
+    expect(p.wrongReason('q1'), '계산 실수');
+
+    // 다시 맞히면 원인 태그가 사라진다.
+    p.recordAnswers([(id: 'q1', major: 'em.1', correct: true)], now: d0);
+    expect(p.wrongReason('q1'), isNull);
+    expect(p.reasonCounts(), isEmpty);
+  });
 }

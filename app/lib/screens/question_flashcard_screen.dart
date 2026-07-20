@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
+import '../models/card.dart';
 import '../models/progress.dart';
 import '../models/question.dart';
 import '../models/taxonomy.dart';
 import '../theme.dart';
 import '../widgets/card_body.dart';
+import 'card_screen.dart';
 
 /// 문제 카드. 공식 암기처럼, 문제를 넘겨보며 답을 떠올린 뒤 탭해서 답·해설을 확인한다.
 /// 채점·기록은 하지 않는 '훑어보기' 모드다(점수·복습 일정에 영향 없음).
@@ -16,11 +18,13 @@ class QuestionFlashcardScreen extends StatefulWidget {
     required this.taxonomy,
     required this.questions,
     required this.progress,
+    required this.cards,
   });
 
   final Taxonomy taxonomy;
   final QuestionBank questions;
   final StudyProgress progress;
+  final CardLibrary cards;
 
   @override
   State<QuestionFlashcardScreen> createState() =>
@@ -64,6 +68,26 @@ class _QuestionFlashcardScreenState extends State<QuestionFlashcardScreen> {
     } catch (_) {
       return code.toUpperCase();
     }
+  }
+
+  List<TheoryCard> _relatedCards(Question q) => [
+        for (final c in widget.cards.all)
+          if (c.id.startsWith('${q.major}.')) c,
+      ];
+
+  void _openTheory(BuildContext context, Question q) {
+    final rel = _relatedCards(q);
+    if (rel.isEmpty) return;
+    Navigator.push(
+      context,
+      MaterialPageRoute<void>(
+        builder: (_) => CardScreen(
+          card: rel.first,
+          progress: widget.progress,
+          siblings: rel,
+        ),
+      ),
+    );
   }
 
   @override
@@ -142,6 +166,9 @@ class _QuestionFlashcardScreenState extends State<QuestionFlashcardScreen> {
                         child: _QuestionCard(
                           question: q,
                           revealed: _revealed,
+                          onTheory: _relatedCards(q).isEmpty
+                              ? null
+                              : () => _openTheory(context, q),
                         ),
                       ),
                     ),
@@ -186,9 +213,11 @@ class _QuestionFlashcardScreenState extends State<QuestionFlashcardScreen> {
 }
 
 class _QuestionCard extends StatelessWidget {
-  const _QuestionCard({required this.question, required this.revealed});
+  const _QuestionCard(
+      {required this.question, required this.revealed, this.onTheory});
   final Question question;
   final bool revealed;
+  final VoidCallback? onTheory;
 
   static const _labels = ['①', '②', '③', '④', '⑤'];
 
@@ -242,11 +271,28 @@ class _QuestionCard extends StatelessWidget {
               ],
             ),
           )
-        else
+        else ...[
           _Answer(
             label: _labels[q.answer],
             explanation: q.explanation,
           ),
+          if (onTheory != null) ...[
+            const SizedBox(height: 12),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: OutlinedButton.icon(
+                onPressed: onTheory,
+                icon: const Icon(Icons.menu_book_outlined, size: 18),
+                label: const Text('이 단원 이론 보기'),
+                style: OutlinedButton.styleFrom(
+                  foregroundColor: scheme.primary,
+                  side: BorderSide(
+                      color: scheme.primary.withValues(alpha: 0.5)),
+                ),
+              ),
+            ),
+          ],
+        ],
       ],
     );
   }
