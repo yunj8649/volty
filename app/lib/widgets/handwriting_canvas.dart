@@ -4,15 +4,17 @@
 /// 문항·카드별로 기기에 남아 다시 볼 수 있어야 한다. shared_preferences 라 웹은
 /// localStorage, 네이티브는 각 OS 저장소에 들어간다.
 ///
-/// 상호작용 규칙:
-///   - 필기 Off — 필기는 보이되 잠긴다. 아래 문제 풀이·스크롤이 그대로 된다.
-///   - 필기 On  — 본문을 덮어 그리기 전용. 애플펜슬(stylus)이 한 번이라도 감지되면
-///                그 뒤 손바닥 터치는 무시한다(팜 리젝션). 펜슬이 없으면 손가락으로 그린다.
+/// 상호작용 규칙(펜슬 필기 + 손가락 스크롤 동시):
+///   - 애플펜슬(stylus) — 전용 제스처 인식기가 포인터를 가로채 항상 그린다. 아래 스크롤·탭은
+///                        일어나지 않는다(인식기가 아레나를 선점).
+///   - 손가락(touch)   — 인식기가 잡지 않으므로 그대로 아래로 흘러 스크롤·보기 선택이 된다.
+///   - 펜슬이 없으면 도구막대의 '손가락 필기'를 켜서 손가락으로도 그릴 수 있다(그 땐 스크롤 대신 그리기).
 library;
 
 import 'dart:convert';
 import 'dart:ui' as ui;
 
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -46,6 +48,41 @@ class _Stroke {
   }
 }
 
+/// 애플펜슬(및 '손가락 필기' 켤 때 터치/마우스)만 낚아채는 인식기.
+/// 포인터 down 에서 즉시 아레나 승리를 선언해 아래 스크롤·탭이 안 먹게 한다.
+class _DrawRecognizer extends OneSequenceGestureRecognizer {
+  bool Function(ui.PointerDeviceKind)? allow;
+  void Function(PointerEvent)? onDown;
+  void Function(PointerEvent)? onUpdate;
+  void Function(PointerEvent)? onEnd;
+
+  @override
+  bool isPointerAllowed(PointerDownEvent event) => allow?.call(event.kind) ?? false;
+
+  @override
+  void addAllowedPointer(PointerDownEvent event) {
+    startTrackingPointer(event.pointer, event.transform);
+    resolve(GestureDisposition.accepted); // 펜슬 포인터 선점 → 스크롤/탭 차단
+    onDown?.call(event);
+  }
+
+  @override
+  void handleEvent(PointerEvent event) {
+    if (event is PointerMoveEvent) {
+      onUpdate?.call(event);
+    } else if (event is PointerUpEvent || event is PointerCancelEvent) {
+      onEnd?.call(event);
+      stopTrackingPointer(event.pointer);
+    }
+  }
+
+  @override
+  String get debugDescription => 'volty-handwriting';
+
+  @override
+  void didStopTrackingLastPointer(int pointer) {}
+}
+
 class HandwritingCanvas extends StatefulWidget {
   const HandwritingCanvas({
     super.key,
@@ -53,7 +90,7 @@ class HandwritingCanvas extends StatefulWidget {
     required this.child,
   });
 
-  /// 필기를 문항·카드와 묶는 키(예: 'note_em.1.r3'). 이 값이 저장 키가 된다.
+  /// 필기를 문항·카드와 묶는 키(예: 'note_q_em.1.r3'). 이 값이 저장 키가 된다.
   final String storageKey;
   final Widget child;
 
@@ -65,12 +102,13 @@ class _HandwritingCanvasState extends State<HandwritingCanvas> {
   static const _penWidth = 2.4;
   static const _highlightWidth = 15.0;
 
+  final GlobalKey _paintKey = GlobalKey();
   final List<_Stroke> _strokes = [];
   _Stroke? _current;
   int? _activePointer; // 지금 그리는 포인터 하나만 따라간다(멀티터치 무시)
-  bool _sawStylus = false; // 펜슬을 본 적 있으면 손가락은 팜으로 취급
 
-  bool _enabled = false;
+  bool _showTools = false; // 도구막대 펼침
+  bool _fingerDraw = false; // 펜슬 없이 손가락으로 그리기(그 땐 스크롤 대신 필기)
   bool _eraser = false;
   int _colorIdx = 0;
 
@@ -107,9 +145,23 @@ class _HandwritingCanvasState extends State<HandwritingCanvas> {
     );
   }
 
+  bool _allowKind(ui.PointerDeviceKind k) {
+    if (k == ui.PointerDeviceKind.stylus ||
+        k == ui.PointerDeviceKind.invertedStylus) {
+      return true; // 펜슬은 언제나 필기
+    }
+    // 손가락·마우스는 '손가락 필기'를 켰을 때만 그린다(평소엔 스크롤/선택).
+    return _fingerDraw &&
+        (k == ui.PointerDeviceKind.touch || k == ui.PointerDeviceKind.mouse);
+  }
+
+  Offset _local(PointerEvent e) {
+    final box = _paintKey.currentContext?.findRenderObject() as RenderBox?;
+    return box?.globalToLocal(e.position) ?? e.localPosition;
+  }
+
   double _strokeWidth(PointerEvent e) {
     if (_colorIdx == 2) return _highlightWidth;
-    // 펜슬 필압이 있으면 굵기에 반영(없으면 기본값).
     final range = e.pressureMax - e.pressureMin;
     if (range > 0.0001) {
       final p = ((e.pressure - e.pressureMin) / range).clamp(0.0, 1.0);
@@ -118,41 +170,28 @@ class _HandwritingCanvasState extends State<HandwritingCanvas> {
     return _penWidth;
   }
 
-  bool _shouldDraw(PointerDownEvent e) {
-    if (!_enabled) return false;
-    if (e.kind == ui.PointerDeviceKind.stylus ||
-        e.kind == ui.PointerDeviceKind.invertedStylus) {
-      _sawStylus = true;
-      return true;
-    }
-    if (e.kind == ui.PointerDeviceKind.touch) {
-      return !_sawStylus; // 펜슬을 쓰는 중이면 손바닥으로 보고 무시
-    }
-    return true; // 마우스·트랙패드(데스크톱 확인용)
-  }
-
-  void _down(PointerDownEvent e) {
-    if (_activePointer != null || !_shouldDraw(e)) return;
+  void _down(PointerEvent e) {
+    if (_activePointer != null) return;
     _activePointer = e.pointer;
+    final p = _local(e);
     if (_eraser) {
-      _eraseAt(e.localPosition);
+      _eraseAt(p);
       return;
     }
-    setState(() {
-      _current = _Stroke(_colorIdx, _strokeWidth(e), [e.localPosition]);
-    });
+    setState(() => _current = _Stroke(_colorIdx, _strokeWidth(e), [p]));
   }
 
-  void _move(PointerMoveEvent e) {
+  void _move(PointerEvent e) {
     if (e.pointer != _activePointer) return;
+    final p = _local(e);
     if (_eraser) {
-      _eraseAt(e.localPosition);
+      _eraseAt(p);
       return;
     }
-    setState(() => _current?.points.add(e.localPosition));
+    setState(() => _current?.points.add(p));
   }
 
-  void _up(PointerUpEvent e) {
+  void _end(PointerEvent e) {
     if (e.pointer != _activePointer) return;
     _activePointer = null;
     if (_eraser) {
@@ -162,19 +201,12 @@ class _HandwritingCanvasState extends State<HandwritingCanvas> {
     final s = _current;
     _current = null;
     if (s == null) return;
-    // 점 하나(탭)는 획으로 남기지 않는다.
     if (s.points.length < 2) {
-      setState(() {});
+      setState(() {}); // 점 하나(탭)는 획으로 남기지 않는다
       return;
     }
     setState(() => _strokes.add(s));
     _save();
-  }
-
-  void _cancel(PointerCancelEvent e) {
-    if (e.pointer != _activePointer) return;
-    _activePointer = null;
-    setState(() => _current = null);
   }
 
   void _eraseAt(Offset p) {
@@ -219,46 +251,52 @@ class _HandwritingCanvasState extends State<HandwritingCanvas> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        // 본문 — 필기 On 이면 잠가서(스크롤·탭 차단) 그리기 전용으로 만든다.
+        // 본문 + 필기그림 — 펜슬은 인식기가 가로채고, 손가락은 아래 본문으로 흘러 스크롤된다.
         Positioned.fill(
-          child: AbsorbPointer(absorbing: _enabled, child: widget.child),
-        ),
-        // 필기 그림(항상 보이되 터치는 안 먹는다).
-        Positioned.fill(
-          child: IgnorePointer(
-            child: CustomPaint(
-              painter: _InkPainter(
-                strokes: _strokes,
-                current: _current,
-                brightness: Theme.of(context).brightness,
+          child: RawGestureDetector(
+            behavior: HitTestBehavior.translucent,
+            gestures: <Type, GestureRecognizerFactory>{
+              _DrawRecognizer:
+                  GestureRecognizerFactoryWithHandlers<_DrawRecognizer>(
+                () => _DrawRecognizer(),
+                (r) => r
+                  ..allow = _allowKind
+                  ..onDown = _down
+                  ..onUpdate = _move
+                  ..onEnd = _end,
               ),
+            },
+            child: Stack(
+              children: [
+                widget.child,
+                Positioned.fill(
+                  child: IgnorePointer(
+                    child: CustomPaint(
+                      key: _paintKey,
+                      painter: _InkPainter(
+                        strokes: _strokes,
+                        current: _current,
+                        brightness: Theme.of(context).brightness,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ),
-        // 그리기 입력 레이어 — On 일 때만 얹는다.
-        if (_enabled)
-          Positioned.fill(
-            child: Listener(
-              behavior: HitTestBehavior.opaque,
-              onPointerDown: _down,
-              onPointerMove: _move,
-              onPointerUp: _up,
-              onPointerCancel: _cancel,
-            ),
-          ),
-        // 도구 막대 + On/Off 토글.
+        // 도구막대 — 인식기 밖(위)에 두어 펜슬로도 버튼을 누를 수 있다.
         Positioned(
           right: 12,
           bottom: 12,
           child: _Toolbar(
-            enabled: _enabled,
+            showTools: _showTools,
+            fingerDraw: _fingerDraw,
             eraser: _eraser,
             colorIdx: _colorIdx,
             hasInk: _strokes.isNotEmpty,
-            onToggle: () => setState(() {
-              _enabled = !_enabled;
-              if (!_enabled) _eraser = false;
-            }),
+            onToggleTools: () => setState(() => _showTools = !_showTools),
+            onToggleFinger: () => setState(() => _fingerDraw = !_fingerDraw),
             onPickColor: (i) => setState(() {
               _colorIdx = i;
               _eraser = false;
@@ -335,22 +373,26 @@ class _InkPainter extends CustomPainter {
 
 class _Toolbar extends StatelessWidget {
   const _Toolbar({
-    required this.enabled,
+    required this.showTools,
+    required this.fingerDraw,
     required this.eraser,
     required this.colorIdx,
     required this.hasInk,
-    required this.onToggle,
+    required this.onToggleTools,
+    required this.onToggleFinger,
     required this.onPickColor,
     required this.onEraser,
     required this.onUndo,
     required this.onClear,
   });
 
-  final bool enabled;
+  final bool showTools;
+  final bool fingerDraw;
   final bool eraser;
   final int colorIdx;
   final bool hasInk;
-  final VoidCallback onToggle;
+  final VoidCallback onToggleTools;
+  final VoidCallback onToggleFinger;
   final ValueChanged<int> onPickColor;
   final VoidCallback onEraser;
   final VoidCallback onUndo;
@@ -363,7 +405,7 @@ class _Toolbar extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        if (enabled)
+        if (showTools)
           Container(
             margin: const EdgeInsets.only(bottom: 10),
             padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
@@ -411,23 +453,35 @@ class _Toolbar extends StatelessWidget {
                   onTap: hasInk ? onClear : null,
                   tooltip: '전체 지우기',
                 ),
+                Container(
+                  width: 1,
+                  height: 22,
+                  margin: const EdgeInsets.symmetric(horizontal: 4),
+                  color: Palette.hairline(context),
+                ),
+                _ToolBtn(
+                  icon: Icons.back_hand_outlined,
+                  active: fingerDraw,
+                  onTap: onToggleFinger,
+                  tooltip: fingerDraw ? '손가락 필기 끄기(스크롤)' : '손가락으로도 필기',
+                ),
               ],
             ),
           ),
-        // On/Off 토글.
+        // 도구막대 여닫기 버튼. 펜슬은 이걸 켜지 않아도 항상 필기된다.
         Material(
-          color: enabled ? scheme.primary : Palette.card(context),
+          color: showTools ? scheme.primary : Palette.card(context),
           shape: const CircleBorder(),
           elevation: 3,
           child: InkWell(
             customBorder: const CircleBorder(),
-            onTap: onToggle,
+            onTap: onToggleTools,
             child: Padding(
               padding: const EdgeInsets.all(13),
               child: Icon(
-                enabled ? Icons.edit : Icons.edit_outlined,
+                showTools ? Icons.edit : Icons.edit_outlined,
                 size: 22,
-                color: enabled ? scheme.onPrimary : scheme.onSurfaceVariant,
+                color: showTools ? scheme.onPrimary : scheme.onSurfaceVariant,
               ),
             ),
           ),
