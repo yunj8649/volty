@@ -157,6 +157,33 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
+  /// '복습' 섹션 카드들(있는 것만, 사이 간격 포함). 비어 있으면 섹션 자체를 숨긴다.
+  List<Widget> _reviewCards(BuildContext context) {
+    final out = <Widget>[];
+    void add(Widget w) {
+      if (out.isNotEmpty) out.add(const SizedBox(height: 10));
+      out.add(w);
+    }
+
+    if (progress.dueCount() > 0) {
+      add(_ReviewCard(
+          count: progress.dueCount(), onTap: () => _startReview(context)));
+    }
+    if (_hasWeakness) {
+      add(_WeaknessCard(onTap: () => _startWeakness(context)));
+    }
+    if (progress.wrongCount > 0) {
+      add(_WrongNoteCard(
+          count: progress.wrongCount, onTap: () => _startWrongNote(context)));
+    }
+    if (progress.questionBookmarkCount > 0) {
+      add(_StarredCard(
+          count: progress.questionBookmarkCount,
+          onTap: () => _startStarred(context)));
+    }
+    return out;
+  }
+
   /// 별표(헷갈린) 문제만 모아 다시 푼다.
   void _startStarred(BuildContext context) {
     final qs = questions.byIds(progress.questionBookmarks)..shuffle();
@@ -374,18 +401,17 @@ class HomeScreen extends StatelessWidget {
                         );
                       },
                     ),
-                    if (progress.dueCount() > 0) ...[
+                    // ── 복습 ──
+                    if (_reviewCards(context).isNotEmpty) ...[
+                      const SizedBox(height: 24),
+                      const _SectionHeader('복습'),
                       const SizedBox(height: 12),
-                      _ReviewCard(
-                        count: progress.dueCount(),
-                        onTap: () => _startReview(context),
-                      ),
+                      ..._reviewCards(context),
                     ],
-                    if (_hasWeakness) ...[
-                      const SizedBox(height: 12),
-                      _WeaknessCard(onTap: () => _startWeakness(context)),
-                    ],
+                    // ── 실전 모의고사 ──
                     if (questions.count > 0) ...[
+                      const SizedBox(height: 24),
+                      const _SectionHeader('실전 모의고사'),
                       const SizedBox(height: 12),
                       _MockExamCard(
                         count: _examOrder.fold(
@@ -396,35 +422,28 @@ class HomeScreen extends StatelessWidget {
                         onTap: () => _openMock(context),
                       ),
                     ],
-                    if (progress.wrongCount > 0) ...[
+                    // ── 암기 카드 ──
+                    if (_formulaCount > 0 || questions.count > 0) ...[
+                      const SizedBox(height: 24),
+                      const _SectionHeader('암기 카드'),
                       const SizedBox(height: 12),
-                      _WrongNoteCard(
-                        count: progress.wrongCount,
-                        onTap: () => _startWrongNote(context),
-                      ),
+                      if (_formulaCount > 0)
+                        _FlashcardCard(
+                          count: _formulaCount,
+                          onTap: () => _openFlashcards(context),
+                        ),
+                      if (_formulaCount > 0 && questions.count > 0)
+                        const SizedBox(height: 10),
+                      if (questions.count > 0)
+                        _QuestionCardCard(
+                          count: questions.count,
+                          onTap: () => _openQuestionCards(context),
+                        ),
                     ],
-                    if (progress.questionBookmarkCount > 0) ...[
-                      const SizedBox(height: 12),
-                      _StarredCard(
-                        count: progress.questionBookmarkCount,
-                        onTap: () => _startStarred(context),
-                      ),
-                    ],
-                    if (_formulaCount > 0) ...[
-                      const SizedBox(height: 12),
-                      _FlashcardCard(
-                        count: _formulaCount,
-                        onTap: () => _openFlashcards(context),
-                      ),
-                    ],
-                    if (questions.count > 0) ...[
-                      const SizedBox(height: 12),
-                      _QuestionCardCard(
-                        count: questions.count,
-                        onTap: () => _openQuestionCards(context),
-                      ),
-                    ],
-                    const SizedBox(height: 20),
+                    // ── 과목별 학습 ──
+                    const SizedBox(height: 24),
+                    const _SectionHeader('과목별 학습'),
+                    const SizedBox(height: 12),
                     for (final s in taxonomy.subjects) ...[
                       _SubjectCard(
                         subject: s,
@@ -449,6 +468,28 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+/// 홈 카드 묶음 제목.
+class _SectionHeader extends StatelessWidget {
+  const _SectionHeader(this.text);
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 2),
+      child: Text(
+        text,
+        style: TextStyle(
+          fontSize: 13,
+          fontWeight: FontWeight.w800,
+          letterSpacing: 0.3,
+          color: Theme.of(context).colorScheme.onSurfaceVariant,
         ),
       ),
     );
