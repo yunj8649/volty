@@ -6,6 +6,7 @@ import '../models/question.dart';
 import '../models/taxonomy.dart';
 import '../theme.dart';
 import '../widgets/volty_mascot.dart';
+import 'analysis_screen.dart';
 import 'mock_menu_screen.dart';
 import 'quiz_screen.dart';
 import 'review_screen.dart';
@@ -75,6 +76,65 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
+  /// 오늘 복습 예정(due)인 문제를 모아 푼다. 간격반복(SRS)의 핵심 진입.
+  void _startReview(BuildContext context) {
+    final qs = questions.byIds(progress.dueIds())..shuffle();
+    if (qs.isEmpty) return;
+    Navigator.push(
+      context,
+      MaterialPageRoute<void>(
+        builder: (_) => QuizScreen(
+          progress: progress,
+          config: QuizConfig(title: '오늘의 복습', questions: qs, isExam: false),
+        ),
+      ),
+    );
+  }
+
+  void _openAnalysis(BuildContext context) => Navigator.push(
+        context,
+        MaterialPageRoute<void>(
+          builder: (_) => AnalysisScreen(
+            taxonomy: taxonomy,
+            questions: questions,
+            progress: progress,
+          ),
+        ),
+      );
+
+  Future<void> _editGoal(BuildContext context) async {
+    var g = progress.dailyGoal;
+    final saved = await showDialog<int>(
+      context: context,
+      builder: (_) => StatefulBuilder(
+        builder: (context, setState) => AlertDialog(
+          title: const Text('일일 목표'),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text('$g문제', style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w800)),
+              Slider(
+                value: g.toDouble(),
+                min: 5,
+                max: 100,
+                divisions: 19,
+                label: '$g',
+                onChanged: (v) => setState(() => g = v.round()),
+              ),
+              Text('하루에 풀 문제 수를 정해두면 스트릭을 이어가기 좋아요.',
+                  style: TextStyle(fontSize: 12.5, color: Theme.of(context).colorScheme.onSurfaceVariant)),
+            ],
+          ),
+          actions: [
+            TextButton(onPressed: () => Navigator.pop(context), child: const Text('취소')),
+            FilledButton(onPressed: () => Navigator.pop(context, g), child: const Text('저장')),
+          ],
+        ),
+      ),
+    );
+    if (saved != null) progress.setDailyGoal(saved);
+  }
+
   @override
   Widget build(BuildContext context) {
     final wide = MediaQuery.sizeOf(context).width >= 720;
@@ -107,6 +167,11 @@ class HomeScreen extends StatelessWidget {
                 builder: (_) => SearchScreen(cards: cards, progress: progress),
               ),
             ),
+          ),
+          IconButton(
+            icon: const Icon(Icons.insights_outlined),
+            tooltip: '실력 분석',
+            onPressed: () => _openAnalysis(context),
           ),
           IconButton(
             icon: const Icon(Icons.bookmarks_outlined),
@@ -185,6 +250,14 @@ class HomeScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
+                    _StreakStrip(
+                      streak: progress.streak(),
+                      today: progress.todayCount(),
+                      goal: progress.dailyGoal,
+                      days: progress.dayCounts,
+                      onEditGoal: () => _editGoal(context),
+                    ),
+                    const SizedBox(height: 12),
                     const _PassRuleBanner(),
                     const SizedBox(height: 12),
                     _NextUp(
@@ -211,6 +284,13 @@ class HomeScreen extends StatelessWidget {
                         );
                       },
                     ),
+                    if (progress.dueCount() > 0) ...[
+                      const SizedBox(height: 12),
+                      _ReviewCard(
+                        count: progress.dueCount(),
+                        onTap: () => _startReview(context),
+                      ),
+                    ],
                     if (questions.count > 0) ...[
                       const SizedBox(height: 12),
                       _MockExamCard(
@@ -478,6 +558,148 @@ class _WrongNoteCard extends StatelessWidget {
       title: '오답노트',
       subtitle: '틀린 문제 $count개 다시 풀기',
       onTap: onTap,
+    );
+  }
+}
+
+/// 간격반복 복습 진입 카드. 오늘 복습할(due) 문항 수를 보여준다.
+class _ReviewCard extends StatelessWidget {
+  const _ReviewCard({required this.count, required this.onTap});
+  final int count;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return _ActionCard(
+      icon: Icons.event_repeat_outlined,
+      iconColor: Theme.of(context).colorScheme.tertiary,
+      title: '오늘의 복습',
+      subtitle: '복습할 때가 된 문제 $count개 · 망각곡선 간격 반복',
+      onTap: onTap,
+    );
+  }
+}
+
+/// 스트릭·오늘 목표·최근 2주 잔디. 끊어 공부하는 습관을 눈에 보이게 한다.
+class _StreakStrip extends StatelessWidget {
+  const _StreakStrip({
+    required this.streak,
+    required this.today,
+    required this.goal,
+    required this.days,
+    required this.onEditGoal,
+  });
+
+  final int streak;
+  final int today;
+  final int goal;
+  final Map<int, int> days;
+  final VoidCallback onEditGoal;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final ratio = goal == 0 ? 0.0 : (today / goal).clamp(0.0, 1.0);
+    final metGoal = today >= goal;
+    final todayIdx = StudyProgress.dayOf(DateTime.now());
+
+    return Container(
+      padding: const EdgeInsets.fromLTRB(16, 14, 12, 14),
+      decoration: BoxDecoration(
+        color: Palette.card(context),
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: Palette.hairline(context)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Text('🔥', style: TextStyle(fontSize: 20, color: scheme.onSurface)),
+              const SizedBox(width: 8),
+              Text('$streak일 연속',
+                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800)),
+              const Spacer(),
+              InkWell(
+                onTap: onEditGoal,
+                borderRadius: BorderRadius.circular(8),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        '오늘 $today/$goal',
+                        style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w700,
+                          color: metGoal ? scheme.primary : scheme.onSurfaceVariant,
+                        ),
+                      ),
+                      const SizedBox(width: 3),
+                      Icon(Icons.tune, size: 14, color: scheme.onSurfaceVariant),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(4),
+            child: LinearProgressIndicator(
+              value: ratio,
+              minHeight: 6,
+              backgroundColor: scheme.surfaceContainerHighest,
+              color: metGoal ? scheme.primary : scheme.tertiary,
+            ),
+          ),
+          const SizedBox(height: 12),
+          // 최근 2주 잔디.
+          Row(
+            children: [
+              for (var i = 13; i >= 0; i--)
+                Expanded(
+                  child: _HeatCell(
+                    count: days[todayIdx - i] ?? 0,
+                    goal: goal,
+                    isToday: i == 0,
+                  ),
+                ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _HeatCell extends StatelessWidget {
+  const _HeatCell({required this.count, required this.goal, required this.isToday});
+  final int count;
+  final int goal;
+  final bool isToday;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final Color c;
+    if (count == 0) {
+      c = scheme.surfaceContainerHighest;
+    } else {
+      final f = goal == 0 ? 1.0 : (count / goal).clamp(0.25, 1.0);
+      c = Color.lerp(scheme.primary.withValues(alpha: 0.25), scheme.primary, f)!;
+    }
+    return Container(
+      height: 18,
+      margin: const EdgeInsets.symmetric(horizontal: 1.5),
+      decoration: BoxDecoration(
+        color: c,
+        borderRadius: BorderRadius.circular(4),
+        border: isToday
+            ? Border.all(color: scheme.primary, width: 1.5)
+            : null,
+      ),
     );
   }
 }

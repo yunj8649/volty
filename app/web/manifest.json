@@ -1,11 +1,11 @@
 {
-    "name": "volty",
-    "short_name": "volty",
+    "name": "볼티 · 전기기사",
+    "short_name": "볼티",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "볼티 — 전기기사 필기 이론카드·문제·모의고사. 끊어서 공부하는 앱.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

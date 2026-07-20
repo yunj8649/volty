@@ -81,13 +81,18 @@ class _QuizScreenState extends State<QuizScreen> {
 
   void _finish() {
     _timer?.cancel();
-    // 채점 결과를 기록: 오답노트 갱신, 모의고사면 성적 이력.
-    final results = <String, bool>{
+    // 채점 결과를 기록: SRS 복습·오답노트·단원통계·오늘 학습량, 모의고사면 성적 이력.
+    final answers = <AnswerRecord>[
       for (var i = 0; i < _qs.length; i++)
-        if (_selected.containsKey(i)) _qs[i].id: _selected[i] == _qs[i].answer,
-    };
-    widget.progress
-        .recordQuiz(results, isExam: _exam, examLabel: widget.config.examLabel);
+        if (_selected.containsKey(i))
+          (
+            id: _qs[i].id,
+            major: _qs[i].major,
+            correct: _selected[i] == _qs[i].answer,
+          ),
+    ];
+    widget.progress.recordAnswers(answers,
+        isExam: _exam, examLabel: widget.config.examLabel);
     Navigator.pushReplacement(
       context,
       MaterialPageRoute<void>(
