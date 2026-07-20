@@ -8,6 +8,7 @@ import '../models/question.dart';
 import '../theme.dart';
 import '../widgets/card_body.dart';
 import '../widgets/handwriting_canvas.dart';
+import 'calc_tips_screen.dart';
 import 'card_screen.dart';
 import 'quiz_result_screen.dart';
 
@@ -171,6 +172,14 @@ class _QuizScreenState extends State<QuizScreen> {
       appBar: AppBar(
         title: Text(widget.config.title),
         actions: [
+          IconButton(
+            tooltip: '계산 팁',
+            icon: const Icon(Icons.tips_and_updates_outlined),
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute<void>(builder: (_) => const CalcTipsScreen()),
+            ),
+          ),
           IconButton(
             tooltip: widget.progress.isQuestionBookmarked(q.id)
                 ? '즐겨찾기 해제'

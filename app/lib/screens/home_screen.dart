@@ -7,6 +7,7 @@ import '../models/taxonomy.dart';
 import '../theme.dart';
 import '../widgets/volty_mascot.dart';
 import 'analysis_screen.dart';
+import 'calc_tips_screen.dart';
 import 'flashcard_screen.dart';
 import 'mock_menu_screen.dart';
 import 'question_flashcard_screen.dart';
@@ -217,6 +218,11 @@ class HomeScreen extends StatelessWidget {
             cards: cards,
           ),
         ),
+      );
+
+  void _openCalcTips(BuildContext context) => Navigator.push(
+        context,
+        MaterialPageRoute<void>(builder: (_) => const CalcTipsScreen()),
       );
 
   Future<void> _editGoal(BuildContext context) async {
@@ -439,6 +445,8 @@ class HomeScreen extends StatelessWidget {
                           count: questions.count,
                           onTap: () => _openQuestionCards(context),
                         ),
+                      const SizedBox(height: 10),
+                      _CalcTipsCard(onTap: () => _openCalcTips(context)),
                     ],
                     // ── 과목별 학습 ──
                     const SizedBox(height: 24),
@@ -766,6 +774,23 @@ class _WeaknessCard extends StatelessWidget {
       iconColor: Theme.of(context).colorScheme.error,
       title: '약점 공략',
       subtitle: '정답률 낮은 단원 위주로 20문제',
+      onTap: onTap,
+    );
+  }
+}
+
+/// 계산 팁 모음 진입 카드.
+class _CalcTipsCard extends StatelessWidget {
+  const _CalcTipsCard({required this.onTap});
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return _ActionCard(
+      icon: Icons.calculate_outlined,
+      iconColor: Theme.of(context).colorScheme.primary,
+      title: '계산 팁',
+      subtitle: '근사값·단축식·검산 요령 — 빨리, 안 틀리게',
       onTap: onTap,
     );
   }
