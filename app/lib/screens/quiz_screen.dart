@@ -6,6 +6,7 @@ import '../models/progress.dart';
 import '../models/question.dart';
 import '../theme.dart';
 import '../widgets/card_body.dart';
+import '../widgets/handwriting_canvas.dart';
 import 'quiz_result_screen.dart';
 
 /// 문제풀이 설정.
@@ -145,12 +146,15 @@ class _QuizScreenState extends State<QuizScreen> {
           ),
         ),
       ),
-      body: Center(
-        child: ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 760),
-          child: ListView(
-            padding: const EdgeInsets.fromLTRB(18, 18, 18, 24),
-            children: [
+      body: HandwritingCanvas(
+        key: ValueKey('note_q_${q.id}'),
+        storageKey: 'note_q_${q.id}',
+        child: Center(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 760),
+            child: ListView(
+              padding: const EdgeInsets.fromLTRB(18, 18, 18, 24),
+              children: [
               Row(
                 children: [
                   Text('${_index + 1} / ${_qs.length}',
@@ -190,6 +194,7 @@ class _QuizScreenState extends State<QuizScreen> {
                 _Explanation(correct: _selected[_index] == q.answer, text: q.explanation),
               ],
             ],
+            ),
           ),
         ),
       ),

@@ -5,6 +5,7 @@ import '../models/card.dart';
 import '../models/progress.dart';
 import '../theme.dart';
 import '../widgets/card_body.dart';
+import '../widgets/handwriting_canvas.dart';
 
 /// 이론 카드 화면. 폰과 패드가 같은 카드를 다르게 쓴다.
 ///
@@ -93,7 +94,11 @@ class CardScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: wide ? _WideLayout(card: card) : _PhoneLayout(card: card),
+      body: HandwritingCanvas(
+        key: ValueKey('note_c_${card.id}'),
+        storageKey: 'note_c_${card.id}',
+        child: wide ? _WideLayout(card: card) : _PhoneLayout(card: card),
+      ),
       bottomNavigationBar: hasNav
           ? SafeArea(
               child: Padding(
