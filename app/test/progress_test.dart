@@ -30,6 +30,18 @@ void main() {
     expect(p.bookmarkCount, 1);
   });
 
+  test('문제 즐겨찾기는 카드 즐겨찾기와 분리되어 저장·복원된다', () async {
+    var p = await StudyProgress.load();
+    expect(p.isQuestionBookmarked('em.1.r1'), isFalse);
+    p.toggleQuestionBookmark('em.1.r1');
+    expect(p.isQuestionBookmarked('em.1.r1'), isTrue);
+    expect(p.questionBookmarkCount, 1);
+    expect(p.bookmarkCount, 0); // 카드 즐겨찾기와 별개
+
+    p = await StudyProgress.load(); // 다시 로드
+    expect(p.questionBookmarks, contains('em.1.r1'));
+  });
+
   test('studiedAmong 은 교집합 수를 센다', () async {
     final p = await StudyProgress.load();
     p.toggleStudied('a');

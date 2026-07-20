@@ -68,6 +68,7 @@ class StudyProgress extends ChangeNotifier {
     this._prefs,
     this._studied,
     this._bookmarked,
+    this._qBookmarked,
     this._wrong,
     this._exams,
     this._srs,
@@ -78,7 +79,8 @@ class StudyProgress extends ChangeNotifier {
 
   final SharedPreferences _prefs;
   final Set<String> _studied;
-  final Set<String> _bookmarked;
+  final Set<String> _bookmarked; // 즐겨찾은 이론 카드 ID
+  final Set<String> _qBookmarked; // 즐겨찾은(헷갈린) 문제 ID
   final Set<String> _wrong; // 틀린 문제 ID(오답노트)
   final List<ExamResult> _exams; // 모의고사 이력(최신이 앞)
   final Map<String, ReviewCard> _srs; // 문항ID -> 복습 상태
@@ -88,6 +90,7 @@ class StudyProgress extends ChangeNotifier {
 
   static const _kStudied = 'studied_ids';
   static const _kBookmarked = 'bookmarked_ids';
+  static const _kQBookmarked = 'q_bookmarked_ids';
   static const _kWrong = 'wrong_qids';
   static const _kExams = 'exam_log';
   static const _kSrs = 'srs_v1';
@@ -140,6 +143,7 @@ class StudyProgress extends ChangeNotifier {
       prefs,
       (prefs.getStringList(_kStudied) ?? const []).toSet(),
       (prefs.getStringList(_kBookmarked) ?? const []).toSet(),
+      (prefs.getStringList(_kQBookmarked) ?? const []).toSet(),
       (prefs.getStringList(_kWrong) ?? const []).toSet(),
       exams,
       srs,
@@ -166,6 +170,17 @@ class StudyProgress extends ChangeNotifier {
   void toggleBookmark(String id) {
     if (!_bookmarked.remove(id)) _bookmarked.add(id);
     _prefs.setStringList(_kBookmarked, _bookmarked.toList());
+    notifyListeners();
+  }
+
+  // ── 문제 즐겨찾기(헷갈린 문제 저장) ──
+  bool isQuestionBookmarked(String id) => _qBookmarked.contains(id);
+  int get questionBookmarkCount => _qBookmarked.length;
+  Set<String> get questionBookmarks => Set.unmodifiable(_qBookmarked);
+
+  void toggleQuestionBookmark(String id) {
+    if (!_qBookmarked.remove(id)) _qBookmarked.add(id);
+    _prefs.setStringList(_kQBookmarked, _qBookmarked.toList());
     notifyListeners();
   }
 
@@ -306,6 +321,7 @@ class StudyProgress extends ChangeNotifier {
   void clear() {
     _studied.clear();
     _bookmarked.clear();
+    _qBookmarked.clear();
     _wrong.clear();
     _exams.clear();
     _srs.clear();
@@ -315,6 +331,7 @@ class StudyProgress extends ChangeNotifier {
     for (final k in [
       _kStudied,
       _kBookmarked,
+      _kQBookmarked,
       _kWrong,
       _kExams,
       _kSrs,

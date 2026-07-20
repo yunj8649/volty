@@ -138,6 +138,19 @@ class _QuizScreenState extends State<QuizScreen> {
       appBar: AppBar(
         title: Text(widget.config.title),
         actions: [
+          IconButton(
+            tooltip: widget.progress.isQuestionBookmarked(q.id)
+                ? '즐겨찾기 해제'
+                : '헷갈린 문제로 저장',
+            icon: Icon(widget.progress.isQuestionBookmarked(q.id)
+                ? Icons.star
+                : Icons.star_border),
+            color: widget.progress.isQuestionBookmarked(q.id)
+                ? scheme.primary
+                : null,
+            onPressed: () => setState(
+                () => widget.progress.toggleQuestionBookmark(q.id)),
+          ),
           if (_exam && widget.config.timeLimit != null)
             Center(child: _TimerChip(remaining: _remaining)),
           const SizedBox(width: 8),

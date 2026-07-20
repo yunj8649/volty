@@ -7,6 +7,7 @@ import '../models/taxonomy.dart';
 import '../theme.dart';
 import '../widgets/volty_mascot.dart';
 import 'analysis_screen.dart';
+import 'flashcard_screen.dart';
 import 'mock_menu_screen.dart';
 import 'quiz_screen.dart';
 import 'review_screen.dart';
@@ -27,6 +28,10 @@ class HomeScreen extends StatelessWidget {
   final CardLibrary cards;
   final StudyProgress progress;
   final QuestionBank questions;
+
+  /// 플래시카드로 넘겨볼 수 있는 공식 총수.
+  int get _formulaCount =>
+      cards.all.fold(0, (a, c) => a + c.formulas.length);
 
   /// 한 과목이 가진 '카드가 있는' 세부항목 ID들. 진척 계산의 분모.
   List<String> _cardIds(Subject s) => [
@@ -99,6 +104,28 @@ class HomeScreen extends StatelessWidget {
             questions: questions,
             progress: progress,
           ),
+        ),
+      );
+
+  /// 별표(헷갈린) 문제만 모아 다시 푼다.
+  void _startStarred(BuildContext context) {
+    final qs = questions.byIds(progress.questionBookmarks)..shuffle();
+    if (qs.isEmpty) return;
+    Navigator.push(
+      context,
+      MaterialPageRoute<void>(
+        builder: (_) => QuizScreen(
+          progress: progress,
+          config: QuizConfig(title: '즐겨찾은 문제', questions: qs, isExam: false),
+        ),
+      ),
+    );
+  }
+
+  void _openFlashcards(BuildContext context) => Navigator.push(
+        context,
+        MaterialPageRoute<void>(
+          builder: (_) => FlashcardScreen(cards: cards),
         ),
       );
 
@@ -307,6 +334,20 @@ class HomeScreen extends StatelessWidget {
                       _WrongNoteCard(
                         count: progress.wrongCount,
                         onTap: () => _startWrongNote(context),
+                      ),
+                    ],
+                    if (progress.questionBookmarkCount > 0) ...[
+                      const SizedBox(height: 12),
+                      _StarredCard(
+                        count: progress.questionBookmarkCount,
+                        onTap: () => _startStarred(context),
+                      ),
+                    ],
+                    if (_formulaCount > 0) ...[
+                      const SizedBox(height: 12),
+                      _FlashcardCard(
+                        count: _formulaCount,
+                        onTap: () => _openFlashcards(context),
                       ),
                     ],
                     const SizedBox(height: 20),
@@ -557,6 +598,42 @@ class _WrongNoteCard extends StatelessWidget {
       iconColor: Palette.trapFg(context),
       title: '오답노트',
       subtitle: '틀린 문제 $count개 다시 풀기',
+      onTap: onTap,
+    );
+  }
+}
+
+/// 즐겨찾은(헷갈린) 문제 다시 풀기 카드.
+class _StarredCard extends StatelessWidget {
+  const _StarredCard({required this.count, required this.onTap});
+  final int count;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return _ActionCard(
+      icon: Icons.star_rounded,
+      iconColor: const Color(0xFFF4B400),
+      title: '즐겨찾은 문제',
+      subtitle: '헷갈려서 담아둔 문제 $count개 다시 풀기',
+      onTap: onTap,
+    );
+  }
+}
+
+/// 공식 암기 플래시카드 진입 카드.
+class _FlashcardCard extends StatelessWidget {
+  const _FlashcardCard({required this.count, required this.onTap});
+  final int count;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return _ActionCard(
+      icon: Icons.style_outlined,
+      iconColor: Theme.of(context).colorScheme.secondary,
+      title: '공식 암기',
+      subtitle: '핵심 공식 $count개 · 이름 보고 떠올린 뒤 뒤집기',
       onTap: onTap,
     );
   }
