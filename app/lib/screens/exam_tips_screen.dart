@@ -9,7 +9,7 @@ import '../widgets/card_body.dart';
 class ExamTipsScreen extends StatelessWidget {
   const ExamTipsScreen({super.key});
 
-  static const _sections = <(String, List<(String, String)>)>[
+  static const sections = <(String, List<(String, String)>)>[
     (
       '객관식 소거법 · 최후의 보루',
       [
@@ -42,6 +42,18 @@ class ExamTipsScreen extends StatelessWidget {
             '펠턴 > 프란시스 > 사류 > 카플란(프로펠러). 특유속도는 정반대 순서.'),
         ('제동 방식',
             '발전제동(저항 소모)·회생제동(전원 반환)·역상제동(플러깅). "발·회·역".'),
+        ('강자성체',
+            '철·니켈·코발트 → "철니코". 상자성·반자성과 구분하는 문제에 바로.'),
+        ('조상설비 무효전력',
+            '콘덴서=진상 공급, 분로리액터=지상 흡수(경부하 페란티 방지), 동기조상기=양쪽 연속. "콘진·리지·동양".'),
+        ('중성점 접지 크기순',
+            '지락전류·유도장해 크기: 직접 > 저항 > 소호리액터 > 비접지. 안정도는 정반대 순.'),
+        ('유도기 기동법',
+            r'농형: 직입·$Y{-}\Delta$·리액터·기동보상기. 권선형: 2차 저항(비례추이). "농형은 전압을, 권선형은 저항을".'),
+        ('제어 안정판별 3형제',
+            '라우스-후르비츠 · 나이퀴스트 · 보드선도. 시간영역(라우스) / 주파수영역(나이퀴스트·보드)로 묶어 기억.'),
+        ('라플라스 3쌍',
+            r'계단 $\to\dfrac1s$, 임펄스 $\to1$, 지수 $\to\dfrac1{s+a}$. 이 셋이면 웬만한 역변환은 커버.'),
       ],
     ),
     (
@@ -89,7 +101,7 @@ class ExamTipsScreen extends StatelessWidget {
             children: [
               const _Disclaimer(),
               const SizedBox(height: 16),
-              for (final section in _sections) ...[
+              for (final section in sections) ...[
                 _SectionTitle(section.$1),
                 const SizedBox(height: 10),
                 for (final tip in section.$2) _TipCard(title: tip.$1, body: tip.$2),

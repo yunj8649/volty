@@ -9,7 +9,7 @@ class CalcTipsScreen extends StatelessWidget {
   const CalcTipsScreen({super.key});
 
   // (섹션 제목, [(팁 제목, 팁 내용)])
-  static const _sections = <(String, List<(String, String)>)>[
+  static const sections = <(String, List<(String, String)>)>[
     (
       '공통 · 단위와 근사값',
       [
@@ -23,6 +23,10 @@ class CalcTipsScreen extends StatelessWidget {
             r'$\mathrm{mm^2}\to\mathrm{m^2}$ 는 $\times10^{-6}$. 단면적이 섞이면 이것부터 맞춘다.'),
         ('데시벨',
             r'$g=20\log_{10}|G|$. 10배=20dB, 100배=40dB, 1000배=60dB, 2배$\approx$6dB.'),
+        ('각도값 암기',
+            r'$180^\circ=\pi$ rad. $\sin30^\circ=0.5$, $\sin45^\circ=0.707$, $\sin60^\circ=0.866$. 위상차 계산에 바로 쓴다.'),
+        ('지수 계산',
+            r'같은 밑끼리 곱은 지수 더하기: $10^{3}\times10^{-6}=10^{-3}$. 접두어 곱셈을 지수 덧셈으로 처리하면 빠르다.'),
       ],
     ),
     (
@@ -36,6 +40,12 @@ class CalcTipsScreen extends StatelessWidget {
             r'무한직선 $H=\dfrac{I}{2\pi r}$, 원형코일 중심 $H=\dfrac{NI}{2r}$, 솔레노이드 $H=\dfrac{NI}{l}$ — 분모의 $2\pi r/2r/l$ 만 다르다.'),
         ('상호인덕턴스',
             r'$M=k\sqrt{L_1 L_2}$. 가동접속 $L=L_1+L_2+2M$, 차동 $-2M$.'),
+        ('자기회로 = 전기회로',
+            r'기자력 $F=NI$(↔기전력), 자속 $\Phi$(↔전류), 자기저항 $R_m=\dfrac{l}{\mu A}$(↔저항). $\Phi=\dfrac{F}{R_m}$ 는 옴의 법칙 꼴.'),
+        ('전자력·유기기전력',
+            r'도체 힘 $F=BIl$, 운동 도체 기전력 $e=Blv$. 회전자 $e=NBA\omega\sin\omega t$.'),
+        ('정전용량 3형',
+            r'평행판 $\dfrac{\varepsilon A}{d}$, 고립구 $4\pi\varepsilon a$, 동심구 $\dfrac{4\pi\varepsilon ab}{b-a}$.'),
       ],
     ),
     (
@@ -51,6 +61,14 @@ class CalcTipsScreen extends StatelessWidget {
             r'$Q_c=P(\tan\theta_1-\tan\theta_2)$. 각도별 $\tan$: $\cos0.6\to\tan=1.333$, $\cos0.8\to0.75$.'),
         ('충전용량',
             r'3상 $Q_c=\omega C V^2$ ($V$=선간전압), 상당 $2\pi f C E^2$.'),
+        ('변압기 효율·최대효율',
+            r'$\eta=\dfrac{P}{P+P_i+P_c}$. **철손 $P_i$=동손 $P_c$** 일 때 최대효율, 그때 부하율 $m=\sqrt{P_i/P_c}$.'),
+        ('부하 3률',
+            r'수용률 $=\dfrac{\text{최대수요}}{\text{설비용량}}$, 부하율 $=\dfrac{\text{평균}}{\text{최대}}$, 부등률 $=\dfrac{\text{개별최대합}}{\text{합성최대}}(\ge1)$.'),
+        ('이도와 실장',
+            r'이도 $D=\dfrac{WS^2}{8T}$, 전선 실제길이 $L\approx S+\dfrac{8D^2}{3S}$.'),
+        ('등가 선간거리',
+            r'$D_e=\sqrt[3]{D_{12}D_{23}D_{31}}$ (세 간격의 기하평균).'),
       ],
     ),
     (
@@ -64,6 +82,12 @@ class CalcTipsScreen extends StatelessWidget {
             r'$a=\dfrac{V_1}{V_2}=\dfrac{N_1}{N_2}=\dfrac{I_2}{I_1}$. 임피던스 환산은 $Z_1=a^2 Z_2$ (**제곱**).'),
         ('V결선',
             r'출력 $=\sqrt3\times$(변압기 1대), 이용률 $86.6\%$, 출력비 $57.7\%$ — 셋을 구분.'),
+        ('직류기 유기기전력',
+            r'$E=\dfrac{pZ\Phi N}{60a}$. 권선법: 중권 $a=p$, 파권 $a=2$.'),
+        ('전압변동률',
+            r'$\varepsilon=p\cos\theta+q\sin\theta$ ($p$=%저항, $q$=%리액턴스). 지상 $+$, 진상 $-$.'),
+        ('토크 환산',
+            r'$T=\dfrac{P}{\omega}=9.55\dfrac{P}{N}$ [N·m] ($N$은 rpm). 출력·속도만 알면 즉산.'),
       ],
     ),
     (
@@ -79,6 +103,14 @@ class CalcTipsScreen extends StatelessWidget {
             r'최종값 $\lim_{s\to0}sF(s)$, 초기값 $\lim_{s\to\infty}sF(s)$.'),
         ('2차계 표준형',
             r'$s^2+2\zeta\omega_n s+\omega_n^2$ 와 비교: $\omega_n=\sqrt{\text{상수항}}$, $\zeta=\dfrac{s\text{항 계수}}{2\omega_n}$.'),
+        ('파형률·파고율',
+            r'파형률$=\dfrac{\text{실효}}{\text{평균}}$, 파고율$=\dfrac{\text{최대}}{\text{실효}}$. 정현파는 각각 $1.11$, $1.414$.'),
+        ('라플라스 변환 필수쌍',
+            r'$1\to\dfrac1s$, $t\to\dfrac1{s^2}$, $e^{-at}\to\dfrac1{s+a}$, $\sin\omega t\to\dfrac{\omega}{s^2+\omega^2}$.'),
+        ('오차상수 ↔ 편차',
+            r'위치 $K_p$(계단), 속도 $K_v$(램프), 가속도 $K_a$(포물선). 편차$=\dfrac{1}{1+K_p}$ 또는 $\dfrac{1}{K_v}$.'),
+        ('감쇠비별 응답',
+            r'$\zeta<1$ 진동(부족제동), $\zeta=1$ 임계제동, $\zeta>1$ 과제동. $\zeta$ 로 진동 여부 판단.'),
       ],
     ),
     (
@@ -107,7 +139,7 @@ class CalcTipsScreen extends StatelessWidget {
           child: ListView(
             padding: EdgeInsets.symmetric(horizontal: wide ? 32 : 16, vertical: 16),
             children: [
-              for (final section in _sections) ...[
+              for (final section in sections) ...[
                 _SectionTitle(section.$1),
                 const SizedBox(height: 10),
                 for (final tip in section.$2) _TipCard(title: tip.$1, body: tip.$2),
