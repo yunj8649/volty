@@ -8,6 +8,7 @@ import '../theme.dart';
 import '../widgets/volty_mascot.dart';
 import 'analysis_screen.dart';
 import 'calc_tips_screen.dart';
+import 'exam_tips_screen.dart';
 import 'flashcard_screen.dart';
 import 'mock_menu_screen.dart';
 import 'question_flashcard_screen.dart';
@@ -223,6 +224,11 @@ class HomeScreen extends StatelessWidget {
   void _openCalcTips(BuildContext context) => Navigator.push(
         context,
         MaterialPageRoute<void>(builder: (_) => const CalcTipsScreen()),
+      );
+
+  void _openExamTips(BuildContext context) => Navigator.push(
+        context,
+        MaterialPageRoute<void>(builder: (_) => const ExamTipsScreen()),
       );
 
   Future<void> _editGoal(BuildContext context) async {
@@ -447,6 +453,8 @@ class HomeScreen extends StatelessWidget {
                         ),
                       const SizedBox(height: 10),
                       _CalcTipsCard(onTap: () => _openCalcTips(context)),
+                      const SizedBox(height: 10),
+                      _ExamTipsCard(onTap: () => _openExamTips(context)),
                     ],
                     // ── 과목별 학습 ──
                     const SizedBox(height: 24),
@@ -791,6 +799,23 @@ class _CalcTipsCard extends StatelessWidget {
       iconColor: Theme.of(context).colorScheme.primary,
       title: '계산 팁',
       subtitle: '근사값·단축식·검산 요령 — 빨리, 안 틀리게',
+      onTap: onTap,
+    );
+  }
+}
+
+/// 시험 꿀팁(객관식 소거법·암기 두문자·시험장 요령) 진입 카드.
+class _ExamTipsCard extends StatelessWidget {
+  const _ExamTipsCard({required this.onTap});
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return _ActionCard(
+      icon: Icons.emoji_objects_outlined,
+      iconColor: Theme.of(context).colorScheme.tertiary,
+      title: '시험 꿀팁',
+      subtitle: '객관식 소거법·암기 두문자·시험장 요령',
       onTap: onTap,
     );
   }
