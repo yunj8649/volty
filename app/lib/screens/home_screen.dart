@@ -9,6 +9,7 @@ import '../widgets/volty_mascot.dart';
 import 'analysis_screen.dart';
 import 'flashcard_screen.dart';
 import 'mock_menu_screen.dart';
+import 'question_flashcard_screen.dart';
 import 'quiz_screen.dart';
 import 'review_screen.dart';
 import 'search_screen.dart';
@@ -126,6 +127,17 @@ class HomeScreen extends StatelessWidget {
         context,
         MaterialPageRoute<void>(
           builder: (_) => FlashcardScreen(cards: cards),
+        ),
+      );
+
+  void _openQuestionCards(BuildContext context) => Navigator.push(
+        context,
+        MaterialPageRoute<void>(
+          builder: (_) => QuestionFlashcardScreen(
+            taxonomy: taxonomy,
+            questions: questions,
+            progress: progress,
+          ),
         ),
       );
 
@@ -348,6 +360,13 @@ class HomeScreen extends StatelessWidget {
                       _FlashcardCard(
                         count: _formulaCount,
                         onTap: () => _openFlashcards(context),
+                      ),
+                    ],
+                    if (questions.count > 0) ...[
+                      const SizedBox(height: 12),
+                      _QuestionCardCard(
+                        count: questions.count,
+                        onTap: () => _openQuestionCards(context),
                       ),
                     ],
                     const SizedBox(height: 20),
@@ -634,6 +653,24 @@ class _FlashcardCard extends StatelessWidget {
       iconColor: Theme.of(context).colorScheme.secondary,
       title: '공식 암기',
       subtitle: '핵심 공식 $count개 · 이름 보고 떠올린 뒤 뒤집기',
+      onTap: onTap,
+    );
+  }
+}
+
+/// 문제 카드(문제→답·해설 뒤집기) 진입 카드.
+class _QuestionCardCard extends StatelessWidget {
+  const _QuestionCardCard({required this.count, required this.onTap});
+  final int count;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return _ActionCard(
+      icon: Icons.quiz_outlined,
+      iconColor: Theme.of(context).colorScheme.tertiary,
+      title: '문제 카드',
+      subtitle: '문제 $count개 · 답을 떠올린 뒤 뒤집어 확인',
       onTap: onTap,
     );
   }
