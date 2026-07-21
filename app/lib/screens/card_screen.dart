@@ -5,6 +5,7 @@ import '../models/card.dart';
 import '../models/progress.dart';
 import '../theme.dart';
 import '../widgets/card_body.dart';
+import '../widgets/figure_view.dart';
 import '../widgets/handwriting_canvas.dart';
 
 /// 이론 카드 화면. 폰과 패드가 같은 카드를 다르게 쓴다.
@@ -234,6 +235,12 @@ List<Widget> _essentials(BuildContext context, TheoryCard card) {
     ],
     _SummaryCard(text: card.summary),
     const SizedBox(height: 18),
+    if (card.figures.isNotEmpty) ...[
+      _Label('그림으로 이해', Icons.insights_rounded, Palette.accent(context)),
+      const SizedBox(height: 10),
+      for (final f in card.figures) FigureView(figure: f),
+      const SizedBox(height: 8),
+    ],
     if (card.formulas.isNotEmpty) ...[
       _Label('핵심 공식', Icons.functions_rounded, Palette.accent(context)),
       const SizedBox(height: 10),

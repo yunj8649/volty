@@ -10,6 +10,8 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart' show rootBundle;
 
+import 'figure.dart';
+
 /// 검수 상태. 전기 계산은 틀리면 치명적이라 검수 전이면 앱에 배지를 띄운다.
 enum CardStatus { draft, reviewed }
 
@@ -55,6 +57,7 @@ class TheoryCard {
     required this.traps,
     required this.related,
     required this.sections,
+    this.figures = const [],
   });
 
   /// 세부항목 ID (예: em.1.4). 학습 기록이 여기 매달린다.
@@ -74,6 +77,9 @@ class TheoryCard {
   final List<String> related;
   final List<CardSection> sections;
 
+  /// 이해를 돕는 도식(그림). 없을 수 있다.
+  final List<Figure> figures;
+
   bool get isDraft => status == CardStatus.draft;
 
   factory TheoryCard.fromJson(Map<String, dynamic> j) => TheoryCard(
@@ -91,6 +97,9 @@ class TheoryCard {
         related: (j['related'] as List).cast<String>(),
         sections: (j['sections'] as List)
             .map((s) => CardSection.fromJson(s as Map<String, dynamic>))
+            .toList(growable: false),
+        figures: ((j['figures'] as List?) ?? const [])
+            .map((f) => Figure.fromJson(f as Map<String, dynamic>))
             .toList(growable: false),
       );
 }
