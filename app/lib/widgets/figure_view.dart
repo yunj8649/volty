@@ -79,6 +79,7 @@ class FigureView extends StatelessWidget {
                   child: Text(
                     figure.caption,
                     style: TextStyle(
+                        fontFamily: 'NanumGothic',
                         fontSize: 12.5,
                         height: 1.45,
                         color: scheme.onSurfaceVariant),
