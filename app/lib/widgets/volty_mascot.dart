@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-/// Volty — 앱 마스코트. 통통한 몸통에 작은 팔·다리, 머리 위엔 번개 뿔, 큰 반짝이는 눈의
-/// 꼬마 전기 캐릭터. "귀여움" 우선.
+/// Volty — 앱 마스코트. 말랑말랑한 슬라임(젤리) 몸통에 큰 반짝이는 눈, 발그레한 볼,
+/// 앙증맞은 입, 머리 위엔 번개 스파크. "말랑·귀여움" 우선.
 ///
 /// 이미지 자산 없이 CustomPainter 로 그린다(선명하게 확대되고 웹 CSP·폰트 문제 없음).
 class VoltyMascot extends StatelessWidget {
@@ -20,8 +20,8 @@ class VoltyMascot extends StatelessWidget {
 
 class _VoltyPainter extends CustomPainter {
   static const _brown = Color(0xFF7A4E00);
-  static const _bodyTop = Color(0xFFFFE87A);
-  static const _bodyBot = Color(0xFFFFBE2A);
+  static const _top = Color(0xFFFFEA85);
+  static const _bot = Color(0xFFFFBE2A);
 
   void _sparkle(Canvas c, double x, double y, double s, Color col) {
     final p = Path()
@@ -42,90 +42,82 @@ class _VoltyPainter extends CustomPainter {
     final w = size.width, h = size.height;
     final line = Paint()
       ..style = PaintingStyle.stroke
-      ..strokeWidth = w * 0.04
+      ..strokeWidth = w * 0.045
       ..strokeJoin = StrokeJoin.round
       ..strokeCap = StrokeCap.round
       ..color = _brown;
     Paint fill(Color c) => Paint()..color = c;
 
-    // ── 반짝임 ──
-    _sparkle(canvas, 0.90 * w, 0.20 * h, 0.05 * w, const Color(0xFFFFD54A));
-    _sparkle(canvas, 0.10 * w, 0.30 * h, 0.035 * w, const Color(0xFFFFE08A));
+    // ── 반짝임 + 머리 위 작은 번개 ──
+    _sparkle(canvas, 0.86 * w, 0.20 * h, 0.05 * w, const Color(0xFFFFD54A));
+    _sparkle(canvas, 0.13 * w, 0.28 * h, 0.035 * w, const Color(0xFFFFE08A));
+    final bolt = Path()
+      ..moveTo(0.55 * w, 0.02 * h)
+      ..lineTo(0.44 * w, 0.15 * h)
+      ..lineTo(0.52 * w, 0.15 * h)
+      ..lineTo(0.46 * w, 0.26 * h)
+      ..lineTo(0.60 * w, 0.11 * h)
+      ..lineTo(0.52 * w, 0.11 * h)
+      ..close();
+    canvas.drawPath(bolt, fill(const Color(0xFFFFD23E)));
+    canvas.drawPath(bolt, line);
 
-    // ── 번개 뿔(머리 위 두 개) ──
-    for (final dx in [-0.11, 0.11]) {
-      final cx = (0.5 + dx) * w;
-      final bolt = Path()
-        ..moveTo(cx + 0.03 * w, 0.03 * h)
-        ..lineTo(cx - 0.03 * w, 0.16 * h)
-        ..lineTo(cx + 0.01 * w, 0.16 * h)
-        ..lineTo(cx - 0.02 * w, 0.27 * h)
-        ..lineTo(cx + 0.06 * w, 0.13 * h)
-        ..lineTo(cx + 0.02 * w, 0.13 * h)
-        ..close();
-      canvas.drawPath(bolt, fill(const Color(0xFFFFD23E)));
-      canvas.drawPath(bolt, line);
-    }
+    // ── 튀는 물방울(젤리가 튀는 느낌) ──
+    canvas.drawCircle(Offset(0.90 * w, 0.60 * h), 0.028 * w, fill(_bot));
+    canvas.drawCircle(Offset(0.90 * w, 0.60 * h), 0.028 * w, line);
 
-    // ── 다리(몸통 뒤에서 살짝) ──
-    for (final dx in [-0.14, 0.14]) {
-      final r = Rect.fromCenter(
-          center: Offset((0.5 + dx) * w, 0.90 * h),
-          width: 0.16 * w,
-          height: 0.12 * h);
-      canvas.drawOval(r, fill(_bodyBot));
-      canvas.drawOval(r, line);
-    }
+    // ── 슬라임 몸통(말랑한 젤리 블롭: 위는 몽글, 아래는 넓고 물결) ──
+    final body = Path()
+      ..moveTo(0.12 * w, 0.72 * h)
+      ..cubicTo(0.03 * w, 0.52 * h, 0.13 * w, 0.30 * h, 0.34 * w, 0.28 * h)
+      ..cubicTo(0.40 * w, 0.20 * h, 0.46 * w, 0.24 * h, 0.50 * w, 0.30 * h)
+      ..cubicTo(0.55 * w, 0.22 * h, 0.64 * w, 0.24 * h, 0.68 * w, 0.31 * h)
+      ..cubicTo(0.89 * w, 0.34 * h, 0.96 * w, 0.54 * h, 0.87 * w, 0.72 * h)
+      ..cubicTo(0.90 * w, 0.82 * h, 0.83 * w, 0.90 * h, 0.74 * w, 0.86 * h)
+      ..cubicTo(0.68 * w, 0.91 * h, 0.60 * w, 0.90 * h, 0.56 * w, 0.86 * h)
+      ..cubicTo(0.50 * w, 0.90 * h, 0.40 * w, 0.90 * h, 0.36 * w, 0.85 * h)
+      ..cubicTo(0.30 * w, 0.91 * h, 0.20 * w, 0.90 * h, 0.20 * w, 0.82 * h)
+      ..cubicTo(0.12 * w, 0.84 * h, 0.09 * w, 0.78 * h, 0.12 * w, 0.72 * h)
+      ..close();
+    final bodyRect = Rect.fromLTRB(0.03 * w, 0.20 * h, 0.97 * w, 0.92 * h);
+    canvas.drawPath(
+      body,
+      fill(_top)
+        ..shader = const LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [_top, _bot],
+        ).createShader(bodyRect),
+    );
+    canvas.drawPath(body, line..strokeWidth = w * 0.05);
 
-    // ── 팔(몸통 옆 작은 나뭇가지) ──
-    for (final dx in [-1.0, 1.0]) {
-      final ax = (0.5 + dx * 0.30) * w;
-      final arm = Rect.fromCenter(
-          center: Offset(ax, 0.62 * h), width: 0.11 * w, height: 0.16 * h);
-      canvas.drawOval(arm, fill(_bodyTop));
-      canvas.drawOval(arm, line);
-    }
-
-    // ── 몸통(통통한 물방울) ──
-    final bodyRect =
-        Rect.fromCenter(center: Offset(0.5 * w, 0.58 * h), width: 0.66 * w, height: 0.68 * h);
-    final body = fill(_bodyTop)
-      ..shader = const LinearGradient(
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter,
-        colors: [_bodyTop, _bodyBot],
-      ).createShader(bodyRect);
-    canvas.drawOval(bodyRect, body);
-
-    // 배 쪽 광택.
+    // ── 젤리 광택(큰 하이라이트 + 작은 점) ──
     canvas.drawOval(
       Rect.fromCenter(
-          center: Offset(0.40 * w, 0.42 * h), width: 0.30 * w, height: 0.20 * h),
-      fill(const Color(0x40FFFFFF)),
+          center: Offset(0.36 * w, 0.42 * h), width: 0.26 * w, height: 0.18 * h),
+      fill(const Color(0x55FFFFFF)),
     );
-    canvas.drawOval(bodyRect, line..strokeWidth = w * 0.045);
+    canvas.drawCircle(Offset(0.66 * w, 0.40 * h), 0.03 * w, fill(const Color(0x66FFFFFF)));
 
     // ── 발그레한 볼 ──
     final blush = fill(const Color(0x66FF8A8A));
     canvas.drawOval(
         Rect.fromCenter(
-            center: Offset(0.30 * w, 0.66 * h), width: 0.14 * w, height: 0.09 * h),
+            center: Offset(0.30 * w, 0.66 * h), width: 0.13 * w, height: 0.085 * h),
         blush);
     canvas.drawOval(
         Rect.fromCenter(
-            center: Offset(0.70 * w, 0.66 * h), width: 0.14 * w, height: 0.09 * h),
+            center: Offset(0.70 * w, 0.66 * h), width: 0.13 * w, height: 0.085 * h),
         blush);
 
     // ── 크고 반짝이는 눈 ──
-    final eyeL = Offset(0.38 * w, 0.55 * h);
-    final eyeR = Offset(0.62 * w, 0.55 * h);
     final black = fill(const Color(0xFF3A2600));
     final shine = fill(Colors.white);
-    for (final e in [eyeL, eyeR]) {
+    for (final e in [Offset(0.39 * w, 0.58 * h), Offset(0.61 * w, 0.58 * h)]) {
       canvas.drawOval(
-          Rect.fromCenter(center: e, width: 0.18 * w, height: 0.22 * w), black);
-      canvas.drawCircle(e.translate(-0.04 * w, -0.045 * w), 0.045 * w, shine);
-      canvas.drawCircle(e.translate(0.035 * w, 0.04 * w), 0.02 * w, shine);
+          Rect.fromCenter(center: e, width: 0.17 * w, height: 0.21 * w), black);
+      canvas.drawCircle(e.translate(-0.037 * w, -0.045 * w), 0.043 * w, shine);
+      canvas.drawCircle(e.translate(0.033 * w, 0.038 * w), 0.019 * w, shine);
     }
 
     // ── 앙증맞은 ω 입 ──
@@ -136,10 +128,10 @@ class _VoltyPainter extends CustomPainter {
       ..color = _brown;
     const st = 0.15, sw = 3.14159 - 0.3;
     canvas.drawArc(
-        Rect.fromCircle(center: Offset(0.455 * w, 0.68 * h), radius: 0.045 * w),
+        Rect.fromCircle(center: Offset(0.455 * w, 0.72 * h), radius: 0.045 * w),
         st, sw, false, mouth);
     canvas.drawArc(
-        Rect.fromCircle(center: Offset(0.545 * w, 0.68 * h), radius: 0.045 * w),
+        Rect.fromCircle(center: Offset(0.545 * w, 0.72 * h), radius: 0.045 * w),
         st, sw, false, mouth);
   }
 
