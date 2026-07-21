@@ -6,6 +6,7 @@ import 'models/question.dart';
 import 'models/taxonomy.dart';
 import 'screens/home_screen.dart';
 import 'theme.dart';
+import 'widgets/volty_mascot.dart';
 
 void main() => runApp(const VoltyApp());
 
@@ -58,17 +59,10 @@ class _BootState extends State<_Boot> {
       future: _future,
       builder: (context, snap) {
         if (snap.hasError) {
-          return Scaffold(
-            body: Center(
-              child: Padding(
-                padding: const EdgeInsets.all(24),
-                child: Text('학습 자료를 불러오지 못했습니다.\n${snap.error}'),
-              ),
-            ),
-          );
+          return _Splash(error: '학습 자료를 불러오지 못했습니다.\n${snap.error}');
         }
         if (!snap.hasData) {
-          return const Scaffold(body: Center(child: CircularProgressIndicator()));
+          return const _Splash();
         }
         final (taxonomy, cards, progress, questions) = snap.data!;
         return HomeScreen(
@@ -78,6 +72,59 @@ class _BootState extends State<_Boot> {
           questions: questions,
         );
       },
+    );
+  }
+}
+
+/// 로딩(스플래시) 화면 — 마스코트 + Volty 로고. 오류 시 메시지도 함께.
+class _Splash extends StatelessWidget {
+  const _Splash({this.error});
+  final String? error;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return Scaffold(
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const VoltyMascot(size: 112),
+              const SizedBox(height: 20),
+              Text(
+                'Volty',
+                style: TextStyle(
+                  fontSize: 32,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: -0.5,
+                  color: scheme.onSurface,
+                ),
+              ),
+              const SizedBox(height: 6),
+              Text(
+                '전기기사, 한 손에',
+                style: TextStyle(fontSize: 13.5, color: scheme.onSurfaceVariant),
+              ),
+              const SizedBox(height: 28),
+              if (error == null)
+                SizedBox(
+                  width: 24,
+                  height: 24,
+                  child: CircularProgressIndicator(
+                      strokeWidth: 2.5, color: scheme.primary),
+                )
+              else
+                Text(
+                  error!,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 13, color: scheme.error, height: 1.5),
+                ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
