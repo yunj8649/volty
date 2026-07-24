@@ -270,14 +270,7 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const VoltyMascot(size: 32),
-            const SizedBox(width: 8),
-            const VoltyWordmark(height: 22),
-          ],
-        ),
+        title: const VoltyLogo(height: 32),
         actions: [
           IconButton(
             icon: const Icon(Icons.search),

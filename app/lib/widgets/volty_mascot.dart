@@ -19,6 +19,23 @@ class VoltyMascot extends StatelessWidget {
   }
 }
 
+/// Volty 결합 로고(마스코트 + vol⚡y). 앱바용 가로형. 다크모드 자동 전환.
+class VoltyLogo extends StatelessWidget {
+  const VoltyLogo({super.key, this.height = 30});
+  final double height;
+
+  @override
+  Widget build(BuildContext context) {
+    final dark = Theme.of(context).brightness == Brightness.dark;
+    return Image.asset(
+      dark ? 'assets/brand/volty_logo_dark.png' : 'assets/brand/volty_logo.png',
+      height: height,
+      fit: BoxFit.contain,
+      filterQuality: FilterQuality.medium,
+    );
+  }
+}
+
 /// Volty 워드마크(vol⚡y). 다크모드에선 흰색 버전으로 자동 전환.
 class VoltyWordmark extends StatelessWidget {
   const VoltyWordmark({super.key, this.height = 22});
