@@ -66,6 +66,10 @@ flutter:
     - assets/cards.json
     # 볼티 원작 연습문제(출제기준 기반 자작). 기출 복제 아님.
     - assets/questions.json
+    # 브랜드 에셋(마스코트·워드마크). image/ 원본에서 배경 제거·크롭.
+    - assets/brand/volty_mascot.png
+    - assets/brand/volty_wordmark.png
+    - assets/brand/volty_wordmark_dark.png
 
   # 한글 폰트를 반드시 번들해야 한다. Flutter 웹은 CanvasKit/skwasm 렌더러만 쓰는데
   # 이건 CSS 시스템 폰트를 못 쓴다. 안 넣으면 웹에서 한글이 전부 두부(□)로 나온다.

@@ -273,17 +273,9 @@ class HomeScreen extends StatelessWidget {
         title: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const VoltyMascot(size: 30),
+            const VoltyMascot(size: 32),
             const SizedBox(width: 8),
-            Text(
-              'Volty',
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.w900,
-                letterSpacing: -0.5,
-                color: Theme.of(context).colorScheme.onSurface,
-              ),
-            ),
+            const VoltyWordmark(height: 22),
           ],
         ),
         actions: [

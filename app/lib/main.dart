@@ -91,20 +91,12 @@ class _Splash extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const VoltyMascot(size: 112),
-              const SizedBox(height: 20),
+              const VoltyMascot(size: 132),
+              const SizedBox(height: 18),
+              const VoltyWordmark(height: 40),
+              const SizedBox(height: 10),
               Text(
-                'Volty',
-                style: TextStyle(
-                  fontSize: 32,
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: -0.5,
-                  color: scheme.onSurface,
-                ),
-              ),
-              const SizedBox(height: 6),
-              Text(
-                '전기기사, 한 손에',
+                '전기기사 합격의 전력',
                 style: TextStyle(fontSize: 13.5, color: scheme.onSurfaceVariant),
               ),
               const SizedBox(height: 28),
