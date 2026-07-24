@@ -212,7 +212,9 @@ Rounded.
 
 Three-finger hands.
 
-Yellow hoodie is mandatory.
+Yellow lightning hood is mandatory.
+
+Black study hoodie is mandatory.
 
 ---
 
@@ -230,7 +232,9 @@ White
 Accent
 #FFB300
 
-Never change the hoodie color without an official seasonal variant.
+Never change the yellow lightning hood color without an official seasonal variant.
+
+Never change the black study hoodie without an official seasonal variant.
 
 ---
 
@@ -499,3 +503,24 @@ Volty의 말풍선은 짧아야 한다.
 - 긴 공식 설명
 - 교재 문장 복붙
 - "반드시 암기" 같은 명령형
+
+---
+
+# 19. Canonical Character Lock
+
+The canonical Instagram toon direction is **1안 뽀짝 Volty** from `brand/assets/볼티_마스코트_3개_제안.png`.
+
+The detailed lock rules live in `docs/character-lock.md`.
+
+In short:
+
+- Yellow lightning hood
+- Black study hoodie
+- Round white face
+- Tiny black oval eyes
+- Small simple mouth
+- Pink cheeks
+- Rounded hands and feet
+- Thick rounded outline
+
+2안 동글 Volty and 3안 미니 Volty are not the default character. They can be used only as future variant candidates after Brand Bible approval.

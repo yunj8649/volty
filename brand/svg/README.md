@@ -4,7 +4,7 @@ Volty 인스타툰은 SVG 우선으로 제작한다. SVG는 캐릭터 비율과 
 
 ## 우선 제작 순서
 
-1. `volty-base-front.svg`
+1. `volty-base-front.svg` - draft added
 2. `volty-base-3q-left.svg`
 3. `volty-base-3q-right.svg`
 4. `expressions/`
@@ -39,3 +39,13 @@ svg/
 - 눈과 입 스타일이 바뀌지 않았는가?
 - 손과 팔이 과하게 사람처럼 보이지 않는가?
 - 기존 SVG와 조합 가능한가?
+
+## Current Draft
+
+`volty-base-front.svg`는 1안 뽀짝 Volty를 기준으로 만든 첫 정면 SVG 초안이다.
+
+사용 전 확인할 것:
+
+- `docs/character-lock.md` 기준과 맞는지 검수한다.
+- 실제 인스타툰 적용 전 `templates/character-asset-review.md`를 통과시킨다.
+- 이 SVG에서 파생 포즈를 만들 때 후드, 눈, 입, 몸 비율을 바꾸지 않는다.

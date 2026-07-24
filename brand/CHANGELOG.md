@@ -8,3 +8,7 @@
 - Brand Bible에 Instagram First Strategy와 제작 판단 체크리스트 추가
 - Character Guide에 인스타툰 컷별 캐릭터 사용 규칙 추가
 - World Building에 인스타툰 세계관, 장소, 감정, 시즌 구조 추가
+- Phase 1 Character Lock 시작
+- 1안 뽀짝 Volty를 인스타툰 기준 캐릭터 방향으로 문서화
+- `docs/character-lock.md`, `assets/README.md`, `templates/character-asset-review.md`, `prompts/character-lock.md` 추가
+- 첫 정면 SVG 초안 `svg/volty-base-front.svg` 추가

@@ -14,14 +14,22 @@ Volty 브랜드 개발은 인스타툰을 중심으로 시작한다. 앱, 웹사
 
 목표: Volty가 어떤 컷에서도 같은 캐릭터로 보이게 만든다.
 
+현재 상태:
+
+- 기준 방향: 1안 뽀짝 Volty
+- 기준 문서: `docs/character-lock.md`
+- 검수 템플릿: `templates/character-asset-review.md`
+- 프롬프트 기준: `prompts/character-lock.md`
+- 첫 SVG 초안: `svg/volty-base-front.svg`
+
 할 일:
 
-- 기준 캐릭터 1개 확정
+- 기준 캐릭터 1개 확정: 진행 중
 - 정면, 좌우 3/4, 전신 비율 확정
-- 표정 12개 확정
-- 기본 포즈 15개 확정
-- 금지 변형 목록 작성
-- `docs/character-guide.md` 업데이트
+- 표정 12개 확정: 초안 작성
+- 기본 포즈 15개 확정: 초안 작성
+- 금지 변형 목록 작성: 초안 작성
+- `docs/character-guide.md` 업데이트: 진행 중
 
 완료 기준:
 
