@@ -270,7 +270,9 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const VoltyLogo(height: 32),
+        centerTitle: false,
+        titleSpacing: 14,
+        title: const VoltyLogo(height: 34),
         actions: [
           IconButton(
             icon: const Icon(Icons.search),
