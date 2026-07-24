@@ -22,6 +22,7 @@
 
 기준 자산:
 
+- `brand/assets/reference/volty-canonical-bbotjjak-panel.png`: 1안 뽀짝 Volty 기준 패널 crop
 - `brand/assets/볼티_마스코트_3개_제안.png`: 1안 뽀짝 Volty를 기준형으로 사용
 - `brand/assets/볼티_마스코트_예시.png`: 인스타툰 표정, 포즈, 하루 구성 참고
 - `app/assets/brand/volty_mascot.png`: 현재 앱에서 쓰는 마스코트 기준 이미지
@@ -147,6 +148,10 @@ Phase 1에서 우선 고정할 포즈 15개:
 
 뒷모습에서도 노란 번개 후드와 검은 후드티가 보여야 한다.
 
+주의:
+
+방향 SVG는 아직 승인된 기준 자산이 없다. 새 방향 SVG는 손으로 임의 재구성하지 않고, 기준 시안 또는 승인된 원본을 트레이싱해서 만든다.
+
 ## Instagram Usage
 
 정보 컷:
@@ -179,3 +184,18 @@ Phase 1에서 우선 고정할 포즈 15개:
 - 작은 크기에서도 Volty로 읽히는가?
 
 하나라도 실패하면 수정 후 다시 검수한다.
+
+## SVG Production Rule
+
+SVG 제작은 다음 순서로만 진행한다.
+
+1. 기준 시안 crop을 먼저 둔다.
+2. 시안을 기준으로 선, 면, 비율을 트레이싱한다.
+3. `templates/character-asset-review.md`로 검수한다.
+4. 승인된 SVG만 `brand/svg/`의 기준 자산으로 등록한다.
+
+금지:
+
+- 시안을 보고 대충 비슷하게 새로 그리기
+- 비율을 단순화한다는 이유로 얼굴, 후드, 몸통 형태를 바꾸기
+- 기존 시안과 다른 귀여움 방향으로 재해석하기

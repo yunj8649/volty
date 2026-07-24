@@ -20,7 +20,8 @@ Volty 브랜드 개발은 인스타툰을 중심으로 시작한다. 앱, 웹사
 - 기준 문서: `docs/character-lock.md`
 - 검수 템플릿: `templates/character-asset-review.md`
 - 프롬프트 기준: `prompts/character-lock.md`
-- 첫 SVG 초안: `svg/volty-base-front.svg`
+- 기준 reference crop: `assets/reference/volty-canonical-bbotjjak-panel.png`
+- 승인된 기준 SVG: 없음
 
 할 일:
 
@@ -35,6 +36,7 @@ Volty 브랜드 개발은 인스타툰을 중심으로 시작한다. 앱, 웹사
 
 - 누구나 같은 기준으로 Volty를 다시 그릴 수 있다.
 - AI 생성 이미지가 나와도 무엇이 틀렸는지 판단할 수 있다.
+- SVG가 기준 시안과 비율/실루엣이 맞는다.
 
 ## Phase 2. Instagram Toon System
 

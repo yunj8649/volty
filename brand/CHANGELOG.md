@@ -11,4 +11,6 @@
 - Phase 1 Character Lock 시작
 - 1안 뽀짝 Volty를 인스타툰 기준 캐릭터 방향으로 문서화
 - `docs/character-lock.md`, `assets/README.md`, `templates/character-asset-review.md`, `prompts/character-lock.md` 추가
-- 첫 정면 SVG 초안 `svg/volty-base-front.svg` 추가
+- 첫 정면 SVG 초안 `svg/volty-base-front.svg`는 시안과 맞지 않는 손그림식 초안이라 폐기
+- 1안 기준 패널 crop `assets/reference/volty-canonical-bbotjjak-panel.png` 추가
+- SVG 제작 규칙을 시안 기반 트레이싱으로 수정
