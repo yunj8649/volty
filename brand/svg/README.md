@@ -46,6 +46,8 @@ svg/
 
 이전의 손그림식 SVG 초안은 시안과 달라 폐기했다. 다음 SVG는 `brand/assets/reference/volty-canonical-bbotjjak-panel.png` 또는 승인된 원본을 기준으로 트레이싱해서 만든다.
 
+현재 SVG 작업은 `tracing/volty-canonical-trace-board.svg`에서 시작한다. 이 파일은 최종 자산이 아니라 1안 외형 reference와 2안 의상 reference를 함께 놓은 작업 보드다.
+
 제작 전 확인할 것:
 
 - `docs/character-lock.md` 기준과 맞는지 검수한다.

@@ -214,7 +214,7 @@ Three-finger hands.
 
 Yellow lightning hood is mandatory.
 
-Black study hoodie is mandatory.
+Black study hoodie with the 2안 centered lightning emblem is mandatory.
 
 ---
 
@@ -234,7 +234,7 @@ Accent
 
 Never change the yellow lightning hood color without an official seasonal variant.
 
-Never change the black study hoodie without an official seasonal variant.
+Never change the black study hoodie or centered lightning emblem without an official seasonal variant.
 
 ---
 
@@ -356,7 +356,8 @@ Always include
 - Flat vector
 - Official Volty Design
 - Rounded mascot
-- Yellow hoodie
+- Yellow lightning hood
+- 2안-style black hoodie with centered lightning emblem
 - Black oval eyes
 - Transparent background
 - Cute Korean mascot
@@ -508,14 +509,15 @@ Volty의 말풍선은 짧아야 한다.
 
 # 19. Canonical Character Lock
 
-The canonical Instagram toon direction is **1안 뽀짝 Volty** from `brand/assets/볼티_마스코트_3개_제안.png`.
+The canonical Instagram toon direction is **1안 뽀짝 Volty shape + 2안 동글 Volty clothing** from `brand/assets/볼티_마스코트_3개_제안.png`.
 
 The detailed lock rules live in `docs/character-lock.md`.
 
 In short:
 
 - Yellow lightning hood
-- Black study hoodie
+- 2안-style black study hoodie
+- Centered yellow lightning emblem on the hoodie
 - Round white face
 - Tiny black oval eyes
 - Small simple mouth
@@ -523,4 +525,4 @@ In short:
 - Rounded hands and feet
 - Thick rounded outline
 
-2안 동글 Volty and 3안 미니 Volty are not the default character. They can be used only as future variant candidates after Brand Bible approval.
+2안 동글 Volty's face and body proportions are not the default character. Only its hoodie system is canonical. 3안 미니 Volty can be used only as a future variant candidate after Brand Bible approval.

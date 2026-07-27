@@ -17,10 +17,12 @@ Volty 브랜드 개발은 인스타툰을 중심으로 시작한다. 앱, 웹사
 현재 상태:
 
 - 기준 방향: 1안 뽀짝 Volty
+- 의상 기준: 2안 동글 Volty 후드티
 - 기준 문서: `docs/character-lock.md`
 - 검수 템플릿: `templates/character-asset-review.md`
 - 프롬프트 기준: `prompts/character-lock.md`
 - 기준 reference crop: `assets/reference/volty-canonical-bbotjjak-panel.png`
+- 의상 reference crop: `assets/reference/volty-clothing-dongle-panel.png`, `assets/reference/volty-clothing-dongle-main.png`
 - 승인된 기준 SVG: 없음
 
 할 일:

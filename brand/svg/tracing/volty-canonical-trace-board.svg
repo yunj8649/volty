@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="960" viewBox="0 0 1280 960" role="img" aria-labelledby="title desc">
+  <title id="title">Volty canonical trace board</title>
+  <desc id="desc">Tracing workspace for Volty: 1안 bbotjjak shape reference plus 2안 dongle hoodie reference.</desc>
+
+  <rect width="1280" height="960" fill="#F8FAFC" />
+
+  <g id="board-header">
+    <text x="48" y="58" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#333333">Volty SVG Trace Board</text>
+    <text x="48" y="92" font-family="Arial, sans-serif" font-size="16" fill="#666666">Shape: 1안 뽀짝 Volty / Clothing: 2안 동글 Volty hoodie</text>
+  </g>
+
+  <g id="shape-reference" transform="translate(48 128)">
+    <rect x="0" y="0" width="420" height="795" rx="16" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="2" />
+    <image href="../../assets/reference/volty-canonical-bbotjjak-panel.png" x="16" y="16" width="388" height="735" preserveAspectRatio="xMidYMid meet" />
+    <text x="16" y="775" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#333333">1안 외형 기준</text>
+  </g>
+
+  <g id="clothing-reference" transform="translate(512 128)">
+    <rect x="0" y="0" width="340" height="420" rx="16" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="2" />
+    <image href="../../assets/reference/volty-clothing-dongle-main.png" x="24" y="24" width="292" height="308" preserveAspectRatio="xMidYMid meet" />
+    <text x="24" y="370" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#333333">2안 의상 기준</text>
+    <text x="24" y="398" font-family="Arial, sans-serif" font-size="14" fill="#666666">black hoodie + centered yellow lightning</text>
+  </g>
+
+  <g id="trace-canvas" transform="translate(900 128)">
+    <rect x="0" y="0" width="330" height="420" rx="16" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="2" />
+    <text x="24" y="46" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#333333">Trace Target</text>
+    <text x="24" y="78" font-family="Arial, sans-serif" font-size="14" fill="#666666">Final vector goes here after tracing.</text>
+    <line x1="165" y1="104" x2="165" y2="360" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="8 8" />
+    <line x1="48" y1="232" x2="282" y2="232" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="8 8" />
+    <rect x="48" y="104" width="234" height="256" rx="12" fill="none" stroke="#FFD54F" stroke-width="2" stroke-dasharray="10 8" />
+  </g>
+
+  <g id="rules" transform="translate(512 592)">
+    <rect x="0" y="0" width="718" height="254" rx="16" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="2" />
+    <text x="24" y="42" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#333333">Lock Rules</text>
+    <text x="24" y="82" font-family="Arial, sans-serif" font-size="16" fill="#333333">1. 1안 얼굴/후드/비율을 따른다.</text>
+    <text x="24" y="116" font-family="Arial, sans-serif" font-size="16" fill="#333333">2. 2안 검은 후드티와 중앙 노란 번개 심볼을 따른다.</text>
+    <text x="24" y="150" font-family="Arial, sans-serif" font-size="16" fill="#333333">3. 후드티에 volty 글자 로고를 넣지 않는다.</text>
+    <text x="24" y="184" font-family="Arial, sans-serif" font-size="16" fill="#333333">4. 실사, 3D, 그라데이션, 과한 그림자 금지.</text>
+    <text x="24" y="218" font-family="Arial, sans-serif" font-size="16" fill="#333333">5. 승인 전까지 이 보드는 작업용 reference다.</text>
+  </g>
+</svg>

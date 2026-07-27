@@ -5,7 +5,7 @@ AI 이미지 작업은 기존 Volty 디자인을 확장하는 용도로만 사�
 ## Base Prompt
 
 ```text
-Create a flat vector Instagram toon panel featuring Volty, the official mascot of a Korean electrician exam study brand. Volty is a small rounded study buddy with a yellow hoodie, black oval eyes, simple mouth, rounded body and arms, cute friendly expression, thick clean outline, pastel minimal style, no gradient, no realistic rendering. The scene should feel like studying together, not teaching from above.
+Create a flat vector Instagram toon panel featuring Volty, the official mascot of a Korean electrician exam study brand. Volty is a small rounded study buddy with a yellow lightning-shaped hood, 1안-style round white face, 2안-style black hoodie with a centered yellow lightning emblem and small white hoodie-string details, black oval eyes, simple mouth, rounded body and arms, cute friendly expression, thick clean outline, pastel minimal style, no gradient, no realistic rendering. The scene should feel like studying together, not teaching from above.
 ```
 
 ## Character Lock
@@ -13,13 +13,13 @@ Create a flat vector Instagram toon panel featuring Volty, the official mascot o
 항상 함께 넣는다.
 
 ```text
-Keep Volty's exact proportions, yellow hoodie, black oval eyes, simple mouth, rounded body, rounded arms, flat design, thick outline, cute Korean mascot style. Do not redesign the character.
+Keep Volty's exact proportions, yellow lightning hood, 1안-style round face, 2안-style black hoodie with centered yellow lightning emblem, black oval eyes, simple mouth, rounded body, rounded arms, flat design, thick outline, cute Korean mascot style. Do not add wordmark text on the hoodie. Do not redesign the character.
 ```
 
 ## Negative Prompt
 
 ```text
-realistic, 3D, cinematic, gradient, shadow-heavy, anime eyes, human-like body, different hoodie, complex background, textbook page, copied exam question, scary mood, aggressive teacher pose
+realistic, 3D, cinematic, gradient, shadow-heavy, anime eyes, human-like body, different hoodie, wordmark text on hoodie, volty text on hoodie, complex background, textbook page, copied exam question, scary mood, aggressive teacher pose
 ```
 
 ## 4-Cut Panel Prompt
@@ -32,6 +32,8 @@ Create a 4-panel Instagram toon layout for Volty. The first panel shows empathy 
 
 - Volty가 기존 캐릭터와 같은가?
 - 후드, 눈, 입, 몸, 팔 비율이 유지됐는가?
+- 2안 기준 검은 후드티와 중앙 노란 번개 심볼이 유지됐는가?
+- 후드티에 `volty` 글자 로고가 들어가지 않았는가?
 - 선생님보다 친구처럼 보이는가?
 - 배경이 콘텐츠를 방해하지 않는가?
 - 텍스트를 나중에 얹을 여백이 있는가?
