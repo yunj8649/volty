@@ -44,3 +44,12 @@
 - 정면 베이스 `svg/drafts/volty-base-front.svg` 재작성(매끈한 외곽선, 닫힌 패스, 그림자 없음)
 - 표정 12·포즈 15 SVG 전부 클린 벡터로 재생성(베이스 고정 + 눈·입·볼·소품 오버레이)
 - 클라이언트 프루프용 컨택트시트 `assets/reference/volty-contact-sheet.png` 추가
+
+## 2026-07-27 (충실 벡터 베이스 확정)
+
+- 손으로 재작도한 baseline이 원본과 다른 off-model이라 폐기
+- `vtracer`(venv)로 원본 레이어 합성본을 곡선 벡터화 → 원본 실루엣·불꽃 후드·교차한 손·표정·비율에 충실한 정면 베이스로 교체
+- `svg/drafts/volty-base-front.svg` 확정. 반투명 회색 그림자 제거 + 최대 연결요소만 유지(누끼 잔여 제거), viewBox 추가
+- 검증: cairosvg 래스터라이즈로 원본과 대조. `assets/reference/volty-base-front-proof.png` 첨부
+- off-model 표정12·포즈15 SVG, 구 컨택트시트 삭제(다음 라운드에서 이 충실 베이스 기반으로 표정·포즈 재작업)
+- 충실도 우선: 가장자리 소프트·파일 큼(약 800KB). 이 vtracer 빌드는 기본 파라미터만 안정적이라 소스 정리로만 개선
