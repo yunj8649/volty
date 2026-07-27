@@ -29,20 +29,20 @@
 - Flat / No-Gradient 규칙 준수, 하단 그림자 잔여 제거. 시안을 새로 그리지 않고 레이어 트레이싱으로 제작
 - 승인 전 초안이라 `svg/drafts/`에 위치. `templates/character-asset-review.md` 검수 통과 후 `svg/poses/`(기본 정면)로 승격 예정
 
-## 2026-07-27 (표정·포즈 SVG)
+## 2026-07-27 (표정·포즈 SVG - 폐기된 초안)
 
-- 정면 베이스(레이어 트레이싱)를 고정하고, 그 위에 눈·입·볼·소품만 얹는 방식으로 표정 12종·포즈 15종 SVG 생성
+- 정면 베이스(레이어 트레이싱)를 고정하고, 그 위에 눈·입·볼·소품만 얹는 방식으로 표정 12종·포즈 15종 SVG 초안 생성
 - 표정 `svg/expressions/volty-01-happy … 12-touched.svg`: 기본/활짝/같이틀림/당황/고민/이해/방전/졸림/응원/작은승리/긴장/감동
 - 포즈 `svg/poses/volty-01-front … 15-victory.svg`: 정면/책/노트/계산기/연필/짚기/두손번쩍/충전/방전/커피/노트북/시험지/이불/하트/승리
 - 캐릭터 락 준수: 노란 번개 후드·검정 후드티·중앙 번개 엠블럼·비율 고정, `volty` 글자 없음, Flat/No-Gradient
 - 표정은 눈·입·볼만 교체(얼굴 구조 불변), 포즈는 소품·이펙트만 추가(몸 비율 불변)
-- 승인 전 초안 성격. `templates/character-asset-review.md` 체크리스트 통과 후 기준 자산으로 확정 권장
+- 후속 검수에서 reference sheet와 다른 off-model 초안으로 판단되어 현재 기준 자산에서 제외
 
-## 2026-07-27 (클린 벡터 재작업)
+## 2026-07-27 (클린 벡터 재작업 - 폐기된 초안)
 
 - 래스터 트레이싱본이 가장자리 거칠고 빈 곳·누끼 잔여가 있어 폐기하고, 베지어 곡선 기반 **클린 벡터**로 캐릭터를 새로 그림
 - 정면 베이스 `svg/drafts/volty-base-front.svg` 재작성(매끈한 외곽선, 닫힌 패스, 그림자 없음)
-- 표정 12·포즈 15 SVG 전부 클린 벡터로 재생성(베이스 고정 + 눈·입·볼·소품 오버레이)
+- 표정 12·포즈 15 SVG 전부 클린 벡터로 재생성했으나, 후속 검수에서 reference sheet와 달라 폐기
 - 클라이언트 프루프용 컨택트시트 `assets/reference/volty-contact-sheet.png` 추가
 
 ## 2026-07-27 (충실 벡터 베이스 확정)
@@ -75,8 +75,11 @@
 ## 2026-07-27 (클린 베이스 기반 표정·포즈 개별 SVG)
 
 - `assets/볼티_표정+포즈.png` reference sheet 추가
-- `svg/drafts/volty-base-front.svg`에서 기존 눈·볼·입 path만 제거한 베이스를 공통으로 사용해 표정 12종 개별 SVG 생성
-- `svg/expressions/01-joy.svg` - `svg/expressions/12-cheering.svg` 추가
-- 같은 베이스 위에 소품, 손, 동작선을 얹어 기본 포즈 15종 개별 SVG 생성
-- `svg/poses/01-standing.svg` - `svg/poses/15-lightning-power.svg` 추가
+- 기존 베이스 위 overlay 방식 표정·포즈 SVG는 reference sheet와 달라 폐기하고 덮어씀
+- `assets/볼티_표정+포즈.png`에서 실제 표정 12종과 기본 포즈 15종을 crop해 투명 배경 소스로 분리
+- `assets/crops/expressions/01-joy.png` - `12-cheering.png` 추가
+- `assets/crops/poses/01-standing.png` - `15-lightning-power.png` 추가
+- `svg/expressions/01-joy.svg` - `12-cheering.svg`, `svg/poses/01-standing.svg` - `15-lightning-power.svg`를 source-preserving raster-backed SVG로 교체
+- 검수용 contact sheet `assets/reference/volty-expression-pose-crop-contact-sheet.png` 추가
 - 모든 신규 SVG는 독립 실행 가능한 파일이며 `xmllint` 검증과 Quick Look 렌더 검수를 통과
+- path-only 벡터화는 다음 단계로 분리

@@ -1,6 +1,8 @@
 # Volty Expressions
 
-`brand/svg/drafts/volty-base-front.svg`를 기준으로 만든 표정 12종 개별 SVG다.
+`brand/assets/볼티_표정+포즈.png` reference sheet에서 실제 표정 12종을 분리한 개별 SVG다.
+
+현재 세트는 시안과의 시각 일치를 우선한 raster-backed SVG다. 각 SVG는 투명 배경 PNG crop을 내부에 포함하므로 독립 실행 가능하다. path-only 벡터화는 다음 제작 단계에서 진행한다.
 
 ## Files
 
@@ -19,7 +21,8 @@
 
 ## Rule
 
-- 후드, 몸, 손발, 옷 비율은 베이스 SVG를 그대로 유지한다.
-- 눈, 입, 볼, 작은 감정 이펙트만 교체한다.
+- 캐릭터를 새로 그리거나 임의로 재해석하지 않는다.
+- 후드, 얼굴, 눈, 입, 볼, 옷 비율은 reference sheet와 맞춘다.
 - 모든 파일은 독립 실행 가능한 SVG다.
+- `assets/reference/volty-expression-pose-crop-contact-sheet.png`로 전체 균형을 확인한다.
 - 승인 전 1차 제작본이므로 `templates/character-asset-review.md`로 검수한다.

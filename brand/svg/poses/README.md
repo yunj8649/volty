@@ -1,6 +1,8 @@
 # Volty Poses
 
-`brand/svg/drafts/volty-base-front.svg`를 기준으로 만든 기본 포즈 15종 개별 SVG다.
+`brand/assets/볼티_표정+포즈.png` reference sheet에서 실제 기본 포즈 15종을 분리한 개별 SVG다.
+
+현재 세트는 시안과의 시각 일치를 우선한 raster-backed SVG다. 각 SVG는 투명 배경 PNG crop을 내부에 포함하므로 독립 실행 가능하다. path-only 벡터화는 다음 제작 단계에서 진행한다.
 
 ## Files
 
@@ -22,7 +24,8 @@
 
 ## Rule
 
-- 베이스 캐릭터 실루엣을 유지하고 소품, 손, 동작선만 추가한다.
-- 새 포즈를 만들 때 후드 모양과 몸 비율을 새로 그리지 않는다.
+- 캐릭터를 새로 그리거나 임의로 재해석하지 않는다.
+- 후드, 몸, 손발, 옷 비율은 reference sheet와 맞춘다.
+- 소품, 손, 동작선은 reference sheet의 위치와 크기를 우선한다.
 - 모든 파일은 독립 실행 가능한 SVG다.
 - 승인 전 1차 제작본이므로 실제 인스타툰 컷에 넣어 작은 크기 검수를 한다.

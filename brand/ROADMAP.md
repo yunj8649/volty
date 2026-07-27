@@ -25,16 +25,16 @@ Volty 브랜드 개발은 인스타툰을 중심으로 시작한다. 앱, 웹사
 - 의상 reference crop: `assets/reference/volty-clothing-dongle-panel.png`, `assets/reference/volty-clothing-dongle-main.png`
 - 정면 레이어 작업판: `svg/layers/volty-base-front-raster-layered.svg`
 - 정면 작업 기준 SVG: `svg/drafts/volty-base-front.svg`
-- 표정 12종 SVG: `svg/expressions/`
-- 기본 포즈 15종 SVG: `svg/poses/`
+- 표정 12종 SVG: `svg/expressions/` (reference crop 기반 1차 완료)
+- 기본 포즈 15종 SVG: `svg/poses/` (reference crop 기반 1차 완료)
 
 할 일:
 
 - 기준 캐릭터 1개 확정: 스탠딩 베이스 완료, 검수 필요
 - 정면 레이어 분해: 완료, 검수 필요
 - 정면, 좌우 3/4, 전신 비율 확정
-- 표정 12개 확정: 1차 SVG 완료, 검수 필요
-- 기본 포즈 15개 확정: 1차 SVG 완료, 검수 필요
+- 표정 12개 확정: reference crop SVG 완료, path-only 벡터화 필요
+- 기본 포즈 15개 확정: reference crop SVG 완료, path-only 벡터화 필요
 - 금지 변형 목록 작성: 초안 작성
 - `docs/character-guide.md` 업데이트: 진행 중
 

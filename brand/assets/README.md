@@ -77,6 +77,30 @@
 - `svg/expressions/`와 `svg/poses/` 개별 SVG 제작 기준
 - 최종 SVG 검수 시 누락된 표정, 소품, 동작 확인용
 
+### `crops/expressions/`
+
+용도:
+
+- `볼티_표정+포즈.png`에서 표정 12종만 분리한 투명 PNG crop
+- `svg/expressions/` raster-backed SVG의 직접 소스
+- path-only 벡터화 전 시안 고정용 기준
+
+### `crops/poses/`
+
+용도:
+
+- `볼티_표정+포즈.png`에서 기본 포즈 15종만 분리한 투명 PNG crop
+- `svg/poses/` raster-backed SVG의 직접 소스
+- path-only 벡터화 전 시안 고정용 기준
+
+### `reference/volty-expression-pose-crop-contact-sheet.png`
+
+용도:
+
+- 표정 12종과 포즈 15종 crop이 시트 기준과 맞는지 한 장에서 검수
+- 옆 컷 잔상, 하단 라벨, 구분선 유입 여부 확인
+- 개별 SVG 업데이트 후 전체 균형 확인
+
 ## Reference Assets
 
 ### `볼티_디자인.png`

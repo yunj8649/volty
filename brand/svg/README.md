@@ -45,12 +45,20 @@ svg/
 
 현재 작업 기준 SVG는 `drafts/volty-base-front.svg`다.
 
-이 파일은 사용자 제공 클린 스탠딩 Volty SVG에서 흰 배경을 제거한 투명 베이스다. 표정과 포즈는 이 베이스의 후드, 몸, 손발, 옷 비율을 유지한 상태에서 overlay 방식으로 확장한다.
+이 파일은 사용자 제공 클린 스탠딩 Volty SVG에서 흰 배경을 제거한 투명 베이스다.
+
+표정과 포즈 1차 세트는 `assets/볼티_표정+포즈.png` reference sheet에서 실제 캐릭터를 분리한 **레퍼런스 보존용 SVG**다. 현재 파일은 원본 시안과의 시각 일치를 우선해 PNG crop을 SVG 내부에 포함한 raster-backed SVG이며, path-only 벡터화는 다음 제작 단계로 분리한다.
 
 현재 개별 SVG:
 
 - `expressions/01-joy.svg` - `expressions/12-cheering.svg`
 - `poses/01-standing.svg` - `poses/15-lightning-power.svg`
+
+같이 생성된 검수 자산:
+
+- `assets/crops/expressions/`: 표정 12종 투명 PNG crop
+- `assets/crops/poses/`: 포즈 15종 투명 PNG crop
+- `assets/reference/volty-expression-pose-crop-contact-sheet.png`: 27종 crop 검수용 contact sheet
 
 참고 작업판:
 
@@ -62,3 +70,4 @@ svg/
 - `docs/character-lock.md` 기준과 맞는지 검수한다.
 - 실제 인스타툰 적용 전 `templates/character-asset-review.md`를 통과시킨다.
 - 후드, 눈, 입, 몸 비율을 바꾸지 않는다.
+- path-only 벡터로 재제작할 때도 reference sheet crop을 직접 대조한다.
