@@ -53,3 +53,12 @@
 - 검증: cairosvg 래스터라이즈로 원본과 대조. `assets/reference/volty-base-front-proof.png` 첨부
 - off-model 표정12·포즈15 SVG, 구 컨택트시트 삭제(다음 라운드에서 이 충실 베이스 기반으로 표정·포즈 재작업)
 - 충실도 우선: 가장자리 소프트·파일 큼(약 800KB). 이 vtracer 빌드는 기본 파라미터만 안정적이라 소스 정리로만 개선
+
+## 2026-07-27 (베이스 소스 교체: 2안 동글 클린 라인)
+
+- 1안 합성본은 원본 라인이 물러 vtracer 결과가 소프트·대용량(누끼가 덜 된 느낌)이라 베이스 소스에서 제외
+- 가장 깔끔하고 기획에 맞는 `assets/reference/volty-clothing-dongle-main.png`(2안 동글, 굵고 깨끗한 라인)로 베이스 재제작
+- 처리: 흰 배경+헤일로 누끼 → 반짝이 제거(최대 연결요소) → 브랜드 팔레트 스냅 → 경계 정돈 → vtracer
+- 결과 `svg/drafts/volty-base-front.svg`: 크리스프 외곽선·플랫 컬러, 약 42KB(기존 800KB 대비 경량), viewBox 포함
+- 프루프 `assets/reference/volty-base-front-proof.png` 갱신
+- 참고: 캐릭터 락 문서는 '1안 외형+2안 의상'이 기준이나, 라인 품질 우선으로 2안 동글을 베이스로 채택(문서 갱신 필요 시 반영)
