@@ -21,3 +21,19 @@
 - 정면 기준을 새로 그리지 않고 픽셀 보존 방식으로 분해한 레이어 자산 `assets/layers/volty-base-front/` 추가
 - 1안 외형 레이어 위에 2안 의상 요소를 분리한 작업판 `svg/layers/volty-base-front-raster-layered.svg` 추가
 - 앱용 PNG 대신 1안 시안 패널의 큰 정면 crop `assets/reference/volty-shape-bbotjjak-main.png`를 레이어 기준으로 추가
+
+## 2026-07-27
+
+- `assets/layers/volty-base-front/`의 색상별 레이어를 합성해 최종 정면 시안을 만들고, 이를 브랜드 팔레트로 양자화한 뒤 색상별 컨투어 트레이싱으로 벡터화한 정면 SVG 초안 `svg/drafts/volty-base-front.svg` 추가
+- 노란 번개 후드·둥근 흰 얼굴·검정 타원 눈·분홍 볼·작은 입·둥근 손발·2안 기준 검정 후드티 포함. `volty` 글자 없이 후드티 중앙에 앰버(#FFB300) 번개 엠블럼 배치
+- Flat / No-Gradient 규칙 준수, 하단 그림자 잔여 제거. 시안을 새로 그리지 않고 레이어 트레이싱으로 제작
+- 승인 전 초안이라 `svg/drafts/`에 위치. `templates/character-asset-review.md` 검수 통과 후 `svg/poses/`(기본 정면)로 승격 예정
+
+## 2026-07-27 (표정·포즈 SVG)
+
+- 정면 베이스(레이어 트레이싱)를 고정하고, 그 위에 눈·입·볼·소품만 얹는 방식으로 표정 12종·포즈 15종 SVG 생성
+- 표정 `svg/expressions/volty-01-happy … 12-touched.svg`: 기본/활짝/같이틀림/당황/고민/이해/방전/졸림/응원/작은승리/긴장/감동
+- 포즈 `svg/poses/volty-01-front … 15-victory.svg`: 정면/책/노트/계산기/연필/짚기/두손번쩍/충전/방전/커피/노트북/시험지/이불/하트/승리
+- 캐릭터 락 준수: 노란 번개 후드·검정 후드티·중앙 번개 엠블럼·비율 고정, `volty` 글자 없음, Flat/No-Gradient
+- 표정은 눈·입·볼만 교체(얼굴 구조 불변), 포즈는 소품·이펙트만 추가(몸 비율 불변)
+- 승인 전 초안 성격. `templates/character-asset-review.md` 체크리스트 통과 후 기준 자산으로 확정 권장

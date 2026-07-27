@@ -25,3 +25,4 @@ data/reference/
 
 # Node
 node_modules/
+.idea/
