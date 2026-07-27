@@ -62,3 +62,12 @@
 - 결과 `svg/drafts/volty-base-front.svg`: 크리스프 외곽선·플랫 컬러, 약 42KB(기존 800KB 대비 경량), viewBox 포함
 - 프루프 `assets/reference/volty-base-front-proof.png` 갱신
 - 참고: 캐릭터 락 문서는 '1안 외형+2안 의상'이 기준이나, 라인 품질 우선으로 2안 동글을 베이스로 채택(문서 갱신 필요 시 반영)
+
+## 2026-07-27 (클린 스탠딩 베이스 확정)
+
+- 사용자 제공 클린 벡터 `볼티.svg`(스탠딩 전신, 크리스프 외곽선·플랫 컬러)를 정면 베이스로 채택
+- 노란 불꽃 후드·둥근 흰 얼굴·검정 타원 눈·벌린 입(빨강 혀)·분홍 볼·검정 후드티+중앙 앰버 번개 엠블럼·흰 손발 — 캐릭터 락 준수, Flat/No-Gradient
+- 원본에 박혀 있던 풀캔버스 흰 배경 사각형(`#FDFDFD`)을 제거해 투명 처리(로고 투명 규칙 준수). 나머지 15개 캐릭터 path는 픽셀 보존
+- `svg/drafts/volty-base-front.svg` = 투명 클린본(26.5KB), `svg/drafts/volty-base-front-source.svg` = 흰 배경 포함 원본 아카이브
+- 프루프 `assets/reference/volty-base-front-proof.png` 갱신(회색 배경 위 렌더로 투명·라인 검증)
+- 기존 2안 동글 vtrace 베이스("선 딴 느낌 아님" 반려)를 대체
