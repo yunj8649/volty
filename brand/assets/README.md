@@ -21,6 +21,14 @@
 - 얼굴, 후드 실루엣, 비율 검수의 직접 기준
 - 임의 재해석 없이 원본 비율을 확인하기 위한 reference
 
+### `reference/volty-shape-bbotjjak-clean.png`
+
+용도:
+
+- 앱에서 사용 중인 단독 Volty 마스코트 reference
+- 정면 기본형 SVG의 외형 underlay
+- 얼굴, 후드, 손, 발 위치를 확인하기 위한 깨끗한 투명 PNG
+
 ### `reference/volty-clothing-dongle-panel.png`
 
 용도:
