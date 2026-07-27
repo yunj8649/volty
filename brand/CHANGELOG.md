@@ -17,4 +17,4 @@
 - 의상 기준을 2안 동글 Volty 후드티로 정정
 - 2안 의상 reference crop `assets/reference/volty-clothing-dongle-panel.png`, `assets/reference/volty-clothing-dongle-main.png` 추가
 - SVG 트레이싱 작업 보드 `svg/tracing/volty-canonical-trace-board.svg` 추가
-- 정면 기본형 레이어드 SVG 초안 `svg/drafts/volty-base-front-layered-draft.svg` 추가
+- 시안과 다르게 보이는 정면 레이어드 SVG 초안은 폐기
