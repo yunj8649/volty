@@ -41,17 +41,21 @@ svg/
 - 손과 팔이 과하게 사람처럼 보이지 않는가?
 - 기존 SVG와 조합 가능한가?
 
-## Current Draft
+## Current Working Assets
 
-현재 승인된 기준 SVG는 없다.
+현재 작업 기준 SVG는 `drafts/volty-base-front.svg`다.
 
-이전의 손그림식 SVG 초안은 시안과 달라 폐기했다. 다음 SVG는 `brand/assets/reference/volty-canonical-bbotjjak-panel.png` 또는 승인된 원본을 기준으로 트레이싱해서 만든다.
+이 파일은 사용자 제공 클린 스탠딩 Volty SVG에서 흰 배경을 제거한 투명 베이스다. 표정과 포즈는 이 베이스의 후드, 몸, 손발, 옷 비율을 유지한 상태에서 overlay 방식으로 확장한다.
 
-현재 SVG 작업은 `tracing/volty-canonical-trace-board.svg`에서 시작한다. 이 파일은 최종 자산이 아니라 1안 외형 reference와 2안 의상 reference를 함께 놓은 작업 보드다.
+현재 개별 SVG:
 
-현재 승인된 순수 path 기준 SVG는 없다. 시안과 다르게 보이는 수작업 path SVG는 기준 자산은 물론 draft로도 남기지 않는다.
+- `expressions/01-joy.svg` - `expressions/12-cheering.svg`
+- `poses/01-standing.svg` - `poses/15-lightning-power.svg`
 
-현재 레이어 작업판은 `layers/volty-base-front-raster-layered.svg`다. 이 파일은 원본 픽셀 레이어를 보존하면서 1안 외형과 2안 의상 요소를 분리 검수하기 위한 중간 산출물이며, 최종 승인 SVG가 아니다.
+참고 작업판:
+
+- `tracing/volty-canonical-trace-board.svg`: 1안 외형 reference와 2안 의상 reference를 함께 놓은 작업 보드
+- `layers/volty-base-front-raster-layered.svg`: 원본 픽셀 레이어를 보존한 중간 작업판
 
 제작 전 확인할 것:
 

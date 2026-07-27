@@ -69,6 +69,14 @@
 - 말투와 컷 구성 참고
 - 최종 SVG 제작 시 직접 복사하지 않고 재해석 기준으로 사용
 
+### `볼티_표정+포즈.png`
+
+용도:
+
+- 표정 12종과 기본 포즈 15종 reference sheet
+- `svg/expressions/`와 `svg/poses/` 개별 SVG 제작 기준
+- 최종 SVG 검수 시 누락된 표정, 소품, 동작 확인용
+
 ## Reference Assets
 
 ### `볼티_디자인.png`

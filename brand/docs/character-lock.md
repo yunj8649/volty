@@ -35,6 +35,8 @@
 - `brand/assets/reference/volty-clothing-dongle-main.png`: 2안 동글 Volty 의상 디테일 crop
 - `brand/assets/볼티_마스코트_3개_제안.png`: 1안 외형과 2안 의상을 함께 확인하는 원본
 - `brand/assets/볼티_마스코트_예시.png`: 인스타툰 표정, 포즈, 하루 구성 참고
+- `brand/assets/볼티_표정+포즈.png`: 표정 12종과 기본 포즈 15종 reference sheet
+- `brand/svg/drafts/volty-base-front.svg`: 현재 표정·포즈 SVG 제작 기준이 되는 클린 스탠딩 베이스
 - `app/assets/brand/volty_mascot.png`: 현재 앱에서 쓰는 마스코트 기준 이미지
 
 참고 자산:

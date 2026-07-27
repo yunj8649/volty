@@ -71,3 +71,12 @@
 - `svg/drafts/volty-base-front.svg` = 투명 클린본(26.5KB), `svg/drafts/volty-base-front-source.svg` = 흰 배경 포함 원본 아카이브
 - 프루프 `assets/reference/volty-base-front-proof.png` 갱신(회색 배경 위 렌더로 투명·라인 검증)
 - 기존 2안 동글 vtrace 베이스("선 딴 느낌 아님" 반려)를 대체
+
+## 2026-07-27 (클린 베이스 기반 표정·포즈 개별 SVG)
+
+- `assets/볼티_표정+포즈.png` reference sheet 추가
+- `svg/drafts/volty-base-front.svg`에서 기존 눈·볼·입 path만 제거한 베이스를 공통으로 사용해 표정 12종 개별 SVG 생성
+- `svg/expressions/01-joy.svg` - `svg/expressions/12-cheering.svg` 추가
+- 같은 베이스 위에 소품, 손, 동작선을 얹어 기본 포즈 15종 개별 SVG 생성
+- `svg/poses/01-standing.svg` - `svg/poses/15-lightning-power.svg` 추가
+- 모든 신규 SVG는 독립 실행 가능한 파일이며 `xmllint` 검증과 Quick Look 렌더 검수를 통과
