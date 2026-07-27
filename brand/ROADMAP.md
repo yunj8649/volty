@@ -23,11 +23,13 @@ Volty 브랜드 개발은 인스타툰을 중심으로 시작한다. 앱, 웹사
 - 프롬프트 기준: `prompts/character-lock.md`
 - 기준 reference crop: `assets/reference/volty-canonical-bbotjjak-panel.png`
 - 의상 reference crop: `assets/reference/volty-clothing-dongle-panel.png`, `assets/reference/volty-clothing-dongle-main.png`
+- 정면 레이어 작업판: `svg/layers/volty-base-front-raster-layered.svg`
 - 승인된 기준 SVG: 없음
 
 할 일:
 
 - 기준 캐릭터 1개 확정: 진행 중
+- 정면 레이어 분해: 완료, 검수 필요
 - 정면, 좌우 3/4, 전신 비율 확정
 - 표정 12개 확정: 초안 작성
 - 기본 포즈 15개 확정: 초안 작성

@@ -18,3 +18,6 @@
 - 2안 의상 reference crop `assets/reference/volty-clothing-dongle-panel.png`, `assets/reference/volty-clothing-dongle-main.png` 추가
 - SVG 트레이싱 작업 보드 `svg/tracing/volty-canonical-trace-board.svg` 추가
 - 시안과 다르게 보이는 정면 레이어드 SVG 초안은 폐기
+- 정면 기준을 새로 그리지 않고 픽셀 보존 방식으로 분해한 레이어 자산 `assets/layers/volty-base-front/` 추가
+- 1안 외형 레이어 위에 2안 의상 요소를 분리한 작업판 `svg/layers/volty-base-front-raster-layered.svg` 추가
+- 앱용 PNG 대신 1안 시안 패널의 큰 정면 crop `assets/reference/volty-shape-bbotjjak-main.png`를 레이어 기준으로 추가

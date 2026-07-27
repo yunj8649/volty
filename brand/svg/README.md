@@ -30,6 +30,7 @@ svg/
   props/
   backgrounds/
   icons/
+  layers/
 ```
 
 ## 제작 체크리스트
@@ -48,7 +49,9 @@ svg/
 
 현재 SVG 작업은 `tracing/volty-canonical-trace-board.svg`에서 시작한다. 이 파일은 최종 자산이 아니라 1안 외형 reference와 2안 의상 reference를 함께 놓은 작업 보드다.
 
-현재 캐릭터 형태를 그린 draft SVG도 없다. 시안과 다르게 보이는 수작업 path SVG는 기준 자산은 물론 draft로도 남기지 않는다.
+현재 승인된 순수 path 기준 SVG는 없다. 시안과 다르게 보이는 수작업 path SVG는 기준 자산은 물론 draft로도 남기지 않는다.
+
+현재 레이어 작업판은 `layers/volty-base-front-raster-layered.svg`다. 이 파일은 원본 픽셀 레이어를 보존하면서 1안 외형과 2안 의상 요소를 분리 검수하기 위한 중간 산출물이며, 최종 승인 SVG가 아니다.
 
 제작 전 확인할 것:
 

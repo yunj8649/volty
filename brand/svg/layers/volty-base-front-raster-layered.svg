@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="235" height="284" viewBox="0 0 235 284" role="img" aria-labelledby="title desc">
+  <title id="title">Volty base front raster layered workspace</title>
+  <desc id="desc">Source-preserving layered SVG workspace. Shape comes from 1an bbotjjak Volty; the visible clothing overlay follows the 2an black hoodie with centered yellow lightning.</desc>
+
+  <g id="reference-source-1an-shape" display="none">
+    <image href="../../assets/layers/volty-base-front/00-reference-source.png" x="0" y="0" width="235" height="284" />
+  </g>
+
+  <g id="source-antialias-shadow">
+    <image href="../../assets/layers/volty-base-front/06-source-antialias-shadow.png" x="0" y="0" width="235" height="284" />
+  </g>
+
+  <g id="hood-yellow">
+    <image href="../../assets/layers/volty-base-front/01-hood-yellow.png" x="0" y="0" width="235" height="284" />
+  </g>
+
+  <g id="lineart-and-hoodie-source">
+    <image href="../../assets/layers/volty-base-front/04-lineart-and-hoodie-source.png" x="0" y="0" width="235" height="284" />
+  </g>
+
+  <g id="source-wordmark-hidden" display="none">
+    <image href="../../assets/layers/volty-base-front/05-source-wordmark-to-hide.png" x="0" y="0" width="235" height="284" />
+  </g>
+
+  <g id="hoodie-clean-wordmark-patch">
+    <image href="../../assets/layers/volty-base-front/07-hoodie-clean-wordmark-patch.png" x="0" y="0" width="235" height="284" />
+  </g>
+
+  <g id="hoodie-front-panel-2an">
+    <path d="M54 196 C65 187 86 184 106 185 C131 184 153 189 164 201 C162 221 157 238 145 247 C126 257 82 256 62 245 C53 235 49 212 54 196 Z" fill="#333333" />
+  </g>
+
+  <g id="face-hands-feet-white">
+    <image href="../../assets/layers/volty-base-front/02-face-hands-feet-white.png" x="0" y="0" width="235" height="284" />
+  </g>
+
+  <g id="cheeks-mouth-pink">
+    <image href="../../assets/layers/volty-base-front/03-cheeks-mouth-pink.png" x="0" y="0" width="235" height="284" />
+  </g>
+
+  <g id="clothing-2an-vector-overlay">
+    <g id="hoodie-string-left">
+      <path d="M88 191 C83 195 84 201 89 204" fill="none" stroke="#333333" stroke-width="7" stroke-linecap="round" />
+      <path d="M88 191 C83 195 84 201 89 204" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+    </g>
+    <g id="hoodie-string-right">
+      <path d="M128 191 C133 195 132 201 127 204" fill="none" stroke="#333333" stroke-width="7" stroke-linecap="round" />
+      <path d="M128 191 C133 195 132 201 127 204" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+    </g>
+    <path id="hoodie-lightning-symbol" d="M110 205 L124 205 L117 221 L128 221 L106 250 L112 228 L100 228 Z" fill="#FFD54F" stroke="#333333" stroke-width="4" stroke-linejoin="round" />
+  </g>
+
+  <g id="reference-clothing-2an-hidden" display="none">
+    <image href="../../assets/layers/volty-base-front/08-clothing-2an-reference.png" x="-18" y="-1" width="270" height="285" />
+  </g>
+</svg>

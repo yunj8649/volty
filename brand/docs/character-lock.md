@@ -30,6 +30,7 @@
 기준 자산:
 
 - `brand/assets/reference/volty-canonical-bbotjjak-panel.png`: 1안 뽀짝 Volty 기준 패널 crop
+- `brand/assets/reference/volty-shape-bbotjjak-main.png`: 1안 패널의 큰 정면 Volty를 잘라낸 레이어 작업 기준 crop
 - `brand/assets/reference/volty-clothing-dongle-panel.png`: 2안 동글 Volty 의상 기준 패널 crop
 - `brand/assets/reference/volty-clothing-dongle-main.png`: 2안 동글 Volty 의상 디테일 crop
 - `brand/assets/볼티_마스코트_3개_제안.png`: 1안 외형과 2안 의상을 함께 확인하는 원본

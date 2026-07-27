@@ -29,6 +29,14 @@
 - 정면 기본형 SVG의 외형 underlay
 - 얼굴, 후드, 손, 발 위치를 확인하기 위한 깨끗한 투명 PNG
 
+### `reference/volty-shape-bbotjjak-main.png`
+
+용도:
+
+- `volty-canonical-bbotjjak-panel.png`의 큰 정면 Volty를 잘라낸 투명 PNG
+- `layers/volty-base-front/`의 현재 직접 기준
+- 앱용 PNG보다 시안 원본에 가까운 정면 비율 확인용
+
 ### `reference/volty-clothing-dongle-panel.png`
 
 용도:
@@ -42,6 +50,16 @@
 
 - 2안 의상 디테일 crop
 - SVG 트레이싱 시 옷 구조를 확인하기 위한 직접 기준
+
+## Layer Assets
+
+### `layers/volty-base-front/`
+
+용도:
+
+- 정면 Volty를 후드, 얼굴/손/발, 볼/입, 선/후드티, 숨길 1안 글자, 2안 의상 reference로 분해한 작업 레이어
+- `svg/layers/volty-base-front-raster-layered.svg`의 직접 소스
+- 최종 승인 SVG가 아니라 다음 순수 path SVG 제작 전 검수용
 
 ### `볼티_마스코트_예시.png`
 
